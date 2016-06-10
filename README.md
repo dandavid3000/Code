@@ -78,7 +78,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 
 -
 
-* [Network project](Python/Network1_Project) Building a client-server in Python - Please check [this report](Python/Network1_Project/Report.pdf).
+* [Network project](Python/Network1_Project) Building a client-server in Python with requirements below - Please check [this report](Python/Network1_Project/Report.pdf) for the work.
   - Implement a client capable of scraping data from a webpage and to store
 these data into a small database
     - You will have to use sockets – no existing library will be allowed
