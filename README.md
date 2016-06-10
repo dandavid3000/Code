@@ -1,4 +1,4 @@
->For those who may concern about my work I have been doing during my study. This folder contains many different subfolders storing various projects. There are my 6-month internship at SAP Labs France, Eurecom semester project, exercises as well as projects relating to software development in different programming languages.
+>This folder contains many different subfolders storing various projects that I have been working during my study. There are my 6-month internship at SAP Labs France, Eurecom semester project, exercises as well as projects relating to software development in different programming languages.
 
 #Introduction
 Most of the projects I mainly finished in `C/C++` or in `Java`. `Python` is a new language that I've had a chance to access recently since my Master's program at Eurecom under courses such as `Secure System`, `SoftDev`, and `Forensics`. I'm really interested in this language, still studying it, and catching up. 
@@ -56,6 +56,8 @@ This folder contains exercises about algorithms, and data structures.
 This folder contains important projects such as [Finding paths Algs](C/Projects/Algorithms), [Hardware security key breakdown](C/Projects/HardwareSec), and [Singer management](C/Projects/SingerManagement) which is an example of OOP Programming in C/C++.
 
 ## Projects in Java
+
+
 ## Projects in Python
 ## Projects in CSharp
 ## Projects in Visual Basic
