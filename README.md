@@ -17,7 +17,7 @@ p/s Some projects you'll find strange because they're not in English. I am still
 * [What comes next](#what-comes-next)
 
 ## Secure integration of Internet of Things
-I participated in a co-innovation project named [Secure Integration of Internet of Things](http://scn.sap.com/community/labs/blog/2015/06/25/co-innovation-project-on-predictive-analytics-for-pipeline-integrity). The requirements come from French Public Sector - City of Antibes. They'd like to have an end-to-end solution for data collected by more than 2000 sensors, and deployed for their water network. They use the data for `predictive maintenance` to predict the pipeline failures of the water network. In order to improve management, and financial optimization, they also would like to visualize their water network. The data will be encrypted at the beginning, and only decrypted at the end. In particular, I designed and implemented a sysmetrical cryptography to assure the confidentiality and integrity of the data accross many different platforms including `Arduino` (C/C++), `Raspberry` and `Intel Edision` (Python), `DataGraph application` and `FreeDataMap` (Java, and Javascript). Setup a connection between `PLCs`, `SIGFOX`, and `HANA Cloud Platform`. The final step of this project is to evaluate the security perspective. I built an attack tree containing attack models, and considered all possible attacks that could happend to the system, and provided suggestions on how to defend, and mitigrate those risks.
+I participated in a co-innovation project named [Secure Integration of Internet of Things](http://scn.sap.com/community/labs/blog/2015/06/25/co-innovation-project-on-predictive-analytics-for-pipeline-integrity). The requirements come from French Public Sector - City of Antibes. They'd like to have an end-to-end solution for data collected by more than 2000 sensors, and deployed for their water network. They use the data for `predictive maintenance` to predict the pipeline failures of the water network. In order to improve management, and financial optimization, they also would like to visualize their water network. The data will be encrypted at the beginning, and only decrypted at the end. In particular, I designed and implemented a sysmetrical cryptography to assure the confidentiality and integrity of the data accross many different platforms including `Arduino` (C/C++), `Raspberry` and `Intel Edision` (Python), `DataGraph application` and `FreeDataMap` (Java, and Javascript). Setup a secure connection between `PLCs`, `SIGFOX`, and `HANA Cloud Platform`. The final step of this project is to evaluate the security perspective. I built an attack tree containing attack models, and considered all possible attacks that could happend to the system, and provided suggestions on how to defend, and mitigrate those risks.
 
 ![Architecture](https://github.com/dandavid3000/Code/blob/master/images/architecturediagram.png "Architecture Overview")
 
@@ -47,6 +47,14 @@ Regarding to our work in this projects:
 The **final report** for this work is available [here](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/SemesterProjectReport_VO.pdf) along with the [source code](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/TTool.zip). The protocol is developed step by step, and stored [here](Java/Eurecom/SmallClient_Server/) from the simple one from multithreaded to the version that uses SSL socket.
 
 ## Projects in C and C plus plus
+
+1. [Embedded programming](C/EmbeddedProgramming/Exercises)
+This folder contains exercises and final project for the course. The project is about playing around wid leds on a board.
+2. [Exercises](C/Exercises)
+This folder contains exercises about algorithms, and data structures
+3. [Projects](C/Projects)
+This folder contains important projects such as [Finding paths Algs](C/Projects/Algorithms), [Hardware security key breakdown](C/Projects/HardwareSec), and [Singer management](C/Projects/SingerManagement) which is an example of OOP Programming in C/C++
+
 ## Projects in Java
 ## Projects in Python
 ## Projects in CSharp
