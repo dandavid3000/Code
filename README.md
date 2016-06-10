@@ -42,6 +42,8 @@ Regarding to our work in this projects:
 * Implemented a friendly user interface for users to retrieve information, perform the search
 * Designed, and implemented a secure protocol as a bridge to let TTool, and The Crawler interact together.
 
+![Search feature](https://github.com/dandavid3000/Code/blob/master/images/ExternalSearch.png "Search feature")
+
 The **final report** for this work is available [here](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/SemesterProjectReport_VO.pdf) along with the [source code](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/TTool.zip). The protocol is developed step by step, and stored [here](Java/Eurecom/SmallClient_Server/) from the simple one from multithreaded to the version that uses SSL socket.
 
 ## Projects in C and C plus plus
