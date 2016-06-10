@@ -63,10 +63,14 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 
 ## Projects in Python
 1. [Challenges](Python/Challenges) This folder contains challenges as follows:
-[forensics1](Python/Challenges/Forensics1.py)
-
 - Write a simple python script that, by invoking tshark, prints the IPs that are likely natted using the TCP timestamp option.
-with requirements are self-contained python script that uses tshark for the packet analysis. The tool should receive a pcap file as parameter and print the IP addresses that are likely natted.
+with requirements are self-contained python script that uses tshark for the packet analysis. The tool should receive a pcap file as parameter and print the IP addresses that are likely natted. [forensics1](Python/Challenges/Forensics1.py)
+- Write a script that, using SleuthKit, checks all the sector slack at the end of each file in a ext3 partition and dumps the ones that contain data. Requirements:
+  - self-contained python script that either use the SleuthKit bindingins or invoke it as a subprocess
+  - the tool should check all file in a filesystem specified as parameter
+  - shows a progress bar to tell the user the percentage of files analyzed so far
+  - for each file that has data in the slack space, create a file in a subdirectory named with the inode number and containing the slack bytes
+
 
 
 
