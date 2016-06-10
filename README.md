@@ -51,9 +51,9 @@ The **final report** for this work is available [here](Java/Eurecom/SemesterFina
 1. [Embedded programming](C/EmbeddedProgramming/Exercises)
 This folder contains exercises and final project for the course. The project is about playing around wid leds on a board.
 2. [Exercises](C/Exercises)
-This folder contains exercises about algorithms, and data structures
+This folder contains exercises about algorithms, and data structures.
 3. [Projects](C/Projects)
-This folder contains important projects such as [Finding paths Algs](C/Projects/Algorithms), [Hardware security key breakdown](C/Projects/HardwareSec), and [Singer management](C/Projects/SingerManagement) which is an example of OOP Programming in C/C++
+This folder contains important projects such as [Finding paths Algs](C/Projects/Algorithms), [Hardware security key breakdown](C/Projects/HardwareSec), and [Singer management](C/Projects/SingerManagement) which is an example of OOP Programming in C/C++.
 
 ## Projects in Java
 ## Projects in Python
