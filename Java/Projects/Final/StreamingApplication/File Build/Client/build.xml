@@ -1,0 +1,39 @@
+
+<project default = "run">
+	<target name = "compile" depends = "clean">
+		<mkdir dir= "build/classes"/>
+		<javac srcdir = "src" destdir = "build/classes" encoding="UTF-8">
+			
+			<classpath>
+				<pathelement path="build/classes;lib/AbsoluteLayout.jar" />
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name = "clean">
+		<delete dir = "build"/>
+	</target>
+	
+	
+	
+	<target name = "jar" depends = "compile">
+		<mkdir dir= "build/jar"/>
+		
+		<copy file="lib/AbsoluteLayout.jar" todir = "build/jar/lib"/>
+
+		<jar destfile = "build/jar/Client.jar" basedir = "build/classes">
+			<manifest>
+				<attribute name = "Main-class" value="Gui.client"/>
+				
+				<attribute name = "Class-Path" value="lib/AbsoluteLayout.jar"/>
+
+			</manifest>
+		</jar>
+	</target>
+		
+
+	
+	<target name = "run" depends = "jar">
+		<java jar = "build/jar/Client.jar" fork = "true"></java>
+	</target>
+</project>

@@ -1,0 +1,32 @@
+\bib{stuxnet1}{article}{
+  author={Ludovic Apvrille},
+  title={AVATAR-TTool A SysML Environment for the Proof of Safety and Security Properties},
+  organization={},
+  date={},
+  eprint={http://ttool.telecom-paristech.fr/docs/slidesAvatar.pdf},
+}
+
+\bib{stuxnet2}{article}{
+  author={Nicolas Falliere, Liam O Murchu, and Eric Chien},
+  title={W32.Stuxnet Dossier},
+  organization={},
+  date={},
+  eprint={https://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/w32_stuxnet_dossier.pdf},
+}
+
+\bib{stuxnet3}{article}{
+  author={Aleksandr Matrosov, Eugene Rodionov, David Harley, Juraj Malcho},
+  title={Stuxnet Under the Microscope},
+  organization={},
+  date={},
+  eprint={http://www.eset.com/us/resources/white-papers/Stuxnet_Under_the_Microscope.pdf},
+}
+
+\bib{jsoup}{article}{
+  author={Jonathan Hedley},
+  title={jsoup cookbook},
+  organization={},
+  date={},
+  eprint={http://jsoup.org/cookbook/},
+}
+

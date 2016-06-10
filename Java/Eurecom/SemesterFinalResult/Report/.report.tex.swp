@@ -1,0 +1,294 @@
+\documentclass[a4paper,12pt,oneside]{report}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\setdescription{leftmargin=\parindent,labelindent=\parindent}
+\usepackage[lmargin=1.5cm, rmargin=1.5cm,tmargin=2.50cm,bmargin=4cm]{geometry}
+\usepackage{array}
+\usepackage[Bjarne]{fncychap}
+%\usepackage[utf8]{vietnam}
+\renewcommand{\thesection}{\arabic{section}}
+\usepackage{graphicx}
+\usepackage{listings}
+\setlength{\textwidth}{16cm} \setlength{\textheight}{22cm}
+\setlength{\oddsidemargin}{0.5cm} %\setlength{\topmargin}{2.5cm}
+%\setlength{\botmar}{length}
+\setlength{\evensidemargin}{0.5cm} %\setlength{\topmargin}{0cm}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\textsc{Semeter Project Fall 2015}}
+\rhead{{\textsc{EURECOM Institute}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\setcounter{secnumdepth}{3}
+\usepackage{epstopdf}
+\usepackage[acronym]{glossaries}
+
+
+
+\makeglossaries
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  otherkeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{ 
+	Graduate School and Research Center In communication } % Name of your university/college
+\begin{center}
+\includegraphics[scale=0.5]{eurecom.png}
+\end{center}
+
+\textsc{\large Semeter Project}\\[2cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \Large \bfseries Attack Crawler for Modern Networked Systems}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.57\textwidth}
+\begin{flushleft} 
+\emph{Group}\\
+\quad \textbf{TRUONG Quang-Huy}\\
+\quad \textbf{VO Huynh-Dan}\\
+
+
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+%\begin{flushright} 
+%\emph{RESPONSABLES:} \\
+%Prof. \textbf{Christian Bonnet} % Supervisor's Name
+%\end{flushright}
+\begin{flushright} 
+\emph{Supervisor:} \\
+\textbf{Yves Roudier} \\
+\textbf{Ludovic Apvrille} \\
+
+\end{flushright}
+
+\end{minipage}\\[3cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{ Biot, \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\linespread{1.3}
+\pagenumbering{roman}
+
+%\chapter*{Acknowledgement}
+
+%In performing our assignment, we had to take the help and guideline of some respected persons, who deserve our greatest gratitude. The completion of this assignment gives us much Pleasure. We would like to show our gratitude Mr. PUZIO Pasquale, for giving us a good guideline for assignment throughout numerous consultations. We would also like to expand our deepest gratitude to all those who have directly and indirectly guided us in writing this assignment.
+
+%In addition, a thank you to Professor MOLVA Refik, who introduced us to the Methodology of work, and whose passion for the Ã¢ÂÂunderlying structuresÃ¢ÂÂ had lasting effect. 
+
+%Many people, especially our classmates and team members itself, have made valuable comment suggestions on this proposal which gave us an inspiration to improve our assignment. We thank all the people for their help directly and indirectly to complete our assignment.
+%\begin{center}
+%--------------------oOo--------------------
+%\end{center}
+
+%\begin{center}
+%\textbf{Eurecom group}
+%\end{center}
+%\chapter*{Abstract}
+
+%This report demonstrates a simple mechanism protocol, proposed by Mr. PUZIO Pasquale, for deduplicating data of cloud storage in client side which reduces the risk of data leakage from \acrfull{csp}. The mechanism bases on differences between the popular data which have a low sercurity level and un-popular which have schematically security. Besides, the mechanism also has some advantages in efficiency and security level when comparing with other mechanisms. 
+%=========================================================
+% table of contents, table of figures, table of tables
+\tableofcontents
+\printglossary
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\setlength{\parindent}{4em}
+
+%\thispagestyle{empty}
+
+%\listoffigures
+
+%\listoftables
+
+\newpage
+
+\pagenumbering{arabic}
+
+% ========================================
+% abbreviation and glossary
+
+
+
+
+
+
+%\newacronym{api}{API}{Application Programming Interface }
+
+%%% The glossary entry the acronym links to   
+\newacronym{pir}{PIR}{Private Information Retrieval}
+\newacronym{pow}{PoW}{Proof of Ownership}
+
+\newacronym{idx}{IDX}{Index Service}
+\newacronym{phf}{PHF}{Perfect Hash Function}
+\newacronym{cof}{COF}{Confirmation of a file}
+\newacronym{lri}{LRI}{learn-the-remain-information}
+\newacronym{ce}{CE}{Convergent Encryption}
+\newacronym{cd}{CD}{compact disk}
+\newacronym{sv}{S}{secret value}
+\newacronym{ks}{KS}{key server}
+\newacronym{csp}{CSP}{Cloud Storage Provider}
+\newglossaryentry{apig}{name={API},
+	description={An Application Programming Interface (API) is a particular set
+		of rules and specifications that a software program can follow to access and
+		make use of the services and resources provided by another particular software
+		program that implements that API}}
+
+%%% define the acronym and use the see= option
+\newglossaryentry{api}{type=\acronymtype, name={API}, description={Application
+		Programming Interface}, first={Application
+		Programming Interface (API)\glsadd{apig}}, see=[Glossary:]{apig}}
+
+
+%========================================
+\chapter*{Abstract}
+\chapter*{Introduction} 
+	\section{TTool}
+	\section{Goals}
+\chapter*{Model an attack}
+	\section{Introduce Stuxnet}
+	\section{Model Stuxnet's attack in TTool}
+\chapter*{Modules for TTool}
+	\section*{Search module}
+		\subsection{Requirement}
+		Currently, TTool has a function to find components inside the opened model according to a string which is provided by user. The main purpose is supporting for locating components by a string in case the working on large graph. There is a concern that the user would like to inquire more information about the graph, which may be the techical detail of component, the other relationship between components,the variant of the component, usage of component in another purpose,  etc. These material could not be embeded in graph's components. \par
+		The approach in this part of the project is extracting the data from outside TTool, specially, by internet and a vulnerabiliy database.In internet approach,  thank to search engine such as Google and Google Scholar, finding the related information of a string can be perform by an URL to these services. Another way to get infomation is through a vulnerability database, which is an other part of this project.Threrefore the main requirement in this part is:
+		\begin{itemize}
+			\item  Implementing a GUI, allowing the user can perform extended searching to outside resource by string and following options.
+			\item  Retrieving the result from the internet, namely Google and Google Scholar.
+			\item Design and implementing a protocol to communicate to the database in order to get the information and display to user.
+		\end{itemize}
+		\subsection{Environment}
+		As an extention for Ttool's User Interface, this part of project involes directy to source code of TTool, which is competable with Java 7. \par
+		There is an external library, named JSoup, is taken avantage in order to manipulate the request and response to Search Engine, and parse the HTML-format response. Jsoup is an open source project distributed under the liberal MIT license. It can be found at http://jsoup.org/. Jsoup jar jsoup-1.8.1.jar is put in ./bin directory and Makefile is modified to make sure the library is loaded when compliling TTool.
+		\begin{lstlisting}[language=bash]
+	basic:
+	$(JAVAC) $(SOURCEPATH) $(TTOOL_SRC) $(CLASSPATH) $(TTOOL_BIN)/jsoup-1.8.1.jar $(TTOOL_SRC)/*.java	
+		\end{lstlisting}
+		\subsection {Graphic interface}
+		As the requirement, the user desires to view the more information which either directly or indirectly relevant  to the elements in the working model. The task on graphic interface are creating a method to create the keyword and build a form in order to display the request, as well as the result of searching for user.\par
+		 A prerequisite of retreving the information is composing a keyword which will be  provided to the searching function. The main source to make up the keyword is selecting from the components in the model. Besides, user also can input and manipulate the keyword before searching.\par
+		For the convinient, there are four options for user can compose desired keyword:
+		\begin{itemize}
+			\item Type the keyword into the search field on the menu bar of TTool.
+			\item Hold Ctrl and left click on the component to get the name of component as keyword.
+			\item Hold Ctrl and left click on conponents consequently, then right click on the model and select option "External Search". The list of name of selected components will be used as the keyword.
+			\item Hold Alt and left click on a component. The form will be displayed with the name of seleted component.
+			\item When the form is showing. the user can add to the list keywords a name of another component on graph by holding Ctrl and left click on that component. 
+			\item In addition, user can also give the input in the search form.
+		\end{itemize}
+		Then, the selected keywords will be sent to the form, named External Search , which allow user to change the content of query,  select the source to send query, the options of request.
+		To open the form, there are 4 options:
+		\begin {itemize}
+		\item From the main menu Tool $\rightarrow$ External Search\par
+		\includegraphics[scale=0.6]{mainmenu_crop.png}
+		\item From  working graph, through the context menu ( Right click  $\rightarrow$ External Search ) \par
+		\includegraphics[scale=0.5]{contextmenu_crop.png}
+		\item From the menu bar, through the icon External Search.\par
+		\includegraphics[scale=0.6]{menubar.png}
+		\item  Hold Alt and left click on a component. The form will be displayed with the name of seleted component.
+		
+		\end{itemize}
+		
+		The form is place where the query will is contructed by collecting keywords, options, target data sources. As well as, there are tables and text field to represent the searching response. \par
+		\includegraphics[scale=0.5]{ExternalSearch.png}\par
+		The final keyword will be formed by the list components' names which are concatenated to each other. In addition, each name will be splitted by the uper characters. The reason for splitting is making the keyword more searchable by search engines.\par
+		For each target data source ( Google, Google Scholar and Database), there are the reseved options and tab to display the result. \par
+		The related source code for the External Search :
+		\begin {itemize}
+			\item ./src/ui/window/JDialogSearchBox.java: This is the main implimentation of GUI for Searching Dialog. 
+			\item ./src/ui/TDiagramPanel.java : Menu context is added the option for External Search.
+			\item ./src/ui/TDiagramMouseManager.java : A few lines of code catches the event of mouse when click on components with special keys ( Ctrl, Alt) 
+			\item ./src/ui/MainGUI.java : The instance of JDialogSearchBox belongs to MainGUI which allows the search function can be accessed by every context of TTool. 
+			An added code supports to reuse the search field in menu bar for both Internal Search and External Search. It also allows to open a External Search Dialog by a button beside the search field. 
+			\item ./src/ui/TGUIAction.java : register  new actions for Internal and External, included icon and description.
+			
+		\end {itemize}
+		
+		\subsection{Internet Search}
+		
+		\subsection{Database Search}
+		\subsection{Validation}
+\chapter*{Conclusion}
+\chapter*{Reference}
+\end{document}
