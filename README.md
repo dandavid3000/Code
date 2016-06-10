@@ -71,9 +71,10 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
     - the tool should check all file in a filesystem specified as parameter
     - shows a progress bar to tell the user the percentage of files analyzed so far
     - for each file that has data in the slack space, create a file in a subdirectory named with the inode number and containing the slack bytes
-
-
-
+  -  [forensics3](Python/Challenges/Forensics3.py) Write a python script to detect camouflaged files. The script should use the python magic bindings compare the results with the mime types (extracted from `/etc/mime.types` by default or by a file specified as parameter)
+    - The script should take as input a directory and recursively analyze its content.
+    - Collect a memory snapshot of a linux machine. Install volatility 2.4 (use the official release, not the development version), build the profile for your linux dump, and test that it works by listing the processes in the memory image. Then, using volatily as a library (example), write a tool that accepts as parameters two snapshot taken from the same machine at different times (e.g., 15 minutes one after the other) and for each processes (uniquely identified by its PID), list the number of pages that are different between the two snapshots.
+2. [Network project](Python/Network1_Project) Building a client-server in Python - Checkout [this report](Python/Network1_Project/Report.pdf) for tasks
 
 ## Projects in CSharp
 >Most are B2B applications, and exercises
