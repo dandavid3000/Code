@@ -1,13 +1,151 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-
+from itertools import groupby
+from operator import itemgetter
+from STree import STree
 import re
 
+def suffix_array(text, _step=16):
+    tx = text
+    size = len(tx)
+    step = min(max(_step, 1), len(tx))
+    sa = list(range(len(tx)))
+    sa.sort(key=lambda i: tx[i:i + step])
+    grpstart = size * [False] + [True]
+    rsa = size * [None]
+    stgrp, igrp = '', 0
+    for i, pos in enumerate(sa):
+        st = tx[pos:pos + step]
+        if st != stgrp:
+            grpstart[igrp] = (igrp < i - 1)
+            stgrp = st
+            igrp = i
+        rsa[pos] = igrp
+        sa[i] = pos
+    grpstart[igrp] = (igrp < size - 1 or size == 0)
+    while grpstart.index(True) < size:
+        # assert step <= size
+        nextgr = grpstart.index(True)
+        while nextgr < size:
+            igrp = nextgr
+            nextgr = grpstart.index(True, igrp + 1)
+            glist = []
+            for ig in range(igrp, nextgr):
+                pos = sa[ig]
+                if rsa[pos] != igrp:
+                    break
+                newgr = rsa[pos + step] if pos + step < size else -1
+                glist.append((newgr, pos))
+            glist.sort()
+            for ig, g in groupby(glist, key=itemgetter(0)):
+                g = [x[1] for x in g]
+                sa[igrp:igrp + len(g)] = g
+                grpstart[igrp] = (len(g) > 1)
+                for pos in g:
+                    rsa[pos] = igrp
+                igrp += len(g)
+        step *= 2
+    del grpstart
+    # create LCP array
+    lcp = size * [None]
+    h = 0
+    for i in range(size):
+        if rsa[i] > 0:
+            j = sa[rsa[i] - 1]
+            while i != size - h and j != size - h and tx[i + h] == tx[j + h]:
+                h += 1
+            lcp[rsa[i]] = h
+            if h > 0:
+                h -= 1
+    if size > 0:
+        lcp[0] = 0
+    return sa, rsa, lcp
+
 def CountOccurencesInText(word,text):
-	#', and '[abcxyz]' should be considered
+    text = text.lower()
+    word = word.lower()
+    word_len = len(word)
+    text_len = len(text)
+    a=[]
+    sa,rsa,lcp = suffix_array(text)
+    count = 0
+    for i in sa:
+        small_word = text[i:i+word_len]
+        if small_word == word:
+            a.append([i,i+word_len])
+
+    for i in a:
+        if i[0] <=2:
+            i[0] = max(0,i[0]-2)
+        else:
+            i[0] = i[0]-2
+
+        if i[1] >= text_len:
+            i[1] = min(text_len,i[1]+2)
+        else:
+            i[1] = i[1]+2
+
+    pattern = "(?<![a-z])((?<!')|(?<=''))" + word + "(?![a-z])((?!')|(?=''))"
+
+    for i in a:
+        s_w = text[i[0]:i[1]]
+        l = len(re.findall(pattern, s_w, re.IGNORECASE))
+        count = count + l
+    return count
+
+'''
+#Do the KMP to find indexes of word
+#Do regex with world - 2, world + 2 to count
+def computeShifts(pattern):
+	shifts = [None] * (len(pattern) + 1)
+	shift = 1
+	for pos in range(len(pattern) + 1):
+		while shift < pos and pattern[pos-1] != pattern[pos-shift-1]:
+			shift += shifts[pos-shift-1]
+		shifts[pos] = shift
+	return shifts
+
+def kmpAllMatches(pattern, text):
+	shift = computeShifts(pattern)
+	startPos = 0
+	matchLen = 0
+	for c in text:
+		while matchLen >= 0 and pattern[matchLen] != c:
+			startPos += shift[matchLen]
+			matchLen -= shift[matchLen]
+		matchLen += 1
+		if matchLen == len(pattern):
+			yield startPos
+			startPos += shift[matchLen]
+			matchLen -= shift[matchLen]
+
+def CountOccurencesInText(word,text):
+    text = text.lower()
+    word = word.lower()
+    a = kmpAllMatches(word, text)
+    count = 0
+    pattern = "(?<![a-z])((?<!')|(?<=''))" + word + "(?![a-z])((?!')|(?=''))"
+    lw = len(word)
+    lt = len(text)
+    small_text = ""
+    for i in a:
+        if i == 0:
+            small_text = text[i:i + len(word) + 2]
+            # print text
+        elif i + len(word) == len(text):
+            small_text = text[i - 2:i + len(word)]
+        else:
+            small_text = text[i - 2:i + len(word) + 2]
+            # print text
+        count = count + len(re.findall(pattern, small_text, re.IGNORECASE))
+   # print count
+    return count
+'''
+'''
+def CountOccurencesInText(word,text):
     pattern = "(?<![a-z])((?<!')|(?<=''))" + word + "(?![a-z])((?!')|(?=''))"
     return len(re.findall(pattern, text, re.IGNORECASE))
-
+'''
 '''
 def CountOccurencesInText(word,text):
     #Consider which character is accepted"""
@@ -73,7 +211,6 @@ def CountOccurencesInText(word,text):
             occNo += 1
     return occNo
 '''
-
 def testCountOccurencesInText():
     """ Test the CountOccurencesInText function"""
     text="""Georges is my name and I like python. Oh ! your name is georges? And you like Python!
@@ -212,9 +349,6 @@ def doit():
         i+= CountOccurencesInText("green" , SampleTextForBench)
         i+= CountOccurencesInText("parabole" , SampleTextForBench)
     print(i)
-        
-
-
 
 #Start the tests     
 if __name__ == '__main__':
