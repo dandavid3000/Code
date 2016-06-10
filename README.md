@@ -22,7 +22,7 @@ I participated in a co-innovation project named [Secure Integration of Internet 
 ![Architecture](https://github.com/dandavid3000/Code/blob/master/images/architecturediagram.png "Architecture Overview")
 
 
-I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a **presentation file** [here]() which I used for my defense, and for some demo videos you can contact me directly via my email address. I also completed an Enterprise Github about this work to help others can replicate my concept, as well as a detailed report with more than 150 pages.
+I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a **presentation file** [here](https://github.com/dandavid3000/Documents/blob/master/SecureIoT/SAP_Defense.pptx) which I used for my defense, and for some demo videos you can contact me directly via my email address. I also completed an Enterprise Github about this work to help others can replicate my concept, as well as a detailed report with more than 150 pages.
 
 At the end, the concept worked perfectly, it's considered to develop and deloy as a real bussiness.
 
@@ -51,4 +51,4 @@ The **final report** for this work is available [here](Java/Eurecom/SemesterFina
 ## Projects in Visual Basic
 ## Web projects
 ## What comes next
-I hope you will see more interesting projects I will participate in. Currently, I am looking for a position to start my career. I'm passionate about Software development, Internet of Things, and Security.
+I hope you will see more interesting projects in the near future. Currently, I am looking for a new challenge to start my career since I'm passionate about **software development**, **Internet of Things**, and **Security**.
