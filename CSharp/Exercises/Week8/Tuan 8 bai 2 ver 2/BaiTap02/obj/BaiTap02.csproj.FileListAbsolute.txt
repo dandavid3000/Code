@@ -1,0 +1,37 @@
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\bin\Debug\BaiTap02.exe
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\bin\Debug\BaiTap02.pdb
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\ResolveAssemblyReference.cache
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\BaiTap02.Properties.Resources.resources
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\BaiTap02.csproj.GenerateResource.Cache
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\BaiTap02.exe
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\BaiTap02.pdb
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\BaiTap02.frmMain.resources
+D:\Haiem\02 Phung data\Hoc tap\LT C4WIN\Thuc hanh\Bai tap tuan\Week 08\BaiTap02\obj\Debug\BaiTap02.frmUser.resources
+D:\Week 08\Source\BaiTap02\bin\Debug\BaiTap02.exe
+D:\Week 08\Source\BaiTap02\bin\Debug\BaiTap02.pdb
+D:\Week 08\Source\BaiTap02\obj\Debug\ResolveAssemblyReference.cache
+D:\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.frmMain.resources
+D:\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.frmUser.resources
+D:\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.Properties.Resources.resources
+D:\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.csproj.GenerateResource.Cache
+D:\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.exe
+D:\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.pdb
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.exe
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.pdb
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\bin\Debug\BaiTap02.exe
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\bin\Debug\BaiTap02.pdb
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.frmMain.resources
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.frmUser.resources
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.Properties.Resources.resources
+C:\Users\David\Desktop\Week 08\Source\BaiTap02\obj\Debug\BaiTap02.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\bin\Debug\BaiTap02.exe
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\bin\Debug\BaiTap02.pdb
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.frmHuongDan.resources
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.frmMain.resources
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.frmUser.resources
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.Properties.Resources.resources
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.exe
+C:\Users\David\Desktop\Đồ án\C4W\Tuan 8 bai 2 ver 2\BaiTap02\obj\Debug\BaiTap02.pdb

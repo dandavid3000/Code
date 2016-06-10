@@ -1,0 +1,19 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=GiupDo.chm
+Contents file=GiupDo.hhc
+Index file=GiupDo.hhk
+Binary Index=Yes
+Full-text search=Yes
+Language=0x0409
+Title=GiupDo
+Error log file=Errlog.txt
+Default Window=main
+
+[WINDOWS]
+main="GiupDo","GiupDo.hhc","GiupDo.hhk","QuanLyLop.mht","",,,,,0x41520,240,0x184E,[262,184,762,584],,,,0,1,1,0
+
+[FILES]
+QuanLyLop.mht
+QuanLySinhVien.mht
+TrangGioiThieu.mht

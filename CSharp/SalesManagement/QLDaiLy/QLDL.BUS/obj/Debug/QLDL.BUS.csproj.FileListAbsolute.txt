@@ -1,0 +1,5 @@
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDL.BUS.dll
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDL.BUS.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.dll
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.pdb

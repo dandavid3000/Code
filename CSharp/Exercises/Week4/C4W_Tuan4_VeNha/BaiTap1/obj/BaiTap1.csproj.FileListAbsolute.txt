@@ -1,0 +1,14 @@
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\bin\Debug\BaiTap1.exe
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\bin\Debug\BaiTap1.pdb
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.Properties.Resources.resources
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.csproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.exe
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\bin\Debug\BaiTap1.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\bin\Debug\BaiTap1.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.Properties.Resources.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap1\obj\Debug\BaiTap1.pdb

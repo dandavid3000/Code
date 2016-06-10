@@ -1,0 +1,10 @@
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\bin\Debug\MyWinApp.exe
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\bin\Debug\MyWinApp.pdb
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\bin\Debug\MyLibrary.dll
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\bin\Debug\MyLibrary.pdb
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\obj\Debug\MyWinApp.frmDanhSachSinhVien.resources
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\obj\Debug\MyWinApp.Properties.Resources.resources
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\obj\Debug\MyWinApp.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\obj\Debug\MyWinApp.exe
+C:\Users\David\Desktop\Đồ án\C4W\Tuan3_DanhSachHocSinh\MyWinApp\obj\Debug\MyWinApp.pdb

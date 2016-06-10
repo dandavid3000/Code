@@ -1,0 +1,50 @@
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDaiLy.exe
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDaiLy.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\ResolveAssemblyReference.cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.Properties.Resources.resources
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.csproj.GenerateResource.Cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmChinh.resources
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe.licenses
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmPhieuXuatHang.resources
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\bin\QLDaiLy.exe
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\bin\QLDaiLy.pdb
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmChinh.resources
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmPhieuXuatHang.resources
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.Properties.Resources.resources
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.csproj.GenerateResource.Cache
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe.licenses
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.pdb
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.pdb
+F:\Dan_CNPM\QLDaiLy\bin\QLDaiLy.exe
+F:\Dan_CNPM\QLDaiLy\bin\QLDaiLy.pdb
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\ResolveAssemblyReference.cache
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmChinh.resources
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmPhieuXuatHang.resources
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.Properties.Resources.resources
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.csproj.GenerateResource.Cache
+F:\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe.licenses
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.pdb
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\bin\QLDaiLy.exe
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\bin\QLDaiLy.pdb
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmChinh.resources
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmPhieuXuatHang.resources
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.Properties.Resources.resources
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.csproj.GenerateResource.Cache
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe.licenses
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.pdb
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmChinh.resources
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmPhieuXuatHang.resources
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.Properties.Resources.resources
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.csproj.GenerateResource.Cache
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe.licenses
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\bin\QLDaiLy.exe
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\bin\QLDaiLy.pdb

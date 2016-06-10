@@ -1,0 +1,5 @@
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDL.DAO.dll
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDL.DAO.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.DAO\obj\Debug\QLDL.DAO.dll
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.DAO\obj\Debug\QLDL.DAO.pdb

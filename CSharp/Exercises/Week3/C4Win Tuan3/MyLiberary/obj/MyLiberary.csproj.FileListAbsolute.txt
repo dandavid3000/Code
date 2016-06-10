@@ -1,0 +1,5 @@
+C:\Documents and Settings\sv\Desktop\WindowsApplication1\MyLiberary\bin\Debug\MyLiberary.dll
+C:\Documents and Settings\sv\Desktop\WindowsApplication1\MyLiberary\bin\Debug\MyLiberary.pdb
+C:\Documents and Settings\sv\Desktop\WindowsApplication1\MyLiberary\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\WindowsApplication1\MyLiberary\obj\Debug\MyLiberary.dll
+C:\Documents and Settings\sv\Desktop\WindowsApplication1\MyLiberary\obj\Debug\MyLiberary.pdb

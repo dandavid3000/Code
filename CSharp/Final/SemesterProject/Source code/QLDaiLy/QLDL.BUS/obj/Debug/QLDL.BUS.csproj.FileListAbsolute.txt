@@ -1,0 +1,20 @@
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDL.BUS.dll
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDL.BUS.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.dll
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.pdb
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\bin\QLDL.BUS.dll
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\bin\QLDL.BUS.pdb
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDL.BUS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.dll
+C:\Users\Dan\Desktop\QLDaiLy19_06\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.pdb
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\bin\QLDL.BUS.dll
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\bin\QLDL.BUS.pdb
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDL.BUS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.dll
+C:\Documents and Settings\user\Desktop\DoAn CNPM\Dan_CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.pdb
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\bin\QLDL.BUS.dll
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\bin\QLDL.BUS.pdb
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDL.BUS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.dll
+C:\Documents and Settings\loc.huynh.LYLE\Desktop\Dan_CNPM\QLDaiLy\QLDL.BUS\obj\Debug\QLDL.BUS.pdb

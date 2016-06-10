@@ -1,0 +1,18 @@
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\bin\Debug\BaiTap3.exe
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\bin\Debug\BaiTap3.pdb
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.Form1.resources
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.Properties.Resources.resources
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.csproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.exe
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\bin\Debug\BaiTap3.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\bin\Debug\BaiTap3.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.Form1.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.Properties.Resources.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.pdb
+D:\Learnin'\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.exe
+D:\Learnin'\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap3\obj\Debug\BaiTap3.pdb

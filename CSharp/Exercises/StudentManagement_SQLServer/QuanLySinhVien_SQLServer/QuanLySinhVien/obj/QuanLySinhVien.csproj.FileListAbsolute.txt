@@ -1,0 +1,10 @@
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\bin\Debug\QuanLySinhVien.exe
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\bin\Debug\QuanLySinhVien.pdb
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.bin.Debug.Reports.rptSinhVien.rpt
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.rptSinhVien.rpt
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.Form1.resources
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.Properties.Resources.resources
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.csproj.GenerateResource.Cache
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.exe
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QuanLySinhVien_SQLServer\QuanLySinhVien\obj\Debug\QuanLySinhVien.pdb

@@ -1,0 +1,678 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="27" />
+      <Item value="DaiLyDTO`0" priority="11" />
+      <Item value="int" priority="131" />
+      <Item value="String`0" priority="0" />
+      <Item value="string" priority="51" />
+      <Item value="DateTime`0" priority="17" />
+      <Item value="madaily" priority="7" />
+      <Item value="_madaily" priority="0" />
+      <Item value="_tendaily" priority="0" />
+      <Item value="tendaily" priority="2" />
+      <Item value="_maloaidaily" priority="0" />
+      <Item value="maloaidaily" priority="2" />
+      <Item value="_dienthoai" priority="0" />
+      <Item value="dienthoai" priority="2" />
+      <Item value="_diachi" priority="0" />
+      <Item value="diachi" priority="2" />
+      <Item value="_maquan" priority="0" />
+      <Item value="maquan" priority="3" />
+      <Item value="_ngaytiepnhan" priority="0" />
+      <Item value="ngaytiepnhan" priority="9" />
+      <Item value="_email" priority="0" />
+      <Item value="email" priority="5" />
+      <Item value="_nocuadaily" priority="0" />
+      <Item value="nocuadaily" priority="0" />
+      <Item value="_soluongloaidaily" priority="0" />
+      <Item value="soluongloaidaily" priority="0" />
+      <Item value="_soluongmathang" priority="0" />
+      <Item value="soluongmathang" priority="0" />
+      <Item value="_soluongDVT" priority="0" />
+      <Item value="soluongDVT" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="load_lvwPhieuXuatHang`0" priority="2" />
+      <Item value="columnHeader3" priority="0" />
+      <Item value="QLDL" priority="3" />
+      <Item value="DTO" priority="2" />
+      <Item value="OleDbDataAccessHelper" priority="0" />
+      <Item value="ExecuteNoneQuery`0" priority="0" />
+      <Item value="dr" priority="1" />
+      <Item value="new" priority="17" />
+      <Item value="DaiLyDTO" priority="3" />
+      <Item value="loaidaily" priority="0" />
+      <Item value="load_GridDaiLyDaiLy`0" priority="2" />
+      <Item value="GridDaiLy" priority="4" />
+      <Item value="DataTable`0" priority="38" />
+      <Item value="dtTB" priority="2" />
+      <Item value="static" priority="26" />
+      <Item value="OleDbDataAccessHelper`0" priority="0" />
+      <Item value="query" priority="0" />
+      <Item value="return" priority="9" />
+      <Item value="dt" priority="14" />
+      <Item value="System" priority="8" />
+      <Item value="Data" priority="8" />
+      <Item value="DAO" priority="1" />
+      <Item value="DaiLyDAO`0" priority="5" />
+      <Item value="DaiLyDAO" priority="0" />
+      <Item value="dl" priority="12" />
+      <Item value="DaiLyBUS`0" priority="24" />
+      <Item value="txtTenDL" priority="1" />
+      <Item value="cbxMaLoaiDL" priority="6" />
+      <Item value="txtDienThoai" priority="0" />
+      <Item value="Convert`0" priority="43" />
+      <Item value="txtDiaChi" priority="0" />
+      <Item value="cbxMaQuan" priority="2" />
+      <Item value="dtpkNgayTiepNhan" priority="3" />
+      <Item value="txtEmail" priority="0" />
+      <Item value="strColumnDaiLy" priority="1" />
+      <Item value="txtNoToiDa" priority="1" />
+      <Item value="ten" priority="2" />
+      <Item value="maloai" priority="2" />
+      <Item value="dc" priority="4" />
+      <Item value="qu" priority="0" />
+      <Item value="ngay" priority="8" />
+      <Item value="em" priority="0" />
+      <Item value="Load_DataBinding`0" priority="1" />
+      <Item value="tmpCtrlDaiLy" priority="2" />
+      <Item value="buttonDaiLy" priority="1" />
+      <Item value="bAdd" priority="3" />
+      <Item value="Clear_DataBinding`0" priority="0" />
+      <Item value="txtMaDL" priority="1" />
+      <Item value="madaly" priority="1" />
+      <Item value="dtTBDaiLy" priority="4" />
+      <Item value="Reset_Form`0" priority="1" />
+      <Item value="false" priority="2" />
+      <Item value="true" priority="6" />
+      <Item value="GetValue`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="this" priority="6" />
+      <Item value="lvwTimKiem" priority="0" />
+      <Item value="if" priority="15" />
+      <Item value="else" priority="15" />
+      <Item value="MessageBox`0" priority="6" />
+      <Item value="using" priority="0" />
+      <Item value="LoaiDaiLyDAO`0" priority="1" />
+      <Item value="dttb" priority="4" />
+      <Item value="LoaiDaiLyBUS`0" priority="4" />
+      <Item value="QuanDAO`0" priority="1" />
+      <Item value="void" priority="3" />
+      <Item value="QuanBUS`0" priority="2" />
+      <Item value="Load_ComBo_DaiLy`0" priority="1" />
+      <Item value="Control`0" priority="0" />
+      <Item value="for" priority="8" />
+      <Item value="ctr" priority="0" />
+      <Item value="Count`1" priority="0" />
+      <Item value="ct" priority="0" />
+      <Item value="I" priority="1" />
+      <Item value="Enable_Control`0" priority="0" />
+      <Item value="Ctr_En_DL" priority="1" />
+      <Item value="Not_Enable_Control`0" priority="0" />
+      <Item value="tenloai" priority="1" />
+      <Item value="temp" priority="13" />
+      <Item value="ma" priority="5" />
+      <Item value="MatHangDAO`0" priority="3" />
+      <Item value="tenmathang" priority="0" />
+      <Item value="MatHangBUS`0" priority="5" />
+      <Item value="cbxMatHang" priority="3" />
+      <Item value="DonViTinhBUS`0" priority="10" />
+      <Item value="DonViTinhDAO`0" priority="1" />
+      <Item value="Load_ComBo_PhieuXuatHang`0" priority="0" />
+      <Item value="cbxDL" priority="6" />
+      <Item value="cbxDVT" priority="4" />
+      <Item value="lvwPhieuXuatHang" priority="9" />
+      <Item value="mathang" priority="4" />
+      <Item value="dvt" priority="5" />
+      <Item value="sl" priority="6" />
+      <Item value="dg" priority="1" />
+      <Item value="thanhtien" priority="2" />
+      <Item value="lv" priority="0" />
+      <Item value="StatementType`0" priority="1" />
+      <Item value="stt" priority="3" />
+      <Item value="PhieuXuatHangDTO`0" priority="2" />
+      <Item value="PhieuXuatDAO`0" priority="2" />
+      <Item value="dtpkNgayLapPhieu" priority="0" />
+      <Item value="double" priority="4" />
+      <Item value="tongtien" priority="7" />
+      <Item value="PhieuXuatHangDTO" priority="0" />
+      <Item value="maDL" priority="4" />
+      <Item value="ngaylapphieu" priority="1" />
+      <Item value="PhieuXuatBUS`0" priority="5" />
+      <Item value="ChiTietPhieuXuatDTO`0" priority="5" />
+      <Item value="gridDonViTinh" priority="5" />
+      <Item value="buttonDVT" priority="0" />
+      <Item value="dtTBDVT" priority="0" />
+      <Item value="GridDonViTinh" priority="0" />
+      <Item value="load_GridDaiLyDaDVT`0" priority="7" />
+      <Item value="load_TabDonViTinh`0" priority="1" />
+      <Item value="txtTenDVT" priority="1" />
+      <Item value="DonViTinhDTO`0" priority="2" />
+      <Item value="DonViTinhDTO" priority="1" />
+      <Item value="tmpCtrlDVT" priority="1" />
+      <Item value="txtmaDVT" priority="3" />
+      <Item value="btnThemDVT" priority="2" />
+      <Item value="dtTBDPX" priority="0" />
+      <Item value="ChiTietPhieuXuatDAO`0" priority="1" />
+      <Item value="load_GridPhieuXuat`0" priority="0" />
+      <Item value="load_TabPhieuXuat`0" priority="0" />
+      <Item value="tmpCtrlPX" priority="0" />
+      <Item value="GridPhieuXuat1" priority="2" />
+      <Item value="txtTongGiaTri" priority="2" />
+      <Item value="txtTongGia" priority="0" />
+      <Item value="tonggiatri" priority="3" />
+      <Item value="btnThemPX" priority="0" />
+      <Item value="buttonPX" priority="0" />
+      <Item value="txtNoDL" priority="0" />
+      <Item value="no" priority="4" />
+      <Item value="ChiTietPhieuXuatDTO" priority="2" />
+      <Item value="listChiTiet" priority="4" />
+      <Item value="Mamathang" priority="0" />
+      <Item value="Soluongxuat" priority="0" />
+      <Item value="ChiTietPhieuXuatBUS`0" priority="1" />
+      <Item value="i" priority="2" />
+      <Item value="chitiet" priority="1" />
+      <Item value="l" priority="1" />
+      <Item value="ListViewItem" priority="1" />
+      <Item value="LoadLai_lvwPhieuXuat`0" priority="0" />
+      <Item value="txtMaPhieuXuat" priority="0" />
+      <Item value="madl" priority="1" />
+      <Item value="PhieuThuTienDTO`0" priority="2" />
+      <Item value="PhieuThuTienBUS`0" priority="5" />
+      <Item value="cbxDL_PT" priority="3" />
+      <Item value="GridPhieuThu" priority="2" />
+      <Item value="Load_ComBo_PhieuThu`0" priority="1" />
+      <Item value="txtDiaChi_PT" priority="2" />
+      <Item value="da" priority="6" />
+      <Item value="txtDienThoai_PT" priority="2" />
+      <Item value="txtEmail_PT" priority="1" />
+      <Item value="txtSoTienThu_PT" priority="4" />
+      <Item value="dtpkNgayThuTien_PT" priority="0" />
+      <Item value="PhieuThuTienDTO" priority="0" />
+      <Item value="ngaythutien" priority="0" />
+      <Item value="sotienthu" priority="3" />
+      <Item value="load_GridPhieuThu`0" priority="0" />
+      <Item value="PhieuThuDAO`0" priority="1" />
+      <Item value="e" priority="1" />
+      <Item value="Load_ComBo_TimKiem`0" priority="2" />
+      <Item value="maDl" priority="4" />
+      <Item value="tenDL" priority="8" />
+      <Item value="quan" priority="6" />
+      <Item value="malaoiDL" priority="4" />
+      <Item value="txtMaDaiLy_TK" priority="1" />
+      <Item value="strColumnPX" priority="0" />
+      <Item value="txtTenDaiLy_TK" priority="0" />
+      <Item value="cbxTenLDL_TK" priority="0" />
+      <Item value="txtDiaChi_TK" priority="1" />
+      <Item value="cbxQuan_TK" priority="0" />
+      <Item value="dtpkNgayTiepNhan_TK" priority="0" />
+      <Item value="txtEmail_TK" priority="1" />
+      <Item value="txtNoDaiLy_TK" priority="2" />
+      <Item value="maLDL" priority="1" />
+      <Item value="load_GridTimKiem`0" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="emaildaily" priority="1" />
+      <Item value="nodaily" priority="1" />
+      <Item value="noDL" priority="0" />
+      <Item value="maloaiDL" priority="0" />
+      <Item value="LayLoaiDLByTenDL`0" priority="0" />
+      <Item value="LayMaQuanByTenDL`0" priority="0" />
+      <Item value="txtDT_TK" priority="0" />
+      <Item value="load_TabTimKiem`0" priority="1" />
+      <Item value="rdbCongNo" priority="0" />
+      <Item value="dtpkThang_BC" priority="3" />
+      <Item value="thang" priority="6" />
+      <Item value="nam" priority="6" />
+      <Item value="tong" priority="3" />
+      <Item value="MemberwiseClone`0" priority="0" />
+      <Item value="tongPX" priority="0" />
+      <Item value="tongPT" priority="0" />
+      <Item value="PX" priority="7" />
+      <Item value="PT" priority="3" />
+      <Item value="DataTable" priority="2" />
+      <Item value="PS" priority="11" />
+      <Item value="k" priority="2" />
+      <Item value="tienxuat" priority="0" />
+      <Item value="tienthu" priority="0" />
+      <Item value="m" priority="0" />
+      <Item value="xuat" priority="1" />
+      <Item value="thu" priority="2" />
+      <Item value="cuoi" priority="0" />
+      <Item value="load_GridBaoCao`0" priority="0" />
+      <Item value="baocaocongno" priority="8" />
+      <Item value="SqlDbType`0" priority="2" />
+      <Item value="_dt" priority="1" />
+      <Item value="frmChinh`0" priority="2" />
+      <Item value="nodau" priority="0" />
+      <Item value="nocuoi" priority="2" />
+      <Item value="ps" priority="1" />
+      <Item value="tatca" priority="2" />
+      <Item value="sophieuxuat" priority="1" />
+      <Item value="NativeWindow`0" priority="0" />
+      <Item value="tyle" priority="1" />
+      <Item value="tong_gt_px" priority="0" />
+      <Item value="frmMainDoanhSo`0" priority="0" />
+      <Item value="math" priority="0" />
+      <Item value="round`0" priority="0" />
+      <Item value="Math`0" priority="0" />
+      <Item value="tl" priority="0" />
+      <Item value="slquan" priority="0" />
+      <Item value="ThamSoDAO`0" priority="0" />
+      <Item value="ThamSoBUS`0" priority="2" />
+      <Item value="soDltoida" priority="0" />
+      <Item value="mh" priority="0" />
+      <Item value="GiaBanTheoDonViTinhBUS`0" priority="4" />
+      <Item value="dv" priority="0" />
+      <Item value="sltheodvt" priority="1" />
+      <Item value="slton" priority="3" />
+      <Item value="slxuatthat" priority="0" />
+      <Item value="GiaBanTheoDonViTinhDTO`0" priority="0" />
+      <Item value="GiaBanTheoDVT`0" priority="0" />
+      <Item value="MatHangDTO`0" priority="0" />
+      <Item value="MatHangDTO" priority="0" />
+      <Item value="slxuatthatsu" priority="0" />
+      <Item value="load_TabDaiLy`0" priority="0" />
+      <Item value="load_TabPhieuThu`0" priority="0" />
+      <Item value="load_TabBaoCao`0" priority="0" />
+      <Item value="load_TabDonGia`0" priority="0" />
+      <Item value="DA" priority="0" />
+      <Item value="nodl" priority="0" />
+      <Item value="notoida" priority="0" />
+      <Item value="loaidl" priority="0" />
+      <Item value="txtSoLuong" priority="0" />
+      <Item value="txtDonGia" priority="0" />
+      <Item value="load_GridBaoCao_CongNo`0" priority="0" />
+      <Item value="load_GridBaoCao_DoanhSo`0" priority="0" />
+      <Item value="tontaima" priority="0" />
+      <Item value="load_GridLoaiDaiLy`0" priority="0" />
+      <Item value="load_TabLoaiDaiLy`0" priority="0" />
+      <Item value="txtMaLoaiDaiLy" priority="0" />
+      <Item value="txtTenLoaiDaiLy" priority="0" />
+      <Item value="slloaidldaco" priority="0" />
+      <Item value="slloaidlquydinh" priority="0" />
+      <Item value="sldvtdaco" priority="0" />
+      <Item value="sldvtquydinh" priority="0" />
+      <Item value="_ngay" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ColumnHeader">
+      <Item value="AutoResize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.DaiLyDTO">
+      <Item value="Maloaidaily" priority="4" />
+      <Item value="Dienthoai" priority="5" />
+      <Item value="Diachi" priority="3" />
+      <Item value="Maquan" priority="4" />
+      <Item value="Ngaytiepnhan" priority="4" />
+      <Item value="Email" priority="4" />
+      <Item value="Nocuadaily" priority="8" />
+      <Item value="Tendaily" priority="0" />
+      <Item value="Madaily" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Parse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="23" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="11" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.LoaiDaiLyDTO">
+      <Item value="Notoida" priority="3" />
+      <Item value="Tenloaidaily" priority="3" />
+      <Item value="Maloaidaily" priority="4" />
+      <Item value="NocuaLoaiDaiLy" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.Controls.DataGridViewX">
+      <Item value="ColumnAdded" priority="0" />
+      <Item value="Columns" priority="1" />
+      <Item value="ColumnCount" priority="0" />
+      <Item value="DataSource" priority="0" />
+      <Item value="SelectionMode" priority="1" />
+      <Item value="EditingControl" priority="0" />
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumn">
+      <Item value="DividerWidth" priority="0" />
+      <Item value="HeaderCell" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumnCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.OleDbDataAccessHelper">
+      <Item value="ExecuteQuery`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.DaiLyDAO">
+      <Item value="SelectAllDaiLy`0" priority="2" />
+      <Item value="Insertdaily`0" priority="0" />
+      <Item value="DeletedailyByMadaily`0" priority="0" />
+      <Item value="Updatedaily`0" priority="0" />
+      <Item value="SelectdailyByMadaily`0" priority="0" />
+      <Item value="SelectNoByMaDL`0" priority="0" />
+      <Item value="SelectTraCuu`0" priority="0" />
+      <Item value="LayLoaiDLByTenDL`0" priority="0" />
+      <Item value="SelectAllMaDaiLy`0" priority="0" />
+      <Item value="SelectAllMa_No_DaiLy`0" priority="0" />
+      <Item value="SelectNoByMaDaiLy_Moi`0" priority="0" />
+      <Item value="SelectDemSoPhieuXuat`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.DaiLyBUS">
+      <Item value="SelectAllDaiLy`0" priority="6" />
+      <Item value="InsertDaiLy`0" priority="1" />
+      <Item value="DeleteDaiLy`0" priority="0" />
+      <Item value="updateDaiLy`0" priority="2" />
+      <Item value="SelectDaiLyByMa`0" priority="1" />
+      <Item value="selectNoByMaDL`0" priority="2" />
+      <Item value="SelectAllCongNoDaiLy`0" priority="0" />
+      <Item value="SelectTTDLByMa`0" priority="1" />
+      <Item value="SelectTimKiem`0" priority="0" />
+      <Item value="SelectAllMa`0" priority="0" />
+      <Item value="SelectAllMa_No_DaiLy`0" priority="0" />
+      <Item value="selectNoByMaDL_Moi`0" priority="1" />
+      <Item value="SelectDemSoPhieuXuat`0" priority="0" />
+      <Item value="layMaLoaiDLByTenDL`0" priority="0" />
+      <Item value="layMaLoaiDLBymaDL`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.Controls.TextBoxX">
+      <Item value="Text" priority="35" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.Controls.ComboBoxEx">
+      <Item value="Text" priority="5" />
+      <Item value="DataSource" priority="0" />
+      <Item value="DisplayMember" priority="0" />
+      <Item value="ValueMember" priority="3" />
+      <Item value="SelectedIndex" priority="0" />
+      <Item value="SelectedValue" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt16`0" priority="31" />
+      <Item value="ToDateTime`0" priority="4" />
+      <Item value="ToInt64`0" priority="0" />
+      <Item value="ToInt32`0" priority="4" />
+      <Item value="IsDBNull`0" priority="0" />
+      <Item value="ToDouble`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.Editors.DateTimeAdv.DateTimeInput">
+      <Item value="Values" priority="5" />
+      <Item value="Text" priority="2" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortDateString`0" priority="2" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="Month" priority="2" />
+      <Item value="Year" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDaiLy.frmChinh">
+      <Item value="GridDaiLy" priority="2" />
+      <Item value="txtMaDL" priority="0" />
+      <Item value="txtTenDL" priority="0" />
+      <Item value="cbxMaLoaiDL" priority="0" />
+      <Item value="txtDienThoai" priority="0" />
+      <Item value="dtpkNgayTiepNhan" priority="0" />
+      <Item value="txtNoCuaDaiLy" priority="0" />
+      <Item value="Close`0" priority="3" />
+      <Item value="txtMaDaiLy" priority="0" />
+      <Item value="txtmaDVT" priority="2" />
+      <Item value="txtTenDVT" priority="1" />
+      <Item value="btnCanelDVT" priority="0" />
+      <Item value="gridDonViTinh" priority="2" />
+      <Item value="txtMaPhieuXuat" priority="1" />
+      <Item value="cbxDVT" priority="0" />
+      <Item value="dtpkNgayLapPhieu" priority="1" />
+      <Item value="txtTongGiaTri" priority="1" />
+      <Item value="GridPhieuXuat1" priority="4" />
+      <Item value="cbxDL" priority="0" />
+      <Item value="lvwPhieuXuatHang" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.LoaiDaiLyDAO">
+      <Item value="SelectAllLoaiDaiLy`0" priority="0" />
+      <Item value="SelectMaLoaiByTenloai`0" priority="0" />
+      <Item value="NoToiDa`0" priority="0" />
+      <Item value="NoToiDaByMaLoaiDL`0" priority="0" />
+      <Item value="SelectLoaiDaiLyByMaLoaiDaiLy`0" priority="0" />
+      <Item value="DemLoaiDL`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.LoaiDaiLyBUS">
+      <Item value="SelectAllLoaiDaiLy`0" priority="1" />
+      <Item value="SelectMaByTenLoai`0" priority="0" />
+      <Item value="NoToiDa`0" priority="0" />
+      <Item value="DemSoLoaiDL`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.QuanDAO">
+      <Item value="SelectAllQuan`0" priority="0" />
+      <Item value="SelectMaQuanBytenQuan`0" priority="0" />
+      <Item value="DemSoDaiLyMoiQuan`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.QuanBUS">
+      <Item value="SelectAllQuan`0" priority="0" />
+      <Item value="SelectMaByTenLoai`0" priority="0" />
+      <Item value="DemSoDLMoiQuan`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToString`0" priority="4" />
+      <Item value="TrimEnd`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="Rows" priority="40" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.MatHangDAO">
+      <Item value="SelectAllMatHang`0" priority="1" />
+      <Item value="SelectMamatHangbyTenMatHang`0" priority="0" />
+      <Item value="SSLTon`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.MatHangBUS">
+      <Item value="SelectAllmatHang`0" priority="2" />
+      <Item value="SLTon`0" priority="2" />
+      <Item value="updateSLTon`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.DonViTinhBUS">
+      <Item value="SelectAllQuan`0" priority="0" />
+      <Item value="SelectAllDonViTinh`0" priority="4" />
+      <Item value="InsertDonViTinh`0" priority="1" />
+      <Item value="XoaDonViTinh`0" priority="1" />
+      <Item value="CapNhatDonViTinh`0" priority="0" />
+      <Item value="Dem_DVT`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.DonViTinhDAO">
+      <Item value="SelectAllDonViTinh`0" priority="0" />
+      <Item value="Dem_DVT`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="DataBindings" priority="0" />
+      <Item value="Items" priority="5" />
+      <Item value="DrawSubItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ListViewItemCollection">
+      <Item value="Add`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="SelectedItem" priority="0" />
+      <Item value="SelectedValue" priority="7" />
+      <Item value="Text" priority="3" />
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="13" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.PhieuXuatHangDTO">
+      <Item value="Madaily" priority="0" />
+      <Item value="Ngaytiepnhan" priority="0" />
+      <Item value="Tonggiatri" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.PhieuXuatDAO">
+      <Item value="InsertPhieuXuatHang`0" priority="0" />
+      <Item value="SelectAllphieuXuat`0" priority="0" />
+      <Item value="TongGiaTriPXTrongThang`0" priority="0" />
+      <Item value="TongGiaTriPX_Moi`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Validating" priority="0" />
+      <Item value="Value" priority="3" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.PhieuXuatBUS">
+      <Item value="InsertPhieuXuat`0" priority="0" />
+      <Item value="SelectAllPhieuXuat`0" priority="2" />
+      <Item value="tongGiaTriPXTrongThang`0" priority="0" />
+      <Item value="TongGiaTriPX_Moi`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.ChiTietPhieuXuatDTO">
+      <Item value="Maphieuxuat" priority="2" />
+      <Item value="Mamathang" priority="2" />
+      <Item value="Madonvitinh" priority="3" />
+      <Item value="Dongiaxuat" priority="2" />
+      <Item value="Soluongxuat" priority="3" />
+      <Item value="Thanhtien" priority="1" />
+      <Item value="_thanhtien" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.ButtonX">
+      <Item value="Enabled" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.ChiTietPhieuXuatDAO">
+      <Item value="InsertChiTietPhieuXuat`0" priority="1" />
+      <Item value="SelectAllChiTietPhieuXuatByMaPhieuXuat`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.ChiTietPhieuXuatBUS">
+      <Item value="InsertChiTietPhieuXuat`0" priority="0" />
+      <Item value="SelectAllChiTietPhieuXuatByMaPhieuXuat`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowCollection">
+      <Item value="Count" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.PhieuThuTienDTO">
+      <Item value="Ngaythutien" priority="0" />
+      <Item value="Sotien" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.PhieuThuTienBUS">
+      <Item value="InsertPhieuThu`0" priority="2" />
+      <Item value="tongGiaTriPTTrongThang`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.RadioButton">
+      <Item value="Checked" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.PhieuThuDAO">
+      <Item value="TongGiaTriPTTrongThang`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDaiLy.frmChinh">
+      <Item value="thang" priority="1" />
+      <Item value="ngay" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="round`0" priority="0" />
+      <Item value="Round`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.ThamSoDAO">
+      <Item value="SoDLToiDa`0" priority="0" />
+      <Item value="SLloaiDL`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.ThamSoBUS">
+      <Item value="SoDLToiDa`0" priority="0" />
+      <Item value="SLLoaiDL`0" priority="0" />
+      <Item value="SL_DVT`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.GiaBanTheoDonViTinhBUS">
+      <Item value="SoLuongTheoDVT`0" priority="2" />
+      <Item value="MaGiaBanTheo_MaDVT_maMH`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.GiaBanTheoDVT">
+      <Item value="MaGiaBanTheo_maDVT_maMH_`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDaiLy.rptDoanhSo">
+      <Item value="SetParameterValue`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:PhieuThuTienBUS.cs" caret="509" fromTop="16" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.Designer.cs" caret="423472" fromTop="2262" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:LoaiDaiLyBUS.cs" caret="989" fromTop="15" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DonViTinhBUS.cs" caret="1395" fromTop="26" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DonViTinhDAO.cs" caret="7363" fromTop="31" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:MatHangDAO.cs" caret="2713" fromTop="12" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:QuanBUS.cs" caret="698" fromTop="11" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:ThamSoBUS.cs" caret="1073" fromTop="25" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:ThamSoDAO.cs" caret="4182" fromTop="26" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:LoaiDaiLyDAO.cs" caret="7314" fromTop="17" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:GiaBanTheoDonViTinhBUS.cs" caret="1118" fromTop="28" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:GiaBanTheoDVT.DAO.cs" caret="2267" fromTop="19" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:OleDbDataAccessHelper.cs" caret="2308" fromTop="19" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DaiLyDAO.cs" caret="13378" fromTop="8" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DaiLyBUS.cs" caret="2932" fromTop="20" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:ChiTietPhieuXuatDTO.cs" caret="1025" fromTop="7" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:MatHangBUS.cs" caret="1316" fromTop="28" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:DaiLyDTO.cs" caret="0" fromTop="0" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:GiaBanTheoDonViTinhDTO.cs" caret="0" fromTop="0" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:QuanDAO.cs" caret="698" fromTop="0" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:DataSet1.cs" caret="129" fromTop="5" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:PhieuXuatDAO.cs" caret="4154" fromTop="11" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:PhieuXuatBUS.cs" caret="906" fromTop="28" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:PhieuThuDAO.cs" caret="1457" fromTop="25" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:Form1.cs" caret="0" fromTop="0" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:Program.cs" caret="315" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainReCongNo.cs" caret="487" fromTop="12" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainDoanhSo.cs" caret="624" fromTop="12" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainDoanhSo.Designer.cs" caret="159" fromTop="2" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="1162" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:MatHangDAO.cs" caret="2894" fromTop="16" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:MatHangDAO.cs" caret="2713" fromTop="12" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DonViTinhDAO.cs" caret="7353" fromTop="20" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DonViTinhDAO.cs" caret="7186" fromTop="10" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DonViTinhBUS.cs" caret="1311" fromTop="14" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DonViTinhBUS.cs" caret="1431" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="38707" fromTop="4" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DonViTinhBUS.cs" caret="1395" fromTop="11" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="39188" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="39316" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="65303" fromTop="5" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="65464" fromTop="9" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainDoanhSo.cs" caret="910" fromTop="9" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainReCongNo.cs" caret="867" fromTop="9" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="76023" fromTop="12" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainDoanhSo.cs" caret="545" fromTop="10" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainDoanhSo.cs" caret="472" fromTop="6" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainDoanhSo.cs" caret="906" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="77972" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainReCongNo.cs" caret="547" fromTop="16" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmMainReCongNo.cs" caret="474" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="78955" fromTop="3" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="74012" fromTop="9" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="52936" fromTop="12" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="14912" fromTop="2" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="16041" fromTop="20" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="16026" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="15964" fromTop="16" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="15795" fromTop="8" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="637" fromTop="5" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

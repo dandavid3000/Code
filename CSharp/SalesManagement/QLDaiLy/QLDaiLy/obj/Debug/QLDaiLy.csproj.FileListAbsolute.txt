@@ -1,0 +1,10 @@
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDaiLy.exe
+D:\Học kỳ 1\CNPM\QLDaiLy\bin\QLDaiLy.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\ResolveAssemblyReference.cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.Properties.Resources.resources
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.csproj.GenerateResource.Cache
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.pdb
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmChinh.resources
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.exe.licenses
+D:\Học kỳ 1\CNPM\QLDaiLy\QLDaiLy\obj\Debug\QLDaiLy.frmPhieuXuatHang.resources

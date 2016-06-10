@@ -1,0 +1,4 @@
+C:\Users\David\Documents\Visual Studio 2005\Projects\Tuan01\BTVN3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2005\Projects\Tuan01\BTVN3\obj\Debug\BTVN3.Form1.resources
+C:\Users\David\Documents\Visual Studio 2005\Projects\Tuan01\BTVN3\obj\Debug\BTVN3.Properties.Resources.resources
+C:\Users\David\Documents\Visual Studio 2005\Projects\Tuan01\BTVN3\obj\Debug\BTVN3.csproj.GenerateResource.Cache

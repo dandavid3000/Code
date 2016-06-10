@@ -1,0 +1,10 @@
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\bin\Debug\QLSV.exe
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\bin\Debug\QLSV.pdb
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.bin.Debug.Reports.rptDanhSach.rpt
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.rptDanhSach.rpt
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.Form1.resources
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.Properties.Resources.resources
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.csproj.GenerateResource.Cache
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.exe
+C:\Users\Dan\Desktop\NM CNPM\SourceCode\QLSV_Access\QLSV\obj\Debug\QLSV.pdb

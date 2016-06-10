@@ -1,0 +1,10 @@
+C:\Users\David\Desktop\06k3021\06k3021\bin\Debug\06k3021.exe
+C:\Users\David\Desktop\06k3021\06k3021\bin\Debug\06k3021.pdb
+C:\Users\David\Desktop\06k3021\06k3021\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\06k3021\06k3021\obj\Debug\_6k3021.Form1.resources
+C:\Users\David\Desktop\06k3021\06k3021\obj\Debug\_6k3021.Properties.Resources.resources
+C:\Users\David\Desktop\06k3021\06k3021\obj\Debug\06k3021.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\06k3021\06k3021\obj\Debug\06k3021.exe
+C:\Users\David\Desktop\06k3021\06k3021\obj\Debug\06k3021.pdb
+C:\Users\David\Desktop\06k3021\06k3021\bin\Debug\MyClassLibrary.dll
+C:\Users\David\Desktop\06k3021\06k3021\bin\Debug\MyClassLibrary.pdb

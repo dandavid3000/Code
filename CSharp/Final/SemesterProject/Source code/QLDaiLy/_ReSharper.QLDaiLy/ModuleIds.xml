@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="32125E83-9463-4DD2-9B61-5212220B7A66" ModuleId="QLDL.DTO" />
+  <Module PersistentId="DA86B790-E4FE-402B-9E67-052C9BDFFE15" ModuleId="QLDL.DAO" />
+  <Module PersistentId="96118495-50A5-4426-A04C-E9A783484A9D" ModuleId="QLDaiLy" />
+  <Module PersistentId="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB" ModuleId="QLDL.BUS" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="Miscellaneous Files" />
+</Modules>

@@ -1,0 +1,18 @@
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\bin\Debug\BaiTap2.exe
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\bin\Debug\BaiTap2.pdb
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.Form3.resources
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.Properties.Resources.resources
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.csproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.exe
+C:\Documents and Settings\sv\Desktop\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.pdb
+C:\Users\David\Desktop\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.exe
+C:\Users\David\Desktop\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\bin\Debug\BaiTap2.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\bin\Debug\BaiTap2.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.Form3.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.Properties.Resources.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan4_VeNha\BaiTap2\obj\Debug\BaiTap2.csproj.GenerateResource.Cache

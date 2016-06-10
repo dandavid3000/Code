@@ -1,0 +1,16 @@
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\bin\Debug\WindowExplorer.exe
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\bin\Debug\WindowExplorer.pdb
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\obj\Debug\WindowExplorer.frmMain.resources
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\obj\Debug\WindowExplorer.Properties.Resources.resources
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\obj\Debug\WindowExplorer.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\obj\Debug\WindowExplorer.exe
+C:\Users\David\Desktop\C4W\C4W_Tuan6\WindowExplorer\obj\Debug\WindowExplorer.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\obj\Debug\WindowExplorer.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\obj\Debug\WindowExplorer.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\bin\Debug\WindowExplorer.exe
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\bin\Debug\WindowExplorer.pdb
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\obj\Debug\WindowExplorer.frmMain.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\obj\Debug\WindowExplorer.Properties.Resources.resources
+C:\Users\David\Desktop\Đồ án\C4W\C4W_Tuan6_Explorer\WindowExplorer\obj\Debug\WindowExplorer.csproj.GenerateResource.Cache

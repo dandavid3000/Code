@@ -1,0 +1,266 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="6" />
+      <Item value="DaiLyDTO`0" priority="7" />
+      <Item value="int" priority="11" />
+      <Item value="String`0" priority="0" />
+      <Item value="string" priority="15" />
+      <Item value="DateTime`0" priority="6" />
+      <Item value="madaily" priority="2" />
+      <Item value="_madaily" priority="0" />
+      <Item value="_tendaily" priority="0" />
+      <Item value="tendaily" priority="0" />
+      <Item value="_maloaidaily" priority="0" />
+      <Item value="maloaidaily" priority="0" />
+      <Item value="_dienthoai" priority="0" />
+      <Item value="dienthoai" priority="0" />
+      <Item value="_diachi" priority="0" />
+      <Item value="diachi" priority="0" />
+      <Item value="_maquan" priority="0" />
+      <Item value="maquan" priority="0" />
+      <Item value="_ngaytiepnhan" priority="0" />
+      <Item value="ngaytiepnhan" priority="1" />
+      <Item value="_email" priority="0" />
+      <Item value="email" priority="0" />
+      <Item value="_nocuadaily" priority="0" />
+      <Item value="nocuadaily" priority="0" />
+      <Item value="_soluongloaidaily" priority="0" />
+      <Item value="soluongloaidaily" priority="0" />
+      <Item value="_soluongmathang" priority="0" />
+      <Item value="soluongmathang" priority="0" />
+      <Item value="_soluongDVT" priority="0" />
+      <Item value="soluongDVT" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="load_lvwPhieuXuatHang`0" priority="0" />
+      <Item value="columnHeader3" priority="0" />
+      <Item value="QLDL" priority="1" />
+      <Item value="DTO" priority="1" />
+      <Item value="OleDbDataAccessHelper" priority="0" />
+      <Item value="ExecuteNoneQuery`0" priority="0" />
+      <Item value="dr" priority="1" />
+      <Item value="new" priority="6" />
+      <Item value="DaiLyDTO" priority="3" />
+      <Item value="loaidaily" priority="0" />
+      <Item value="load_GridDaiLyDaiLy`0" priority="2" />
+      <Item value="GridDaiLy" priority="4" />
+      <Item value="DataTable`0" priority="6" />
+      <Item value="dtTB" priority="2" />
+      <Item value="static" priority="2" />
+      <Item value="OleDbDataAccessHelper`0" priority="0" />
+      <Item value="query" priority="0" />
+      <Item value="return" priority="1" />
+      <Item value="dt" priority="2" />
+      <Item value="System" priority="2" />
+      <Item value="Data" priority="2" />
+      <Item value="DAO" priority="0" />
+      <Item value="DaiLyDAO`0" priority="3" />
+      <Item value="DaiLyDAO" priority="0" />
+      <Item value="dl" priority="5" />
+      <Item value="DaiLyBUS`0" priority="4" />
+      <Item value="txtTenDL" priority="1" />
+      <Item value="cbxMaLoaiDL" priority="0" />
+      <Item value="txtDienThoai" priority="0" />
+      <Item value="Convert`0" priority="7" />
+      <Item value="txtDiaChi" priority="0" />
+      <Item value="cbxMaQuan" priority="0" />
+      <Item value="dtpkNgayTiepNhan" priority="3" />
+      <Item value="txtEmail" priority="0" />
+      <Item value="strColumnDaiLy" priority="2" />
+      <Item value="txtNoToiDa" priority="0" />
+      <Item value="ten" priority="1" />
+      <Item value="maloai" priority="0" />
+      <Item value="dc" priority="0" />
+      <Item value="qu" priority="0" />
+      <Item value="ngay" priority="0" />
+      <Item value="em" priority="0" />
+      <Item value="Load_DataBinding`0" priority="1" />
+      <Item value="tmpCtrlDaiLy" priority="2" />
+      <Item value="buttonDaiLy" priority="3" />
+      <Item value="bAdd" priority="6" />
+      <Item value="Clear_DataBinding`0" priority="0" />
+      <Item value="txtMaDL" priority="1" />
+      <Item value="madaly" priority="0" />
+      <Item value="dtTBDaiLy" priority="1" />
+      <Item value="Reset_Form`0" priority="2" />
+      <Item value="false" priority="2" />
+      <Item value="true" priority="9" />
+      <Item value="GetValue`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="tab" priority="1" />
+      <Item value="load_TabDaiLy`0" priority="0" />
+      <Item value="tabItemPhong" priority="4" />
+      <Item value="tabControl1" priority="1" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="TabItem" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ColumnHeader">
+      <Item value="AutoResize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.DaiLyDTO">
+      <Item value="Maloaidaily" priority="4" />
+      <Item value="Dienthoai" priority="5" />
+      <Item value="Diachi" priority="3" />
+      <Item value="Maquan" priority="4" />
+      <Item value="Ngaytiepnhan" priority="4" />
+      <Item value="Email" priority="4" />
+      <Item value="Nocuadaily" priority="2" />
+      <Item value="Tendaily" priority="0" />
+      <Item value="Madaily" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Parse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDL.DTO.LoaiDaiLyDTO">
+      <Item value="Notoida" priority="3" />
+      <Item value="Tenloaidaily" priority="3" />
+      <Item value="Maloaidaily" priority="4" />
+      <Item value="NocuaLoaiDaiLy" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.Controls.DataGridViewX">
+      <Item value="ColumnAdded" priority="0" />
+      <Item value="Columns" priority="1" />
+      <Item value="ColumnCount" priority="0" />
+      <Item value="DataSource" priority="0" />
+      <Item value="SelectionMode" priority="1" />
+      <Item value="EditingControl" priority="0" />
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumn">
+      <Item value="DividerWidth" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumnCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.OleDbDataAccessHelper">
+      <Item value="ExecuteQuery`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.DAO.DaiLyDAO">
+      <Item value="SelectAllDaiLy`0" priority="0" />
+      <Item value="Insertdaily`0" priority="0" />
+      <Item value="DeletedailyByMadaily`0" priority="0" />
+      <Item value="Updatedaily`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@QLDL.BUS.DaiLyBUS">
+      <Item value="SelectAllDaiLy`0" priority="0" />
+      <Item value="InsertDaiLy`0" priority="1" />
+      <Item value="DeleteDaiLy`0" priority="0" />
+      <Item value="updateDaiLy`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.Controls.TextBoxX">
+      <Item value="Text" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.Controls.ComboBoxEx">
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt16`0" priority="4" />
+      <Item value="ToDateTime`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.Editors.DateTimeAdv.DateTimeInput">
+      <Item value="Values" priority="3" />
+      <Item value="Text" priority="1" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortDateString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:QLDaiLy.frmChinh">
+      <Item value="GridDaiLy" priority="1" />
+      <Item value="txtMaDL" priority="0" />
+      <Item value="txtTenDL" priority="0" />
+      <Item value="cbxMaLoaiDL" priority="0" />
+      <Item value="txtDienThoai" priority="0" />
+      <Item value="dtpkNgayTiepNhan" priority="0" />
+      <Item value="txtNoCuaDaiLy" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.TabItem">
+      <Item value="Visible" priority="0" />
+      <Item value="PerformClick`0" priority="1" />
+      <Item value="IsSelected" priority="2" />
+      <Item value="CloseButtonVisible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevComponents.DotNetBar.TabControl">
+      <Item value="Tabs" priority="0" />
+      <Item value="SelectedTabIndex" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:ThamSoDTO.cs" caret="1373" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmPhieuXuatHang.cs" caret="1417" fromTop="15" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DataProvider.cs" caret="116" fromTop="4" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:OleDbDataAccessHelper.cs" caret="3910" fromTop="128" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:LoaiDaiLyDTO.cs" caret="311" fromTop="4" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:LoaiDaiLyDAO.cs" caret="5844" fromTop="28" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:Program.cs" caret="494" fromTop="18" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DaiLyBUS.cs" caret="693" fromTop="8" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DaiLyDAO.cs" caret="2587" fromTop="9" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:QuanDTO.cs" caret="0" fromTop="0" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:DaiLyDTO.cs" caret="3246" fromTop="12" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.Designer.cs" caret="184637" fromTop="8" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="5120" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="10539" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="10468" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="10379" fromTop="16" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="10490" fromTop="16" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="11190" fromTop="9" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="836" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="3428" fromTop="2" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="10934" fromTop="2" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="7418" fromTop="6" />
+      <File id="B0F5DCBA-CC09-42E5-AF04-E0AE6A84D7FB/f:DaiLyBUS.cs" caret="716" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="11601" fromTop="8" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="6807" fromTop="6" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:DaiLyDTO.cs" caret="2497" fromTop="8" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:DaiLyDTO.cs" caret="2789" fromTop="9" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DaiLyDAO.cs" caret="2412" fromTop="1" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DaiLyDAO.cs" caret="1743" fromTop="5" />
+      <File id="DA86B790-E4FE-402B-9E67-052C9BDFFE15/f:DaiLyDAO.cs" caret="1743" fromTop="8" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:DaiLyDTO.cs" caret="3085" fromTop="7" />
+      <File id="32125E83-9463-4DD2-9B61-5212220B7A66/f:DaiLyDTO.cs" caret="3372" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="6464" fromTop="5" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="7039" fromTop="15" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="7279" fromTop="12" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="3323" fromTop="17" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="6102" fromTop="10" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="11801" fromTop="13" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="11469" fromTop="7" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.Designer.cs" caret="184637" fromTop="8" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="11938" fromTop="6" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="11980" fromTop="4" />
+      <File id="96118495-50A5-4426-A04C-E9A783484A9D/f:frmChinh.cs" caret="5017" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

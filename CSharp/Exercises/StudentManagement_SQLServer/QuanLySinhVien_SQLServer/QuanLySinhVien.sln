@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLySinhVien", "QuanLySinhVien\QuanLySinhVien.csproj", "{EC8DC564-7619-4B8A-A6FB-CF70EABDA273}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupQLSV", "SetupQLSV\SetupQLSV.vdproj", "{68C4F074-6AAF-45CB-ABC4-92BF8BC0C580}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC8DC564-7619-4B8A-A6FB-CF70EABDA273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8DC564-7619-4B8A-A6FB-CF70EABDA273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8DC564-7619-4B8A-A6FB-CF70EABDA273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8DC564-7619-4B8A-A6FB-CF70EABDA273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C4F074-6AAF-45CB-ABC4-92BF8BC0C580}.Debug|Any CPU.ActiveCfg = Debug
+		{68C4F074-6AAF-45CB-ABC4-92BF8BC0C580}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

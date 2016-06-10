@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DeThi>
+<CauHoi noiDung="1+1=?" dapAnDung="b">
+<DapAnA>1</DapAnA>
+<DapAnB>2</DapAnB>
+<DapAnC>3</DapAnC>
+<DapAnD>4</DapAnD>
+</CauHoi>
+<CauHoi noiDung="2+2=?" dapAnDung="d">
+<DapAnA>1</DapAnA>
+<DapAnB>2</DapAnB>
+<DapAnC>3</DapAnC>
+<DapAnD>4</DapAnD>
+</CauHoi>
+</DeThi>
