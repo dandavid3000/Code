@@ -65,6 +65,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 
 ## Projects in CSharp
 >Most are B2B applications, and exercises
+
 1. [Book management app](CSharp/BookManagement/06k3021) This app is used to manage a book system. There are some basic features such as adding, deleting, updating books. It's baed on 3 layers model.
 2. [Exercises](CSharp/Exercises) This folder contains applications about basic features in building an application using *SQL*, or *Access* databases.
 3. [Sale management app](CSharp/SalesManagement/QLDaiLy) This is similar to `Book management app` with other system.
