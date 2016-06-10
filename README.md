@@ -15,7 +15,7 @@ Most of the projects I mainly finished in `C/C++` or in `Java`. `Python` is a ne
 * [What comes next](#what-comes-next)
 
 ## Secure integration of Internet of Things
-I participated in a co-innovation project named [Secure Integration of Internet of Things](http://scn.sap.com/community/labs/blog/2015/06/25/co-innovation-project-on-predictive-analytics-for-pipeline-integrity). The requirements come from French Public Sector - City of Antibes. They'd like to have an end-to-end solution for data collected by more than 2000 sensors, and deployed for their water network. They use the data for `predictive maintenance` to predict the pipeline failure of the water network. In order to improve the management, and financial optimization, they also would like to visualize their water network. The data will be encrypted at the beginning, and only decrypted 
+I participated in a co-innovation project named [Secure Integration of Internet of Things](http://scn.sap.com/community/labs/blog/2015/06/25/co-innovation-project-on-predictive-analytics-for-pipeline-integrity). The requirements come from French Public Sector - City of Antibes. They'd like to have an end-to-end solution for data collected by more than 2000 sensors, and deployed for their water network. They use the data for `predictive maintenance` to predict the pipeline failures of the water network. In order to improve management, and financial optimization, they also would like to visualize their water network. The data will be encrypted at the beginning, and only decrypted at the end
 
 I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a presentation file here which I used for my defense, and for some demo videos you can contact me directly via my email address. Actually, I completed a Enterprise Github about this work to help others can replicate my concept if it's neccessary, as well as a detailed report with more than 150 pages.
 
@@ -33,7 +33,7 @@ Regarding to our work in this projects:
 
 The **final report** for this work is available [here](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/SemesterProjectReport_VO.pdf) along with the [source code](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/TTool.zip). The protocol is developed step by step, and stored [here](Java/Eurecom/SmallClient_Server/) from the simple one from multithreaded to the version that uses SSL socket usage.
 
-## Projects in C/C++
+## Projects in C and C plus plus
 ## Projects in Java
 ## Projects in Python
 ## Projects in CSharp
