@@ -1,7 +1,7 @@
->For those who may concern about my work I have been doing during my study. This folder contains many different folders storing various projects
+>For those who may concern about my work I have been doing during my study. This folder contains many different folders storing various projects. There are my 6-month internship at SAP Labs France, Eurecom semester project, exercises as well as projects relating to software development in different programming languages.
 
 #Introduction
-Most of the projects I mainly finished in C/C++ or in Java. Python is a new language that I've had a chance to access recently since my Master's program at Eurecom. Some projects you'll find strange because they're not in English because I am still working on them.
+Most of the projects I mainly finished in C/C++ or in Java. Python is a new language that I've had a chance to access recently since my Master's program at Eurecom. I'm really interested in this language, still studying it, and catching up. Some projects you'll find strange because they're not in English because I am still working on them.
 
 ## Table of contents
 * [Secure integration of Internet of Things](#secure-integration-of-internet-of-things)
@@ -23,3 +23,4 @@ Most of the projects I mainly finished in C/C++ or in Java. Python is a new lang
 ## Projects in Visual Basic
 ## Web projects
 ## What comes next
+I hope you will see more interesting project I will participate in. Currently I am looking for a position to start my career. I'm passionate about Software development, Internet of Things, and Security.
