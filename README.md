@@ -1,7 +1,7 @@
 >This folder contains many different subfolders storing various projects that I have been working during my study. There are my 6-month internship at SAP Labs France, Eurecom semester project, exercises as well as projects relating to software development in different programming languages.
 
 #Introduction
-Most of the projects I mainly finished in `C/C++` or in `Java`. `Python` is a new language that I've had a chance to access recently since my Master's program at Eurecom under courses such as `Secure System`, `SoftDev`, and `Forensics`. I'm really interested in this language, still studying it, and catching up. 
+Most of the projects I mainly finished in `C/C++` or in `Java`. `Python` is a new language that I've had a chance to access recently since my Master's program at Eurecom under courses such as `System Security`, `SoftDev`, and `Forensics`. I'm really interested in this language, still studying it, and catching up. 
 
 p/s Some projects you'll find strange because they're not in English. I am still working on them.
 
@@ -56,7 +56,10 @@ This folder contains exercises about algorithms, and data structures.
 This folder contains important projects such as [Finding paths Algs](C/Projects/Algorithms), [Hardware security key breakdown](C/Projects/HardwareSec), and [Singer management](C/Projects/SingerManagement) which is an example of OOP Programming in C/C++.
 
 ## Projects in Java
-
+1. [Eurecom](Java/Eurecom) This folder contains my semester project at Eurecom.
+2. [Java exercises](Java/Projects/Exercises) There are some exercises about *IO*, *jdbc*, and *multithread*.
+3. [Java mail app](Java/Projects/Final/JavaMailApp/0941037) This is my mail application in java.
+4. [Java video streaming app](Java/Projects/Final/StreamingApplication) This is one of the most interesting projects. The application contains a client-server model. When a server plays a video, clients can connect to the server and watch the video which is being played on server.
 
 ## Projects in Python
 ## Projects in CSharp
