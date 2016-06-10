@@ -71,6 +71,10 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 3. [Sale management app](CSharp/SalesManagement/QLDaiLy) This is similar to `Book management app` with other system.
 4. [Acency management app](CSharp/Final/SemesterProject/) This is the final project with set-up kits, report, and source code.
 
+![Application interface](images/CSharp.png "Application interface")
+
+
+
 ## Projects in Visual Basic
 ## Web projects
 ## What comes next
