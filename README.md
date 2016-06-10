@@ -63,7 +63,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 
 ## Projects in Python
 
-1. [Challenges](Python/Challenges) This folder contains challenges as follows: 
+* [Challenges](Python/Challenges) This folder contains challenges as follows: 
   - [forensics1](Python/Challenges/Forensics1.py) Write a simple python script that, by invoking tshark, prints the IPs that are likely natted using the TCP timestamp option. Requirements: 
     - self-contained python script that uses tshark for the packet analysis. 
     - The tool should receive a pcap file as parameter and print the IP addresses that are likely natted. 
@@ -78,7 +78,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 
 -
 
-2. [Network project](Python/Network1_Project) Building a client-server in Python - Please check [this report](Python/Network1_Project/Report.pdf).
+* [Network project](Python/Network1_Project) Building a client-server in Python - Please check [this report](Python/Network1_Project/Report.pdf).
   - Implement a client capable of scraping data from a webpage and to store
 these data into a small database
     - You will have to use sockets – no existing library will be allowed
