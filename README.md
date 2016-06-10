@@ -19,9 +19,9 @@ I participated in a co-innovation project named [Secure Integration of Internet 
 
 I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a presentation file [here]() which I used for my defense, and for some demo videos you can contact me directly via my email address. I also completed an Enterprise Github about this work to help others can replicate my concept, as well as a detailed report with more than 150 pages.
 
-At the end, the concept worked perfectly, it's considered to developed and deloyed as a real bussiness.
+At the end, the concept worked perfectly, it's considered to develop and deloy as a real bussiness.
 
-I am really into this project because it brought me a lot of experiences. I could improve my programming skills, and learnt new languages, platforms. In addition, I had a chance to improve my communications skill by speaking directly to the stakeholders, and access new modern technologies.
+I am really into this project because it brought me a lot of experiences. I could improve my programming skills, and learnt new languages, platforms. In addition, I had a chance to improve my communication skills by communicating directly to the stakeholders in a multicultural environment, and access new modern technologies.
 
 ## Attack Crawler for Modern Networked Systems
 Because we have a large scale attacks on networked systems have been conducted in recent year. Unfortunately, to study and analyse those attacks is quite complex, and requires gathering information from very diverse sourses.
