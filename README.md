@@ -21,7 +21,6 @@ I participated in a co-innovation project named [Secure Integration of Internet 
 
 ![Architecture](images/architecturediagram.png "Architecture Overview")
 
-
 I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a **presentation file** [here](https://github.com/dandavid3000/Documents/blob/master/SecureIoT/SAP_Defense.pptx) which I used for my defense, and for some demo videos you can contact me directly via my email address. I also completed an Enterprise Github about this work to help others can replicate my concept, as well as a detailed report with more than 150 pages.
 
 At the end, the concept worked perfectly, it's considered to develop and deloy as a real bussiness.
@@ -63,6 +62,14 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 ![Streaming application](images/Streamingapplication.png "Streaming application")
 
 ## Projects in Python
+1. [Challenges](Python/Challenges) This folder contains challenges such as [forensics1](Python/Challenges/Forensics1.py)
+* Write a simple python script that, by invoking tshark, prints the IPs that are likely natted using the TCP timestamp option.
+Requirements:
+
+** self-contained python script that uses tshark for the packet analysis
+** The tool should receive a pcap file as parameter and print the IP addresses that are likely natted.
+
+
 
 ## Projects in CSharp
 >Most are B2B applications, and exercises
@@ -79,7 +86,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 2. [Exercises](VisualBasic/Exercises) This folder contains some basic programs such as *Hospital management*, *Scheduling*, *Student management*.
 
 ## Web projects
-1. [E-commerce](Web/E_Commerce) a web system that connects many websites together to perform e-commerce. For example, a selling website can connect to a bank to do the payment, and supply APIs for other websites about it's products.
+1. [E-commerce](Web/E_Commerce) a web system that connects many websites together to perform e-commerce. For example, a website can connect to a bank to do the payment, and supply APIs for other websites about it's products.
 2. [The pictures](Web/ThePictures) A basic web project for building an entertaining website
 3. [Web interaction](Web/WebInt) This folder contains assignments, project of the course that I studied about HTML5, CSS, and javascript.
 
