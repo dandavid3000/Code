@@ -1,0 +1,924 @@
+﻿<html>
+  <head>
+    <link href="http://nettiers.com/common/styles.css" rel="stylesheet" type="text/css" />
+    <style>
+				      span.executionTime {font-style: italic; color: #55AEED;}
+	            </style>
+  </head>
+  <body>
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="700">
+          <a href="http://nettiers.com/download.aspx" target="_blank">
+            <img border="0" src="http://nettiers.com/img/netTiersLogo2.0_small.gif" alt=".netTiers 2.0" />
+          </a>
+          <hr />
+          <div>
+            <a href="http://nettiers.com/">Website</a>
+                                |    
+                             <a href="http://community.codesmithtools.com/forums/default.aspx?GroupID=11/">Forums</a>
+                                |    
+                             <a href="http://sourceforge.net/projects/nettiers/">Sourceforge</a>
+                                |    
+                             <a href="https://www.nettiers.com/download.aspx">Downloads</a></div>
+          <hr />
+          <h2>Generation Report</h2>
+          <div style="width:70%">
+            <span class="content">.netTiers is a set of open source code generation templates that
+                            simplify the tasks of creating customized Application Framework for your Microsoft.Net
+                            applications in just a few minutes. 
+                            <br /><br />
+                            This report shows you a list of all of your selected .net class that were generated.  This report
+                            also shows gives a quick start configuration instructions so that you can get started using .netTiers.
+                            If you need further documentation, please check out the documentation section of this report.
+                         </span>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td>
+          <h2>Sections</h2>
+          <ol>
+            <li>
+              <a href="#summary">Summary</a>
+            </li>
+            <li>
+              <a href="#Configuration">Configuration</a>
+            </li>
+            <li>
+              <a href="#documentation">Documentation</a>
+            </li>
+            <li>
+              <a href="#details">Details - Generated Classes</a>
+            </li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="100%">
+          <div id="Summary" style="display:inline">
+            <a name="summary" />
+            <h3>Generation Summary <a href="#top" class="calloutlink">Top</a></h3>
+            <span class="docSubHeader">Generated Solution Found: </span>
+            <br />
+            <span class="content">
+              <ul>
+                <li>file:\\\c:\NetTiers\QuanLyHocSinhPTNK\QuanLyHocSinhPTNK.sln</li>
+              </ul>
+            </span>
+            <table>
+              <tr>
+                <td width="200">Total Object Created</td>
+                <td>191</td>
+              </tr>
+              <tr>
+                <td width="200">Total Errors / Warnings</td>
+                <td>11</td>
+              </tr>
+            </table>
+          </div>
+          <div id="Configuration" style="display:inline">
+            <a name="Configuration" />
+            <h3>.netTiers Quick Configuration <a href="#top" class="calloutlink">Top</a></h3>
+            <p> Below are the steps to to configure the .netTiers components.</p>
+            <p>To Configure your application to use .netTiers, add the following sections to your App / Web config files.
+			
+			 You can find more information on how to set this up at<br /><a href="http://docs.nettiers.com">.netTiers 2 Install and Configuration Document @ http://docs.netTiers.com</a></p>
+            <p>1. Add a new section to the configSettings</p>
+            <pre>
+  &lt;section name="netTiersService"
+		type="QuanLyHocSinhPTNK.Data.Bases.NetTiersServiceSection, QuanLyHocSinhPTNK.Data"
+		allowDefinition="MachineToApplication"
+		restartOnExternalChanges="true" /&gt;
+</pre>
+            <p>2.  Add an item to the ConnectionStrings Section</p>
+            <pre>
+&lt;connectionStrings&gt;
+  &lt;add name="netTiersConnectionString" connectionString="Data Source=KHOANHOC\SQLEXPRESS;Initial Catalog=QuanLyHocSinhPTNK;Integrated Security=True" /&gt;
+&lt;/connectionStrings&gt;
+</pre>
+            <p>3.  Add the netTierService configuration section to your configuration file. Comment / Uncomment which provider you plan on using / not using</p>
+            <pre>
+&lt;netTiersService defaultProvider="SqlNetTiersProvider"&gt;
+  &lt;providers&gt;
+    
+    &lt;add 
+	name="SqlNetTiersProvider" 
+	type="QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider, QuanLyHocSinhPTNK.Data.SqlClient"
+	connectionStringName="netTiersConnectionString"
+	providerInvariantName="System.Data.SqlClient" 
+	entityFactoryType="QuanLyHocSinhPTNK.Entities.EntityFactory"
+	useEntityFactory="true"
+	enableEntityTracking="false"
+	enableMethodAuthorization="false"
+	useStoredProcedure="false"
+  /&gt;
+    
+  &lt;/providers&gt;
+&lt;/netTiersService&gt;
+ </pre>
+          </div>
+          <div id="Documentation" style="display:inline">
+            <a name="documentation" />
+            <h3>Documentation <a href="#top" class="calloutlink">Top</a></h3>
+            <a href="http://wiki.nettiers.com">.netTiers 2.0 Getting Started</a>
+            <br />
+            <br />
+            <b>Sample API Usage</b>
+            <br />
+            <table style="border: 1px dashed rgb(255, 153, 0); background-color: rgb(255, 255, 223);" bgcolor="#ffffdf">
+              <tbody>
+                <tr>
+                  <td>
+                    <pre>
+                      <font color="black" face="Courier New" size="2">
+AccountService accountsService = <font color="blue">new</font> AccountsService();<font color="green">
+//GetAll()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetAll();
+
+<font color="green">//GetPagedl()</font>
+TList&lt;Accounts&gt; accountList = 
+accountsService.GetPaged("IsActive = 1 AND AccountName LIKE 'smi%'");
+
+<font color="green">//GetByFk()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetByCustomerId(25);
+
+<font color="green">//GetIX()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetByAccountCreatedDate(<font color="blue">new</font> DateTime("1/1/2006"));<br /><br /><font color="green">
+//Get()</font>
+entity.Entitykey;
+Accounts account = accountsService.Get(entity.EntityKey);
+
+<font color="green">//Insert()</font>
+Account accountEntity = <font color="blue">new</font> Account();
+accountEntity.AccountName = "MyAccountName";
+accountEntity.CreatedDate = DateTime.Now;
+
+accountsService.Insert(accountEntity);
+accountEntity.AccountId <font color="green">// is now populated</font><font color="green">
+//Delete()</font>
+bool result = accountsService.Delete(accountEntity);
+
+<font color="green">//Delete()</font>
+bool result = accountsService.Delete(23);
+
+<font color="green">//Update()</font>
+accountEntity.AccountName = "MyAccountName 2";
+accountsService.Update(accountEntity);
+        
+<font color="green">//GetByManyToManyl()</font>
+TList&lt;Customers&gt; accountList = accountsService.GetCustomers_From_AccountsReceivable();
+					            
+<font color="green">//GetCustomProcedureName()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetByAccountMaturationDate();
+    
+<font color="green">//DeepLoadByIdl() using PK</font>
+Account account = accountsService.DeepLoadByAccountId(id, <font color="blue">false</font>, DeepLoadType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /><font color="green">//DeepLoadByIdl() using FK</font>
+TList&lt;Account&gt; account = accountsService.DeepLoadByCustomerId(id, <font color="blue">false</font>, DeepLoadType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /><font color="green">//already instatiated objects</font><font color="green">//DeepLoad</font>
+accountsService.DeepLoad(myAccountEntity, <font color="blue">false</font>, DeepLoadType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /><font color="green">
+Response.Write(accountsService.CustomerIdSource.LastName); <font color="green">// is now filled</font>
+Response.Write(accountsService.ChartOfAccountsCollection.Count); <font color="green">// is now filled</font>
+
+//DeepSave</font>
+accountsService.DeepSave(myAccountEntity, <font color="blue">false</font>, DeepSaveType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /></font>
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+          </div>
+          <div id="ReportDetails" style="display:inline">
+            <a name="details" />
+            <h3>Report Details <a href="#top" class="calloutlink">Top</a></h3>
+            <ul>
+              <li>
+                <h3>Initialization</h3>
+                <ul>
+                  <li>
+                    <span class="message0">Validating parameters.</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message2">Generating .netTiers Entity Mapping</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message0">Loading templates.</span>
+                    <ul />[00:00:11.2187500]<br /></li>
+                  <li>
+                    <span class="message1">Table BangDiem is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table BangThamSo is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table ChucDanh is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table Diem is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table HocKy is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table HocSinh is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table Khoi is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table LopHoc is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table MonHoc is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table PhongBan is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message1">Table QuanLy is not eligible for enum generation: table primary key column is not an integer. (used for enum value)</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message0">Creating folders and copying dependencies.</span>
+                    <ul />
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:22.1718750</span><p /></li>
+              <li>
+                <h3>Common files</h3>
+                <ul>
+                  <li>
+                    <span class="file">ListBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TList.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">VList.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntity.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityId.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityKey.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityFactory.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityFactoryBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityFactory.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityCacheItem.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityCache.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityLocator.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityManager.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BrokenRule.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BrokenRulesList.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CommonRules.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRuleArgs.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRuleHandler.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRuleInfo.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRules.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityKeyBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityKeyBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SecurityContext.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IProcessor.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IProcessorResult.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProcessorBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">GenericProcessorResult.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DomainUtil.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ConnectionScope.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IComponentService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceBase.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceBaseCore.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceViewBase.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceViewBaseCore.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceResult.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityFilter.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityPropertyComparer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">GenericTypeConverter.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StoredProcedures.sql</span>
+                  </li>
+                  <li>
+                    <span class="file">Unit test configuration files</span>
+                  </li>
+                  <li>
+                    <span class="file">Enterprise Library v2 unit test configuration files</span>
+                  </li>
+                  <li>
+                    <span class="file">Utility.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TransactionManager.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DataRepository.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityViewProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityProviderBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityViewProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityViewProviderBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersProviderCollection.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersServiceSection.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ExpressionParserBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlExpressionParser.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlStringBuilder.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlUtil.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StringTokenizer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlNetTiersProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StoredProcedureProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyHocSinhPTNK.sln</span>
+                  </li>
+                  <li>
+                    <span class="file">Services.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyHocSinhPTNK.Entities.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyHocSinhPTNK.Data.Data.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyHocSinhPTNK.Entities.Data.SqlClient.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyHocSinhPTNK.UnitTests.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyHocSinhPTNK.build</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityHelper.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityUtil.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:16.6406250</span><p /></li>
+              <li>
+                <h3>Khoi</h3>
+                <ul>
+                  <li>
+                    <span class="file">Khoi.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IKhoi.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Khoi.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">KhoiService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">KhoiServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">KhoiProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">KhoiProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlKhoiProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\KhoiTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">KhoiTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">KhoiTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:02.4375000</span><p /></li>
+              <li>
+                <h3>PhongBan</h3>
+                <ul>
+                  <li>
+                    <span class="file">PhongBan.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IPhongBan.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBan.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBanService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBanServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBanProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBanProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlPhongBanProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\PhongBanTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBanTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">PhongBanTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01.2812500</span><p /></li>
+              <li>
+                <h3>HocSinh</h3>
+                <ul>
+                  <li>
+                    <span class="file">HocSinh.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IHocSinh.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinh.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinhService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinhServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinhProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinhProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlHocSinhProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\HocSinhTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinhTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocSinhTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01.1093750</span><p /></li>
+              <li>
+                <h3>LopHoc</h3>
+                <ul>
+                  <li>
+                    <span class="file">LopHoc.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ILopHoc.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHoc.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHocService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHocServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHocProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHocProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlLopHocProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\LopHocTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHocTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">LopHocTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.8437500</span><p /></li>
+              <li>
+                <h3>QuanLy</h3>
+                <ul>
+                  <li>
+                    <span class="file">QuanLy.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IQuanLy.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLy.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlQuanLyProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\QuanLyTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuanLyTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01</span><p /></li>
+              <li>
+                <h3>MonHoc</h3>
+                <ul>
+                  <li>
+                    <span class="file">MonHoc.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IMonHoc.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHoc.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHocService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHocServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHocProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHocProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlMonHocProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\MonHocTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHocTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">MonHocTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01.0781250</span><p /></li>
+              <li>
+                <h3>BangThamSo</h3>
+                <ul>
+                  <li>
+                    <span class="file">BangThamSo.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IBangThamSo.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSo.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSoService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSoServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSoProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSoProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlBangThamSoProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\BangThamSoTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSoTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangThamSoTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01.0781250</span><p /></li>
+              <li>
+                <h3>BangDiem</h3>
+                <ul>
+                  <li>
+                    <span class="file">BangDiem.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IBangDiem.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiem.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiemService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiemServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiemProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiemProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlBangDiemProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\BangDiemTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiemTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BangDiemTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.8437500</span><p /></li>
+              <li>
+                <h3>ChucDanh</h3>
+                <ul>
+                  <li>
+                    <span class="file">ChucDanh.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IChucDanh.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanh.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanhService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanhServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanhProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanhProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlChucDanhProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ChucDanhTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanhTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ChucDanhTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.9375000</span><p /></li>
+              <li>
+                <h3>HocKy</h3>
+                <ul>
+                  <li>
+                    <span class="file">HocKy.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IHocKy.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKy.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKyService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKyServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKyProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKyProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlHocKyProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\HocKyTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKyTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">HocKyTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01.0625000</span><p /></li>
+              <li>
+                <h3>Diem</h3>
+                <ul>
+                  <li>
+                    <span class="file">Diem.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IDiem.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Diem.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DiemService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DiemServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DiemProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DiemProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlDiemProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\DiemTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DiemTest.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DiemTest.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.9531250</span><p /></li>
+              <li>
+                <h3>
+            Custom Stored Procedures
+         </h3>
+                <ul />
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <hr noshade="noshade" />
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td />
+        <td />
+      </tr>
+    </table>
+    <div align="center">
+			.netTiersOpen Source Group, 2007
+		</div>
+    <div align="center">
+      <a href="http://sourceforge.net">
+        <img src="http://sourceforge.net/sflogo.php?group_id=118735" width="88" height="31" border="0" alt="SourceForge Logo" />
+      </a>
+    </div>
+  </body>
+</html>

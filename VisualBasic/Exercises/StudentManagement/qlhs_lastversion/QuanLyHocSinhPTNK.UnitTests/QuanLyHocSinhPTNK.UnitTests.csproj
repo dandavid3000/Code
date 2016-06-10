@@ -1,0 +1,262 @@
+﻿
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{031D5BAE-0BFB-4D45-8125-9AB0BBC09A92}</ProjectGuid>
+    <ProjectType>Local</ProjectType>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon>
+	</ApplicationIcon>
+    <AssemblyKeyContainerName>
+	</AssemblyKeyContainerName>
+    <AssemblyName>QuanLyHocSinhPTNK.UnitTests</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\QuanLyHocSinhPTNK.snk</AssemblyOriginatorKeyFile>
+	<SignAssembly>false</SignAssembly>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <RootNamespace>QuanLyHocSinhPTNK.UnitTests</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject></StartupObject>
+    <FileUpgradeFlags></FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>QuanLyHocSinhPTNK.UnitTests.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>QuanLyHocSinhPTNK.UnitTests.xml</DocumentationFile>
+	 <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenerateDebug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>QuanLyHocSinhPTNK.UnitTests.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System"/>
+    <Reference Include="System.Web"/>
+    <Reference Include="System.Data"/>
+    <Reference Include="System.Design"/>
+    <Reference Include="System.Xml"/>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+     
+	<ProjectReference Include="..\QuanLyHocSinhPTNK.Entities\QuanLyHocSinhPTNK.Entities.csproj">
+      <Name>QuanLyHocSinhPTNK.Entities</Name>
+      <Project>{20E43088-4618-4F4A-B8AD-FC31B50D94CD}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+	
+	
+	
+	
+    
+    
+    <!-- check the GAC ? -->
+    <Reference Include="nunit.framework, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\nunit.framework.dll</HintPath>
+    </Reference>
+
+    <ProjectReference Include="..\QuanLyHocSinhPTNK.Data\QuanLyHocSinhPTNK.Data.csproj">
+        <Name>QuanLyHocSinhPTNK.Data</Name>
+        <Project>{041C1BBE-0BFB-4D45-8125-9AB0BBC09A92}</Project>
+        <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
+    </ProjectReference>
+	<ProjectReference Include="..\QuanLyHocSinhPTNK.Data.SqlClient\QuanLyHocSinhPTNK.Data.SqlClient.csproj">
+        <Name>QuanLyHocSinhPTNK.Data.SqlClient</Name>
+        <Project>{8996A7B4-57D3-440B-A545-A701844B8C4A}</Project>
+        <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+	<ProjectReference Include="..\QuanLyHocSinhPTNK.Services\QuanLyHocSinhPTNK.Services.csproj">
+        <Name>QuanLyHocSinhPTNK.Services</Name>
+        <Project>{794327CE-DC0A-4381-89EE-4C00AFB08D5A}</Project>
+        <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
+    </ProjectReference>
+	     
+    	
+	
+	
+	
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Include="QuanLyHocSinhPTNK.UnitTests.dll.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="entlib.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+		
+	<!-- Custom code folder: c:\NetTiers\QuanLyHocSinhPTNK\QuanLyHocSinhPTNK.UnitTests\App_Code -->
+	<ItemGroup>	
+		<Folder Include="App_Code\" />
+        <Compile Include="App_Code\**\*.cs">
+          <SubType>Code</SubType>
+        </Compile>		
+	</ItemGroup>
+
+	<!-- Include any user files -->
+	<ItemGroup>	
+		<Compile Include="**\*.user.*" Exclude="**\*.csproj.user" >
+          <SubType>Code</SubType>
+        </Compile>		
+	</ItemGroup>
+	
+	<ItemGroup>
+			<Compile Include="KhoiTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="KhoiTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>KhoiTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="PhongBanTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="PhongBanTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>PhongBanTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="HocSinhTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="HocSinhTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>HocSinhTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="LopHocTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="LopHocTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>LopHocTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="QuanLyTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="QuanLyTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>QuanLyTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="MonHocTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="MonHocTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>MonHocTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="BangThamSoTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="BangThamSoTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>BangThamSoTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="BangDiemTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="BangDiemTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>BangDiemTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ChucDanhTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ChucDanhTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ChucDanhTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="HocKyTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="HocKyTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>HocKyTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="DiemTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="DiemTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>DiemTest.cs</DependentUpon>
+			</Compile>
+		<Compile Include="..\AssemblyInfo.cs">
+		  <SubType>Code</SubType>
+		</Compile>
+			
+
+		
+		
+		
+		
+		
+		 <AppDesigner Include="Properties\" />
+	</ItemGroup>
+	
+	
+	
+	
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+	<PostBuildEvent>
+	</PostBuildEvent>
+  </PropertyGroup>
+
+</Project>

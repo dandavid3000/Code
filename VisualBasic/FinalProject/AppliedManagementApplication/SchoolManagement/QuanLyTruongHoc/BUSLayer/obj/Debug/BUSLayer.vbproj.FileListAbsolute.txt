@@ -1,0 +1,105 @@
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+E:\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+E:\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+E:\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+E:\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+E:\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+E:\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\BUSLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DTO.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\bin\Debug\DAOLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.Resources.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.vbproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\BUSLayer\obj\Debug\BUSLayer.pdb

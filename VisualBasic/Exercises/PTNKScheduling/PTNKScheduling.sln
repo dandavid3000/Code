@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PTNKScheduling", "PTNKScheduling\PTNKScheduling.vbproj", "{467AABB8-B8BF-408E-8E6A-4DEF33CBA752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{467AABB8-B8BF-408E-8E6A-4DEF33CBA752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467AABB8-B8BF-408E-8E6A-4DEF33CBA752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467AABB8-B8BF-408E-8E6A-4DEF33CBA752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467AABB8-B8BF-408E-8E6A-4DEF33CBA752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

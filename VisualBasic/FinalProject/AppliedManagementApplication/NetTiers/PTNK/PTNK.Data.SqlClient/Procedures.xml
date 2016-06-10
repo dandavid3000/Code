@@ -1,0 +1,3772 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type='text/xsl' href="scriptsql.xsl"?>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database includeDrop="true">PTNK</database>
+<procedures>
+		
+		<procedure owner="dbo" name="RangBuocLopHoc_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the RangBuocLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaRangBuocLopHoc],
+					[MaLopHoc],
+					[Thu],
+					[TietHoc],
+					[TrangThai]
+				FROM
+					[dbo].[RangBuocLopHoc]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="RangBuocLopHoc_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the RangBuocLopHoc table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaRangBuocLopHoc]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaRangBuocLopHoc]'
+				SET @SQL = @SQL + ', [MaLopHoc]'
+				SET @SQL = @SQL + ', [Thu]'
+				SET @SQL = @SQL + ', [TietHoc]'
+				SET @SQL = @SQL + ', [TrangThai]'
+				SET @SQL = @SQL + ' FROM [dbo].[RangBuocLopHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaRangBuocLopHoc],'
+				SET @SQL = @SQL + ' [MaLopHoc],'
+				SET @SQL = @SQL + ' [Thu],'
+				SET @SQL = @SQL + ' [TietHoc],'
+				SET @SQL = @SQL + ' [TrangThai]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[RangBuocLopHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="RangBuocLopHoc_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the RangBuocLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocLopHoc" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@Thu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TrangThai" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[RangBuocLopHoc]
+					(
+					[MaRangBuocLopHoc]
+					,[MaLopHoc]
+					,[Thu]
+					,[TietHoc]
+					,[TrangThai]
+					)
+				VALUES
+					(
+					@MaRangBuocLopHoc
+					,@MaLopHoc
+					,@Thu
+					,@TietHoc
+					,@TrangThai
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="RangBuocLopHoc_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the RangBuocLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocLopHoc" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+				<parameter name="@OriginalMaRangBuocLopHoc" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@Thu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TrangThai" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[RangBuocLopHoc]
+				SET
+					[MaRangBuocLopHoc] = @MaRangBuocLopHoc
+					,[MaLopHoc] = @MaLopHoc
+					,[Thu] = @Thu
+					,[TietHoc] = @TietHoc
+					,[TrangThai] = @TrangThai
+				WHERE
+[MaRangBuocLopHoc] = @OriginalMaRangBuocLopHoc 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="RangBuocLopHoc_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the RangBuocLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocLopHoc" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[RangBuocLopHoc] WITH (ROWLOCK) 
+				WHERE
+					[MaRangBuocLopHoc] = @MaRangBuocLopHoc
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="RangBuocLopHoc_GetByMaRangBuocLopHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the RangBuocLopHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocLopHoc" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaRangBuocLopHoc],
+					[MaLopHoc],
+					[Thu],
+					[TietHoc],
+					[TrangThai]
+				FROM
+					[dbo].[RangBuocLopHoc]
+				WHERE
+					[MaRangBuocLopHoc] = @MaRangBuocLopHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="RangBuocLopHoc_GetByMaLopHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the RangBuocLopHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaRangBuocLopHoc],
+					[MaLopHoc],
+					[Thu],
+					[TietHoc],
+					[TrangThai]
+				FROM
+					[dbo].[RangBuocLopHoc]
+				WHERE
+					[MaLopHoc] = @MaLopHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="RangBuocLopHoc_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the RangBuocLopHoc table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaRangBuocLopHoc" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault="null"/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault="null"/>
+				<parameter name="@Thu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@TietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@TrangThai" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaRangBuocLopHoc]
+	, [MaLopHoc]
+	, [Thu]
+	, [TietHoc]
+	, [TrangThai]
+    FROM
+	[dbo].[RangBuocLopHoc]
+    WHERE 
+	 ([MaRangBuocLopHoc] = @MaRangBuocLopHoc OR @MaRangBuocLopHoc is null)
+	AND ([MaLopHoc] = @MaLopHoc OR @MaLopHoc is null)
+	AND ([Thu] = @Thu OR @Thu is null)
+	AND ([TietHoc] = @TietHoc OR @TietHoc is null)
+	AND ([TrangThai] = @TrangThai OR @TrangThai is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaRangBuocLopHoc]
+	, [MaLopHoc]
+	, [Thu]
+	, [TietHoc]
+	, [TrangThai]
+    FROM
+	[dbo].[RangBuocLopHoc]
+    WHERE 
+	 ([MaRangBuocLopHoc] = @MaRangBuocLopHoc AND @MaRangBuocLopHoc is not null)
+	OR ([MaLopHoc] = @MaLopHoc AND @MaLopHoc is not null)
+	OR ([Thu] = @Thu AND @Thu is not null)
+	OR ([TietHoc] = @TietHoc AND @TietHoc is not null)
+	OR ([TrangThai] = @TrangThai AND @TrangThai is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="RangBuocLopHoc_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the RangBuocLopHoc table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaRangBuocLopHoc]
+					, [MaLopHoc]
+					, [Thu]
+					, [TietHoc]
+					, [TrangThai]
+					from [dbo].[RangBuocLopHoc] {0}
+				)
+				select
+				       [MaRangBuocLopHoc],
+				       [MaLopHoc],
+				       [Thu],
+				       [TietHoc],
+				       [TrangThai]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[RangBuocLopHoc] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="MonHoc_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the MonHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaMonHoc],
+					[TenMonHoc],
+					[QuiDinhSoTietHocLienTiepToiThieu],
+					[QuiDinhSoTietHocLienTiepToiDa]
+				FROM
+					[dbo].[MonHoc]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="MonHoc_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the MonHoc table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaMonHoc]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaMonHoc]'
+				SET @SQL = @SQL + ', [TenMonHoc]'
+				SET @SQL = @SQL + ', [QuiDinhSoTietHocLienTiepToiThieu]'
+				SET @SQL = @SQL + ', [QuiDinhSoTietHocLienTiepToiDa]'
+				SET @SQL = @SQL + ' FROM [dbo].[MonHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaMonHoc],'
+				SET @SQL = @SQL + ' [TenMonHoc],'
+				SET @SQL = @SQL + ' [QuiDinhSoTietHocLienTiepToiThieu],'
+				SET @SQL = @SQL + ' [QuiDinhSoTietHocLienTiepToiDa]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[MonHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="MonHoc_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the MonHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@TenMonHoc" type="nvarchar" direction="Input" size="40" precision="0" scale="0" param="(40)" nulldefault=""/>
+				<parameter name="@QuiDinhSoTietHocLienTiepToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@QuiDinhSoTietHocLienTiepToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[MonHoc]
+					(
+					[MaMonHoc]
+					,[TenMonHoc]
+					,[QuiDinhSoTietHocLienTiepToiThieu]
+					,[QuiDinhSoTietHocLienTiepToiDa]
+					)
+				VALUES
+					(
+					@MaMonHoc
+					,@TenMonHoc
+					,@QuiDinhSoTietHocLienTiepToiThieu
+					,@QuiDinhSoTietHocLienTiepToiDa
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="MonHoc_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the MonHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@OriginalMaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@TenMonHoc" type="nvarchar" direction="Input" size="40" precision="0" scale="0" param="(40)" nulldefault=""/>
+				<parameter name="@QuiDinhSoTietHocLienTiepToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@QuiDinhSoTietHocLienTiepToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[MonHoc]
+				SET
+					[MaMonHoc] = @MaMonHoc
+					,[TenMonHoc] = @TenMonHoc
+					,[QuiDinhSoTietHocLienTiepToiThieu] = @QuiDinhSoTietHocLienTiepToiThieu
+					,[QuiDinhSoTietHocLienTiepToiDa] = @QuiDinhSoTietHocLienTiepToiDa
+				WHERE
+[MaMonHoc] = @OriginalMaMonHoc 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="MonHoc_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the MonHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[MonHoc] WITH (ROWLOCK) 
+				WHERE
+					[MaMonHoc] = @MaMonHoc
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="MonHoc_GetByMaMonHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the MonHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaMonHoc],
+					[TenMonHoc],
+					[QuiDinhSoTietHocLienTiepToiThieu],
+					[QuiDinhSoTietHocLienTiepToiDa]
+				FROM
+					[dbo].[MonHoc]
+				WHERE
+					[MaMonHoc] = @MaMonHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="MonHoc_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the MonHoc table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault="null"/>
+				<parameter name="@TenMonHoc" type="nvarchar" direction="Input" size="40" precision="0" scale="0" param="(40)" nulldefault="null"/>
+				<parameter name="@QuiDinhSoTietHocLienTiepToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@QuiDinhSoTietHocLienTiepToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaMonHoc]
+	, [TenMonHoc]
+	, [QuiDinhSoTietHocLienTiepToiThieu]
+	, [QuiDinhSoTietHocLienTiepToiDa]
+    FROM
+	[dbo].[MonHoc]
+    WHERE 
+	 ([MaMonHoc] = @MaMonHoc OR @MaMonHoc is null)
+	AND ([TenMonHoc] = @TenMonHoc OR @TenMonHoc is null)
+	AND ([QuiDinhSoTietHocLienTiepToiThieu] = @QuiDinhSoTietHocLienTiepToiThieu OR @QuiDinhSoTietHocLienTiepToiThieu is null)
+	AND ([QuiDinhSoTietHocLienTiepToiDa] = @QuiDinhSoTietHocLienTiepToiDa OR @QuiDinhSoTietHocLienTiepToiDa is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaMonHoc]
+	, [TenMonHoc]
+	, [QuiDinhSoTietHocLienTiepToiThieu]
+	, [QuiDinhSoTietHocLienTiepToiDa]
+    FROM
+	[dbo].[MonHoc]
+    WHERE 
+	 ([MaMonHoc] = @MaMonHoc AND @MaMonHoc is not null)
+	OR ([TenMonHoc] = @TenMonHoc AND @TenMonHoc is not null)
+	OR ([QuiDinhSoTietHocLienTiepToiThieu] = @QuiDinhSoTietHocLienTiepToiThieu AND @QuiDinhSoTietHocLienTiepToiThieu is not null)
+	OR ([QuiDinhSoTietHocLienTiepToiDa] = @QuiDinhSoTietHocLienTiepToiDa AND @QuiDinhSoTietHocLienTiepToiDa is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="MonHoc_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the MonHoc table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaMonHoc]
+					, [TenMonHoc]
+					, [QuiDinhSoTietHocLienTiepToiThieu]
+					, [QuiDinhSoTietHocLienTiepToiDa]
+					from [dbo].[MonHoc] {0}
+				)
+				select
+				       [MaMonHoc],
+				       [TenMonHoc],
+				       [QuiDinhSoTietHocLienTiepToiThieu],
+				       [QuiDinhSoTietHocLienTiepToiDa]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[MonHoc] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="ThoiKhoaBieu_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the ThoiKhoaBieu table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaThoiKhoaBieu],
+					[MaPhanCong],
+					[MaLopHoc],
+					[PhuTrach],
+					[Thu],
+					[TietHoc]
+				FROM
+					[dbo].[ThoiKhoaBieu]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="ThoiKhoaBieu_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the ThoiKhoaBieu table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaThoiKhoaBieu]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaThoiKhoaBieu]'
+				SET @SQL = @SQL + ', [MaPhanCong]'
+				SET @SQL = @SQL + ', [MaLopHoc]'
+				SET @SQL = @SQL + ', [PhuTrach]'
+				SET @SQL = @SQL + ', [Thu]'
+				SET @SQL = @SQL + ', [TietHoc]'
+				SET @SQL = @SQL + ' FROM [dbo].[ThoiKhoaBieu]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaThoiKhoaBieu],'
+				SET @SQL = @SQL + ' [MaPhanCong],'
+				SET @SQL = @SQL + ' [MaLopHoc],'
+				SET @SQL = @SQL + ' [PhuTrach],'
+				SET @SQL = @SQL + ' [Thu],'
+				SET @SQL = @SQL + ' [TietHoc]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[ThoiKhoaBieu]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="ThoiKhoaBieu_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the ThoiKhoaBieu table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaThoiKhoaBieu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@PhuTrach" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@Thu" type="int" direction="Input" size="4" precision="10" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietHoc" type="int" direction="Input" size="4" precision="10" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[ThoiKhoaBieu]
+					(
+					[MaThoiKhoaBieu]
+					,[MaPhanCong]
+					,[MaLopHoc]
+					,[PhuTrach]
+					,[Thu]
+					,[TietHoc]
+					)
+				VALUES
+					(
+					@MaThoiKhoaBieu
+					,@MaPhanCong
+					,@MaLopHoc
+					,@PhuTrach
+					,@Thu
+					,@TietHoc
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="ThoiKhoaBieu_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the ThoiKhoaBieu table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaThoiKhoaBieu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@OriginalMaThoiKhoaBieu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@PhuTrach" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@Thu" type="int" direction="Input" size="4" precision="10" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietHoc" type="int" direction="Input" size="4" precision="10" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[ThoiKhoaBieu]
+				SET
+					[MaThoiKhoaBieu] = @MaThoiKhoaBieu
+					,[MaPhanCong] = @MaPhanCong
+					,[MaLopHoc] = @MaLopHoc
+					,[PhuTrach] = @PhuTrach
+					,[Thu] = @Thu
+					,[TietHoc] = @TietHoc
+				WHERE
+[MaThoiKhoaBieu] = @OriginalMaThoiKhoaBieu 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="ThoiKhoaBieu_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the ThoiKhoaBieu table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaThoiKhoaBieu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[ThoiKhoaBieu] WITH (ROWLOCK) 
+				WHERE
+					[MaThoiKhoaBieu] = @MaThoiKhoaBieu
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="ThoiKhoaBieu_GetByMaThoiKhoaBieu" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the ThoiKhoaBieu table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaThoiKhoaBieu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaThoiKhoaBieu],
+					[MaPhanCong],
+					[MaLopHoc],
+					[PhuTrach],
+					[Thu],
+					[TietHoc]
+				FROM
+					[dbo].[ThoiKhoaBieu]
+				WHERE
+					[MaThoiKhoaBieu] = @MaThoiKhoaBieu
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="ThoiKhoaBieu_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the ThoiKhoaBieu table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaThoiKhoaBieu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault="null"/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault="null"/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault="null"/>
+				<parameter name="@PhuTrach" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault="null"/>
+				<parameter name="@Thu" type="int" direction="Input" size="4" precision="10" scale="0" param="" nulldefault="null"/>
+				<parameter name="@TietHoc" type="int" direction="Input" size="4" precision="10" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaThoiKhoaBieu]
+	, [MaPhanCong]
+	, [MaLopHoc]
+	, [PhuTrach]
+	, [Thu]
+	, [TietHoc]
+    FROM
+	[dbo].[ThoiKhoaBieu]
+    WHERE 
+	 ([MaThoiKhoaBieu] = @MaThoiKhoaBieu OR @MaThoiKhoaBieu is null)
+	AND ([MaPhanCong] = @MaPhanCong OR @MaPhanCong is null)
+	AND ([MaLopHoc] = @MaLopHoc OR @MaLopHoc is null)
+	AND ([PhuTrach] = @PhuTrach OR @PhuTrach is null)
+	AND ([Thu] = @Thu OR @Thu is null)
+	AND ([TietHoc] = @TietHoc OR @TietHoc is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaThoiKhoaBieu]
+	, [MaPhanCong]
+	, [MaLopHoc]
+	, [PhuTrach]
+	, [Thu]
+	, [TietHoc]
+    FROM
+	[dbo].[ThoiKhoaBieu]
+    WHERE 
+	 ([MaThoiKhoaBieu] = @MaThoiKhoaBieu AND @MaThoiKhoaBieu is not null)
+	OR ([MaPhanCong] = @MaPhanCong AND @MaPhanCong is not null)
+	OR ([MaLopHoc] = @MaLopHoc AND @MaLopHoc is not null)
+	OR ([PhuTrach] = @PhuTrach AND @PhuTrach is not null)
+	OR ([Thu] = @Thu AND @Thu is not null)
+	OR ([TietHoc] = @TietHoc AND @TietHoc is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="ThoiKhoaBieu_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the ThoiKhoaBieu table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaThoiKhoaBieu]
+					, [MaPhanCong]
+					, [MaLopHoc]
+					, [PhuTrach]
+					, [Thu]
+					, [TietHoc]
+					from [dbo].[ThoiKhoaBieu] {0}
+				)
+				select
+				       [MaThoiKhoaBieu],
+				       [MaPhanCong],
+				       [MaLopHoc],
+				       [PhuTrach],
+				       [Thu],
+				       [TietHoc]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[ThoiKhoaBieu] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="ThamSo_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the ThamSo table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[SoTietToiDaTrongNgay],
+					[TietGay],
+					[SoTietToiDaDuocHocTrongNgay]
+				FROM
+					[dbo].[ThamSo]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="ThamSo_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the ThamSo table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[SoTietToiDaTrongNgay]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [SoTietToiDaTrongNgay]'
+				SET @SQL = @SQL + ', [TietGay]'
+				SET @SQL = @SQL + ', [SoTietToiDaDuocHocTrongNgay]'
+				SET @SQL = @SQL + ' FROM [dbo].[ThamSo]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [SoTietToiDaTrongNgay],'
+				SET @SQL = @SQL + ' [TietGay],'
+				SET @SQL = @SQL + ' [SoTietToiDaDuocHocTrongNgay]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[ThamSo]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="ThamSo_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the ThamSo table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SoTietToiDaTrongNgay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietGay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietToiDaDuocHocTrongNgay" type="smallint" direction="Input" size="2" precision="5" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[ThamSo]
+					(
+					[SoTietToiDaTrongNgay]
+					,[TietGay]
+					,[SoTietToiDaDuocHocTrongNgay]
+					)
+				VALUES
+					(
+					@SoTietToiDaTrongNgay
+					,@TietGay
+					,@SoTietToiDaDuocHocTrongNgay
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="ThamSo_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the ThamSo table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SoTietToiDaTrongNgay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@OriginalSoTietToiDaTrongNgay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietGay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@OriginalTietGay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietToiDaDuocHocTrongNgay" type="smallint" direction="Input" size="2" precision="5" scale="0" param="" nulldefault=""/>
+				<parameter name="@OriginalSoTietToiDaDuocHocTrongNgay" type="smallint" direction="Input" size="2" precision="5" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[ThamSo]
+				SET
+					[SoTietToiDaTrongNgay] = @SoTietToiDaTrongNgay
+					,[TietGay] = @TietGay
+					,[SoTietToiDaDuocHocTrongNgay] = @SoTietToiDaDuocHocTrongNgay
+				WHERE
+[SoTietToiDaTrongNgay] = @OriginalSoTietToiDaTrongNgay 
+AND [TietGay] = @OriginalTietGay 
+AND [SoTietToiDaDuocHocTrongNgay] = @OriginalSoTietToiDaDuocHocTrongNgay 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="ThamSo_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the ThamSo table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SoTietToiDaTrongNgay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietGay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietToiDaDuocHocTrongNgay" type="smallint" direction="Input" size="2" precision="5" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[ThamSo] WITH (ROWLOCK) 
+				WHERE
+					[SoTietToiDaTrongNgay] = @SoTietToiDaTrongNgay
+					AND [TietGay] = @TietGay
+					AND [SoTietToiDaDuocHocTrongNgay] = @SoTietToiDaDuocHocTrongNgay
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="ThamSo_GetBySoTietToiDaTrongNgayTietGaySoTietToiDaDuocHocTrongNgay" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the ThamSo table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SoTietToiDaTrongNgay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietGay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietToiDaDuocHocTrongNgay" type="smallint" direction="Input" size="2" precision="5" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[SoTietToiDaTrongNgay],
+					[TietGay],
+					[SoTietToiDaDuocHocTrongNgay]
+				FROM
+					[dbo].[ThamSo]
+				WHERE
+					[SoTietToiDaTrongNgay] = @SoTietToiDaTrongNgay
+					AND [TietGay] = @TietGay
+					AND [SoTietToiDaDuocHocTrongNgay] = @SoTietToiDaDuocHocTrongNgay
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="ThamSo_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the ThamSo table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoTietToiDaTrongNgay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@TietGay" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoTietToiDaDuocHocTrongNgay" type="smallint" direction="Input" size="2" precision="5" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [SoTietToiDaTrongNgay]
+	, [TietGay]
+	, [SoTietToiDaDuocHocTrongNgay]
+    FROM
+	[dbo].[ThamSo]
+    WHERE 
+	 ([SoTietToiDaTrongNgay] = @SoTietToiDaTrongNgay OR @SoTietToiDaTrongNgay is null)
+	AND ([TietGay] = @TietGay OR @TietGay is null)
+	AND ([SoTietToiDaDuocHocTrongNgay] = @SoTietToiDaDuocHocTrongNgay OR @SoTietToiDaDuocHocTrongNgay is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [SoTietToiDaTrongNgay]
+	, [TietGay]
+	, [SoTietToiDaDuocHocTrongNgay]
+    FROM
+	[dbo].[ThamSo]
+    WHERE 
+	 ([SoTietToiDaTrongNgay] = @SoTietToiDaTrongNgay AND @SoTietToiDaTrongNgay is not null)
+	OR ([TietGay] = @TietGay AND @TietGay is not null)
+	OR ([SoTietToiDaDuocHocTrongNgay] = @SoTietToiDaDuocHocTrongNgay AND @SoTietToiDaDuocHocTrongNgay is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="ThamSo_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the ThamSo table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [SoTietToiDaTrongNgay]
+					, [TietGay]
+					, [SoTietToiDaDuocHocTrongNgay]
+					from [dbo].[ThamSo] {0}
+				)
+				select
+				       [SoTietToiDaTrongNgay],
+				       [TietGay],
+				       [SoTietToiDaDuocHocTrongNgay]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[ThamSo] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="Khoi_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the Khoi table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaKhoi],
+					[TenKhoi]
+				FROM
+					[dbo].[Khoi]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="Khoi_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the Khoi table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaKhoi]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaKhoi]'
+				SET @SQL = @SQL + ', [TenKhoi]'
+				SET @SQL = @SQL + ' FROM [dbo].[Khoi]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaKhoi],'
+				SET @SQL = @SQL + ' [TenKhoi]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[Khoi]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="Khoi_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the Khoi table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+				<parameter name="@TenKhoi" type="nvarchar" direction="Input" size="10" precision="0" scale="0" param="(10)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[Khoi]
+					(
+					[MaKhoi]
+					,[TenKhoi]
+					)
+				VALUES
+					(
+					@MaKhoi
+					,@TenKhoi
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="Khoi_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the Khoi table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+				<parameter name="@OriginalMaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+				<parameter name="@TenKhoi" type="nvarchar" direction="Input" size="10" precision="0" scale="0" param="(10)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[Khoi]
+				SET
+					[MaKhoi] = @MaKhoi
+					,[TenKhoi] = @TenKhoi
+				WHERE
+[MaKhoi] = @OriginalMaKhoi 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="Khoi_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the Khoi table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[Khoi] WITH (ROWLOCK) 
+				WHERE
+					[MaKhoi] = @MaKhoi
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="Khoi_GetByMaKhoi" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the Khoi table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaKhoi],
+					[TenKhoi]
+				FROM
+					[dbo].[Khoi]
+				WHERE
+					[MaKhoi] = @MaKhoi
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="Khoi_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the Khoi table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault="null"/>
+				<parameter name="@TenKhoi" type="nvarchar" direction="Input" size="10" precision="0" scale="0" param="(10)" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaKhoi]
+	, [TenKhoi]
+    FROM
+	[dbo].[Khoi]
+    WHERE 
+	 ([MaKhoi] = @MaKhoi OR @MaKhoi is null)
+	AND ([TenKhoi] = @TenKhoi OR @TenKhoi is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaKhoi]
+	, [TenKhoi]
+    FROM
+	[dbo].[Khoi]
+    WHERE 
+	 ([MaKhoi] = @MaKhoi AND @MaKhoi is not null)
+	OR ([TenKhoi] = @TenKhoi AND @TenKhoi is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="Khoi_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the Khoi table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaKhoi]
+					, [TenKhoi]
+					from [dbo].[Khoi] {0}
+				)
+				select
+				       [MaKhoi],
+				       [TenKhoi]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[Khoi] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="GiaoVien_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the GiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaGiaoVien],
+					[HoTenGiaoVien],
+					[TenTat],
+					[DiaChi],
+					[DienThoai]
+				FROM
+					[dbo].[GiaoVien]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="GiaoVien_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the GiaoVien table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaGiaoVien]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaGiaoVien]'
+				SET @SQL = @SQL + ', [HoTenGiaoVien]'
+				SET @SQL = @SQL + ', [TenTat]'
+				SET @SQL = @SQL + ', [DiaChi]'
+				SET @SQL = @SQL + ', [DienThoai]'
+				SET @SQL = @SQL + ' FROM [dbo].[GiaoVien]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaGiaoVien],'
+				SET @SQL = @SQL + ' [HoTenGiaoVien],'
+				SET @SQL = @SQL + ' [TenTat],'
+				SET @SQL = @SQL + ' [DiaChi],'
+				SET @SQL = @SQL + ' [DienThoai]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[GiaoVien]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="GiaoVien_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the GiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@HoTenGiaoVien" type="nvarchar" direction="Input" size="30" precision="0" scale="0" param="(30)" nulldefault=""/>
+				<parameter name="@TenTat" type="nvarchar" direction="Input" size="15" precision="0" scale="0" param="(15)" nulldefault=""/>
+				<parameter name="@DiaChi" type="nvarchar" direction="Input" size="100" precision="0" scale="0" param="(100)" nulldefault=""/>
+				<parameter name="@DienThoai" type="nvarchar" direction="Input" size="21" precision="0" scale="0" param="(21)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[GiaoVien]
+					(
+					[MaGiaoVien]
+					,[HoTenGiaoVien]
+					,[TenTat]
+					,[DiaChi]
+					,[DienThoai]
+					)
+				VALUES
+					(
+					@MaGiaoVien
+					,@HoTenGiaoVien
+					,@TenTat
+					,@DiaChi
+					,@DienThoai
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="GiaoVien_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the GiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@OriginalMaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@HoTenGiaoVien" type="nvarchar" direction="Input" size="30" precision="0" scale="0" param="(30)" nulldefault=""/>
+				<parameter name="@TenTat" type="nvarchar" direction="Input" size="15" precision="0" scale="0" param="(15)" nulldefault=""/>
+				<parameter name="@DiaChi" type="nvarchar" direction="Input" size="100" precision="0" scale="0" param="(100)" nulldefault=""/>
+				<parameter name="@DienThoai" type="nvarchar" direction="Input" size="21" precision="0" scale="0" param="(21)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[GiaoVien]
+				SET
+					[MaGiaoVien] = @MaGiaoVien
+					,[HoTenGiaoVien] = @HoTenGiaoVien
+					,[TenTat] = @TenTat
+					,[DiaChi] = @DiaChi
+					,[DienThoai] = @DienThoai
+				WHERE
+[MaGiaoVien] = @OriginalMaGiaoVien 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="GiaoVien_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the GiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[GiaoVien] WITH (ROWLOCK) 
+				WHERE
+					[MaGiaoVien] = @MaGiaoVien
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="GiaoVien_GetByMaGiaoVien" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the GiaoVien table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaGiaoVien],
+					[HoTenGiaoVien],
+					[TenTat],
+					[DiaChi],
+					[DienThoai]
+				FROM
+					[dbo].[GiaoVien]
+				WHERE
+					[MaGiaoVien] = @MaGiaoVien
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="GiaoVien_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the GiaoVien table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault="null"/>
+				<parameter name="@HoTenGiaoVien" type="nvarchar" direction="Input" size="30" precision="0" scale="0" param="(30)" nulldefault="null"/>
+				<parameter name="@TenTat" type="nvarchar" direction="Input" size="15" precision="0" scale="0" param="(15)" nulldefault="null"/>
+				<parameter name="@DiaChi" type="nvarchar" direction="Input" size="100" precision="0" scale="0" param="(100)" nulldefault="null"/>
+				<parameter name="@DienThoai" type="nvarchar" direction="Input" size="21" precision="0" scale="0" param="(21)" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaGiaoVien]
+	, [HoTenGiaoVien]
+	, [TenTat]
+	, [DiaChi]
+	, [DienThoai]
+    FROM
+	[dbo].[GiaoVien]
+    WHERE 
+	 ([MaGiaoVien] = @MaGiaoVien OR @MaGiaoVien is null)
+	AND ([HoTenGiaoVien] = @HoTenGiaoVien OR @HoTenGiaoVien is null)
+	AND ([TenTat] = @TenTat OR @TenTat is null)
+	AND ([DiaChi] = @DiaChi OR @DiaChi is null)
+	AND ([DienThoai] = @DienThoai OR @DienThoai is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaGiaoVien]
+	, [HoTenGiaoVien]
+	, [TenTat]
+	, [DiaChi]
+	, [DienThoai]
+    FROM
+	[dbo].[GiaoVien]
+    WHERE 
+	 ([MaGiaoVien] = @MaGiaoVien AND @MaGiaoVien is not null)
+	OR ([HoTenGiaoVien] = @HoTenGiaoVien AND @HoTenGiaoVien is not null)
+	OR ([TenTat] = @TenTat AND @TenTat is not null)
+	OR ([DiaChi] = @DiaChi AND @DiaChi is not null)
+	OR ([DienThoai] = @DienThoai AND @DienThoai is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="GiaoVien_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the GiaoVien table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaGiaoVien]
+					, [HoTenGiaoVien]
+					, [TenTat]
+					, [DiaChi]
+					, [DienThoai]
+					from [dbo].[GiaoVien] {0}
+				)
+				select
+				       [MaGiaoVien],
+				       [HoTenGiaoVien],
+				       [TenTat],
+				       [DiaChi],
+				       [DienThoai]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[GiaoVien] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="RangBuocGiaoVien_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the RangBuocGiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaRangBuocGiaoVien],
+					[MaGiaoVien],
+					[Thu],
+					[TietHoc],
+					[TrangThai]
+				FROM
+					[dbo].[RangBuocGiaoVien]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="RangBuocGiaoVien_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the RangBuocGiaoVien table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaRangBuocGiaoVien]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaRangBuocGiaoVien]'
+				SET @SQL = @SQL + ', [MaGiaoVien]'
+				SET @SQL = @SQL + ', [Thu]'
+				SET @SQL = @SQL + ', [TietHoc]'
+				SET @SQL = @SQL + ', [TrangThai]'
+				SET @SQL = @SQL + ' FROM [dbo].[RangBuocGiaoVien]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaRangBuocGiaoVien],'
+				SET @SQL = @SQL + ' [MaGiaoVien],'
+				SET @SQL = @SQL + ' [Thu],'
+				SET @SQL = @SQL + ' [TietHoc],'
+				SET @SQL = @SQL + ' [TrangThai]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[RangBuocGiaoVien]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="RangBuocGiaoVien_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the RangBuocGiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocGiaoVien" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@Thu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TrangThai" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[RangBuocGiaoVien]
+					(
+					[MaRangBuocGiaoVien]
+					,[MaGiaoVien]
+					,[Thu]
+					,[TietHoc]
+					,[TrangThai]
+					)
+				VALUES
+					(
+					@MaRangBuocGiaoVien
+					,@MaGiaoVien
+					,@Thu
+					,@TietHoc
+					,@TrangThai
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="RangBuocGiaoVien_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the RangBuocGiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocGiaoVien" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+				<parameter name="@OriginalMaRangBuocGiaoVien" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@Thu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@TrangThai" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[RangBuocGiaoVien]
+				SET
+					[MaRangBuocGiaoVien] = @MaRangBuocGiaoVien
+					,[MaGiaoVien] = @MaGiaoVien
+					,[Thu] = @Thu
+					,[TietHoc] = @TietHoc
+					,[TrangThai] = @TrangThai
+				WHERE
+[MaRangBuocGiaoVien] = @OriginalMaRangBuocGiaoVien 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="RangBuocGiaoVien_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the RangBuocGiaoVien table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocGiaoVien" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[RangBuocGiaoVien] WITH (ROWLOCK) 
+				WHERE
+					[MaRangBuocGiaoVien] = @MaRangBuocGiaoVien
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="RangBuocGiaoVien_GetByMaRangBuocGiaoVien" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the RangBuocGiaoVien table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaRangBuocGiaoVien" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaRangBuocGiaoVien],
+					[MaGiaoVien],
+					[Thu],
+					[TietHoc],
+					[TrangThai]
+				FROM
+					[dbo].[RangBuocGiaoVien]
+				WHERE
+					[MaRangBuocGiaoVien] = @MaRangBuocGiaoVien
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="RangBuocGiaoVien_GetByMaGiaoVien" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the RangBuocGiaoVien table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaRangBuocGiaoVien],
+					[MaGiaoVien],
+					[Thu],
+					[TietHoc],
+					[TrangThai]
+				FROM
+					[dbo].[RangBuocGiaoVien]
+				WHERE
+					[MaGiaoVien] = @MaGiaoVien
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="RangBuocGiaoVien_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the RangBuocGiaoVien table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaRangBuocGiaoVien" type="nvarchar" direction="Input" size="9" precision="0" scale="0" param="(9)" nulldefault="null"/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault="null"/>
+				<parameter name="@Thu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@TietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@TrangThai" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaRangBuocGiaoVien]
+	, [MaGiaoVien]
+	, [Thu]
+	, [TietHoc]
+	, [TrangThai]
+    FROM
+	[dbo].[RangBuocGiaoVien]
+    WHERE 
+	 ([MaRangBuocGiaoVien] = @MaRangBuocGiaoVien OR @MaRangBuocGiaoVien is null)
+	AND ([MaGiaoVien] = @MaGiaoVien OR @MaGiaoVien is null)
+	AND ([Thu] = @Thu OR @Thu is null)
+	AND ([TietHoc] = @TietHoc OR @TietHoc is null)
+	AND ([TrangThai] = @TrangThai OR @TrangThai is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaRangBuocGiaoVien]
+	, [MaGiaoVien]
+	, [Thu]
+	, [TietHoc]
+	, [TrangThai]
+    FROM
+	[dbo].[RangBuocGiaoVien]
+    WHERE 
+	 ([MaRangBuocGiaoVien] = @MaRangBuocGiaoVien AND @MaRangBuocGiaoVien is not null)
+	OR ([MaGiaoVien] = @MaGiaoVien AND @MaGiaoVien is not null)
+	OR ([Thu] = @Thu AND @Thu is not null)
+	OR ([TietHoc] = @TietHoc AND @TietHoc is not null)
+	OR ([TrangThai] = @TrangThai AND @TrangThai is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="RangBuocGiaoVien_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the RangBuocGiaoVien table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaRangBuocGiaoVien]
+					, [MaGiaoVien]
+					, [Thu]
+					, [TietHoc]
+					, [TrangThai]
+					from [dbo].[RangBuocGiaoVien] {0}
+				)
+				select
+				       [MaRangBuocGiaoVien],
+				       [MaGiaoVien],
+				       [Thu],
+				       [TietHoc],
+				       [TrangThai]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[RangBuocGiaoVien] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="LopHoc_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the LopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaLopHoc],
+					[TenLopHoc],
+					[MaKhoi]
+				FROM
+					[dbo].[LopHoc]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="LopHoc_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the LopHoc table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaLopHoc]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaLopHoc]'
+				SET @SQL = @SQL + ', [TenLopHoc]'
+				SET @SQL = @SQL + ', [MaKhoi]'
+				SET @SQL = @SQL + ' FROM [dbo].[LopHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaLopHoc],'
+				SET @SQL = @SQL + ' [TenLopHoc],'
+				SET @SQL = @SQL + ' [MaKhoi]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[LopHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="LopHoc_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the LopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@TenLopHoc" type="nvarchar" direction="Input" size="20" precision="0" scale="0" param="(20)" nulldefault=""/>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[LopHoc]
+					(
+					[MaLopHoc]
+					,[TenLopHoc]
+					,[MaKhoi]
+					)
+				VALUES
+					(
+					@MaLopHoc
+					,@TenLopHoc
+					,@MaKhoi
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="LopHoc_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the LopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@OriginalMaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@TenLopHoc" type="nvarchar" direction="Input" size="20" precision="0" scale="0" param="(20)" nulldefault=""/>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[LopHoc]
+				SET
+					[MaLopHoc] = @MaLopHoc
+					,[TenLopHoc] = @TenLopHoc
+					,[MaKhoi] = @MaKhoi
+				WHERE
+[MaLopHoc] = @OriginalMaLopHoc 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="LopHoc_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the LopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[LopHoc] WITH (ROWLOCK) 
+				WHERE
+					[MaLopHoc] = @MaLopHoc
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="LopHoc_GetByMaLopHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the LopHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaLopHoc],
+					[TenLopHoc],
+					[MaKhoi]
+				FROM
+					[dbo].[LopHoc]
+				WHERE
+					[MaLopHoc] = @MaLopHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="LopHoc_GetByMaKhoi" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the LopHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaLopHoc],
+					[TenLopHoc],
+					[MaKhoi]
+				FROM
+					[dbo].[LopHoc]
+				WHERE
+					[MaKhoi] = @MaKhoi
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="LopHoc_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the LopHoc table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault="null"/>
+				<parameter name="@TenLopHoc" type="nvarchar" direction="Input" size="20" precision="0" scale="0" param="(20)" nulldefault="null"/>
+				<parameter name="@MaKhoi" type="nvarchar" direction="Input" size="3" precision="0" scale="0" param="(3)" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaLopHoc]
+	, [TenLopHoc]
+	, [MaKhoi]
+    FROM
+	[dbo].[LopHoc]
+    WHERE 
+	 ([MaLopHoc] = @MaLopHoc OR @MaLopHoc is null)
+	AND ([TenLopHoc] = @TenLopHoc OR @TenLopHoc is null)
+	AND ([MaKhoi] = @MaKhoi OR @MaKhoi is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaLopHoc]
+	, [TenLopHoc]
+	, [MaKhoi]
+    FROM
+	[dbo].[LopHoc]
+    WHERE 
+	 ([MaLopHoc] = @MaLopHoc AND @MaLopHoc is not null)
+	OR ([TenLopHoc] = @TenLopHoc AND @TenLopHoc is not null)
+	OR ([MaKhoi] = @MaKhoi AND @MaKhoi is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="LopHoc_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the LopHoc table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaLopHoc]
+					, [TenLopHoc]
+					, [MaKhoi]
+					from [dbo].[LopHoc] {0}
+				)
+				select
+				       [MaLopHoc],
+				       [TenLopHoc],
+				       [MaKhoi]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[LopHoc] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="PhanCong_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the PhanCong table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaPhanCong],
+					[MaLopHoc],
+					[MaMonHoc],
+					[MaGiaoVien],
+					[SoTietHocTuan],
+					[SoTietHocLienTiepToiThieu],
+					[SoTietHocLienTiepToiDa],
+					[SoBuoiHocToiThieu],
+					[SoBuoiHocToiDa]
+				FROM
+					[dbo].[PhanCong]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="PhanCong_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the PhanCong table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaPhanCong]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaPhanCong]'
+				SET @SQL = @SQL + ', [MaLopHoc]'
+				SET @SQL = @SQL + ', [MaMonHoc]'
+				SET @SQL = @SQL + ', [MaGiaoVien]'
+				SET @SQL = @SQL + ', [SoTietHocTuan]'
+				SET @SQL = @SQL + ', [SoTietHocLienTiepToiThieu]'
+				SET @SQL = @SQL + ', [SoTietHocLienTiepToiDa]'
+				SET @SQL = @SQL + ', [SoBuoiHocToiThieu]'
+				SET @SQL = @SQL + ', [SoBuoiHocToiDa]'
+				SET @SQL = @SQL + ' FROM [dbo].[PhanCong]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaPhanCong],'
+				SET @SQL = @SQL + ' [MaLopHoc],'
+				SET @SQL = @SQL + ' [MaMonHoc],'
+				SET @SQL = @SQL + ' [MaGiaoVien],'
+				SET @SQL = @SQL + ' [SoTietHocTuan],'
+				SET @SQL = @SQL + ' [SoTietHocLienTiepToiThieu],'
+				SET @SQL = @SQL + ' [SoTietHocLienTiepToiDa],'
+				SET @SQL = @SQL + ' [SoBuoiHocToiThieu],'
+				SET @SQL = @SQL + ' [SoBuoiHocToiDa]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[PhanCong]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="PhanCong_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the PhanCong table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@SoTietHocTuan" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietHocLienTiepToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietHocLienTiepToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoBuoiHocToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoBuoiHocToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[PhanCong]
+					(
+					[MaPhanCong]
+					,[MaLopHoc]
+					,[MaMonHoc]
+					,[MaGiaoVien]
+					,[SoTietHocTuan]
+					,[SoTietHocLienTiepToiThieu]
+					,[SoTietHocLienTiepToiDa]
+					,[SoBuoiHocToiThieu]
+					,[SoBuoiHocToiDa]
+					)
+				VALUES
+					(
+					@MaPhanCong
+					,@MaLopHoc
+					,@MaMonHoc
+					,@MaGiaoVien
+					,@SoTietHocTuan
+					,@SoTietHocLienTiepToiThieu
+					,@SoTietHocLienTiepToiDa
+					,@SoBuoiHocToiThieu
+					,@SoBuoiHocToiDa
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the PhanCong table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+				<parameter name="@OriginalMaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@SoTietHocTuan" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietHocLienTiepToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietHocLienTiepToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoBuoiHocToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoBuoiHocToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[PhanCong]
+				SET
+					[MaPhanCong] = @MaPhanCong
+					,[MaLopHoc] = @MaLopHoc
+					,[MaMonHoc] = @MaMonHoc
+					,[MaGiaoVien] = @MaGiaoVien
+					,[SoTietHocTuan] = @SoTietHocTuan
+					,[SoTietHocLienTiepToiThieu] = @SoTietHocLienTiepToiThieu
+					,[SoTietHocLienTiepToiDa] = @SoTietHocLienTiepToiDa
+					,[SoBuoiHocToiThieu] = @SoBuoiHocToiThieu
+					,[SoBuoiHocToiDa] = @SoBuoiHocToiDa
+				WHERE
+[MaPhanCong] = @OriginalMaPhanCong 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the PhanCong table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[PhanCong] WITH (ROWLOCK) 
+				WHERE
+					[MaPhanCong] = @MaPhanCong
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_GetByMaPhanCong" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhanCong table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhanCong],
+					[MaLopHoc],
+					[MaMonHoc],
+					[MaGiaoVien],
+					[SoTietHocTuan],
+					[SoTietHocLienTiepToiThieu],
+					[SoTietHocLienTiepToiDa],
+					[SoBuoiHocToiThieu],
+					[SoBuoiHocToiDa]
+				FROM
+					[dbo].[PhanCong]
+				WHERE
+					[MaPhanCong] = @MaPhanCong
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_GetByMaGiaoVien" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhanCong table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhanCong],
+					[MaLopHoc],
+					[MaMonHoc],
+					[MaGiaoVien],
+					[SoTietHocTuan],
+					[SoTietHocLienTiepToiThieu],
+					[SoTietHocLienTiepToiDa],
+					[SoBuoiHocToiThieu],
+					[SoBuoiHocToiDa]
+				FROM
+					[dbo].[PhanCong]
+				WHERE
+					[MaGiaoVien] = @MaGiaoVien
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_GetByMaLopHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhanCong table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhanCong],
+					[MaLopHoc],
+					[MaMonHoc],
+					[MaGiaoVien],
+					[SoTietHocTuan],
+					[SoTietHocLienTiepToiThieu],
+					[SoTietHocLienTiepToiDa],
+					[SoBuoiHocToiThieu],
+					[SoBuoiHocToiDa]
+				FROM
+					[dbo].[PhanCong]
+				WHERE
+					[MaLopHoc] = @MaLopHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_GetByMaMonHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhanCong table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhanCong],
+					[MaLopHoc],
+					[MaMonHoc],
+					[MaGiaoVien],
+					[SoTietHocTuan],
+					[SoTietHocLienTiepToiThieu],
+					[SoTietHocLienTiepToiDa],
+					[SoBuoiHocToiThieu],
+					[SoBuoiHocToiDa]
+				FROM
+					[dbo].[PhanCong]
+				WHERE
+					[MaMonHoc] = @MaMonHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhanCong_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the PhanCong table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault="null"/>
+				<parameter name="@MaLopHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault="null"/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault="null"/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault="null"/>
+				<parameter name="@SoTietHocTuan" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoTietHocLienTiepToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoTietHocLienTiepToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoBuoiHocToiThieu" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoBuoiHocToiDa" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaPhanCong]
+	, [MaLopHoc]
+	, [MaMonHoc]
+	, [MaGiaoVien]
+	, [SoTietHocTuan]
+	, [SoTietHocLienTiepToiThieu]
+	, [SoTietHocLienTiepToiDa]
+	, [SoBuoiHocToiThieu]
+	, [SoBuoiHocToiDa]
+    FROM
+	[dbo].[PhanCong]
+    WHERE 
+	 ([MaPhanCong] = @MaPhanCong OR @MaPhanCong is null)
+	AND ([MaLopHoc] = @MaLopHoc OR @MaLopHoc is null)
+	AND ([MaMonHoc] = @MaMonHoc OR @MaMonHoc is null)
+	AND ([MaGiaoVien] = @MaGiaoVien OR @MaGiaoVien is null)
+	AND ([SoTietHocTuan] = @SoTietHocTuan OR @SoTietHocTuan is null)
+	AND ([SoTietHocLienTiepToiThieu] = @SoTietHocLienTiepToiThieu OR @SoTietHocLienTiepToiThieu is null)
+	AND ([SoTietHocLienTiepToiDa] = @SoTietHocLienTiepToiDa OR @SoTietHocLienTiepToiDa is null)
+	AND ([SoBuoiHocToiThieu] = @SoBuoiHocToiThieu OR @SoBuoiHocToiThieu is null)
+	AND ([SoBuoiHocToiDa] = @SoBuoiHocToiDa OR @SoBuoiHocToiDa is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaPhanCong]
+	, [MaLopHoc]
+	, [MaMonHoc]
+	, [MaGiaoVien]
+	, [SoTietHocTuan]
+	, [SoTietHocLienTiepToiThieu]
+	, [SoTietHocLienTiepToiDa]
+	, [SoBuoiHocToiThieu]
+	, [SoBuoiHocToiDa]
+    FROM
+	[dbo].[PhanCong]
+    WHERE 
+	 ([MaPhanCong] = @MaPhanCong AND @MaPhanCong is not null)
+	OR ([MaLopHoc] = @MaLopHoc AND @MaLopHoc is not null)
+	OR ([MaMonHoc] = @MaMonHoc AND @MaMonHoc is not null)
+	OR ([MaGiaoVien] = @MaGiaoVien AND @MaGiaoVien is not null)
+	OR ([SoTietHocTuan] = @SoTietHocTuan AND @SoTietHocTuan is not null)
+	OR ([SoTietHocLienTiepToiThieu] = @SoTietHocLienTiepToiThieu AND @SoTietHocLienTiepToiThieu is not null)
+	OR ([SoTietHocLienTiepToiDa] = @SoTietHocLienTiepToiDa AND @SoTietHocLienTiepToiDa is not null)
+	OR ([SoBuoiHocToiThieu] = @SoBuoiHocToiThieu AND @SoBuoiHocToiThieu is not null)
+	OR ([SoBuoiHocToiDa] = @SoBuoiHocToiDa AND @SoBuoiHocToiDa is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="PhanCong_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the PhanCong table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaPhanCong]
+					, [MaLopHoc]
+					, [MaMonHoc]
+					, [MaGiaoVien]
+					, [SoTietHocTuan]
+					, [SoTietHocLienTiepToiThieu]
+					, [SoTietHocLienTiepToiDa]
+					, [SoBuoiHocToiThieu]
+					, [SoBuoiHocToiDa]
+					from [dbo].[PhanCong] {0}
+				)
+				select
+				       [MaPhanCong],
+				       [MaLopHoc],
+				       [MaMonHoc],
+				       [MaGiaoVien],
+				       [SoTietHocTuan],
+				       [SoTietHocLienTiepToiThieu],
+				       [SoTietHocLienTiepToiDa],
+				       [SoBuoiHocToiThieu],
+				       [SoBuoiHocToiDa]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[PhanCong] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="PhuTrach_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the PhuTrach table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaPhuTrach],
+					[MaGiaoVien],
+					[MaMonHoc]
+				FROM
+					[dbo].[PhuTrach]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="PhuTrach_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the PhuTrach table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaPhuTrach]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaPhuTrach]'
+				SET @SQL = @SQL + ', [MaGiaoVien]'
+				SET @SQL = @SQL + ', [MaMonHoc]'
+				SET @SQL = @SQL + ' FROM [dbo].[PhuTrach]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaPhuTrach],'
+				SET @SQL = @SQL + ' [MaGiaoVien],'
+				SET @SQL = @SQL + ' [MaMonHoc]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[PhuTrach]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="PhuTrach_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the PhuTrach table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhuTrach" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[PhuTrach]
+					(
+					[MaPhuTrach]
+					,[MaGiaoVien]
+					,[MaMonHoc]
+					)
+				VALUES
+					(
+					@MaPhuTrach
+					,@MaGiaoVien
+					,@MaMonHoc
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="PhuTrach_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the PhuTrach table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhuTrach" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@OriginalMaPhuTrach" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[PhuTrach]
+				SET
+					[MaPhuTrach] = @MaPhuTrach
+					,[MaGiaoVien] = @MaGiaoVien
+					,[MaMonHoc] = @MaMonHoc
+				WHERE
+[MaPhuTrach] = @OriginalMaPhuTrach 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="PhuTrach_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the PhuTrach table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhuTrach" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[PhuTrach] WITH (ROWLOCK) 
+				WHERE
+					[MaPhuTrach] = @MaPhuTrach
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="PhuTrach_GetByMaPhuTrach" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhuTrach table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhuTrach" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhuTrach],
+					[MaGiaoVien],
+					[MaMonHoc]
+				FROM
+					[dbo].[PhuTrach]
+				WHERE
+					[MaPhuTrach] = @MaPhuTrach
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhuTrach_GetByMaGiaoVien" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhuTrach table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhuTrach],
+					[MaGiaoVien],
+					[MaMonHoc]
+				FROM
+					[dbo].[PhuTrach]
+				WHERE
+					[MaGiaoVien] = @MaGiaoVien
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhuTrach_GetByMaMonHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the PhuTrach table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaPhuTrach],
+					[MaGiaoVien],
+					[MaMonHoc]
+				FROM
+					[dbo].[PhuTrach]
+				WHERE
+					[MaMonHoc] = @MaMonHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="PhuTrach_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the PhuTrach table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaPhuTrach" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault="null"/>
+				<parameter name="@MaGiaoVien" type="nvarchar" direction="Input" size="5" precision="0" scale="0" param="(5)" nulldefault="null"/>
+				<parameter name="@MaMonHoc" type="nvarchar" direction="Input" size="4" precision="0" scale="0" param="(4)" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaPhuTrach]
+	, [MaGiaoVien]
+	, [MaMonHoc]
+    FROM
+	[dbo].[PhuTrach]
+    WHERE 
+	 ([MaPhuTrach] = @MaPhuTrach OR @MaPhuTrach is null)
+	AND ([MaGiaoVien] = @MaGiaoVien OR @MaGiaoVien is null)
+	AND ([MaMonHoc] = @MaMonHoc OR @MaMonHoc is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaPhuTrach]
+	, [MaGiaoVien]
+	, [MaMonHoc]
+    FROM
+	[dbo].[PhuTrach]
+    WHERE 
+	 ([MaPhuTrach] = @MaPhuTrach AND @MaPhuTrach is not null)
+	OR ([MaGiaoVien] = @MaGiaoVien AND @MaGiaoVien is not null)
+	OR ([MaMonHoc] = @MaMonHoc AND @MaMonHoc is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="PhuTrach_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the PhuTrach table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaPhuTrach]
+					, [MaGiaoVien]
+					, [MaMonHoc]
+					from [dbo].[PhuTrach] {0}
+				)
+				select
+				       [MaPhuTrach],
+				       [MaGiaoVien],
+				       [MaMonHoc]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[PhuTrach] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="LichLopHoc_Get_List" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the LichLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				SELECT
+					[MaLichLopHoc],
+					[MaPhanCong],
+					[Thu],
+					[TietHocBatDau],
+					[SoTietHoc]
+				FROM
+					[dbo].[LichLopHoc]
+					
+				Select @@ROWCOUNT
+			]]></body>
+		</procedure>
+		
+		
+		<procedure owner="dbo" name="LichLopHoc_GetPaged" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the LichLopHoc table passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+				<parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>
+				<parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+				<parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+			</parameters>
+			<body><![CDATA[
+				
+				BEGIN
+				DECLARE @PageLowerBound int
+				DECLARE @PageUpperBound int
+				
+				-- Set the page bounds
+				SET @PageLowerBound = @PageSize * @PageIndex
+				SET @PageUpperBound = @PageLowerBound + @PageSize
+
+				IF (@OrderBy is null or LEN(@OrderBy) < 1)
+				BEGIN
+					-- default order by to first column
+					SET @OrderBy = '[MaLichLopHoc]'
+				END
+
+				-- SQL Server 2005 Paging
+				declare @SQL as nvarchar(4000)
+				SET @SQL = 'WITH PageIndex AS ('
+				SET @SQL = @SQL + ' SELECT'
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' TOP ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+				SET @SQL = @SQL + ', [MaLichLopHoc]'
+				SET @SQL = @SQL + ', [MaPhanCong]'
+				SET @SQL = @SQL + ', [Thu]'
+				SET @SQL = @SQL + ', [TietHocBatDau]'
+				SET @SQL = @SQL + ', [SoTietHoc]'
+				SET @SQL = @SQL + ' FROM [dbo].[LichLopHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				SET @SQL = @SQL + ' ) SELECT'
+				SET @SQL = @SQL + ' [MaLichLopHoc],'
+				SET @SQL = @SQL + ' [MaPhanCong],'
+				SET @SQL = @SQL + ' [Thu],'
+				SET @SQL = @SQL + ' [TietHocBatDau],'
+				SET @SQL = @SQL + ' [SoTietHoc]'
+				SET @SQL = @SQL + ' FROM PageIndex'
+				SET @SQL = @SQL + ' WHERE RowIndex > ' + convert(nvarchar, @PageLowerBound)
+				IF @PageSize > 0
+				BEGIN
+					SET @SQL = @SQL + ' AND RowIndex <= ' + convert(nvarchar, @PageUpperBound)
+				END
+				SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+				exec sp_executesql @SQL
+				
+				-- get row count
+				SET @SQL = 'SELECT COUNT(*) as TotalRowCount'
+				SET @SQL = @SQL + ' FROM [dbo].[LichLopHoc]'
+				IF LEN(@WhereClause) > 0
+				BEGIN
+					SET @SQL = @SQL + ' WHERE ' + @WhereClause
+				END
+				exec sp_executesql @SQL
+			
+				END
+			]]></body>
+		</procedure>
+		
+		<procedure owner="dbo" name="LichLopHoc_Insert" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Inserts a record into the LichLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLichLopHoc" type="nvarchar" direction="Input" size="8" precision="0" scale="0" param="(8)" nulldefault=""/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+				<parameter name="@Thu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@TietHocBatDau" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+					
+				INSERT INTO [dbo].[LichLopHoc]
+					(
+					[MaLichLopHoc]
+					,[MaPhanCong]
+					,[Thu]
+					,[TietHocBatDau]
+					,[SoTietHoc]
+					)
+				VALUES
+					(
+					@MaLichLopHoc
+					,@MaPhanCong
+					,@Thu
+					,@TietHocBatDau
+					,@SoTietHoc
+					)
+				
+									
+							
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="LichLopHoc_Update" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Updates a record in the LichLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLichLopHoc" type="nvarchar" direction="Input" size="8" precision="0" scale="0" param="(8)" nulldefault=""/>
+				<parameter name="@OriginalMaLichLopHoc" type="nvarchar" direction="Input" size="8" precision="0" scale="0" param="(8)" nulldefault=""/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+				<parameter name="@Thu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault=""/>
+				<parameter name="@TietHocBatDau" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+				<parameter name="@SoTietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				
+				
+				-- Modify the updatable columns
+				UPDATE
+					[dbo].[LichLopHoc]
+				SET
+					[MaLichLopHoc] = @MaLichLopHoc
+					,[MaPhanCong] = @MaPhanCong
+					,[Thu] = @Thu
+					,[TietHocBatDau] = @TietHocBatDau
+					,[SoTietHoc] = @SoTietHoc
+				WHERE
+[MaLichLopHoc] = @OriginalMaLichLopHoc 
+				
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="LichLopHoc_Delete" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Deletes a record in the LichLopHoc table
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLichLopHoc" type="nvarchar" direction="Input" size="8" precision="0" scale="0" param="(8)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				DELETE FROM [dbo].[LichLopHoc] WITH (ROWLOCK) 
+				WHERE
+					[MaLichLopHoc] = @MaLichLopHoc
+					
+			]]></body>
+		</procedure>
+		<procedure owner="dbo" name="LichLopHoc_GetByMaLichLopHoc" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the LichLopHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaLichLopHoc" type="nvarchar" direction="Input" size="8" precision="0" scale="0" param="(8)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaLichLopHoc],
+					[MaPhanCong],
+					[Thu],
+					[TietHocBatDau],
+					[SoTietHoc]
+				FROM
+					[dbo].[LichLopHoc]
+				WHERE
+					[MaLichLopHoc] = @MaLichLopHoc
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="LichLopHoc_GetByMaPhanCong" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Select records from the LichLopHoc table through an index
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault=""/>
+			</parameters>
+			<body><![CDATA[
+				SELECT
+					[MaLichLopHoc],
+					[MaPhanCong],
+					[Thu],
+					[TietHocBatDau],
+					[SoTietHoc]
+				FROM
+					[dbo].[LichLopHoc]
+				WHERE
+					[MaPhanCong] = @MaPhanCong
+			Select @@ROWCOUNT
+					
+			]]></body>
+			
+		</procedure>
+		<procedure owner="dbo" name="LichLopHoc_Find" grant="">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Finds records in the LichLopHoc table passing nullable parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters>
+				<parameter name="@SearchUsingOR" type="bit" direction="Input" size="0" precision="1" scale="0" param="" nulldefault="null"/>
+				<parameter name="@MaLichLopHoc" type="nvarchar" direction="Input" size="8" precision="0" scale="0" param="(8)" nulldefault="null"/>
+				<parameter name="@MaPhanCong" type="nvarchar" direction="Input" size="6" precision="0" scale="0" param="(6)" nulldefault="null"/>
+				<parameter name="@Thu" type="nvarchar" direction="Input" size="50" precision="0" scale="0" param="(50)" nulldefault="null"/>
+				<parameter name="@TietHocBatDau" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+				<parameter name="@SoTietHoc" type="tinyint" direction="Input" size="1" precision="3" scale="0" param="" nulldefault="null"/>
+			</parameters>
+			<body><![CDATA[
+				
+  IF ISNULL(@SearchUsingOR, 0) <> 1
+  BEGIN
+    SELECT
+	  [MaLichLopHoc]
+	, [MaPhanCong]
+	, [Thu]
+	, [TietHocBatDau]
+	, [SoTietHoc]
+    FROM
+	[dbo].[LichLopHoc]
+    WHERE 
+	 ([MaLichLopHoc] = @MaLichLopHoc OR @MaLichLopHoc is null)
+	AND ([MaPhanCong] = @MaPhanCong OR @MaPhanCong is null)
+	AND ([Thu] = @Thu OR @Thu is null)
+	AND ([TietHocBatDau] = @TietHocBatDau OR @TietHocBatDau is null)
+	AND ([SoTietHoc] = @SoTietHoc OR @SoTietHoc is null)
+						
+  END
+  ELSE
+  BEGIN
+    SELECT
+	  [MaLichLopHoc]
+	, [MaPhanCong]
+	, [Thu]
+	, [TietHocBatDau]
+	, [SoTietHoc]
+    FROM
+	[dbo].[LichLopHoc]
+    WHERE 
+	 ([MaLichLopHoc] = @MaLichLopHoc AND @MaLichLopHoc is not null)
+	OR ([MaPhanCong] = @MaPhanCong AND @MaPhanCong is not null)
+	OR ([Thu] = @Thu AND @Thu is not null)
+	OR ([TietHocBatDau] = @TietHocBatDau AND @TietHocBatDau is not null)
+	OR ([SoTietHoc] = @SoTietHoc AND @SoTietHoc is not null)
+	Select @@ROWCOUNT			
+  END
+				]]></body>
+		</procedure>
+
+		
+		<procedure owner="dbo" name="LichLopHoc_Find_Dynamic" grant="" skip="true">
+			<comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets records from the LichLopHoc table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+			<parameters/>
+			<body><![CDATA[
+				
+				BEGIN
+				
+				with PageIndex as (
+					select top {3} row_number() over (order by {1}) as RowIndex
+					, [MaLichLopHoc]
+					, [MaPhanCong]
+					, [Thu]
+					, [TietHocBatDau]
+					, [SoTietHoc]
+					from [dbo].[LichLopHoc] {0}
+				)
+				select
+				       [MaLichLopHoc],
+				       [MaPhanCong],
+				       [Thu],
+				       [TietHocBatDau],
+				       [SoTietHoc]
+				  from PageIndex
+				 where RowIndex > {2}
+				   and RowIndex <= {3};
+				
+
+				-- get total count
+				select count(*) as TotalRowCount from [dbo].[LichLopHoc] {0};
+			
+				END
+			]]></body>
+		</procedure>
+		
+</procedures>
+</root>

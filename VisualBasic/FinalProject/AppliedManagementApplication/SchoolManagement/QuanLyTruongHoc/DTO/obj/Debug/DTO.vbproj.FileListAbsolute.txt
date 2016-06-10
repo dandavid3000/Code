@@ -1,0 +1,63 @@
+E:\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+E:\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+E:\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+E:\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+E:\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+E:\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+E:\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+E:\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+E:\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\bin\Debug\DTO.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\bin\Debug\DTO.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\bin\Debug\DTO.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.Resources.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.vbproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DTO\obj\Debug\DTO.pdb

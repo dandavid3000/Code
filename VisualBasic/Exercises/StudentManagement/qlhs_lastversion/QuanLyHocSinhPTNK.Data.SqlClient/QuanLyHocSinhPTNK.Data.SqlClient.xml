@@ -1,0 +1,2561 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QuanLyHocSinhPTNK.Data.SqlClient</name>
+    </assembly>
+    <members>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.BangDiem"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.BangDiem"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maBangDiem">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangDiem objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangDiem objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangDiem objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangDiem objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.GetByMaHocSinh(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_BangDiem_HocSinh key.
+            	FK_BangDiem_HocSinh Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maHocSinh"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangDiem objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.GetByMaBangDiem(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_BangDiem index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maBangDiem"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.BangDiem"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.BangDiem})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.BangDiem object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangDiem)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.BangDiem object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.BangDiem object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.BangDiem object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangDiem)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.BangDiem object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.BangDiem object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangDiemProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.Diem"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.Diem"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maDiem">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.GetByMaMon(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_Diem_MonHoc key.
+            	FK_Diem_MonHoc Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maMon"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.GetByMaHocKy(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_Diem_HocKy key.
+            	FK_Diem_HocKy Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maHocKy"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.GetByMaBangDiem(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_Diem_BangDiem key.
+            	FK_Diem_BangDiem Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maBangDiem"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Diem objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.GetByMaDiem(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_MonHoc index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maDiem"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.Diem"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.Diem})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.Diem object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Diem)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.Diem object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.Diem object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.Diem object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Diem)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.Diem object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.Diem object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlDiemProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.BangThamSo"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maBangThamSo">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangThamSo objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangThamSo objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangThamSo objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.BangThamSo objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.GetByMaBangThamSo(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_BangThamSo index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maBangThamSo"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.BangThamSo"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.BangThamSo})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.BangThamSo object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangThamSo)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.BangThamSo object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.BangThamSo object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.BangThamSo object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangThamSo)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.BangThamSo object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.BangThamSo object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.HocSinh"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maHocSinh">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocSinh objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocSinh objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocSinh objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocSinh objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.GetByMaLop(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_HocSinh_LopHoc key.
+            	FK_HocSinh_LopHoc Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maLop"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocSinh objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.GetByMaHocSinh(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_HocSinh index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maHocSinh"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.HocSinh"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.HocSinh})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.HocSinh object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocSinh)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.HocSinh object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.HocSinh object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.HocSinh object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocSinh)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.HocSinh object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.HocSinh object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.PhongBan"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.PhongBan"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maPhongBan">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.PhongBan objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.PhongBan objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.PhongBan objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.PhongBan objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.GetByMaPhongBan(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_PhongBan index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maPhongBan"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.PhongBan"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.PhongBan})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.PhongBan object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.PhongBan)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.PhongBan object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.PhongBan object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.PhongBan object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.PhongBan)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.PhongBan object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.PhongBan object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlPhongBanProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider">
+            <summary>
+            Summary description for Procedures.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.Serialize(System.String)">
+            <summary>
+            Serializes the specified filename.
+            </summary>
+            <param name="filename">Filename.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.Deserialize">
+            <summary>
+            Deserializes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.GetProcedureBodyFromEmbeddedResource(System.String)">
+            <summary>
+            Get the query text from the embedded xml file.
+            </summary>
+            <param name="name">The name of the query.</param>
+            <returns>the text of the query</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.GetCommandWrapper(Microsoft.Practices.EnterpriseLibrary.Data.Database,System.String,System.Boolean)">
+            <summary>
+            Get the command wrapper, either from the stored procedures or from the embedded queries.
+            </summary>
+            <param name="database">The database instance.</param>
+            <param name="commandName">the name of the sp.</param>
+            <param name="useStoredProcedure">Indicates if we want stored procedure.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.GetCommandWrapper(Microsoft.Practices.EnterpriseLibrary.Data.Database,System.String,System.Type,QuanLyHocSinhPTNK.Data.SqlFilterParameterCollection,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the command wrapper for a dynamically generated query and
+            optionally includes server-side paging.
+            </summary>
+            <param name="database"></param>
+            <param name="commandName"></param>
+            <param name="columnEnum"></param>
+            <param name="parameters"></param>
+            <param name="orderBy"></param>
+            <param name="start"></param>
+            <param name="pageLength"></param>
+            <returns></returns>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.Current">
+            <summary>
+            Gets the current <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider"/> singleton instance.
+            </summary>
+            <value><see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider"/></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.Procedures">
+            <summary>
+            Gets or sets the procedures.
+            </summary>
+            <value>An <see cref="T:System.Collections.ArrayList"/> of <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.Procedure"/> objects.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.Item(System.String)">
+            <summary>
+            Gets or sets the <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.Procedure"/> instance with the specified name.
+            </summary>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.StoredProcedureProvider.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.Procedure"/> instance at the specified index.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.Procedure">
+            <summary>
+            Represents a sql query.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.Procedure"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.Parameter(System.String)">
+            <summary>
+            Get the parameter from the specified name of the param.
+            </summary>
+            <param name="paramName">Name of the param.</param>
+            <returns></returns>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.Parameters">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.Owner">
+            <summary>
+            Gets or sets the owner.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.Comment">
+            <summary>
+            Gets or sets the comment.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Procedure.Body">
+            <summary>
+            Gets or sets the body.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.Parameter">
+            <summary>
+            Respresents a query parameter.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.Parameter"/> instance.
+            </summary>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.SqlType">
+            <summary>
+            Gets or sets the SqlType.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.Direction">
+            <summary>
+            Gets or sets the Direction.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.Precision">
+            <summary>
+            Gets or sets the precision.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.Parameter.Scale">
+            <summary>
+            Gets or sets the scale.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.BangThamSo"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlBangThamSoProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.HocSinh"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocSinhProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.ChucDanh"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.ChucDanh"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maChucDanh">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.ChucDanh objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.ChucDanh objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.ChucDanh objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.ChucDanh objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.GetByMaChucDanh(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_ChucDanh index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maChucDanh"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.ChucDanh"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.ChucDanh})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.ChucDanh object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.ChucDanh)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.ChucDanh object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.ChucDanh object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.ChucDanh object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.ChucDanh)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.ChucDanh object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.ChucDanh object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlChucDanhProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.MonHoc"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.MonHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maMon">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.MonHoc objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.MonHoc objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.MonHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.MonHoc objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.GetByMaMon(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_MonHoc_1 index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maMon"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.MonHoc"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.MonHoc})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.MonHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.MonHoc)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.MonHoc object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.MonHoc object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.MonHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.MonHoc)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.MonHoc object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.MonHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlMonHocProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.Khoi"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maKhoi">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Khoi objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Khoi objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Khoi objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.Khoi objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.GetByMaKhoi(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_Khoi index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maKhoi"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.Khoi"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.Khoi})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.Khoi object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Khoi)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.Khoi object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.Khoi object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.Khoi object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Khoi)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.Khoi object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.Khoi object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.QuanLy"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.QuanLy"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maQuanLy">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.QuanLy objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.QuanLy objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.QuanLy objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.QuanLy objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.GetByMaChucDanh(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_QuanLy_ChucDanh key.
+            	FK_QuanLy_ChucDanh Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maChucDanh"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.QuanLy objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.GetByMaPhongBan(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_QuanLy_PhongBan key.
+            	FK_QuanLy_PhongBan Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maPhongBan"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.QuanLy objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.GetByMaQuanLy(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_QuanLy index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maQuanLy"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.QuanLy"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.QuanLy})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.QuanLy object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.QuanLy)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.QuanLy object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.QuanLy object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.QuanLy object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.QuanLy)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.QuanLy object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.QuanLy object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlQuanLyProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider">
+            <summary>
+            This class is the Sql implementation of the NetTiersProvider.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the provider.
+            </summary>
+            <param name="name">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</param>
+            <exception cref="T:System.ArgumentNullException">The name of the provider is null.</exception>
+            <exception cref="T:System.InvalidOperationException">An attempt is made to call <see cref="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)"></see> on a provider after the provider has already been initialized.</exception>
+            <exception cref="T:System.ArgumentException">The name of the provider has a length of zero.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.CreateTransaction">
+            <summary>
+            Creates a new <c cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> instance from the current datasource.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(System.String,System.Object[])">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(System.String,System.Object[])">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(System.String,System.Object[])">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(System.String,System.Object[])">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(QuanLyHocSinhPTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.UseStoredProcedure">
+            <summary>
+            Gets a value indicating whether to use stored procedure or not.
+            </summary>
+            <value>
+            	<c>true</c> if this repository use stored procedures; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.IsTransactionSupported">
+            <summary>
+             Indicates if the current <c cref="T:QuanLyHocSinhPTNK.Data.Bases.NetTiersProvider"/> implementation supports Transacton.
+            </summary>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.KhoiProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.Khoi"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlKhoiProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlKhoiProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.PhongBanProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.PhongBan"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlPhongBanProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlPhongBanProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.HocSinhProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.HocSinh"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlHocSinhProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlHocSinhProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.LopHocProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.LopHoc"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlLopHocProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlLopHocProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.QuanLyProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.QuanLy"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlQuanLyProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlQuanLyProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.MonHocProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.MonHoc"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlMonHocProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlMonHocProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.BangThamSoProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.BangThamSo"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlBangThamSoProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlBangThamSoProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.BangDiemProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.BangDiem"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlBangDiemProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlBangDiemProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.ChucDanhProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.ChucDanh"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlChucDanhProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlChucDanhProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.HocKyProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.HocKy"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlHocKyProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlHocKyProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.DiemProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:QuanLyHocSinhPTNK.Entities.Diem"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlDiemProvider">
+            <summary>
+            Gets the current <c cref="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlNetTiersProvider.SqlDiemProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.HocKy"/> entity.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.HocKy"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maHocKy">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocKy objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocKy objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocKy objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.HocKy objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.GetByMaHocKy(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_HocKy index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maHocKy"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.HocKy"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.HocKy})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.HocKy object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocKy)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.HocKy object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.HocKy object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.HocKy object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocKy)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.HocKy object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.HocKy object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlHocKyProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.LopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.Delete(QuanLyHocSinhPTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maLop">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.LopHoc objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.Find(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:QuanLyHocSinhPTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.LopHoc objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.GetAll(QuanLyHocSinhPTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.LopHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.GetPaged(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.LopHoc objects.</returns>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.GetByMaKhoi(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the FK_LopHoc_Khoi key.
+            	FK_LopHoc_Khoi Description: 
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maKhoi"></param>
+            <param name="count">out parameter to get total records for query</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of QuanLyHocSinhPTNK.Entities.LopHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.GetByMaLop(QuanLyHocSinhPTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PK_LopHoc index.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="maLop"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:QuanLyHocSinhPTNK.Entities.LopHoc"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.BulkInsert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.TList{QuanLyHocSinhPTNK.Entities.LopHoc})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.LopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.Insert(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.LopHoc)">
+            <summary>
+            	Inserts a QuanLyHocSinhPTNK.Entities.LopHoc object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.LopHoc object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the QuanLyHocSinhPTNK.Entities.LopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.Update(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.LopHoc)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:QuanLyHocSinhPTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">QuanLyHocSinhPTNK.Entities.LopHoc object to update.</param>
+            <remarks>
+            	After updating the datasource, the QuanLyHocSinhPTNK.Entities.LopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.LopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlLopHocProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:QuanLyHocSinhPTNK.Entities.Khoi"/> entity.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.Data.SqlClient.SqlKhoiProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+    </members>
+</doc>

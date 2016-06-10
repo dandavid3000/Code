@@ -1,0 +1,240 @@
+<NetTiersReport DALNameSpace="QuanLyHocSinhPTNK.Data" SolutionLink="file:\\\c:\NetTiers\QuanLyHocSinhPTNK\QuanLyHocSinhPTNK.sln" ConnectionString="Data Source=KHOANHOC\SQLEXPRESS;Initial Catalog=QuanLyHocSinhPTNK;Integrated Security=True" FactoryType="QuanLyHocSinhPTNK.Entities.EntityFactory">
+  <initialization startTime="128859807325937500" executionTime="00:00:22.1718750">
+    <Message level="0" startTime="128859807326250000" message="Validating parameters." />
+    <Message level="2" startTime="128859807395312500" message="Generating .netTiers Entity Mapping" />
+    <Message level="0" startTime="128859807413437500" message="Loading templates." executionTime="00:00:11.2187500" />
+    <Message level="1" startTime="128859807527187500" message="Table BangDiem is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807528750000" message="Table BangThamSo is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807529687500" message="Table ChucDanh is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807530625000" message="Table Diem is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807532031250" message="Table HocKy is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807532656250" message="Table HocSinh is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807533281250" message="Table Khoi is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807534375000" message="Table LopHoc is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807535625000" message="Table MonHoc is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807536562500" message="Table PhongBan is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="1" startTime="128859807537500000" message="Table QuanLy is not eligible for enum generation: table primary key column is not an integer. (used for enum value)" />
+    <Message level="0" startTime="128859807537500000" message="Creating folders and copying dependencies." />
+  </initialization>
+  <customStoredProcedures includeCustoms="true" />
+  <common startTime="128859807547656250" executionTime="00:00:16.6406250">
+    <File name="ListBase.cs" startTime="128859807547656250" />
+    <File name="TList.cs" startTime="128859807550468750" />
+    <File name="VList.cs" startTime="128859807551406250" />
+    <File name="IEntity.cs" startTime="128859807552031250" />
+    <File name="IEntityId.cs" startTime="128859807552656250" />
+    <File name="IEntityKey.cs" startTime="128859807553125000" />
+    <File name="EntityFactory.cs" startTime="128859807553750000" />
+    <File name="EntityFactoryBase.cs" startTime="128859807554687500" />
+    <File name="IEntityFactory.cs" startTime="128859807555468750" />
+    <File name="IEntityCacheItem.cs" startTime="128859807556093750" />
+    <File name="EntityCache.cs" startTime="128859807556718750" />
+    <File name="EntityLocator.cs" startTime="128859807557343750" />
+    <File name="EntityManager.cs" startTime="128859807557968750" />
+    <File name="BrokenRule.cs" startTime="128859807558750000" />
+    <File name="BrokenRulesList.cs" startTime="128859807559375000" />
+    <File name="CommonRules.cs" startTime="128859807560000000" />
+    <File name="ValidationRuleArgs.cs" startTime="128859807561718750" />
+    <File name="ValidationRuleHandler.cs" startTime="128859807562343750" />
+    <File name="ValidationRuleInfo.cs" startTime="128859807563281250" />
+    <File name="ValidationRules.cs" startTime="128859807563593750" />
+    <File name="EntityBaseCore.generated.cs" startTime="128859807564375000" />
+    <File name="EntityBase.cs" startTime="128859807565468750" />
+    <File name="EntityKeyBaseCore.generated.cs" startTime="128859807565625000" />
+    <File name="EntityKeyBase.cs" startTime="128859807566250000" />
+    <File name="SecurityContext.cs" startTime="128859807566875000" />
+    <File name="IProcessor.cs" startTime="128859807567500000" />
+    <File name="IProcessorResult.cs" startTime="128859807568125000" />
+    <File name="ProcessorBase.cs" startTime="128859807568593750" />
+    <File name="GenericProcessorResult.cs" startTime="128859807569375000" />
+    <File name="DomainUtil.cs" startTime="128859807569531250" />
+    <File name="ConnectionScope.cs" startTime="128859807570156250" />
+    <File name="IComponentService.cs" startTime="128859807570937500" />
+    <File name="ServiceBase.cst.cs" startTime="128859807570937500" />
+    <File name="ServiceBaseCore.cst.cs" startTime="128859807572187500" />
+    <File name="ServiceViewBase.cst.cs" startTime="128859807573125000" />
+    <File name="ServiceViewBaseCore.cst.cs" startTime="128859807573750000" />
+    <File name="ServiceResult.cs" startTime="128859807574375000" />
+    <File name="EntityFilter.cs" startTime="128859807575000000" />
+    <File name="EntityPropertyComparer.cs" startTime="128859807577187500" />
+    <File name="GenericTypeConverter.cs" startTime="128859807577343750" />
+    <File name="StoredProcedures.sql" startTime="128859807577968750" />
+    <File name="Unit test configuration files" startTime="128859807673906250" />
+    <File name="Enterprise Library v2 unit test configuration files" startTime="128859807674687500" />
+    <File name="Utility.cs" startTime="128859807675468750" />
+    <File name="TransactionManager.cs" startTime="128859807677656250" />
+    <File name="DataRepository.cs" startTime="128859807678281250" />
+    <File name="IEntityProvider.cs" startTime="128859807679218750" />
+    <File name="IEntityViewProvider.cs" startTime="128859807680937500" />
+    <File name="EntityProviderBase.cs" startTime="128859807681718750" />
+    <File name="EntityProviderBaseCore.generated.cs" startTime="128859807681718750" />
+    <File name="EntityViewProviderBase.cs" startTime="128859807686250000" />
+    <File name="EntityViewProviderBaseCore.generated.cs" startTime="128859807686250000" />
+    <File name="NetTiersProvider.cs" startTime="128859807687812500" />
+    <File name="NetTiersProviderCollection.cs" startTime="128859807689218750" />
+    <File name="NetTiersServiceSection.cs" startTime="128859807689843750" />
+    <File name="ExpressionParserBase.cs" startTime="128859807690000000" />
+    <File name="SqlExpressionParser.cs" startTime="128859807690625000" />
+    <File name="SqlStringBuilder.cs" startTime="128859807691406250" />
+    <File name="SqlUtil.cs" startTime="128859807694687500" />
+    <File name="StringTokenizer.cs" startTime="128859807695625000" />
+    <File name="SqlClient\SqlNetTiersProvider.cs" startTime="128859807696406250" />
+    <File name="StoredProcedureProvider.cs" startTime="128859807697968750" />
+    <File name="QuanLyHocSinhPTNK.sln" startTime="128859807698750000" />
+    <File name="Services.csproj" startTime="128859807701250000" />
+    <File name="QuanLyHocSinhPTNK.Entities.csproj" startTime="128859807705937500" />
+    <File name="QuanLyHocSinhPTNK.Data.Data.csproj" startTime="128859807706718750" />
+    <File name="QuanLyHocSinhPTNK.Entities.Data.SqlClient.csproj" startTime="128859807707343750" />
+    <File name="QuanLyHocSinhPTNK.UnitTests.csproj" startTime="128859807708125000" />
+    <File name="QuanLyHocSinhPTNK.build" startTime="128859807708750000" />
+    <File name="EntityHelper.cs" startTime="128859807710000000" />
+    <File name="EntityUtil.cs" startTime="128859807710625000" />
+  </common>
+  <Table name="Khoi" startTime="128859807714062500" executionTime="00:00:02.4375000">
+    <File name="Khoi.generated.cs" startTime="128859807714062500" executionTime="00:00:00.5781250" />
+    <File name="IKhoi.cs" startTime="128859807719843750" executionTime="00:00:00.0781250" />
+    <File name="Khoi.cs" startTime="128859807720625000" executionTime="00:00:00.0156250" />
+    <File name="KhoiService.cs" startTime="128859807720781250" executionTime="00:00:00.1250000" />
+    <File name="KhoiServiceBase.generated.cs" startTime="128859807722031250" executionTime="00:00:00.4531250" />
+    <File name="KhoiProviderBase.generatedCore.cs" startTime="128859807726562500" executionTime="00:00:00.3750000" />
+    <File name="KhoiProviderBase.generated.cs" startTime="128859807730312500" executionTime="00:00:00.0625000" />
+    <File name="SqlClient\SqlKhoiProviderBase.generated.cs" startTime="128859807730937500" executionTime="00:00:00.3906250" />
+    <File name="SqlClient\KhoiTest.cs" startTime="128859807734843750" executionTime="00:00:00.0625000" />
+    <File name="KhoiTest.cs" startTime="128859807735468750" executionTime="00:00:00.0781250" />
+    <File name="KhoiTest.generated.cs" startTime="128859807736250000" executionTime="00:00:00.2187500" />
+  </Table>
+  <Table name="PhongBan" startTime="128859807738437500" executionTime="00:00:01.2812500">
+    <File name="PhongBan.generated.cs" startTime="128859807738437500" executionTime="00:00:00.2343750" />
+    <File name="IPhongBan.cs" startTime="128859807740781250" executionTime="00:00:00.0625000" />
+    <File name="PhongBan.cs" startTime="128859807741406250" executionTime="00:00:00.0625000" />
+    <File name="PhongBanService.cs" startTime="128859807742031250" executionTime="00:00:00.0625000" />
+    <File name="PhongBanServiceBase.generated.cs" startTime="128859807742812500" executionTime="00:00:00.2343750" />
+    <File name="PhongBanProviderBase.generatedCore.cs" startTime="128859807745156250" executionTime="00:00:00.0781250" />
+    <File name="PhongBanProviderBase.generated.cs" startTime="128859807746093750" executionTime="00:00:00.0625000" />
+    <File name="SqlClient\SqlPhongBanProviderBase.generated.cs" startTime="128859807746718750" executionTime="00:00:00.0781250" />
+    <File name="SqlClient\PhongBanTest.cs" startTime="128859807747500000" executionTime="00:00:00.0312500" />
+    <File name="PhongBanTest.cs" startTime="128859807747812500" executionTime="00:00:00.2656250" />
+    <File name="PhongBanTest.generated.cs" startTime="128859807750468750" executionTime="00:00:00.0781250" />
+  </Table>
+  <Table name="HocSinh" startTime="128859807751250000" executionTime="00:00:01.1093750">
+    <File name="HocSinh.generated.cs" startTime="128859807751250000" executionTime="00:00:00.2656250" />
+    <File name="IHocSinh.cs" startTime="128859807753906250" executionTime="00:00:00.0468750" />
+    <File name="HocSinh.cs" startTime="128859807754531250" executionTime="00:00:00.0625000" />
+    <File name="HocSinhService.cs" startTime="128859807755156250" executionTime="00:00:00.0156250" />
+    <File name="HocSinhServiceBase.generated.cs" startTime="128859807755312500" executionTime="00:00:00.1406250" />
+    <File name="HocSinhProviderBase.generatedCore.cs" startTime="128859807756875000" executionTime="00:00:00.0781250" />
+    <File name="HocSinhProviderBase.generated.cs" startTime="128859807757656250" executionTime="00:00:00.0625000" />
+    <File name="SqlClient\SqlHocSinhProviderBase.generated.cs" startTime="128859807758281250" executionTime="00:00:00.2187500" />
+    <File name="SqlClient\HocSinhTest.cs" startTime="128859807760468750" executionTime="00:00:00.0625000" />
+    <File name="HocSinhTest.cs" startTime="128859807761093750" executionTime="00:00:00.0625000" />
+    <File name="HocSinhTest.generated.cs" startTime="128859807761718750" executionTime="00:00:00.0625000" />
+  </Table>
+  <Table name="LopHoc" startTime="128859807762343750" executionTime="00:00:00.8437500">
+    <File name="LopHoc.generated.cs" startTime="128859807762343750" executionTime="00:00:00.1250000" />
+    <File name="ILopHoc.cs" startTime="128859807763593750" executionTime="00:00:00.0625000" />
+    <File name="LopHoc.cs" startTime="128859807764218750" executionTime="00:00:00.0625000" />
+    <File name="LopHocService.cs" startTime="128859807764843750" executionTime="00:00:00.0156250" />
+    <File name="LopHocServiceBase.generated.cs" startTime="128859807765000000" executionTime="00:00:00.1875000" />
+    <File name="LopHocProviderBase.generatedCore.cs" startTime="128859807766875000" executionTime="00:00:00.1718750" />
+    <File name="LopHocProviderBase.generated.cs" startTime="128859807768593750" executionTime="00:00:00" />
+    <File name="SqlClient\SqlLopHocProviderBase.generated.cs" startTime="128859807768593750" executionTime="00:00:00.0781250" />
+    <File name="SqlClient\LopHocTest.cs" startTime="128859807769375000" executionTime="00:00:00.0312500" />
+    <File name="LopHocTest.cs" startTime="128859807769687500" executionTime="00:00:00.0468750" />
+    <File name="LopHocTest.generated.cs" startTime="128859807770156250" executionTime="00:00:00.0625000" />
+  </Table>
+  <Table name="QuanLy" startTime="128859807770781250" executionTime="00:00:01">
+    <File name="QuanLy.generated.cs" startTime="128859807770781250" executionTime="00:00:00.1718750" />
+    <File name="IQuanLy.cs" startTime="128859807772500000" executionTime="00:00:00" />
+    <File name="QuanLy.cs" startTime="128859807772656250" executionTime="00:00:00.0468750" />
+    <File name="QuanLyService.cs" startTime="128859807773125000" executionTime="00:00:00.0625000" />
+    <File name="QuanLyServiceBase.generated.cs" startTime="128859807773750000" executionTime="00:00:00.2187500" />
+    <File name="QuanLyProviderBase.generatedCore.cs" startTime="128859807775937500" executionTime="00:00:00.0781250" />
+    <File name="QuanLyProviderBase.generated.cs" startTime="128859807776718750" executionTime="00:00:00.0625000" />
+    <File name="SqlClient\SqlQuanLyProviderBase.generated.cs" startTime="128859807777343750" executionTime="00:00:00.0781250" />
+    <File name="SqlClient\QuanLyTest.cs" startTime="128859807778125000" executionTime="00:00:00.1250000" />
+    <File name="QuanLyTest.cs" startTime="128859807779375000" executionTime="00:00:00.0625000" />
+    <File name="QuanLyTest.generated.cs" startTime="128859807780000000" executionTime="00:00:00.0781250" />
+  </Table>
+  <Table name="MonHoc" startTime="128859807780781250" executionTime="00:00:01.0781250">
+    <File name="MonHoc.generated.cs" startTime="128859807780781250" executionTime="00:00:00.1562500" />
+    <File name="IMonHoc.cs" startTime="128859807782343750" executionTime="00:00:00.0625000" />
+    <File name="MonHoc.cs" startTime="128859807782968750" executionTime="00:00:00.1406250" />
+    <File name="MonHocService.cs" startTime="128859807784375000" executionTime="00:00:00.0156250" />
+    <File name="MonHocServiceBase.generated.cs" startTime="128859807784687500" executionTime="00:00:00.1875000" />
+    <File name="MonHocProviderBase.generatedCore.cs" startTime="128859807786562500" executionTime="00:00:00.1093750" />
+    <File name="MonHocProviderBase.generated.cs" startTime="128859807787656250" executionTime="00:00:00.0312500" />
+    <File name="SqlClient\SqlMonHocProviderBase.generated.cs" startTime="128859807787968750" executionTime="00:00:00.1093750" />
+    <File name="SqlClient\MonHocTest.cs" startTime="128859807789062500" executionTime="00:00:00.0625000" />
+    <File name="MonHocTest.cs" startTime="128859807789687500" executionTime="00:00:00.0625000" />
+    <File name="MonHocTest.generated.cs" startTime="128859807790312500" executionTime="00:00:00.1250000" />
+  </Table>
+  <Table name="BangThamSo" startTime="128859807791562500" executionTime="00:00:01.0781250">
+    <File name="BangThamSo.generated.cs" startTime="128859807791562500" executionTime="00:00:00.1875000" />
+    <File name="IBangThamSo.cs" startTime="128859807793437500" executionTime="00:00:00" />
+    <File name="BangThamSo.cs" startTime="128859807793437500" executionTime="00:00:00.0625000" />
+    <File name="BangThamSoService.cs" startTime="128859807794062500" executionTime="00:00:00.0625000" />
+    <File name="BangThamSoServiceBase.generated.cs" startTime="128859807794687500" executionTime="00:00:00.1718750" />
+    <File name="BangThamSoProviderBase.generatedCore.cs" startTime="128859807796406250" executionTime="00:00:00.0781250" />
+    <File name="BangThamSoProviderBase.generated.cs" startTime="128859807797187500" executionTime="00:00:00" />
+    <File name="SqlClient\SqlBangThamSoProviderBase.generated.cs" startTime="128859807797187500" executionTime="00:00:00.3125000" />
+    <File name="SqlClient\BangThamSoTest.cs" startTime="128859807800625000" executionTime="00:00:00.0937500" />
+    <File name="BangThamSoTest.cs" startTime="128859807801562500" executionTime="00:00:00.0625000" />
+    <File name="BangThamSoTest.generated.cs" startTime="128859807802187500" executionTime="00:00:00.0156250" />
+  </Table>
+  <Table name="BangDiem" startTime="128859807802343750" executionTime="00:00:00.8437500">
+    <File name="BangDiem.generated.cs" startTime="128859807802343750" executionTime="00:00:00.1406250" />
+    <File name="IBangDiem.cs" startTime="128859807803750000" executionTime="00:00:00.0625000" />
+    <File name="BangDiem.cs" startTime="128859807804375000" executionTime="00:00:00.0156250" />
+    <File name="BangDiemService.cs" startTime="128859807804531250" executionTime="00:00:00.0625000" />
+    <File name="BangDiemServiceBase.generated.cs" startTime="128859807805156250" executionTime="00:00:00.1250000" />
+    <File name="BangDiemProviderBase.generatedCore.cs" startTime="128859807806406250" executionTime="00:00:00.0781250" />
+    <File name="BangDiemProviderBase.generated.cs" startTime="128859807807187500" executionTime="00:00:00.0937500" />
+    <File name="SqlClient\SqlBangDiemProviderBase.generated.cs" startTime="128859807808125000" executionTime="00:00:00.0468750" />
+    <File name="SqlClient\BangDiemTest.cs" startTime="128859807808906250" executionTime="00:00:00.0781250" />
+    <File name="BangDiemTest.cs" startTime="128859807809843750" executionTime="00:00:00.0156250" />
+    <File name="BangDiemTest.generated.cs" startTime="128859807810000000" executionTime="00:00:00.0781250" />
+  </Table>
+  <Table name="ChucDanh" startTime="128859807810781250" executionTime="00:00:00.9375000">
+    <File name="ChucDanh.generated.cs" startTime="128859807810781250" executionTime="00:00:00.1093750" />
+    <File name="IChucDanh.cs" startTime="128859807811875000" executionTime="00:00:00.0625000" />
+    <File name="ChucDanh.cs" startTime="128859807812500000" executionTime="00:00:00" />
+    <File name="ChucDanhService.cs" startTime="128859807812500000" executionTime="00:00:00.0625000" />
+    <File name="ChucDanhServiceBase.generated.cs" startTime="128859807813125000" executionTime="00:00:00.1562500" />
+    <File name="ChucDanhProviderBase.generatedCore.cs" startTime="128859807814687500" executionTime="00:00:00.1406250" />
+    <File name="ChucDanhProviderBase.generated.cs" startTime="128859807816093750" executionTime="00:00:00.0625000" />
+    <File name="SqlClient\SqlChucDanhProviderBase.generated.cs" startTime="128859807816718750" executionTime="00:00:00.0312500" />
+    <File name="SqlClient\ChucDanhTest.cs" startTime="128859807817031250" executionTime="00:00:00.0625000" />
+    <File name="ChucDanhTest.cs" startTime="128859807817656250" executionTime="00:00:00.1875000" />
+    <File name="ChucDanhTest.generated.cs" startTime="128859807819531250" executionTime="00:00:00.0625000" />
+  </Table>
+  <Table name="HocKy" startTime="128859807820156250" executionTime="00:00:01.0625000">
+    <File name="HocKy.generated.cs" startTime="128859807820156250" executionTime="00:00:00.2187500" />
+    <File name="IHocKy.cs" startTime="128859807822500000" executionTime="00:00:00.0468750" />
+    <File name="HocKy.cs" startTime="128859807822968750" executionTime="00:00:00.0625000" />
+    <File name="HocKyService.cs" startTime="128859807823593750" executionTime="00:00:00.0625000" />
+    <File name="HocKyServiceBase.generated.cs" startTime="128859807824218750" executionTime="00:00:00.1718750" />
+    <File name="HocKyProviderBase.generatedCore.cs" startTime="128859807825937500" executionTime="00:00:00.0781250" />
+    <File name="HocKyProviderBase.generated.cs" startTime="128859807826718750" executionTime="00:00:00.0312500" />
+    <File name="SqlClient\SqlHocKyProviderBase.generated.cs" startTime="128859807827187500" executionTime="00:00:00.0312500" />
+    <File name="SqlClient\HocKyTest.cs" startTime="128859807827500000" executionTime="00:00:00.0156250" />
+    <File name="HocKyTest.cs" startTime="128859807827656250" executionTime="00:00:00.2500000" />
+    <File name="HocKyTest.generated.cs" startTime="128859807830156250" executionTime="00:00:00.0625000" />
+  </Table>
+  <Table name="Diem" startTime="128859807830781250" executionTime="00:00:00.9531250">
+    <File name="Diem.generated.cs" startTime="128859807830781250" executionTime="00:00:00.1718750" />
+    <File name="IDiem.cs" startTime="128859807832500000" executionTime="00:00:00.0468750" />
+    <File name="Diem.cs" startTime="128859807833125000" executionTime="00:00:00" />
+    <File name="DiemService.cs" startTime="128859807833125000" executionTime="00:00:00.0781250" />
+    <File name="DiemServiceBase.generated.cs" startTime="128859807833906250" executionTime="00:00:00.1250000" />
+    <File name="DiemProviderBase.generatedCore.cs" startTime="128859807835156250" executionTime="00:00:00.1093750" />
+    <File name="DiemProviderBase.generated.cs" startTime="128859807836250000" executionTime="00:00:00" />
+    <File name="SqlClient\SqlDiemProviderBase.generated.cs" startTime="128859807836250000" executionTime="00:00:00.0781250" />
+    <File name="SqlClient\DiemTest.cs" startTime="128859807837031250" executionTime="00:00:00.0625000" />
+    <File name="DiemTest.cs" startTime="128859807837656250" executionTime="00:00:00.2187500" />
+    <File name="DiemTest.generated.cs" startTime="128859807839843750" executionTime="00:00:00.0468750" />
+  </Table>
+  <summary>
+    <objectCount>191</objectCount>
+    <messageCount>11</messageCount>
+  </summary>
+</NetTiersReport>

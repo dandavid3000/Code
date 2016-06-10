@@ -1,0 +1,24 @@
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\bin\Debug\PTNKScheduling.exe
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\bin\Debug\PTNKScheduling.pdb
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\bin\Debug\PTNKScheduling.xml
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.PTNKScheduling.resources
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.Resources.resources
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.ucPCGDTheoBoMon.resources
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.ucPCGDTheoLopHoc.resources
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.vbproj.GenerateResource.Cache
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.exe
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.xml
+C:\Users\David\Desktop\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.pdb
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.exe
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.xml
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.pdb
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\bin\Debug\PTNKScheduling.exe
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\bin\Debug\PTNKScheduling.pdb
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\bin\Debug\PTNKScheduling.xml
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.PTNKScheduling.resources
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.Resources.resources
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.ucPCGDTheoBoMon.resources
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.ucPCGDTheoLopHoc.resources
+C:\Users\David\Desktop\Đồ án\PTNKScheduling\PTNKScheduling\obj\Debug\PTNKScheduling.vbproj.GenerateResource.Cache

@@ -1,0 +1,84 @@
+E:\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+E:\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+E:\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+E:\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+E:\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+E:\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+E:\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+E:\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+E:\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+E:\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+E:\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DAOLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\bin\Debug\DTO.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.Resources.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.vbproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\DAOLayer\obj\Debug\DAOLayer.pdb

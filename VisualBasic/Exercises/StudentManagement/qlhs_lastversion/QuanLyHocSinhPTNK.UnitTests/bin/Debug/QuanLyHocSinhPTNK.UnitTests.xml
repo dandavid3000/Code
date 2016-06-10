@@ -1,0 +1,1944 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QuanLyHocSinhPTNK.UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.HocKyTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.HocKy"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.HocKy"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock HocKy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all HocKy objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all HocKy children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock HocKy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock HocKy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock HocKy entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock HocKy entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a HocKy collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a HocKy collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed HocKy Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocKy)">
+            <summary>
+              Update the Typed HocKy Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.HocKyTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_01_Insert">
+            <summary>
+            Inserts a mock HocKy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  HocKy objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all HocKy children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_04_Update">
+            <summary>
+            Updates a mock HocKy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_05_Delete">
+            <summary>
+            Delete the mock HocKy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock HocKy entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock HocKy entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a HocKy collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a HocKy collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed HocKy Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocKyTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocKy)">
+            <summary>
+              Update the Typed HocKy Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.MonHocTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.MonHoc"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.MonHoc"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all MonHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all MonHoc children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock MonHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock MonHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a MonHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a MonHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed MonHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.MonHoc)">
+            <summary>
+              Update the Typed MonHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.MonHocTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_01_Insert">
+            <summary>
+            Inserts a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  MonHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all MonHoc children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_04_Update">
+            <summary>
+            Updates a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_05_Delete">
+            <summary>
+            Delete the mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock MonHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock MonHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a MonHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a MonHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed MonHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.MonHocTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.MonHoc)">
+            <summary>
+              Update the Typed MonHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.QuanLyTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.QuanLy"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.QuanLy"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock QuanLy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all QuanLy objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all QuanLy children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock QuanLy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock QuanLy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock QuanLy entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock QuanLy entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a QuanLy collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a QuanLy collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed QuanLy Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.QuanLy)">
+            <summary>
+              Update the Typed QuanLy Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.QuanLyTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_01_Insert">
+            <summary>
+            Inserts a mock QuanLy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  QuanLy objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all QuanLy children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_04_Update">
+            <summary>
+            Updates a mock QuanLy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_05_Delete">
+            <summary>
+            Delete the mock QuanLy entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock QuanLy entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock QuanLy entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a QuanLy collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a QuanLy collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed QuanLy Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.QuanLyTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.QuanLy)">
+            <summary>
+              Update the Typed QuanLy Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.LopHocTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.LopHoc"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.LopHoc"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all LopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all LopHoc children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock LopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock LopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a LopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a LopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed LopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.LopHoc)">
+            <summary>
+              Update the Typed LopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.LopHocTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_01_Insert">
+            <summary>
+            Inserts a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  LopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all LopHoc children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_04_Update">
+            <summary>
+            Updates a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_05_Delete">
+            <summary>
+            Delete the mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock LopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock LopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a LopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a LopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed LopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.LopHocTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.LopHoc)">
+            <summary>
+              Update the Typed LopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.ChucDanh"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.ChucDanh"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_01_Insert">
+            <summary>
+            Inserts a mock ChucDanh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  ChucDanh objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all ChucDanh children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_04_Update">
+            <summary>
+            Updates a mock ChucDanh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_05_Delete">
+            <summary>
+            Delete the mock ChucDanh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock ChucDanh entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock ChucDanh entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a ChucDanh collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a ChucDanh collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed ChucDanh Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.ChucDanh)">
+            <summary>
+              Update the Typed ChucDanh Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock ChucDanh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all ChucDanh objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all ChucDanh children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock ChucDanh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock ChucDanh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock ChucDanh entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock ChucDanh entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a ChucDanh collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a ChucDanh collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed ChucDanh Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.ChucDanhTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.ChucDanh)">
+            <summary>
+              Update the Typed ChucDanh Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.BangDiemTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.BangDiem"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.BangDiem"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.BangDiemTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_01_Insert">
+            <summary>
+            Inserts a mock BangDiem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  BangDiem objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all BangDiem children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_04_Update">
+            <summary>
+            Updates a mock BangDiem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_05_Delete">
+            <summary>
+            Delete the mock BangDiem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock BangDiem entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock BangDiem entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a BangDiem collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a BangDiem collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed BangDiem Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangDiem)">
+            <summary>
+              Update the Typed BangDiem Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock BangDiem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all BangDiem objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all BangDiem children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock BangDiem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock BangDiem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock BangDiem entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock BangDiem entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a BangDiem collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a BangDiem collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed BangDiem Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangDiemTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangDiem)">
+            <summary>
+              Update the Typed BangDiem Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.BangThamSo"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.BangThamSo"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_01_Insert">
+            <summary>
+            Inserts a mock BangThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  BangThamSo objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all BangThamSo children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_04_Update">
+            <summary>
+            Updates a mock BangThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_05_Delete">
+            <summary>
+            Delete the mock BangThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock BangThamSo entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock BangThamSo entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a BangThamSo collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a BangThamSo collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed BangThamSo Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangThamSo)">
+            <summary>
+              Update the Typed BangThamSo Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock BangThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all BangThamSo objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all BangThamSo children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock BangThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock BangThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock BangThamSo entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock BangThamSo entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a BangThamSo collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a BangThamSo collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed BangThamSo Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.BangThamSoTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.BangThamSo)">
+            <summary>
+              Update the Typed BangThamSo Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.HocSinhTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.HocSinh"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.HocSinh"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock HocSinh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all HocSinh objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all HocSinh children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock HocSinh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock HocSinh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock HocSinh entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock HocSinh entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a HocSinh collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a HocSinh collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed HocSinh Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocSinh)">
+            <summary>
+              Update the Typed HocSinh Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.HocSinhTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_01_Insert">
+            <summary>
+            Inserts a mock HocSinh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  HocSinh objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all HocSinh children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_04_Update">
+            <summary>
+            Updates a mock HocSinh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_05_Delete">
+            <summary>
+            Delete the mock HocSinh entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock HocSinh entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock HocSinh entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a HocSinh collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a HocSinh collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed HocSinh Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.HocSinhTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.HocSinh)">
+            <summary>
+              Update the Typed HocSinh Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.PhongBanTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.PhongBan"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.PhongBan"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock PhongBan entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all PhongBan objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all PhongBan children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock PhongBan entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock PhongBan entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock PhongBan entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock PhongBan entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a PhongBan collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a PhongBan collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed PhongBan Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.PhongBan)">
+            <summary>
+              Update the Typed PhongBan Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.PhongBanTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_01_Insert">
+            <summary>
+            Inserts a mock PhongBan entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  PhongBan objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all PhongBan children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_04_Update">
+            <summary>
+            Updates a mock PhongBan entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_05_Delete">
+            <summary>
+            Delete the mock PhongBan entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock PhongBan entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock PhongBan entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a PhongBan collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a PhongBan collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed PhongBan Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.PhongBanTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.PhongBan)">
+            <summary>
+              Update the Typed PhongBan Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.KhoiTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.Khoi"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.Khoi"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all Khoi objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all Khoi children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock Khoi entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock Khoi entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a Khoi collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a Khoi collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed Khoi Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Khoi)">
+            <summary>
+              Update the Typed Khoi Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.KhoiTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_01_Insert">
+            <summary>
+            Inserts a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  Khoi objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all Khoi children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_04_Update">
+            <summary>
+            Updates a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_05_Delete">
+            <summary>
+            Delete the mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock Khoi entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock Khoi entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a Khoi collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a Khoi collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed Khoi Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.KhoiTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Khoi)">
+            <summary>
+              Update the Typed Khoi Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:QuanLyHocSinhPTNK.UnitTests.DiemTest">
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.Diem"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:QuanLyHocSinhPTNK.Entities.Diem"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:QuanLyHocSinhPTNK.UnitTests.DiemTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_01_Insert">
+            <summary>
+            Inserts a mock Diem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  Diem objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all Diem children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_04_Update">
+            <summary>
+            Updates a mock Diem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_05_Delete">
+            <summary>
+            Delete the mock Diem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock Diem entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock Diem entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a Diem collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a Diem collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.CreateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed Diem Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.UpdateMockInstance(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Diem)">
+            <summary>
+              Update the Typed Diem Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock Diem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all Diem objects of the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all Diem children.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock Diem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock Diem entity into the database.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock Diem entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock Diem entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a Diem collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a Diem collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.CreateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed Diem Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:QuanLyHocSinhPTNK.UnitTests.DiemTest.UpdateMockInstance_Generated(QuanLyHocSinhPTNK.Data.TransactionManager,QuanLyHocSinhPTNK.Entities.Diem)">
+            <summary>
+              Update the Typed Diem Entity with modified mock values.
+            </summary>
+        </member>
+    </members>
+</doc>

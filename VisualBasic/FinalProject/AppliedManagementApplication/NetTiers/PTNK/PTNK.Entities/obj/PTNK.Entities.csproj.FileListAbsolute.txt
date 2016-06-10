@@ -1,0 +1,11 @@
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\PTNK.Entities.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\PTNK.Entities.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\PTNK.Entities.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\obj\Debug\PTNK.Entities.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\NetTiers\PTNK\PTNK.Entities\obj\Debug\PTNK.Entities.pdb

@@ -1,0 +1,1944 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PTNK.UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:PTNK.UnitTests.KhoiTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.Khoi"/> objects (entity, collection and repository).
+            </summary>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.Khoi"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all Khoi objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all Khoi children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock Khoi entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock Khoi entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a Khoi collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a Khoi collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed Khoi Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.Khoi)">
+            <summary>
+              Update the Typed Khoi Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.KhoiTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_01_Insert">
+            <summary>
+            Inserts a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  Khoi objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all Khoi children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_04_Update">
+            <summary>
+            Updates a mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_05_Delete">
+            <summary>
+            Delete the mock Khoi entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock Khoi entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock Khoi entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a Khoi collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a Khoi collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed Khoi Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.KhoiTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.Khoi)">
+            <summary>
+              Update the Typed Khoi Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.RangBuocLopHocTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.RangBuocLopHoc"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.RangBuocLopHoc"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.RangBuocLopHocTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_01_Insert">
+            <summary>
+            Inserts a mock RangBuocLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  RangBuocLopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all RangBuocLopHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_04_Update">
+            <summary>
+            Updates a mock RangBuocLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_05_Delete">
+            <summary>
+            Delete the mock RangBuocLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock RangBuocLopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock RangBuocLopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a RangBuocLopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a RangBuocLopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed RangBuocLopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocLopHoc)">
+            <summary>
+              Update the Typed RangBuocLopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock RangBuocLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all RangBuocLopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all RangBuocLopHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock RangBuocLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock RangBuocLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock RangBuocLopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock RangBuocLopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a RangBuocLopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a RangBuocLopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed RangBuocLopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocLopHocTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocLopHoc)">
+            <summary>
+              Update the Typed RangBuocLopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.PhuTrachTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.PhuTrach"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.PhuTrach"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.PhuTrachTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_01_Insert">
+            <summary>
+            Inserts a mock PhuTrach entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  PhuTrach objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all PhuTrach children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_04_Update">
+            <summary>
+            Updates a mock PhuTrach entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_05_Delete">
+            <summary>
+            Delete the mock PhuTrach entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock PhuTrach entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock PhuTrach entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a PhuTrach collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a PhuTrach collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed PhuTrach Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.PhuTrach)">
+            <summary>
+              Update the Typed PhuTrach Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock PhuTrach entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all PhuTrach objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all PhuTrach children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock PhuTrach entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock PhuTrach entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock PhuTrach entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock PhuTrach entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a PhuTrach collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a PhuTrach collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed PhuTrach Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhuTrachTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.PhuTrach)">
+            <summary>
+              Update the Typed PhuTrach Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.PhanCongTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.PhanCong"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.PhanCong"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.PhanCongTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_01_Insert">
+            <summary>
+            Inserts a mock PhanCong entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  PhanCong objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all PhanCong children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_04_Update">
+            <summary>
+            Updates a mock PhanCong entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_05_Delete">
+            <summary>
+            Delete the mock PhanCong entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock PhanCong entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock PhanCong entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a PhanCong collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a PhanCong collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed PhanCong Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.PhanCong)">
+            <summary>
+              Update the Typed PhanCong Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock PhanCong entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all PhanCong objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all PhanCong children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock PhanCong entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock PhanCong entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock PhanCong entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock PhanCong entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a PhanCong collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a PhanCong collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed PhanCong Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.PhanCongTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.PhanCong)">
+            <summary>
+              Update the Typed PhanCong Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.ThoiKhoaBieuTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.ThoiKhoaBieu"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.ThoiKhoaBieu"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.ThoiKhoaBieuTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_01_Insert">
+            <summary>
+            Inserts a mock ThoiKhoaBieu entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  ThoiKhoaBieu objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all ThoiKhoaBieu children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_04_Update">
+            <summary>
+            Updates a mock ThoiKhoaBieu entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_05_Delete">
+            <summary>
+            Delete the mock ThoiKhoaBieu entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock ThoiKhoaBieu entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock ThoiKhoaBieu entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a ThoiKhoaBieu collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a ThoiKhoaBieu collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed ThoiKhoaBieu Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.ThoiKhoaBieu)">
+            <summary>
+              Update the Typed ThoiKhoaBieu Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock ThoiKhoaBieu entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all ThoiKhoaBieu objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all ThoiKhoaBieu children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock ThoiKhoaBieu entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock ThoiKhoaBieu entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock ThoiKhoaBieu entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock ThoiKhoaBieu entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a ThoiKhoaBieu collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a ThoiKhoaBieu collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed ThoiKhoaBieu Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThoiKhoaBieuTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.ThoiKhoaBieu)">
+            <summary>
+              Update the Typed ThoiKhoaBieu Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.MonHocTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.MonHoc"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.MonHoc"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.MonHocTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_01_Insert">
+            <summary>
+            Inserts a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  MonHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all MonHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_04_Update">
+            <summary>
+            Updates a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_05_Delete">
+            <summary>
+            Delete the mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock MonHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock MonHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a MonHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a MonHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed MonHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.MonHoc)">
+            <summary>
+              Update the Typed MonHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all MonHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all MonHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock MonHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock MonHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock MonHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a MonHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a MonHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed MonHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.MonHocTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.MonHoc)">
+            <summary>
+              Update the Typed MonHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.LopHocTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.LopHoc"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.LopHoc"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.LopHocTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_01_Insert">
+            <summary>
+            Inserts a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  LopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all LopHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_04_Update">
+            <summary>
+            Updates a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_05_Delete">
+            <summary>
+            Delete the mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock LopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock LopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a LopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a LopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed LopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.LopHoc)">
+            <summary>
+              Update the Typed LopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all LopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all LopHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock LopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock LopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock LopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a LopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a LopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed LopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LopHocTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.LopHoc)">
+            <summary>
+              Update the Typed LopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.RangBuocGiaoVienTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.RangBuocGiaoVien"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.RangBuocGiaoVien"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.RangBuocGiaoVienTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_01_Insert">
+            <summary>
+            Inserts a mock RangBuocGiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  RangBuocGiaoVien objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all RangBuocGiaoVien children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_04_Update">
+            <summary>
+            Updates a mock RangBuocGiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_05_Delete">
+            <summary>
+            Delete the mock RangBuocGiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock RangBuocGiaoVien entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock RangBuocGiaoVien entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a RangBuocGiaoVien collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a RangBuocGiaoVien collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed RangBuocGiaoVien Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocGiaoVien)">
+            <summary>
+              Update the Typed RangBuocGiaoVien Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock RangBuocGiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all RangBuocGiaoVien objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all RangBuocGiaoVien children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock RangBuocGiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock RangBuocGiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock RangBuocGiaoVien entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock RangBuocGiaoVien entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a RangBuocGiaoVien collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a RangBuocGiaoVien collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed RangBuocGiaoVien Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.RangBuocGiaoVienTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocGiaoVien)">
+            <summary>
+              Update the Typed RangBuocGiaoVien Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.GiaoVienTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.GiaoVien"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.GiaoVien"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.GiaoVienTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_01_Insert">
+            <summary>
+            Inserts a mock GiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  GiaoVien objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all GiaoVien children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_04_Update">
+            <summary>
+            Updates a mock GiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_05_Delete">
+            <summary>
+            Delete the mock GiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock GiaoVien entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock GiaoVien entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a GiaoVien collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a GiaoVien collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed GiaoVien Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.GiaoVien)">
+            <summary>
+              Update the Typed GiaoVien Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock GiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all GiaoVien objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all GiaoVien children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock GiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock GiaoVien entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock GiaoVien entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock GiaoVien entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a GiaoVien collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a GiaoVien collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed GiaoVien Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.GiaoVienTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.GiaoVien)">
+            <summary>
+              Update the Typed GiaoVien Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.LichLopHocTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.LichLopHoc"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.LichLopHoc"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.LichLopHocTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_01_Insert">
+            <summary>
+            Inserts a mock LichLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  LichLopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all LichLopHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_04_Update">
+            <summary>
+            Updates a mock LichLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_05_Delete">
+            <summary>
+            Delete the mock LichLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock LichLopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock LichLopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a LichLopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a LichLopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed LichLopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.LichLopHoc)">
+            <summary>
+              Update the Typed LichLopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock LichLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all LichLopHoc objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all LichLopHoc children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock LichLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock LichLopHoc entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock LichLopHoc entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock LichLopHoc entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a LichLopHoc collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a LichLopHoc collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed LichLopHoc Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.LichLopHocTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.LichLopHoc)">
+            <summary>
+              Update the Typed LichLopHoc Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="T:PTNK.UnitTests.ThamSoTest">
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.ThamSo"/> objects (entity, collection and repository).
+            </summary>
+            <remarks>
+            This file is generated once and will never be overwritten.
+            </remarks>
+            <summary>
+            Provides tests for the and <see cref="T:PTNK.Entities.ThamSo"/> objects (entity, collection and repository).
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.UnitTests.ThamSoTest"/> instance.
+            </summary>	
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Init">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Dispose">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_01_Insert">
+            <summary>
+            Inserts a mock ThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_02_SelectAll">
+            <summary>
+            Selects a sample of  ThamSo objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_03_DeepLoad">
+            <summary>
+            Deep load all ThamSo children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_04_Update">
+            <summary>
+            Updates a mock ThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_05_Delete">
+            <summary>
+            Delete the mock ThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_06_SerializeEntity">
+            <summary>
+            Serialize the mock ThamSo entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_07_DeserializeEntity">
+            <summary>
+            Deserialize the mock ThamSo entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_08_SerializeCollection">
+            <summary>
+            Serialize a ThamSo collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_09_DeserializeCollection">
+            <summary>
+            Deserialize a ThamSo collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_10_FK">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_11_IX">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_20_TestEntityHelper">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.CreateMockInstance(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed ThamSo Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.UpdateMockInstance(PTNK.Data.TransactionManager,PTNK.Entities.ThamSo)">
+            <summary>
+              Update the Typed ThamSo Entity with modified mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Init_Generated">
+            <summary>
+            This method is used to construct the test environment prior to running the tests.
+            </summary>        
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.CleanUp_Generated">
+            <summary>
+            This method is used to restore the environment after the tests are completed.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_01_Insert_Generated">
+            <summary>
+            Inserts a mock ThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_02_SelectAll_Generated">
+            <summary>
+            Selects all ThamSo objects of the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_03_DeepLoad_Generated">
+            <summary>
+            Deep load all ThamSo children.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_04_Update_Generated">
+            <summary>
+            Updates a mock ThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_05_Delete_Generated">
+            <summary>
+            Delete the mock ThamSo entity into the database.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_06_SerializeEntity_Generated">
+            <summary>
+            Serialize the mock ThamSo entity into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_07_DeserializeEntity_Generated">
+            <summary>
+            Deserialize the mock ThamSo entity from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_08_SerializeCollection_Generated">
+            <summary>
+            Serialize a ThamSo collection into a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_09_DeserializeCollection_Generated">
+            <summary>
+            Deserialize a ThamSo collection from a temporary file.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_10_FK_Generated">
+            <summary>
+            Check the foreign key dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_11_IX_Generated">
+            <summary>
+            Check the indexes dal methods.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.Step_20_TestEntityHelper_Generated">
+            <summary>
+            Test methods exposed by the EntityHelper class.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.CreateMockInstance_Generated(PTNK.Data.TransactionManager)">
+            <summary>
+              Returns a Typed ThamSo Entity with mock values.
+            </summary>
+        </member>
+        <member name="M:PTNK.UnitTests.ThamSoTest.UpdateMockInstance_Generated(PTNK.Data.TransactionManager,PTNK.Entities.ThamSo)">
+            <summary>
+              Update the Typed ThamSo Entity with modified mock values.
+            </summary>
+        </member>
+    </members>
+</doc>

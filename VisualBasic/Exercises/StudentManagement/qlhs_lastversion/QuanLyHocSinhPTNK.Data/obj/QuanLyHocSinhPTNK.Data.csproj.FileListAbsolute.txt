@@ -1,0 +1,15 @@
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\QuanLyHocSinhPTNK.Data.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\QuanLyHocSinhPTNK.Data.pdb
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\QuanLyHocSinhPTNK.Data.xml
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\QuanLyHocSinhPTNK.Entities.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\QuanLyHocSinhPTNK.Entities.pdb
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\bin\Debug\QuanLyHocSinhPTNK.Entities.xml
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\obj\Debug\QuanLyHocSinhPTNK.Data.dll
+C:\Users\David\Desktop\Đồ án\QLHS_LastVersion\qlhs_lastversion\QuanLyHocSinhPTNK.Data\obj\Debug\QuanLyHocSinhPTNK.Data.pdb

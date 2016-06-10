@@ -1,0 +1,154 @@
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+E:\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Form1.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.GVUC.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Form2.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.LHUC.resources
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Form2.resources
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.LHUC.resources
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.GVUC.resources
+E:\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ManHinhChinh.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ManHinhChinh.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Form2.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.LHUC.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.GVUC.resources
+C:\Documents and Settings\sv\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoBoMon.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.PTNKScheduling.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\QuanLyTruongHoc\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoLopHoc.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.PTNKScheduling.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoBoMon.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoLopHoc.resources
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\office.dll
+C:\Documents and Settings\Administrator\Desktop\QuanLyTruongHoc\PresentationLayer\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.PTNKScheduling.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoBoMon.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoLopHoc.resources
+C:\Documents and Settings\sv\Desktop\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\PresentationLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.dll
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DAOLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\BUSLayer.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.pdb
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\bin\Debug\DTO.xml
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.PTNKScheduling.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.Resources.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoBoMon.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.ucPCGDTheoLopHoc.resources
+C:\Users\David\Desktop\Đồ án\Do an cuoi ky UDQL2\06k3052_06k3047_06k3021_06k3031\QuanLyTruongHoc\PresentationLayer\obj\Debug\PresentationLayer.vbproj.GenerateResource.Cache

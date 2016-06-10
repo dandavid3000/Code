@@ -1,0 +1,16 @@
+E:\QLBenhVienTu\QLBenhVienTu\bin\Debug\QLBenhVienTu.exe
+E:\QLBenhVienTu\QLBenhVienTu\bin\Debug\QLBenhVienTu.pdb
+E:\QLBenhVienTu\QLBenhVienTu\bin\Debug\QLBenhVienTu.xml
+E:\QLBenhVienTu\QLBenhVienTu\bin\Debug\DevComponents.DotNetBar2.dll
+E:\QLBenhVienTu\QLBenhVienTu\bin\Debug\DevComponents.DotNetBar2.xml
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\ResolveAssemblyReference.cache
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.Resources.resources
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.vbproj.GenerateResource.Cache
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.exe.licenses
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.exe
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.xml
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.pdb
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.ThemBenhNhan.resources
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.TimKiemBenhNhan.resources
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.PhieuXN.resources
+E:\QLBenhVienTu\QLBenhVienTu\obj\Debug\QLBenhVienTu.Form1.resources

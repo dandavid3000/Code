@@ -1,0 +1,2572 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PTNK.Data.SqlClient</name>
+    </assembly>
+    <members>
+        <member name="T:PTNK.Data.SqlClient.StoredProcedureProvider">
+            <summary>
+            Summary description for Procedures.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.StoredProcedureProvider.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.StoredProcedureProvider"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.StoredProcedureProvider.Serialize(System.String)">
+            <summary>
+            Serializes the specified filename.
+            </summary>
+            <param name="filename">Filename.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.StoredProcedureProvider.Deserialize">
+            <summary>
+            Deserializes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.StoredProcedureProvider.GetProcedureBodyFromEmbeddedResource(System.String)">
+            <summary>
+            Get the query text from the embedded xml file.
+            </summary>
+            <param name="name">The name of the query.</param>
+            <returns>the text of the query</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.StoredProcedureProvider.GetCommandWrapper(Microsoft.Practices.EnterpriseLibrary.Data.Database,System.String,System.Boolean)">
+            <summary>
+            Get the command wrapper, either from the stored procedures or from the embedded queries.
+            </summary>
+            <param name="database">The database instance.</param>
+            <param name="commandName">the name of the sp.</param>
+            <param name="useStoredProcedure">Indicates if we want stored procedure.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.StoredProcedureProvider.GetCommandWrapper(Microsoft.Practices.EnterpriseLibrary.Data.Database,System.String,System.Type,PTNK.Data.SqlFilterParameterCollection,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the command wrapper for a dynamically generated query and
+            optionally includes server-side paging.
+            </summary>
+            <param name="database"></param>
+            <param name="commandName"></param>
+            <param name="columnEnum"></param>
+            <param name="parameters"></param>
+            <param name="orderBy"></param>
+            <param name="start"></param>
+            <param name="pageLength"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.StoredProcedureProvider.Current">
+            <summary>
+            Gets the current <see cref="T:PTNK.Data.SqlClient.StoredProcedureProvider"/> singleton instance.
+            </summary>
+            <value><see cref="T:PTNK.Data.SqlClient.StoredProcedureProvider"/></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.StoredProcedureProvider.Procedures">
+            <summary>
+            Gets or sets the procedures.
+            </summary>
+            <value>An <see cref="T:System.Collections.ArrayList"/> of <see cref="T:PTNK.Data.SqlClient.Procedure"/> objects.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.StoredProcedureProvider.Item(System.String)">
+            <summary>
+            Gets or sets the <see cref="T:PTNK.Data.SqlClient.Procedure"/> instance with the specified name.
+            </summary>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.StoredProcedureProvider.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:PTNK.Data.SqlClient.Procedure"/> instance at the specified index.
+            </summary>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.Procedure">
+            <summary>
+            Represents a sql query.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.Procedure.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.Procedure"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.Procedure.Parameter(System.String)">
+            <summary>
+            Get the parameter from the specified name of the param.
+            </summary>
+            <param name="paramName">Name of the param.</param>
+            <returns></returns>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Procedure.Parameters">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Procedure.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Procedure.Owner">
+            <summary>
+            Gets or sets the owner.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Procedure.Comment">
+            <summary>
+            Gets or sets the comment.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Procedure.Body">
+            <summary>
+            Gets or sets the body.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.Parameter">
+            <summary>
+            Respresents a query parameter.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.Parameter.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.Parameter"/> instance.
+            </summary>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Parameter.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Parameter.SqlType">
+            <summary>
+            Gets or sets the SqlType.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Parameter.Direction">
+            <summary>
+            Gets or sets the Direction.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Parameter.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Parameter.Precision">
+            <summary>
+            Gets or sets the precision.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.Parameter.Scale">
+            <summary>
+            Gets or sets the scale.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlLichLopHocProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.LichLopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlLichLopHocProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.LichLopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlLichLopHocProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlLichLopHocProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maLichLopHoc">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.LichLopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.LichLopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.LichLopHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.LichLopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.GetByMaLichLopHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the LichLopHoc$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maLichLopHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.LichLopHoc"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.GetByMaPhanCong(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the LichLopHoc$PhanCongLichLopHoc index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maPhanCong"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.LichLopHoc})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.LichLopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.LichLopHoc)">
+            <summary>
+            	Inserts a PTNK.Entities.LichLopHoc object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.LichLopHoc object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.LichLopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.LichLopHoc)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.LichLopHoc object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.LichLopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlLichLopHocProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLichLopHocProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlLichLopHocProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlThoiKhoaBieuProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.ThoiKhoaBieu"/> entity.
+            </summary>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.ThoiKhoaBieu"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maThoiKhoaBieu">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.ThoiKhoaBieu objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.ThoiKhoaBieu objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.ThoiKhoaBieu objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.ThoiKhoaBieu objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.GetByMaThoiKhoaBieu(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the ThoiKhoaBieu$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maThoiKhoaBieu"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.ThoiKhoaBieu"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.ThoiKhoaBieu})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.ThoiKhoaBieu object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.ThoiKhoaBieu)">
+            <summary>
+            	Inserts a PTNK.Entities.ThoiKhoaBieu object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.ThoiKhoaBieu object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.ThoiKhoaBieu object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.ThoiKhoaBieu)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.ThoiKhoaBieu object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.ThoiKhoaBieu object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlThoiKhoaBieuProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThoiKhoaBieuProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlThoiKhoaBieuProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlLopHocProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.LopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlLopHocProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.LopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlLopHocProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlLopHocProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maLopHoc">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.LopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.LopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.LopHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.LopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.GetByMaLopHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the LopHoc$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maLopHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.LopHoc"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.GetByMaKhoi(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the LopHoc$KhoiLopHoc index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maKhoi"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.LopHoc})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.LopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.LopHoc)">
+            <summary>
+            	Inserts a PTNK.Entities.LopHoc object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.LopHoc object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.LopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.LopHoc)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.LopHoc object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.LopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlLopHocProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlLopHocProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlLopHocProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlLopHocProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlLopHocProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.RangBuocGiaoVien"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maRangBuocGiaoVien">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocGiaoVien objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocGiaoVien objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocGiaoVien objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocGiaoVien objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.GetByMaRangBuocGiaoVien(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the RangBuocGiaoVien$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maRangBuocGiaoVien"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.RangBuocGiaoVien"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.GetByMaGiaoVien(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the RangBuocGiaoVien$GiaoVienRangBuocGiaoVien index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maGiaoVien"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.RangBuocGiaoVien})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.RangBuocGiaoVien object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocGiaoVien)">
+            <summary>
+            	Inserts a PTNK.Entities.RangBuocGiaoVien object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.RangBuocGiaoVien object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.RangBuocGiaoVien object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocGiaoVien)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.RangBuocGiaoVien object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.RangBuocGiaoVien object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.RangBuocGiaoVien"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlRangBuocGiaoVienProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.RangBuocLopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maRangBuocLopHoc">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocLopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocLopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocLopHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.RangBuocLopHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.GetByMaRangBuocLopHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the RangBuocLopHoc$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maRangBuocLopHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.RangBuocLopHoc"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.GetByMaLopHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the RangBuocLopHoc$LopHocRangBuocLopHoc index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maLopHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.RangBuocLopHoc})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.RangBuocLopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocLopHoc)">
+            <summary>
+            	Inserts a PTNK.Entities.RangBuocLopHoc object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.RangBuocLopHoc object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.RangBuocLopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.RangBuocLopHoc)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.RangBuocLopHoc object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.RangBuocLopHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlRangBuocLopHocProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlPhuTrachProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.PhuTrach"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlPhuTrachProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlPhuTrachProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maPhuTrach">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.PhuTrach objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.PhuTrach objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.PhuTrach objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.PhuTrach objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.GetByMaPhuTrach(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhuTrach$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maPhuTrach"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.PhuTrach"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.GetByMaGiaoVien(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhuTrach$GiaoVienPhuTrach index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maGiaoVien"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.GetByMaMonHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhuTrach$MonHocPhuTrach index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maMonHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.PhuTrach})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.PhuTrach object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.PhuTrach)">
+            <summary>
+            	Inserts a PTNK.Entities.PhuTrach object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.PhuTrach object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.PhuTrach object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.PhuTrach)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.PhuTrach object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.PhuTrach object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlPhuTrachProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlGiaoVienProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.GiaoVien"/> entity.
+            </summary>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlGiaoVienProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.GiaoVien"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlGiaoVienProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlGiaoVienProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maGiaoVien">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.GiaoVien objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.GiaoVien objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.GiaoVien objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.GiaoVien objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.GetByMaGiaoVien(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the GiaoVien$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maGiaoVien"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.GiaoVien"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.GiaoVien})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.GiaoVien object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.GiaoVien)">
+            <summary>
+            	Inserts a PTNK.Entities.GiaoVien object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.GiaoVien object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.GiaoVien object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.GiaoVien)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.GiaoVien object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.GiaoVien object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlGiaoVienProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlGiaoVienProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlGiaoVienProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlThamSoProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.ThamSo"/> entity.
+            </summary>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlThamSoProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.ThamSo"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlThamSoProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlThamSoProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.Delete(PTNK.Data.TransactionManager,System.Byte,System.Byte,System.Int16)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="soTietToiDaTrongNgay">. Primary Key.</param>	
+            <param name="tietGay">. Primary Key.</param>	
+            <param name="soTietToiDaDuocHocTrongNgay">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.ThamSo objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.ThamSo objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.ThamSo objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.ThamSo objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.GetBySoTietToiDaTrongNgayTietGaySoTietToiDaDuocHocTrongNgay(PTNK.Data.TransactionManager,System.Byte,System.Byte,System.Int16,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the ThamSo$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="soTietToiDaTrongNgay"></param>
+            <param name="tietGay"></param>
+            <param name="soTietToiDaDuocHocTrongNgay"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.ThamSo"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.ThamSo})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.ThamSo object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.ThamSo)">
+            <summary>
+            	Inserts a PTNK.Entities.ThamSo object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.ThamSo object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.ThamSo object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.ThamSo)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.ThamSo object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.ThamSo object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlThamSoProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlThamSoProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlThamSoProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlThamSoProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlThamSoProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlMonHocProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.MonHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlMonHocProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlMonHocProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maMonHoc">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.MonHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.MonHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.MonHoc objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.MonHoc objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.GetByMaMonHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the MonHoc$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maMonHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.MonHoc"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.MonHoc})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.MonHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.MonHoc)">
+            <summary>
+            	Inserts a PTNK.Entities.MonHoc object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.MonHoc object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.MonHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.MonHoc)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.MonHoc object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.MonHoc object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlMonHocProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlMonHocProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlMonHocProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlNetTiersProvider">
+            <summary>
+            This class is the Sql implementation of the NetTiersProvider.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:PTNK.Data.SqlClient.SqlNetTiersProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the provider.
+            </summary>
+            <param name="name">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</param>
+            <exception cref="T:System.ArgumentNullException">The name of the provider is null.</exception>
+            <exception cref="T:System.InvalidOperationException">An attempt is made to call <see cref="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)"></see> on a provider after the provider has already been initialized.</exception>
+            <exception cref="T:System.ArgumentException">The name of the provider has a length of zero.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.CreateTransaction">
+            <summary>
+            Creates a new <c cref="T:PTNK.Data.TransactionManager"/> instance from the current datasource.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(System.String,System.Object[])">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(PTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(PTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteNonQuery(PTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(System.String,System.Object[])">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(PTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(PTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteReader(PTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the reader.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(System.String,System.Object[])">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(PTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(PTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteDataSet(PTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the data set.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(System.String,System.Object[])">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(PTNK.Data.TransactionManager,System.String,System.Object[])">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="storedProcedureName">Name of the stored procedure.</param>
+            <param name="parameterValues">The parameter values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(System.Data.Common.DbCommand)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(PTNK.Data.TransactionManager,System.Data.Common.DbCommand)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandWrapper">The command wrapper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(System.Data.CommandType,System.String)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlNetTiersProvider.ExecuteScalar(PTNK.Data.TransactionManager,System.Data.CommandType,System.String)">
+            <summary>
+            Executes the scalar.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandText">The command text.</param>
+            <returns></returns>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.UseStoredProcedure">
+            <summary>
+            Gets a value indicating whether to use stored procedure or not.
+            </summary>
+            <value>
+            	<c>true</c> if this repository use stored procedures; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.IsTransactionSupported">
+            <summary>
+             Indicates if the current <c cref="T:PTNK.Data.Bases.NetTiersProvider"/> implementation supports Transacton.
+            </summary>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.RangBuocLopHocProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.RangBuocLopHoc"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlRangBuocLopHocProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlRangBuocLopHocProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.MonHocProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.MonHoc"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlMonHocProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlMonHocProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.ThoiKhoaBieuProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.ThoiKhoaBieu"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlThoiKhoaBieuProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlThoiKhoaBieuProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.ThamSoProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.ThamSo"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlThamSoProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlThamSoProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.KhoiProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.Khoi"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlKhoiProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlKhoiProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.GiaoVienProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.GiaoVien"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlGiaoVienProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlGiaoVienProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.RangBuocGiaoVienProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.RangBuocGiaoVien"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlRangBuocGiaoVienProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlRangBuocGiaoVienProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.LopHocProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.LopHoc"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlLopHocProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlLopHocProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.PhanCongProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.PhanCong"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlPhanCongProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlPhanCongProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.PhuTrachProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.PhuTrach"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlPhuTrachProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlPhuTrachProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.LichLopHocProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:PTNK.Entities.LichLopHoc"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlLichLopHocProvider">
+            <summary>
+            Gets the current <c cref="P:PTNK.Data.SqlClient.SqlNetTiersProvider.SqlLichLopHocProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlPhanCongProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.PhanCong"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlPhanCongProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlPhanCongProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maPhanCong">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.PhanCong objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.PhanCong objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.PhanCong objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.PhanCong objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.GetByMaPhanCong(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhanCong$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maPhanCong"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.PhanCong"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.GetByMaGiaoVien(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhanCong$GiaoVienPhanCong index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maGiaoVien"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.GetByMaLopHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhanCong$LopHocPhanCong index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maLopHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.GetByMaMonHoc(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the PhanCong$MonHocPhanCong index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maMonHoc"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.TList`1"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.PhanCong})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.PhanCong object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.PhanCong)">
+            <summary>
+            	Inserts a PTNK.Entities.PhanCong object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.PhanCong object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.PhanCong object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.PhanCong)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.PhanCong object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.PhanCong object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlPhanCongProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlPhanCongProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlPhanCongProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlPhanCongProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.PhanCong"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhanCongProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlPhanCongProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlRangBuocLopHocProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.RangBuocLopHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlRangBuocLopHocProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlRangBuocLopHocProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlPhuTrachProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.PhuTrach"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlPhuTrachProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlPhuTrachProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlKhoiProviderBase">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.Khoi"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlKhoiProviderBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlKhoiProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.Delete(PTNK.Data.TransactionManager,System.String)">
+            <summary>
+            	Deletes a row from the DataSource.
+            </summary>
+            <param name="maKhoi">. Primary Key.</param>	
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks>Deletes based on primary key(s).</remarks>
+            <returns>Returns true if operation suceeded.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.Find(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows meeting the whereclause condition from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks>Operators must be capitalized (OR, AND)</remarks>
+            <returns>Returns a typed collection of PTNK.Entities.Khoi objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.Find(PTNK.Data.TransactionManager,PTNK.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:PTNK.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of PTNK.Entities.Khoi objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.GetAll(PTNK.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.Khoi objects.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.GetPaged(PTNK.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">Number of rows in the DataSource.</param>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of PTNK.Entities.Khoi objects.</returns>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.GetByMaKhoi(PTNK.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            	Gets rows from the datasource based on the Khoi$PrimaryKey index.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="maKhoi"></param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out parameter to get total records for query</param>
+            <returns>Returns an instance of the <see cref="T:PTNK.Entities.Khoi"/> class.</returns>
+            <remarks></remarks>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.BulkInsert(PTNK.Data.TransactionManager,PTNK.Entities.TList{PTNK.Entities.Khoi})">
+            <summary>
+            Lets you efficiently bulk many entity to the database.
+            </summary>
+            <param name="transactionManager">The transaction manager.</param>
+            <param name="entities">The entities.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.Khoi object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.Insert(PTNK.Data.TransactionManager,PTNK.Entities.Khoi)">
+            <summary>
+            	Inserts a PTNK.Entities.Khoi object into the datasource using a transaction.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.Khoi object to insert.</param>
+            <remarks>
+            	After inserting into the datasource, the PTNK.Entities.Khoi object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>	
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProviderBase.Update(PTNK.Data.TransactionManager,PTNK.Entities.Khoi)">
+            <summary>
+            	Update an existing row in the datasource.
+            </summary>
+            <param name="transactionManager"><see cref="T:PTNK.Data.TransactionManager"/> object</param>
+            <param name="entity">PTNK.Entities.Khoi object to update.</param>
+            <remarks>
+            	After updating the datasource, the PTNK.Entities.Khoi object will be updated
+            	to refelect any changes made by the datasource. (ie: identity or computed columns)
+            </remarks>
+            <returns>Returns true if operation is successful.</returns>
+            <exception cref="T:System.Exception">The command could not be executed.</exception>
+            <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
+            <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlKhoiProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlKhoiProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PTNK.Data.SqlClient.SqlKhoiProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlKhoiProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.Khoi"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlKhoiProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlKhoiProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:PTNK.Data.SqlClient.SqlMonHocProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:PTNK.Entities.MonHoc"/> entity.
+            </summary>
+        </member>
+        <member name="M:PTNK.Data.SqlClient.SqlMonHocProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:PTNK.Data.SqlClient.SqlMonHocProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+    </members>
+</doc>
