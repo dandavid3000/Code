@@ -58,7 +58,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 1. [Eurecom](Java/Eurecom) This folder contains my semester project at Eurecom.
 2. [Java exercises](Java/Projects/Exercises) There are some exercises about *IO*, *jdbc*, and *multithread*.
 3. [Java mail app](Java/Projects/Final/JavaMailApp/0941037) This is my mail application in java.
-4. [Java video streaming app](Java/Projects/Final/StreamingApplication) This is one of the most interesting projects. The application contains a client-server model. When a server plays a video, clients can connect to the server and watch the video which is being played on server.
+4. [Java video streaming app](Java/Projects/Final/StreamingApplication) This is one of the most interesting projects. The application contains a client-server model. When a server plays a video, clients can connect to the server and watch the stream video.
 ![Streaming application](images/Streamingapplication.png "Streaming application")
 
 ## Projects in Python
