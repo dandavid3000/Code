@@ -1,4 +1,4 @@
->For those who may concern about my work I have been doing during my study. This folder contains many different folders storing various projects. There are my 6-month internship at SAP Labs France, Eurecom semester project, exercises as well as projects relating to software development in different programming languages.
+>For those who may concern about my work I have been doing during my study. This folder contains many different subfolders storing various projects. There are my 6-month internship at SAP Labs France, Eurecom semester project, exercises as well as projects relating to software development in different programming languages.
 
 #Introduction
 Most of the projects I mainly finished in C/C++ or in Java. Python is a new language that I've had a chance to access recently since my Master's program at Eurecom under courses such as 'Secure System', 'SoftDev', and 'Forensics'. I'm really interested in this language, still studying it, and catching up. Some projects you'll find strange because they're not in English because I am still working on them.
