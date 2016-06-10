@@ -18,9 +18,9 @@ Most of the projects I mainly finished in C/C++ or in Java. Python is a new lang
 ## Attack Crawler for Modern Networked Systems
 Because we have a large scale attacks on networked systems have been conducted in recent year. Unfortunately, to study and analyse those attacks is quite complex, and requires gathering information from very diverse sourses.
 The objective of this project is to evaluate which relevant information can be exracted from the internet and provided to users.
-In particular, we developed a security feature for [TTool](http://ttool.telecom-paristech.fr/) which is an open-source software, and it's develop by my professor [Ludovic Apvrille](http://perso.telecom-paristech.fr/~apvrille/) at Telecom ParisTech.
+In particular, we developed a security feature for [TTool](http://ttool.telecom-paristech.fr/) which is an open-source software, and it's developed by professor [Ludovic Apvrille](http://perso.telecom-paristech.fr/~apvrille/) at Telecom ParisTech.
 
-The project was divided into two main parts. Web crawler, and The assistant; a friendly interface which allows users to retrieve relevant information from the Datebase (Web crawler).
+The project was divided into two main parts. Web crawler, and The assistant; a friendly interface which allows users to retrieve relevant information from the Database (Web crawler).
 
 Regarding to our work in this projects:
 * Studied, analysed, and illustrated a well-known attack [Stuxnet](https://en.wikipedia.org/wiki/Stuxnet) as a SysML-Sec attack model.
