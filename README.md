@@ -6,7 +6,7 @@ Most of the projects I mainly finished in `C/C++` or in `Java`. `Python` is a ne
 ## Table of contents
 * [Secure integration of Internet of Things](#secure-integration-of-internet-of-things)
 * [Attack Crawler for Modern Networked Systems](#attack-crawler-for-modern-networked-systems)
-* [Projects in C/C++](#projects-in-c-and-cplusplus)
+* [Projects in C/C++](#projects-in-c-and-c-plus-plus)
 * [Projects in Java](#projects-in-java)
 * [Projects in Python](#projects-in-python)
 * [Projects in CSharp](#projects-in-sharp)
