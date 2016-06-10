@@ -76,7 +76,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
     - The script should take as input a directory and recursively analyze its content.
     - Collect a memory snapshot of a linux machine. Install volatility 2.4 (use the official release, not the development version), build the profile for your linux dump, and test that it works by listing the processes in the memory image. Then, using volatily as a library (example), write a tool that accepts as parameters two snapshot taken from the same machine at different times (e.g., 15 minutes one after the other) and for each processes (uniquely identified by its PID), list the number of pages that are different between the two snapshots.
 
----
+-
 
 2. [Network project](Python/Network1_Project) Building a client-server in Python - Please check [this report](Python/Network1_Project/Report.pdf).
   - Implement a client capable of scraping data from a webpage and to store
