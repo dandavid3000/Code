@@ -15,6 +15,10 @@ Most of the projects I mainly finished in `C/C++` or in `Java`. `Python` is a ne
 * [What comes next](#what-comes-next)
 
 ## Secure integration of Internet of Things
+I participated in a co-innovation project named [Secure Integration of Internet of Things](http://scn.sap.com/community/labs/blog/2015/06/25/co-innovation-project-on-predictive-analytics-for-pipeline-integrity). The requirements come from French Public Sector - City of Antibes. They'd like to have an end-to-end solution for data collected by more than 2000 sensors, and deployed for their water network. They use the data for `predictive maintenance` to predict the pipeline failure of the water network. In order to improve the management, and financial optimization, they also would like to visualize their water network. The data will be encrypted at the beginning, and only decrypted 
+
+I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a presentation file here which I used for my defense, and for some demo videos you can contact me directly via my email address. Actually, I completed a Enterprise Github about this work to help others can replicate my concept if it's neccessary, as well as a detailed report with more than 150 pages.
+
 ## Attack Crawler for Modern Networked Systems
 Because we have a large scale attacks on networked systems have been conducted in recent year. Unfortunately, to study and analyse those attacks is quite complex, and requires gathering information from very diverse sourses.
 The objective of this project is to evaluate which relevant information can be exracted from the internet and provided to users.
@@ -27,7 +31,7 @@ Regarding to our work in this projects:
 * Implemented a friendly user interface for users to retrieve information, perform the search
 * Designed, and implemented a secure protocol as a bridge to let TTool, and The Crawler interact together.
 
-The **final report** for this work is available [here](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/SemesterProjectReport_VO.pdf) along with the [source code](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/TTool.zip). The protocol is developed step by step, and stored [here](Java/Eurecom/SmallClient_Server/) from the simple one to multithreaded to the version that uses SSL socket usage.
+The **final report** for this work is available [here](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/SemesterProjectReport_VO.pdf) along with the [source code](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/TTool.zip). The protocol is developed step by step, and stored [here](Java/Eurecom/SmallClient_Server/) from the simple one from multithreaded to the version that uses SSL socket usage.
 
 ## Projects in C/C++
 ## Projects in Java
@@ -36,4 +40,4 @@ The **final report** for this work is available [here](Java/Eurecom/SemesterFina
 ## Projects in Visual Basic
 ## Web projects
 ## What comes next
-I hope you will see more interesting project I will participate in. Currently I am looking for a position to start my career. I'm passionate about Software development, Internet of Things, and Security.
+I hope you will see more interesting projects I will participate in. Currently, I am looking for a position to start my career. I'm passionate about Software development, Internet of Things, and Security.
