@@ -1,0 +1,977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>AboutUs</title>
+<style type="text/css">
+<!--
+.style4 {color: #950001}
+-->
+</style>
+<style type="text/css">
+<!--
+.style5 {font-size: xx-large}
+-->
+</style>
+<style type="text/css">
+<!--
+.style6 {color: #000000}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="Templates/Style1.css" rel="stylesheet" type="text/css" />
+
+<link href="Templates/Pictures.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+#spotlight{
+filter:light
+}
+-->
+</style>
+<style type="text/css">
+<!--
+h1 {
+  color:#cc3333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+h3 {
+  color:#993333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+.kisser {
+  position:absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+.style3 {color: #999999}
+-->
+</style>
+
+<script language="JavaScript1.2" type="text/JavaScript">
+<!-- cloak
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+//Modified by Dynamic Drive for bug fixes
+//Visit http://www.dynamicdrive.com for this script
+
+kisserCount = 15 //maximum number of images on screen at one time
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+kissDelay = 1000 //duration images stay on screen (in milliseconds)
+kissSpacer = 50 //distance to move mouse b4 next heart appears
+theimage = "lips_small.gif" //the 1st image to be displayed
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+//Browser checking and syntax variables
+var docLayers = (document.layers) ? true:false;
+var docId = (document.getElementById) ? true:false;
+var docAll = (document.all) ? true:false;
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+var stylebitK = (docLayers) ? "":".style"
+var showbitK = (docLayers) ? "show":"visible"
+var hidebitK = (docLayers) ? "hide":"hidden"
+var ns6=document.getElementById&&!document.all
+//Variables used in script
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+lastX = 0
+lastY = 0
+//Collection of functions to get mouse position and place the images
+function doKisser(e) {
+
+  posX = getMouseXPos(e)
+  posY = getMouseYPos(e)
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+    showKisser(posX,posY)
+    lastX = posX
+    lastY = posY
+  }
+}
+// Get the horizontal position of the mouse
+function getMouseXPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageX+10)
+  } else {
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+  }
+}
+// Get the vartical position of the mouse
+function getMouseYPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageY)
+  } else {
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+  }
+}
+//Place the image and start timer so that it disappears after a period of time
+function showKisser(x,y) {
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".left = " + processedx)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".top = " + y)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+  }
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+  curKisser += 1
+}
+//Make the image disappear
+function hideKisser(knum) {
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+}
+
+function kissbegin(){
+//Let the browser know when the mouse moves
+if (docLayers) {
+  document.captureEvents(Event.MOUSEMOVE)
+  document.onMouseMove = doKisser
+} else {
+  document.onmousemove = doKisser
+}
+}
+window.onload=kissbegin
+// decloak -->
+</script>
+
+<script language="JavaScript1.2">
+
+//Highlight form element- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var highlightcolor="lightyellow"
+
+var ns6=document.getElementById&&!document.all
+var previous=''
+var eventobj
+
+//Regular expression to highlight only form elements
+var intended=/INPUT|TEXTAREA|SELECT|OPTION/
+
+//Function to check whether element clicked is form element
+function checkel(which){
+if (which.style&&intended.test(which.tagName)){
+if (ns6&&eventobj.nodeType==3)
+eventobj=eventobj.parentNode.parentNode
+return true
+}
+else
+return false
+}
+
+//Function to highlight form element
+function highlight(e){
+eventobj=ns6? e.target : event.srcElement
+if (previous!=''){
+if (checkel(previous))
+previous.style.backgroundColor=''
+previous=eventobj
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+}
+else{
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+previous=eventobj
+}
+}
+
+</script>
+</head>
+<body id="container">
+<script language="JavaScript" type="text/JavaScript">
+<!-- cloak
+// Add all DIV's of hearts
+if (document.all||document.getElementById||document.layers){
+for (k=0;k<kisserCount;k=k+2) {
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+}
+}
+
+// decloak -->
+</script>
+
+<p align="center">&nbsp;</p>
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="288" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="232" height="135"><div align="center"><img id="spotlight" speed="100"  src="Images/Logo3.png" width="288" height="129" /></div></td>
+      </tr>
+    </table>    </td>
+    <td width="330" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="330" height="135">
+      <param name="movie" value="Flashes/Bongden.swf" />
+      <param name="quality" value="high" />
+      <embed src="Flashes/Bongden.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="330" height="135"></embed>
+    </object></td>
+    <td width="362" height="105"><table width="358" height="95" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td height="33" colspan="2"><span class="style2">Name</span></td>
+        <td colspan="2"><input type="text" size="20" maxlength="30" /></td>
+      </tr>
+      <tr>
+        <td height="33" colspan="2"><span class="style2">Password</span></td>
+        <td colspan="2"><input type="password" size="20" maxlength="30" />&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59" height="5"></td>
+        <td width="17"></td>
+        <td width="198"></td>
+        <td width="84"></td>
+      </tr>
+      <tr>
+        <td height="29"></td>
+        <td colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="47" height="29">&nbsp;</td>
+                <td width="73" valign="top"><input type="submit" name="btnDangNhap" value="Sign in" />              &nbsp;</td>
+                <td width="66" valign="top" id="TextLink1"><div align="right"><a href="http://www.paygate.vtczone.vn">Sign up</a></div></td>
+                <td width="29">&nbsp;</td>
+              </tr>
+        </table></td>
+        <td>&nbsp;</td>
+      </tr>
+      
+      
+      
+      
+    </table></td>
+  </tr>
+  
+  
+  
+  
+  <tr>
+    <td height="49" valign="top"><h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Thanks for visiting The Pictures!"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+    </h2></td>
+  </tr>
+</table>
+<table width="961" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="961" height="40"></td>
+  </tr>
+</table>
+
+<!-- InstanceBeginEditable name="Menu" -->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Home" onclick="window.location='Home.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="News" onclick="window.location='News.html'"></td>
+    <td id="LineButton" >&nbsp;</td>
+    <td id="Music" onclick="window.location='Music.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Movies" onclick="window.location='Movies.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Store" onclick="window.location='Store.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Hosted" onclick="window.location='Hosted.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Sugs" onclick="window.location='Suggestion.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Search" onclick="window.location='Search.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="SiteMap" onclick="window.location='SiteMap.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Links" onclick="window.location='Links.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Us"><img src="Images/Button-Us2.jpg" /></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="2"></td>
+  </tr>
+</table>
+<!-- InstanceBeginEditable name="MainContent" -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="TextHN3">
+  <!--DWLayoutTable-->
+  <tr>
+    <td height="17" colspan="7" valign="top" class="style4" bgcolor="#950001"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="38" colspan="7" valign="top" bgcolor="#950001"><span class="style6 style5"><strong>&nbsp;&nbsp;&nbsp;<span class="style6">ABOUT US</span></strong></span> </td>
+  </tr>
+  <tr>
+    <td width="36" height="12"></td>
+    <td width="35"></td>
+    <td width="256"></td>
+    <td width="309"></td>
+    <td width="253"></td>
+    <td width="38"></td>
+    <td width="33"></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#00CCFF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="600" height="5"></td>
+        </tr>
+    </table></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <td height="166">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="3" valign="top" id="TextHN2"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EBEBEB">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="13" height="13"></td>
+          <td width="190"></td>
+          <td width="21"></td>
+          <td width="583"></td>
+          <td width="11"></td>
+        </tr>
+      <tr>
+        <td height="143"></td>
+          <td valign="top"><img src="Images/Pics/dan.jpg" alt="dan" width="190" height="143" /></td>
+          <td></td>
+          <td rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!--DWLayoutTable-->
+              <tr>
+                <td width="583" height="144" valign="top"><p>M&igrave;nh t&ecirc;n l&agrave; V&otilde; Hu&#7923;nh &#272;an v&agrave; hi&#7879;n l&agrave; sinh vi&ecirc;n h&#7879; cao &#273;&#7859;ng CNTT tr&#432;&#7901;ng &#272;H KHTN TPHCM, Qu&ecirc; h&#432;&#417;ng c&#7911;a m&igrave;nh l&agrave; C&agrave; Mau. Hi&#7879;n gi&#7901; m&igrave;nh &#273;ang s&#7889;ng v&#7899;i hai ch&#7883; v&agrave; anh trai t&#7841;i TP HCM. M&igrave;nh r&#7845;t th&iacute;ch &#273;&#7885;c truy&#7879;n v&agrave; xem phim h&agrave;nh &#273;&#7897;ng.</p>
+                  <p>Y!M : dan_david3000 </p>
+                <p>Phone: 0916 485 934 </p></td>
+              </tr>
+          </table>          </td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="1"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      <tr>
+        <td height="9"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+    </table></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="27"></td>
+    <td></td>
+    <td></td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#99FF33">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="600" height="5"></td>
+        </tr>
+    </table></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <td height="166">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EBEBEB">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="9" height="7"></td>
+          <td width="584"></td>
+          <td width="13"></td>
+          <td width="200"></td>
+          <td width="12"></td>
+        </tr>
+      
+        <tr>
+          <td height="1"></td>
+          <td rowspan="2" valign="top"><p>Tr&#7847;n Th&#7883; Ng&#7885;c H&#7841;nh, &#273;ang theo h&#7885;c c&ugrave;ng kh&oacute;a v&#7899;i 3 b&#7841;n. S&#7903; th&iacute;ch l&agrave; ch&#7909;p &#7843;nh v&agrave; &#273;i shopping.</p>
+          <p>Y!M : babyloves0611</p>          
+          <p>Phone : 0972 644 781  </p></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="149"></td>
+          <td></td>
+          <td rowspan="2" valign="top"><img src="Images/Pics/hanh.jpg" alt="hanh" width="200" height="150" /></td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td height="1"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="8"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="19"></td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#6699CC">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="600" height="5"></td>
+        </tr>
+    </table></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td height="166">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EBEBEB">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="11" height="7"></td>
+          <td width="200"></td>
+          <td width="18"></td>
+          <td width="574"></td>
+          <td width="15"></td>
+        </tr>
+      
+      <tr>
+        <td height="150">&nbsp;</td>
+          <td valign="top"><img src="Images/Pics/khoa.jpg" width="200" height="150" /></td>
+          <td>&nbsp;</td>
+          <td valign="top"><p>N&#259;ng &#273;&#7897;ng, vui v&#7867;, h&ograve;a &#273;&#7891;ng v&agrave; th&iacute;ch k&#7871;t b&#7841;n v&#7899;i m&#7885;i ng&#432;&#7901;i, M&igrave;nh t&ecirc;n l&agrave; L&#432;u &#272;&#259;ng Khoa</p>
+          <p>Y!M: luudangkhoa007 </p>          
+          <p>Phone : 0935 189 392 </p></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      <tr>
+        <td height="9"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="24"></td>
+    <td></td>
+    <td></td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FF9966">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="600" height="5"></td>
+        </tr>
+    </table></td>
+  <td></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  
+  <tr>
+    <td height="166">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EBEBEB">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="13" height="8"></td>
+          <td width="574"></td>
+          <td width="16"></td>
+          <td width="200"></td>
+          <td width="15"></td>
+        </tr>
+      <tr>
+        <td height="150">&nbsp;</td>
+          <td valign="top"><p>M&igrave;nh t&ecirc;n Nguy&#7877;n Th&#7883; Thanh Huy&#7873;n, s&#7903; th&iacute;ch l&agrave; &#273;i ch&#417;i, karaoke ... </p>
+            <p>Y!M : thu_thuy1227</p>
+            <p>Phone : 01666 307 247 </p></td>
+          <td>&nbsp;</td>
+          <td valign="top"><img src="Images/Pics/Huyen.jpg" width="200" height="150" /></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      <tr>
+        <td height="8"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="28">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="137" height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="137" height="26">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="26" valign="top">
+		
+		<form>
+			&nbsp;&nbsp;&nbsp;<select name="osite">
+				<option value="othersites">Other sites</option>
+				<option value="-">-----</option>
+				<option value="vh1">Vh1</option>
+				<option value="mtvasia">MTVasia</option>
+				<option value="disney">Disney asia</option>
+				<option value="tgdienanh">Pictures World</option>
+				<option value="moviezing">Zing movie</option>
+		</form>
+		
+		 </td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="256">&nbsp;</td>
+    <td width="567" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="567" height="55"><div align="right" class="style2">
+          <div align="right" id="TextLink1"><a href="Home.html">Home </a>|<a href="News.html" target="_self"> News</a> |<a href="Music.html"> Music</a> | <a href="Movies.html">Movies</a> | <a href="AboutUs.html">Contact us </a>|<a href="Links.html"> Links&nbsp;&nbsp;</a></div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="567" height="25"><div align="right"><span class="style1">&copy;2009 TPsKHHD Group  .All rights reserved.</span></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript1.2">
+
+/*
+Flying Butterfly script (By BGAudioDr@aol.com)
+Modified slightly/ permission granted to Dynamic Drive to feature script in archive
+For full source, visit http://www.dynamicdrive.com
+*/
+
+var Ymax=8;                                //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
+var Xmax=8;                                //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
+var Tmax=10000;                        //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+
+//FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
+
+var floatimages=new Array();
+floatimages[0]='./Images/butterfly2.gif';
+floatimages[1]='./Images/butterfly2.gif';
+floatimages[2]='./Images/butterfly2.gif';
+floatimages[3]='./Images/butterfly2.gif';
+
+//*********DO NOT EDIT BELOW***********
+var NS4 = (navigator.appName.indexOf("Netscape")>=0 && parseFloat(navigator.appVersion) >= 4 && parseFloat(navigator.appVersion) < 5)? true : false;
+var IE4 = (document.all)? true : false;
+var NS6 = (parseFloat(navigator.appVersion) >= 5 && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var wind_w, wind_h, t='', IDs=new Array();
+for(i=0; i<floatimages.length; i++){
+t+=(NS4)?'<layer name="pic'+i+'" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">' : '<div id="pic'+i+'" style="position:absolute; visibility:hidden;width:10px; height:10px"><a href="javascript:hidebutterfly()">';
+t+='<img src="'+floatimages[i]+'" name="p'+i+'" border="0">';
+t+=(NS4)? '</a></layer>':'</a></div>';
+}
+document.write(t);
+
+function moveimage(num){
+if(getidleft(num)+IDs[num].W+IDs[num].Xstep >= wind_w+getscrollx())IDs[num].Xdir=false;
+if(getidleft(num)-IDs[num].Xstep<=getscrollx())IDs[num].Xdir=true;
+if(getidtop(num)+IDs[num].H+IDs[num].Ystep >= wind_h+getscrolly())IDs[num].Ydir=false;
+if(getidtop(num)-IDs[num].Ystep<=getscrolly())IDs[num].Ydir=true;
+moveidby(num, (IDs[num].Xdir)? IDs[num].Xstep :  -IDs[num].Xstep , (IDs[num].Ydir)?  IDs[num].Ystep:  -IDs[num].Ystep);
+}
+
+function getnewprops(num){
+IDs[num].Ydir=Math.floor(Math.random()*2)>0;
+IDs[num].Xdir=Math.floor(Math.random()*2)>0;
+IDs[num].Ystep=Math.ceil(Math.random()*Ymax);
+IDs[num].Xstep=Math.ceil(Math.random()*Xmax)
+setTimeout('getnewprops('+num+')', Math.floor(Math.random()*Tmax));
+}
+
+function getscrollx(){
+if(NS4 || NS6)return window.pageXOffset;
+if(IE4)return document.body.scrollLeft;
+}
+
+function getscrolly(){
+if(NS4 || NS6)return window.pageYOffset;
+if(IE4)return document.body.scrollTop;
+}
+
+function getid(name){
+if(NS4)return document.layers[name];
+if(IE4)return document.all[name];
+if(NS6)return document.getElementById(name);
+}
+
+function moveidto(num,x,y){
+if(NS4)IDs[num].moveTo(x,y);
+if(IE4 || NS6){
+IDs[num].style.left=x+'px';
+IDs[num].style.top=y+'px';
+}}
+
+function getidleft(num){
+if(NS4)return IDs[num].left;
+if(IE4 || NS6)return parseInt(IDs[num].style.left);
+}
+
+function getidtop(num){
+if(NS4)return IDs[num].top;
+if(IE4 || NS6)return parseInt(IDs[num].style.top);
+}
+
+function moveidby(num,dx,dy){
+if(NS4)IDs[num].moveBy(dx, dy);
+if(IE4 || NS6){
+IDs[num].style.left=(getidleft(num)+dx)+'px';
+IDs[num].style.top=(getidtop(num)+dy)+'px';
+}}
+
+function getwindowwidth(){
+if(NS4 || NS6)return window.innerWidth;
+if(IE4)return document.body.clientWidth;
+}
+
+function getwindowheight(){
+if(NS4 || NS6)return window.innerHeight;
+if(IE4)return document.body.clientHeight;
+}
+
+function init(){
+wind_w=getwindowwidth();
+wind_h=getwindowheight();
+for(i=0; i<floatimages.length; i++){
+IDs[i]=getid('pic'+i);
+if(NS4){
+IDs[i].W=IDs[i].document.images["p"+i].width;
+IDs[i].H=IDs[i].document.images["p"+i].height;
+}
+if(NS6 || IE4){
+IDs[i].W=document.images["p"+i].width;
+IDs[i].H=document.images["p"+i].height;
+}
+getnewprops(i);
+moveidto(i , Math.floor(Math.random()*(wind_w-IDs[i].W)), Math.floor(Math.random()*(wind_h-IDs[i].H)));
+if(NS4)IDs[i].visibility = "show";
+if(IE4 || NS6)IDs[i].style.visibility = "visible";
+startfly=setInterval('moveimage('+i+')',Math.floor(Math.random()*100)+100);
+}}
+
+function hidebutterfly(){
+for(i=0; i<floatimages.length; i++){
+if (IE4)
+eval("document.all.pic"+i+".style.visibility='hidden'")
+else if (NS6)
+document.getElementById("pic"+i).style.visibility='hidden'
+else if (NS4)
+eval("document.pic"+i+".visibility='hide'")
+clearInterval(startfly)
+}
+}
+
+if (NS4||NS6||IE4){
+window.onload=init;
+window.onresize=function(){ wind_w=getwindowwidth(); wind_h=getwindowheight(); }
+}
+
+</script>
+/* Spot light */
+<script language="JavaScript1.2">
+
+/*
+Moving light on image script
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+if (document.all&&window.spotlight){
+var x=new Array()
+var direction=new Array()
+var y=new Array()
+if (spotlight.length==null){
+spotlight[0]=document.all.spotlight
+x[0]=0
+direction[0]="right"
+y[0]=spotlight[0].height
+spotlight[0].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+else
+for (i=0;i<spotlight.length;i++){
+x[i]=0
+direction[i]="right"
+y[i]=spotlight[i].height
+spotlight[i].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+}
+
+function slidelight(cur){
+spotlight[cur].filters.light.MoveLight(0,x[cur],y[cur],200,-1)
+
+if (x[cur]<spotlight[cur].width+200&&direction[cur]=="right")
+x[cur]+=10
+else if (x[cur]>spotlight[cur].width+200){
+direction[cur]="left"
+x[cur]-=10
+}
+else if (x[cur]>-200&&x[cur]<-185){
+direction[cur]="right"
+x[cur]+=10
+}
+else{
+x[cur]-=10
+direction[cur]="left"
+}
+}
+
+if (document.all&&window.spotlight){
+if (spotlight.length==null)
+setInterval("slidelight(0)",spotlight[0].speed)
+else
+for (t=0;t<spotlight.length;t++){
+var temp='setInterval("slidelight('+t+')",'+spotlight[t].speed+')'
+eval(temp)
+}
+}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

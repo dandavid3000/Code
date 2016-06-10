@@ -1,0 +1,372 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="theme.master.cs" Inherits="theme" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="shortcut icon" href="images/ico1.ico"/>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--tab-->
+<link href="css/tabcontent.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/tabcontent.js"></script>
+<!--h_menu-->
+<link rel="stylesheet" href="css/h-menu.css" type="text/css" />
+<script type="text/javascript" src="js/nav-h.js"></script>
+<!--danh muc san pham-->
+<link rel="stylesheet" href="css/danhmuc.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/danhmuc.js"></script>
+<script type="text/javascript">
+ddaccordion.init({
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+function ClickToURL(linkVal)
+{
+	if (linkVal != 0)
+		window.open(linkVal, "newwindow");
+}
+
+</script>
+
+<title>:: Đồng phục Phúc Cường ::</title>
+
+<style type="text/css">
+<!--
+body {
+	background-image: url(file:///G|/Folder ghost ngay 28-2/phuccuong_new/images/bg.gif);
+	background-repeat: repeat;
+}
+    .style1
+    {
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+    }
+    .style2
+    {
+        width: 106px;
+    }
+-->
+</style>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/stickytooltip.js">
+
+/***********************************************
+* Sticky Tooltip script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="js/stickytooltip.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        <div id="wrapper"><!--begin wrapper-->
+	<div id="header"><!--begin header-->
+    	<div id="banner_top">
+    	  <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','941','height','228','src','images/ngan','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','images/ngan' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="941" height="228">
+<param name="movie" value="images/ngan.swf" />
+            <param name="quality" value="high" />
+            <embed src="images/ngan.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="941" height="228"></embed>
+  	    </object>
+    	</noscript></div>
+      <div id="menu">
+        	<ul id="navmenu-h">
+            	<li><a href="Default.aspx">Trang chủ</a></li>
+                <li><a href="gioithieu.aspx">Giới thiệu</a>
+                
+                </li>
+                <li><a href="khachhang.aspx">Khách hàng</a></li>
+               
+                  
+                </li>
+               
+                <li><a href="tintuc.aspx">Tin tức</a></li>
+              
+                <li><a href="lienhe.aspx">Liên hệ</a></li>
+             <li><a href="download.aspx">Download</a></li>
+             <%if (Session["login"] == null)
+               {
+                  
+                   
+                   %>
+               <li><a href="dangky.aspx">Đăng ký</a></li>
+             <%} %>
+              
+                <%if (Session["admin"] != null)
+                  {%>
+                      <li><a href="admin.aspx" style="color: #FFCC00">Quản Lý</a></li>
+                 <%} %>
+                 <%if (Session["login"] != null)
+                  {%>
+                      <li><a href="dangkytinrao.aspx" style="color: #FFCC00">Đăng Tin Rao</a></li>
+                      <li><a href="xemtindarao.aspx?" style="color: #FFCC00">Xem tin đã rao</a></li>
+                 <%} %>
+                
+            </ul>
+            
+            <div class="lang_web">
+                	<a href="#"><img src="images/vn.jpg" style="margin-right:5px;"/></a>
+                    <a href="#"><img src="images/en.jpg" /></a>
+           	</div>
+      </div>
+    </div><!--end header-->
+    <div id="content"><!--begin content-->
+    
+     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+     
+    	<div id="left"><!--begin left-->
+        	
+            <div class="left_box"><!--begin left_box-->
+                <div class="left_box_title">Chức Năng</div>
+                <div class="left_box_content">
+                   <div class="arrowlistmenu"><!--begin_arrowlistmenu-->
+   						  <div class="menuheader expandable">Thông tin địa ốc</div>
+                           		<ul class="categoryitems">
+                                            <li><a href="baove.html"> Quận 1</a></li>
+                                            <li><a href="baove.html"> Quận 2</a></li>
+                                            <li><a href="baove.html"> Quận 3</a></li>
+                                            <li><a href="baove.html"> Quận 4</a></li>
+                                            <li><a href="baove.html"> Quận 5</a></li>
+                                            <li><a href="baove.html"> Quận 6</a></li>
+                                            <li><a href="baove.html"> Quận 7</a></li>
+                                          
+                                 </ul>            
+              
+                          <div class="menuheader expandable">Tin tức thời sự</div>
+                          		<ul class="categoryitems">
+                                            <li><a href="non.html"> 	Thông Tin Ngoại Tệ </a></li>
+                                            <li><a href="balo.html"> 	Thông Tin Giá Vàng </a></li>
+                                      		<li><a href="aomua.html"> 	Tình Hình Vật Liệu Thế Giới </a></li>
+                                      		<li><a href="aomua.html"> 	Luật Đất Đai Việt Nam </a></li>
+                                            
+                                 </ul>   
+                          <div class="menuheader expandable">Tìm kiếm</div>
+                          		<ul class="categoryitems">
+                                            <li><a href="vaiao.html">Loại tin đăng</a></li>
+                                            <li><a href="vaiquan.html">Loại địa ốc</a></li>
+                                            <li><a href="vaiquan.html">Diện Tích Sử Dụng</a></li>
+                                            <li><a href="vaiquan.html">Vị trí địa ốc</a></li>
+
+                                            
+                                 </ul>   
+                                   
+                          </div><!-- end arrowlistmenu-->
+						  <div class="clear"></div>
+                </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+            <div class="left_box"><!--begin left_box-->
+                 <div class="left_box_title">Bản đồ đường đi</div>
+                 <div class="left_box_content">
+                       <p><a href="lienhe.html" data-tooltip="sticky1"><img src="images/bando1.jpg" /></a></p>
+                   <p class="product_name" style="padding-bottom:10px; text-align:center"><a href="works_detail.html">Nằm ngay mặt tiền kênh Nhiêu Lộc</a></p>
+                       <p><a href="lienhe.html" data-tooltip="sticky2"><img src="images/bando3.jpg" /></a></p>
+                   <p class="product_name" style="text-align:center"><a href="works_detail.html">Từ chùa Pháp Hoa đi dọc đường bờ kênh</a></p>
+                 </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+           
+            
+            
+            <div class="left_box"><!--begin left_box-->
+                <div class="left_box_title">Liên kết WebSite</div>
+                <div class="left_box_content">
+                   <form>
+                   
+                    <select class="selectbox" name="Web" onchange="ClickToURL(this.value)" size="1" style="width:168px; color:#999; font-size:11px; padding:2px;">
+
+                        <option selected="selected" value="0">Chọn WebSite liên kết</option>
+                        <option value="http://tuoitre.vn">Báo tuổi trẻ online</option>
+                        <option value="http://vnexpress.net">Báo vnexpress</option>
+                        <option value="http://kenh14.vn">Kênh 14</option>
+                    </select>
+                   </form>
+                </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+            <div class="left_box"><!--begin left_box-->
+                <div class="left_box_title">Hỗ trợ trực tuyến</div>
+                <div class="left_box_content" align="center">
+                   <p style="margin-bottom:5px;"><a href="ymsgr:sendIM?mickey_happy1984" title="Chào"><img src="http://opi.yahoo.com/online?u=mickey_happy1984&amp;m=g&amp;t=14&amp;l=us" border="0"></a></p>
+                   <p style="margin-bottom:5px;"><a href="#"><img src="images/skype.jpg" /></a></p>
+              </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+     	</div><!--end left-->
+        
+        <div id="right_content"><!--begin right_content-->
+        	<div class="right_content_box"><!--begin right_content_box-->
+        	
+        	  <div id="center">
+        	    <!--begin center-->
+                <div class="center_box">
+                  <div class="center_box_title">Sản phẩm hiện có</div>
+                  <div class="center_box_content">
+                    <p class="normal">&nbsp;</p>
+                    <p>&nbsp;</p>
+                  </div>
+                </div>
+                
+      	    </div>
+      	  
+        	  
+        	  <!--end center-->
+                
+          <div id="right"><!--begin right-->
+                	<div class="right_box"><!--begin right_box-->
+                    	<div class="right_box_title">Thông tin tài khoản</div>
+                    	
+                    	
+                    	<!-- phan user dang nhap --->
+                        <div class="right_box_content">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td class="style1" colspan="2">
+                                        Đăng nhập</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        <asp:TextBox ID="TextBox3" runat="server" Width="96px"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        Tài khoản</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        <asp:TextBox ID="TextBox2" runat="server" Width="96px"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                       Mật khẩu</td>
+                                </tr>
+                            </table>
+                        
+                        </div>
+                                       <center> <asp:Button ID="Login" runat="server" Text="Đăng nhập" /></center>
+                    </div><!--end right_box-->
+                    <br clear="all" />
+                   
+                    <div class="right_box"><!--begin right_box-->
+                        <div class="right_box_title">Tin tức nổi bật</div>
+                        <div class="right_box_content">
+                            
+                           <div class="tintuc_home_box"><!--begin tintuc_home_box-->
+                                <div class="tintuc_home_img"><a href="tintuc.html"><img src="images/news_img.jpg" /></a></div>
+                                <span class="normal">
+                                   <a href="tintuc.html"> <strong>Quy định mới đối với đồng phục bảo vệ</strong></a><br />
+                                    Theo Thông tư 45 của Bộ Công an (ban hành ngày 14-7-2009)...
+                                </span>
+                           </div><!--end tintuc_home_box-->
+                           <br clear="all" />
+                           
+                           <div class="tintuc_home_box"><!--begin tintuc_home_box-->
+                                <div class="tintuc_home_img"><a href="tintuc.html"><img src="images/news_img.jpg" /></a></div>
+                                <span class="normal">
+                                 <a href="tintuc.html">   <strong>Quy định về đồng phục học sinh, sinh viên</strong></a><br />
+                                    Bộ GD&ĐT vừa công bố dự thảo thông tư quy định về đồng phục và lễ phục tốt nghiệp của học sinh, sinh viên...
+                                </span>
+                           </div><!--end tintuc_home_box-->
+                           <br clear="all" />
+                           
+                          
+                        </div>
+                    </div><!--end right_box-->
+                    <br clear="all" />
+                    
+                    <div class="right_box"><!--begin right_box-->
+                        <div class="right_box_title" style="background:none; text-transform:none; color:#a0977b; font-weight:bold;">Tỉ giá ngoại tệ</div>
+                        <div class="right_box_content" style="border:none;background:#ddd8c4;">
+                            <div class="tigia">
+                               <table width="150" border="1" bordercolor="#c7b58b" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>USD</td>
+                                    <td>19,090</td>
+                                </tr>
+                                <tr>
+                                    <td>GBP</td>
+                                    <td>29,407</td>
+                                </tr>
+                                <tr>
+                                    <td>HKD</td>
+                                    <td>2,476</td>
+                                </tr>
+                                <tr>
+                                    <td>EUR</td>
+                                    <td>24,534</td>
+                                </tr>
+                                <tr>
+                                    <td>CAD</td>
+                                    <td>18,324</td>
+                                </tr>
+                              </table>
+                             </div>
+                        </div>
+                    </div><!--end right_box-->
+                    <br clear="all" />
+                    
+                    <div class="right_box"><!--begin right_box-->
+                        <div class="right_box_title">Thống kê truy cập</div>
+                        <div class="right_box_content">
+                           <div class="tc">Đang truy cập : <span style="color:#FF0000"><strong>10</strong></span></div>
+                           <div class="tc">Lượt truy cập : <span style="color:#FF0000"><strong>29.999</strong></span></div>
+                        </div>
+                    </div><!--end left_box-->
+                    <br clear="all" />
+            
+                </div><!--end right-->
+            </div><!--end right_content_box-->
+            <br clear="all" />
+           
+        </div><!--end right_content--> 
+           </asp:ContentPlaceHolder>  
+    </div><!--end content-->
+    <br clear="all" />
+    
+    <div id="footer"><!--begin footer-->
+    	Thuộc bản quyền của <a href="#">Công ty DND </a><br />
+		Địa chỉ: <strong>111 Xóm Đất, P.8, Q.11</strong><br />
+		Điện thoại: (08)<strong> 0011223344</strong> - (08) <strong>09090099990</strong><br />
+        Fax: (08) <strong>09090099990</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email:<strong> phuccuongsilk@gmail.com</strong> </div>
+    <!--end footer-->
+</div><!--end wrapper-->
+    </div>
+    </form>
+</body>
+</html>

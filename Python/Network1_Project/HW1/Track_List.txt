@@ -1,0 +1,74 @@
+[
+   {
+      "No.": "1.", 
+      "Music": "James Hetfield , Lars Ulrich , Kirk Hammett", 
+      "Length": "5:29", 
+      "Title": " Enter Sandman "
+   }, 
+   {
+      "No.": "2.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "5:24", 
+      "Title": " Sad but True "
+   }, 
+   {
+      "No.": "3.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "3:47", 
+      "Title": "Holier Than Thou"
+   }, 
+   {
+      "No.": "4.", 
+      "Music": "Hetfield, Ulrich, Hammett", 
+      "Length": "6:26", 
+      "Title": " The Unforgiven "
+   }, 
+   {
+      "No.": "5.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "6:42", 
+      "Title": " Wherever I May Roam "
+   }, 
+   {
+      "No.": "6.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "3:59", 
+      "Title": " Don't Tread on Me "
+   }, 
+   {
+      "No.": "7.", 
+      "Music": "Hetfield, Ulrich, Hammett", 
+      "Length": "4:01", 
+      "Title": "Through the Never"
+   }, 
+   {
+      "No.": "8.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "6:29", 
+      "Title": " Nothing Else Matters "
+   }, 
+   {
+      "No.": "9.", 
+      "Music": "Hetfield, Ulrich, Hammett", 
+      "Length": "4:16", 
+      "Title": "Of Wolf and Man"
+   }, 
+   {
+      "No.": "10.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "5:05", 
+      "Title": " The God That Failed "
+   }, 
+   {
+      "No.": "11.", 
+      "Music": "Hetfield, Ulrich, Jason Newsted", 
+      "Length": "6:47", 
+      "Title": "My Friend of Misery"
+   }, 
+   {
+      "No.": "12.", 
+      "Music": "Hetfield, Ulrich", 
+      "Length": "3:51", 
+      "Title": "The Struggle Within"
+   }
+]

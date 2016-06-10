@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Apriori">
+</Property><Property Name="Solution File" Value="D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Apriori.sln">
+</Property><Property Name="User Options File" Value="D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Apriori.suo">
+</Property><Property Name="Date" Value="Monday, August 27, 2012">
+</Property><Property Name="Time" Value="1:36 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Apriori.sln" Description="File successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Apriori.suo" Description="File successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori.suo">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Apriori.csproj" Description="Project file successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori\Apriori.csproj">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Apriori.csproj.user" Description="Project user file successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori\Apriori.csproj.user">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Data_practice.cs" Description="File successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori\Data_practice.cs">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Program.cs" Description="File successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori\Program.cs">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Learnin'\HK2-2010\Dataminin'\BonAnhEmSieuNhan\SourceCode\Backup\Apriori\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Apriori.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Apriori" Source="Apriori\Apriori.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Apriori.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Apriori.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Apriori" Source="Apriori\Apriori.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

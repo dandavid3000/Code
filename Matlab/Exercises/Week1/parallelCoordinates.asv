@@ -1,0 +1,12 @@
+
+clc;
+clear all;
+load bank;
+labs = {'Chieu Dai','Chieu Rong Trai','Chieu Rong Phai','Chieu Rong Le Tren','Chieu Rong Le Duoi','Duong Cheo Hinh Trong'};
+N = size(forge,1);
+for i = 1 : 100
+    species(i) = 'forge';
+end
+for i = 101:200
+    
+parallelcoords(forge(1:100,1),'group',,'labels',N,'quantile',.25);

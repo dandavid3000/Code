@@ -1,0 +1,130 @@
+L(1}: 100
+Acetominifen: 31
+Anchovies: 33
+Aspirin: 66
+Auto Magazines: 33
+Bagels: 28
+Batteries: 119
+Beer: 64
+Bologna: 97
+Candles: 26
+Canned Fruit: 64
+Canned Vegetables: 172
+Cereal: 125
+Cheese: 285
+Chips: 145
+Chocolate: 29
+Chocolate Candy: 152
+Clams: 38
+Cleaners: 80
+Coffee: 119
+Cold Remedies: 73
+Computer Magazines: 29
+Conditioner: 35
+Cookies: 238
+Cooking Oil: 134
+Cottage Cheese: 66
+Crackers: 52
+Deli Meats: 118
+Deli Salads: 86
+Deodorizers: 28
+Dips: 127
+Donuts: 78
+Dried Fruit: 256
+Dried Meat: 28
+Eggs: 128
+Fashion Magazines: 25
+Flavored Drinks: 96
+French Fries: 100
+Fresh Chicken: 29
+Fresh Fish: 38
+Frozen Chicken: 119
+Frozen Vegetables: 173
+Gum: 46
+Hamburger: 81
+Hard Candy: 83
+Home Magazines: 40
+Hot Dogs: 85
+Ibuprofen: 39
+Ice Cream: 80
+Jam: 83
+Jelly: 91
+Juice: 113
+Lightbulbs: 120
+Maps: 28
+Milk: 164
+Mouthwash: 68
+Muffins: 132
+Nasal Sprays: 51
+Nuts: 170
+Oysters: 34
+Pancake Mix: 36
+Pancakes: 29
+Paper Dishes: 49
+Paper Wipes: 164
+Pasta: 97
+Peanut Butter: 88
+Personal Hygiene: 113
+Pizza: 122
+Plastic Utensils: 80
+Popcorn: 88
+Popsicles: 124
+Pot Cleaners: 82
+Pot Scrubbers: 36
+Pots and Pans: 33
+Preserves: 185
+Pretzels: 33
+Rice: 81
+Sardines: 23
+Sauces: 42
+Screwdrivers: 23
+Shampoo: 93
+Shellfish: 25
+Shrimp: 35
+Sliced Bread: 137
+Soda: 106
+Soup: 280
+Sour Cream: 54
+Spices: 98
+Sponges: 47
+Sports Magazines: 24
+Sugar: 59
+Sunglasses: 28
+Tofu: 33
+Toilet Brushes: 35
+Tools: 54
+Toothbrushes: 31
+Tuna: 74
+TV Dinner: 103
+Waffles: 132
+Wine: 185
+Yogurt: 50
+
+L(2}: 26
+Batteries,Cheese: 25
+Canned Vegetables,Cheese: 23
+Canned Vegetables,Dried Fruit: 23
+Canned Vegetables,Soup: 28
+Cereal,Soup: 29
+Cheese,Cookies: 24
+Cheese,Cooking Oil: 23
+Cheese,Dried Fruit: 32
+Cheese,Paper Wipes: 24
+Cheese,Preserves: 31
+Cheese,Soup: 39
+Cheese,Wine: 24
+Cookies,Dried Fruit: 30
+Cookies,Muffins: 24
+Cookies,Preserves: 29
+Cookies,Soup: 38
+Dried Fruit,Frozen Vegetables: 25
+Dried Fruit,Lightbulbs: 24
+Dried Fruit,Soup: 36
+Dried Fruit,Wine: 28
+Frozen Vegetables,Soup: 29
+Juice,Soup: 23
+Milk,Soup: 25
+Nuts,Preserves: 29
+Soup,Waffles: 24
+Soup,Wine: 28
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Assignment 3 - Lab section - Webint</title>
+	<link rel="stylesheet" href="style2.css"/>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src='maps.js'></script>
+	<script src='video.js'>	</script>
+	<script src='listVideo.js'></script>
+	<script src='detectBrowser.js'></script>
+		
+</head>
+<body>
+	<header id="blog_title">
+	<h1><a href="#">Assignment 3 - WebInt</a></h1>
+</header>
+<main>
+<div class='container'>
+<!--LOGO AND TITLE-->
+
+<!--MAIN NAVIGATION Nagivation treo o tren top (thuong la menu ngang-->
+<nav id="main_nagivation">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Collections</a></li>
+		<li><a href="#">Tutorials</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Sign up</a></li>
+		<li><a href="#">Login</a></li>
+	</ul>
+</nav>
+
+<!--MAIN SECTION WITH BLOG POSTS-->
+<section id="content">
+	<!--Acticle 1-->
+	<article class="post">
+		<header class="post_header">
+			First post
+		</header>
+		<section class="post_content">
+		<form>
+			<table>
+				<tr><td>First name</td><td><input type="text" name="firstname"></td></tr>
+				<tr><td>Last name</td><td><input type="text" name="lastname"></td></tr>
+				<tr><td>Email</td><td><input type="email" name="email"></td></tr>
+				<tr><td>Phone number</td><td><input type="tel" name="phonenumber"></td></tr>
+				<tr><td></td><td></td></tr>
+			</table>
+			<input type="submit" value="Submit"/>
+		</form>
+		</section>
+		<footer class="post_author">
+		</footer>
+	</article>
+	<!--Acticle 2-->
+	<article class="post">
+		<header class="post_header">
+			Second post : Geo-location
+		</header>
+		<section class="post_content">
+			
+			<p><span id="status"></span></p>
+			<div id="mapcanvas" style="height:400px;width:100%; "></div>
+			<form >
+				<div style="display: table">
+					<div style="display:table-row">
+						<div style="display:table-cell">Street :</div>
+						<div style="display:table-cell"> <input type='text' id='st'/></div>
+					</div>
+					<div style="display:table-row">
+						<div style="display:table-cell">City :</div>
+						<div style="display:table-cell">  <input type='text' id='city'/></div>
+					</div>
+					<div style="display:table-row">
+						<div style="display:table-cell">Zip Code:</div>
+						<div style="display:table-cell">  <input type='text' id='code'/></div>
+					</div>
+					<div style="display:table-row">
+						<div style="display:table-cell">Country:</div>
+						<div style="display:table-cell">  <input type='text' id='country'/></div>
+					</div>
+				</div>
+				<input type="button" value = " Location" onclick='geocoding()'/>
+			</form>
+			
+			
+		</section>
+		<footer class="post_author">
+		</footer>
+	</article>
+	<!--Acticle 3-->
+	<article class="post">
+		<header class="post_header">
+			Third post: Add a video
+		</header>
+		<section class="post_content">
+			<form name="playVideo">
+							Input URL: <input type="url" name="txturlvideo"><button type="button" id="playme" onclick="playNewVideo()">Play Me!</button> 
+							<br>
+							Time to jump: <input type="number" name="jumpnumber"><button type="button" id="jumpbutton" onclick="jumpVideo()">Jump me!</button> 
+							<button type="button" id="snapshoot" onclick="takeSnapShoot()">Take snapshoot!</button> <br>
+							
+							<input type="checkbox" id="hidebutton" onclick="hideControl()" value="hide"/>Hide control 
+							
+							<button type="button" id="mirrorvideo" onclick="mirrorVideo()">Mirror me!</button> 
+							<input type="button" onclick='rotate()' value='Rotate'/>
+			</form>
+			<table cellspacing="0">
+				<tr>
+					<td>
+						<video controls   id="video1">
+							<source id="videosrc" src="http://upload.wikimedia.org/wikipedia/commons/transcoded/b/bd/Elephants_Dream.ogg/Elephants_Dream.ogg.360p.webm" type="video/ogg">
+							Your browser does not support HTML5 video.
+						</video>
+					</td>
+					<td>
+						<canvas id="canvas1"></canvas>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<canvas id="reflection"></canvas>
+					</td>
+					<td>
+						
+					</td>
+					
+					<td><br><div class="web-cam">
+
+		<video width="320" height="240" controls>
+		  <source src="http://demosthenes.info/assets/videos/mountain.mp4" type="video/mp4">
+		  <source src="movie.ogg" type="video/ogg">
+		</video>
+
+		</div>
+		</br>
+					</td>
+				</tr>
+			</table>
+			
+			
+		</section>
+		
+		
+		
+		
+		<footer class="post_author">
+		</footer>
+	</article>
+	<!--Acticle 4-->
+	<article class="post">
+		<header class="post_header">
+			Fourth post
+		</header>
+		<section class="post_content">
+		<figure id="video_player">
+		<div id="video_container">
+			<video controls poster="http://demosthenes.info/assets/images/vid-glacier.jpg">
+			<source src="http://demosthenes.info/assets/videos/glacier.webm" type="video/webm">
+			<source src="http://demosthenes.info/assets/videos/glacier.mp4" type="video/mp4">
+			</video>
+		</div>
+		<figcaption>
+			  <a href="http://demosthenes.info/assets/videos/glacier.mp4" class="currentvid">
+				<img src="http://demosthenes.info/assets/images/vid-glacier.jpg" alt="Athabasca Glacier">
+			  </a>
+			  <a href="http://demosthenes.info/assets/videos/lake.mp4">
+				<img src="http://demosthenes.info/assets/images/vid-lake.jpg" alt="Athabasca Lake">
+			  </a>
+			  <a href="http://demosthenes.info/assets/videos/mountain.mp4">
+				<img src="http://demosthenes.info/assets/images/vid-mountain.jpg" alt="Mountain">
+			  </a>
+		</figcaption>
+		</figure>
+		
+		
+	
+		</section>
+		<footer class="post_author">
+		</footer>
+	</article>
+</section>
+
+<!--SIDEBAR NAVIGATION-->
+<aside id="sidebar">
+	<nav id="month" class="side_nagivation">
+		<h4>Previous months</h4>
+		<ul>
+			<li><a href="#">November 2014</a></li>
+             <li><a  href="#">October 2014</a></li>
+             <li><a  href="#">September 2014</a></li>
+             <li><a  href="#">August 2014</a></li>
+             <li><a  href="#">July 2014</a></li>
+		</ul>
+	</nav>
+	<nav id="categories" class="side_nagivation">
+		<h4>Catergories</h4>
+		<ul>
+	    <li><a  href="#">Typography</a></li>
+            <li><a  href="#">Photography14</a></li>
+            <li><a  href="#">Architechture</a></li>
+            <li><a  href="#">Design</a></li>
+ 			<li><a  href="#">Tutorial</a></li>
+			<li><a  href="#">Wallpapers</a></li>
+		</ul>
+	</nav>
+	<nav id="blogposts" class="side_nagivation">
+		<h4>Blog posts</h4>
+		<ul>
+			<li><a  href="#">1</a></li>
+            <li><a  href="#">2</a></li>
+			<li><a  href="#">3</a></li>
+			<li><a  href="#">4</a></li>
+               		
+		</ul>
+	</nav>
+	<nav id="comments" class="side_nagivation">
+		<h4>Comments</h4>
+		<ul>
+			<li><a  href="#">Typography</a></li>
+              		<li><a href="#">Photography</a></li>
+               		
+		</ul>
+	</nav>
+
+</aside>
+<div class="cleaner"></div>
+</div>
+
+<!--FOOTER-->
+<footer id="foot_note">
+	<p>Created by Dan and Huy for the WebInt class 2014 @ Eurecom Institute</p>
+</footer>
+</main>
+</body>
+</hmtl>

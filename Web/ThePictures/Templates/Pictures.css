@@ -1,0 +1,283 @@
+	/* re chuot len anh no hien ra boder xanh*/
+	#Miley
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/Miley1.jpg);
+	}
+	#Miley:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/Miley2.jpg);
+	}
+	
+	#Justin
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/Justin1.jpg);
+	}
+	#Justin:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/Justin2.jpg);
+	}
+	
+	#CTD
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/CTD1.jpg);
+	}
+	#CTD:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/CTD2.jpg);
+	}
+	
+	#XiTrum
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/XiTrum1.jpg);
+	}
+	
+	#XiTrum:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/XiTrum2.jpg);
+	}
+	#LinhHon
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/LinhHon1.jpg);
+	}
+	
+	#LinhHon:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/LinhHon2.jpg);
+	}
+	
+	#Woman
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/Woman1.jpg);
+	}
+	
+	#Woman:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/Woman2.jpg);
+	}
+	
+	#ManhMoi
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/ManhMoi1.jpg);
+	}
+	
+	#ManhMoi:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/ManhMoi2.jpg);
+	}
+	
+	#ChiecHop
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/ChiecHop1.jpg);
+	}
+	
+	#ChiecHop:hover
+	{
+		width:70px;
+		height:55px;
+		background-image:url(TempPics/ChiecHop2.jpg);
+	}
+	
+	#Uni
+	{
+		width:135px;
+		height:190px;
+		background-image:url(../Images/Cinemas-Uni1.jpg);
+	}
+	
+	#Uni:hover
+	{
+		width:135px;
+		height:190px;
+		background-image:url(../Images/Cinemas-Uni.jpg);
+	}
+	
+	#Jack
+	{
+		width:135px;
+		height:190px;
+		background-image:url(../Images/Jack1.jpg);
+	}
+	
+	#Jack:hover
+	{
+		width:135px;
+		height:190px;
+		background-image:url(../Images/Jack2.jpg);
+	}
+	
+	#MuoiBon
+	{
+		width:135px;
+		height:190px;
+		background-image:url(../Images/muoibonngay1.jpg);
+	}
+	
+	#MuoiBon:hover
+	{
+		width:135px;
+		height:190px;
+		background-image:url(../Images/muoibonngay2.jpg);
+	}
+	
+	#DM-FF
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/70x53_dontmiss20090407_101457.jpg);
+	}
+	
+	#DM-FF:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/70x53_dontmiss20090407_101457_2.jpg);
+	}
+	
+	#DM-Taylor
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/70x53_dontmiss20090422_161356.jpg);
+	}
+	
+	#DM-Taylor:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/70x53_dontmiss20090422_161356_2.jpg);
+	}
+	
+	#DM-HS
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/HonSoTuThan.jpg);
+	}
+	
+	#DM-HS:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/HonSoTuThan2.jpg);
+	}
+	
+	#DM-SaoBang
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/Vuonsaobang1.jpg);
+	}
+	
+	#DM-SaoBang:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/Vuonsaobang2.jpg);
+	}
+	
+	#DM-17Again
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/MBAgain1.jpg);
+	}
+	
+	#DM-17Again:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/MBAgain2.jpg);
+	}
+	
+	#DM-ILU
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/ILYM1.jpg);
+	}
+	
+	#DM-ILU:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/ILYM2.jpg);
+	}
+	
+	#DM-Harry
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/Harry1.jpg);
+	}
+	
+	#DM-Harry:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/Harry2.jpg);
+	}
+	
+	#DM-Xmen
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/XMan1.jpg);
+	}
+	
+	#DM-Xmen:hover
+	{
+		width:70px;
+		height:53px;
+		background-image:url(TempPics/Xman2.jpg);
+	}
+	
+	#Betrao 
+	{
+		width:818px;
+		height:166px;
+		background-image:url(../Images/BG copy.jpg);
+	}
+	
+	#UnbornPoster
+	{
+		width:574px;
+		height:409px;
+		background-image:url(../Images/Unborn1.jpg);
+	}
+	
+	#UnbornPoster:hover
+	{
+		width:574px;
+		height:409px;
+		background-image:url(../Images/unborn2.jpg);
+	}

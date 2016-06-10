@@ -1,0 +1,85 @@
+/* ######### CSS for Indented CSS Tabs. Remove if not using ######### */
+
+
+.indentmenu{
+font: bold 13px Arial;
+width: 100%; /*leave this value as is in most cases*/
+}
+
+.indentmenu ul{
+margin: 0;
+padding: 0;
+float: left;
+/* width: 80%; width of menu*/
+/*border-bottom:1px solid #999;*/
+}
+
+.indentmenu ul li{
+display: inline;
+}
+
+.indentmenu ul li a{
+float: left;
+color:#fff;
+padding: 5px 8px 5px 8px;
+text-decoration: none;
+background: url(../images/tab_nomal.jpg) repeat-x;
+display:block;
+font-family:Tahoma, Verdana, Arial;
+font-size:11px;
+text-align:center;
+margin-right:10px;
+text-transform:uppercase;
+}
+
+.indentmenu ul li a:visited, .indentmenu ul li a:hover{
+color:#fff;
+margin-right:10px;
+text-transform:uppercase;
+}
+
+.indentmenu ul li a.selected{
+color:#fff !important;
+padding: 5px 8px 5px 8px;
+background: url(../images/tab_select.jpg) repeat-x;
+margin-right:10px;
+text-transform:uppercase;
+}
+
+
+.tabcontentstyle{ /*style of tab content oontainer*/
+border: 1px solid gray;
+width: 450px;
+margin-bottom: 1em;
+/*padding: 10px;*/
+padding-top:10px;
+}
+
+.tabcontent{
+display:none;
+padding:9px 9px 0 9px;
+border:1px solid #e9e9e9;
+text-align:justify;
+width:703px;
+}
+.tabcontent_inner {
+/*padding-right:10px;*/
+margin-top:10px;
+}
+
+@media print {
+.tabcontent {
+display:block !important;
+}
+}
+
+#cat5 td,#cat6 td,#cat7 td{
+	padding:5px;
+	border:1px solid #cfcfcf;
+}
+#cat5 td a,#cat6 td a,#cat7 td a{
+	color:#FF0000;
+}
+#cat5 td a:hover,#cat6 td a:hover,#cat7 td a:hover{
+	text-decoration:underline;
+}

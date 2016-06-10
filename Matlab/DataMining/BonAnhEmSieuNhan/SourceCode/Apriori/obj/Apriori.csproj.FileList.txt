@@ -1,0 +1,5 @@
+bin\Debug\Apriori.exe
+bin\Debug\Apriori.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Apriori.exe
+obj\Debug\Apriori.pdb

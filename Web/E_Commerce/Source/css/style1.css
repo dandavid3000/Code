@@ -1,0 +1,503 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font-family:Tahoma;
+	font-size:11px;
+	background:#6d6d6d url(../images/bg.jpg) no-repeat top center fixed;
+	color:#330033;
+	line-height:1.3;
+}
+a,a:hover{
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0000;
+}
+img{
+	border:none;
+}
+
+#wrapper{
+	width:941px;
+	margin:0 auto;
+}
+
+/*---header---*/
+#header{
+	width:940px;
+	height:192px;
+	float:left;
+}
+#banner_top{
+	width:940px;
+	height:156px;
+	float:left;
+	background:url(../images/banner_top.jpg) no-repeat;
+}
+#menu{
+	width:941px;
+	height:36px;
+	float:left;
+	background:url(../images/menu_bg.jpg) repeat-x;
+}
+/**/
+.lang_web{
+	float:right;
+	padding-right:10px;
+	padding-top:9px;
+}
+
+.lang_web img{
+	float:left;
+	display:inline-block;
+}
+.lang_web img a{
+	display:inline-block;
+}
+
+/*-----content------*/
+#content{
+	width:921px;
+	float:left;
+	padding:10px;
+	background:#fff;
+}
+
+/*-----left--------*/
+#left{
+	width:188px;
+	float:left;
+}
+.left_box{
+	width:188px;
+	float:left;
+	margin-bottom:10px;
+}
+.left_box_title{
+	width:178px;
+	height:24px;
+	line-height:24px;
+	float:left;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-left:10px;
+	text-transform:uppercase;
+	background-image: url(../images/left_title_bg.png);
+	background-repeat: repeat-x;
+}
+.left_box_content{
+	width:168px;
+	float:left;
+	padding:9px;
+	border:1px solid #e9e9e9;
+}
+/*---tin tuc_home----*/
+.tintuc_home_box{
+	width:168px;
+	float:left;
+	margin:4px 0 5px 0;
+	padding-bottom:8px;
+	border-bottom:1px dotted #e0e0e0;
+}
+.tintuc_home_img{
+	width:55px;
+	float:left;
+	margin-right:5px;
+}
+.normal{
+	color:#000000;
+	font-size:11px;
+	line-height:1.4;
+}
+/*--truycap---*/
+.tc{
+	background:url(../images/icon_tc.jpg) left no-repeat;
+	padding-bottom:5px;
+	padding-left:20px;
+}
+.tigia{
+	width:168px;
+	float:left; 
+	height:62px; 
+	overflow:auto;
+}
+.tigia td{
+	border:1px solid #c7b58b;
+	padding:2px;
+	color:#333;
+}
+/*----right_content-----*/
+#right_content{
+	width:723px;
+	float:right;
+}
+.center_box{
+	width:723px;
+	float:right;
+	margin-bottom:10px;
+}
+.center_box_title{
+	width:713px;
+	height:24px;
+	font-weight:bold;
+	color:#fff;
+	padding-left:10px;
+	text-transform:uppercase;
+	line-height:24px;
+	float:left;
+	background:url(../images/congtrinh_bg.jpg) no-repeat;
+}
+.center_box_content{
+	width:703px;
+	float:left;
+	padding:9px;
+	border:1px solid #e9e9e9;
+}
+#center{
+	width:523px;
+	float:left;
+}
+.center_box{
+	width:523px;
+	float:left;
+}
+.center_box_title{
+	width:513px;
+	height:24px;
+	line-height:24px;
+	font-weight:bold;
+	color:#fff;
+	padding-left:10px;
+	text-transform:uppercase;
+	float:left;
+	background:url(../images/center_title.jpg) no-repeat;
+}
+.center_box_content{
+	width:503px;
+	float:left;
+	padding:9px;
+	border:1px solid #e9e9e9;
+}
+/*#right{
+	width:211px;
+	float:right;
+}
+.right_box{
+	width:211px;
+	float:right;
+}
+
+.right_box_title{
+	width:201px;
+	height:24px;
+	line-height:24px;
+	font-weight:bold;
+	color:#fff;
+	padding-left:10px;
+	text-transform:uppercase;
+	float:right;
+	background:url(../images/thuvien_title.jpg) no-repeat;
+}
+
+.right_box_content{
+	width:191px;
+	float:right;
+	padding:9px;
+	border:1px solid #e9e9e9;
+}
+*/
+#right{
+	width:188px;
+	float:right;
+}
+.right_box{
+	width:188px;
+	float:left;
+	margin-bottom:10px;
+}
+.right_box_title{
+	width:178px;
+	height:24px;
+	line-height:24px;
+	float:left;
+	font-weight:bold;
+	color:#fff;
+	padding-left:10px;
+	text-transform:uppercase;
+	background-image: url(../images/left_title_bg.png);
+	background-repeat: repeat-x;
+}
+.right_box_content{
+	width:168px;
+	float:left;
+	padding:9px;
+	border:1px solid #e9e9e9;
+}
+/*---footer---*/
+#footer{
+	width:941px;
+	height:45px;	
+	float:left;
+	background:#067540;
+	color:#fff;
+	text-align:center;
+	padding:10px 0 15px 0;
+}
+#footer a{
+	font-weight:bold;
+	color:#fff;
+}
+#footer a:hover{
+	text-decoration:underline;
+}
+
+/*----product------*/
+.product_page{
+	width:503px;
+	float:left;
+}
+
+.product_box{
+	width:154px;
+	float:left;
+	margin:5px 7px 10px 6px;
+	display:inline;
+	text-align:center;
+}
+.product_name{
+	color:#e77817;
+	padding-top:5px;
+	font-weight:bold;
+	font-size:16px;
+}
+.product_name a{
+	color:#e77817;
+	font-weight:bold;
+	font-size:11px;
+}
+.product_name a:hover{
+	color:#FF0000;
+}
+.lang
+{
+text-decoration:none;
+color:#FFFF66;
+font-weight:bold;
+}
+a.lang:hover
+{
+text-decoration:none;
+color:#00FF99;
+font-weight:bold;
+}
+/*---------tin tuc--------*/
+
+#tintuc_page{
+	width:503px;
+	float:right;
+}
+
+
+#box_tintuc{
+	float:left;
+	width:503px;
+	padding-bottom:10px;
+}
+
+.image_tintuc{
+	float:left;
+	margin-right:8px;
+}
+
+.content_tintuc{
+	font-size:11px;
+	color:#666;
+}
+
+.title_tintuc{
+	margin-top:0;
+	margin-bottom:0px;
+	color:#00873e;
+	font-weight:bold;
+	font-size:15px;
+	
+}
+
+.title_tintuc a{
+	color:#00873e;
+	font-weight:bold;
+	font-size:11px;
+	text-decoration:none;
+}
+
+.title_tintuc a:hover{
+	color:#FF0000;
+}
+
+.normal_tintuc{
+	margin-top:5px;
+	text-align:justify;	
+}
+
+.more_link_details{
+	float:left;
+	margin-top:15px;
+}
+.detail a{
+	background:url(../images/icon_detail.jpg) right no-repeat;
+	color:#FF0000;
+	padding-right:25px;
+}
+.detail a:hover{
+	font-weight:bold;
+}
+
+/*---------------tin tuc lien quan--------------*/
+
+#tin_tuc_lien_quan{
+	float:left;
+	margin-top:15px;
+	width:503px;
+	padding-bottom:10px;
+}
+
+#tin_tuc_lien_quan p.title_news{
+	font-size:11px;
+	font-weight:bold;
+	margin-top:0px;
+	margin-bottom:5px;
+	color:#055f31;
+	float:left;
+	clear:both;
+}
+
+#tin_tuc_lien_quan ul{
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#tin_tuc_lien_quan li{
+	display:block;
+	background:url(../images/list_more.jpg) no-repeat left center;
+	padding-left:20px;
+	line-height:16px;
+	margin-left:20px;
+	list-style:none;
+	float:none;	
+}
+
+#tin_tuc_lien_quan li a{
+	color:#666;
+	font-size:11px;
+	text-decoration:none;
+		
+}
+
+#tin_tuc_lien_quan li a:hover{
+	color:#CC0000;
+	text-decoration:underline;	
+}
+
+/*-----------------------------------*/
+/*-----------phan trang----------*/
+
+#phan_trang{
+	float:tight;
+}
+
+#phan_trang ul{
+	float:right;
+	border:0; 
+	margin:0; 
+	padding:0;
+
+}
+
+#phan_trang li{
+	border:0; margin:0; padding:0;
+	font-size:11px;
+	list-style:none;
+	float:left;
+	margin-top:10px;
+}
+#phan_trang a{
+	border:solid 1px #DDDDDD;
+	margin-right:2px;
+}
+#phan_trang .previous-off,
+#phan_trang .next-off {
+	color:#666666;
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding:3px 4px;
+}
+#phan_trang .next a,
+#phan_trang .previous a {
+	font-weight:bold;
+	border:solid 1px #FFFFFF;
+}
+#phan_trang .active{
+	color:#666;
+	font-weight:bold;
+	display:block;
+	float:left;
+	padding:4px 6px;
+}
+#phan_trang a:link,
+#phan_trang a:visited {
+	color:#CC0000;
+	display:block;
+	float:left;
+	padding:3px 6px;
+	text-decoration:none;
+}
+#phan_trang a:hover{
+	border:solid 1px #666666;
+}
+
+
+/*----------end phan trang--------------*/
+/*----contact----*/
+#contact_page{
+	float:left;
+	color:#666;
+	background:#fff;
+	width:503px;
+}
+
+#contact_page input, textarea{
+	float:left;
+	border:#ccc 1px solid;
+	margin-bottom:5px;
+	padding:2px;
+	margin:4px;
+	color:#666;
+	font-size:11px;
+	overflow:auto;
+}
+
+
+.submit_button{
+	float:left;
+	width:90px;
+	height:23px;
+	text-align:center;
+	background:#05592e;
+	color:#FFF;
+	font-size:12px;
+	font-weight:bold;
+	border:none;
+}
+/**/
+.product_detail_img{
+	width:250px;
+	float:left;
+	margin-right:10px;
+}

@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template-News.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>News</title>
+<style type="text/css">
+<!--
+.style3 {
+	font-size: x-large;
+	font-weight: bold;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="../Style1.css" rel="stylesheet" type="text/css" />
+
+<link href="../Pictures.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style4 {color: #999999}
+.style5 {color: #CCCCCC}
+#spotlight{
+filter:light
+}
+-->
+</style>
+<style type="text/css">
+<!--
+h1 {
+  color:#cc3333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+h3 {
+  color:#993333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+.kisser {
+  position:absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+-->
+</style>
+
+<script language="JavaScript1.2" type="text/JavaScript">
+<!-- cloak
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+//Modified by Dynamic Drive for bug fixes
+//Visit http://www.dynamicdrive.com for this script
+
+kisserCount = 15 //maximum number of images on screen at one time
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+kissDelay = 1000 //duration images stay on screen (in milliseconds)
+kissSpacer = 50 //distance to move mouse b4 next heart appears
+theimage = "lips_small.gif" //the 1st image to be displayed
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+//Browser checking and syntax variables
+var docLayers = (document.layers) ? true:false;
+var docId = (document.getElementById) ? true:false;
+var docAll = (document.all) ? true:false;
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+var stylebitK = (docLayers) ? "":".style"
+var showbitK = (docLayers) ? "show":"visible"
+var hidebitK = (docLayers) ? "hide":"hidden"
+var ns6=document.getElementById&&!document.all
+//Variables used in script
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+lastX = 0
+lastY = 0
+//Collection of functions to get mouse position and place the images
+function doKisser(e) {
+
+  posX = getMouseXPos(e)
+  posY = getMouseYPos(e)
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+    showKisser(posX,posY)
+    lastX = posX
+    lastY = posY
+  }
+}
+// Get the horizontal position of the mouse
+function getMouseXPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageX+10)
+  } else {
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+  }
+}
+// Get the vartical position of the mouse
+function getMouseYPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageY)
+  } else {
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+  }
+}
+//Place the image and start timer so that it disappears after a period of time
+function showKisser(x,y) {
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".left = " + processedx)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".top = " + y)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+  }
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+  curKisser += 1
+}
+//Make the image disappear
+function hideKisser(knum) {
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+}
+
+function kissbegin(){
+//Let the browser know when the mouse moves
+if (docLayers) {
+  document.captureEvents(Event.MOUSEMOVE)
+  document.onMouseMove = doKisser
+} else {
+  document.onmousemove = doKisser
+}
+}
+window.onload=kissbegin
+// decloak -->
+</script>
+
+<script language="JavaScript1.2">
+
+//Highlight form element- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var highlightcolor="lightyellow"
+
+var ns6=document.getElementById&&!document.all
+var previous=''
+var eventobj
+
+//Regular expression to highlight only form elements
+var intended=/INPUT|TEXTAREA|SELECT|OPTION/
+
+//Function to check whether element clicked is form element
+function checkel(which){
+if (which.style&&intended.test(which.tagName)){
+if (ns6&&eventobj.nodeType==3)
+eventobj=eventobj.parentNode.parentNode
+return true
+}
+else
+return false
+}
+
+//Function to highlight form element
+function highlight(e){
+eventobj=ns6? e.target : event.srcElement
+if (previous!=''){
+if (checkel(previous))
+previous.style.backgroundColor=''
+previous=eventobj
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+}
+else{
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+previous=eventobj
+}
+}
+
+</script>
+</head>
+<body id="container">
+<script language="JavaScript" type="text/JavaScript">
+<!-- cloak
+// Add all DIV's of hearts
+if (document.all||document.getElementById||document.layers){
+for (k=0;k<kisserCount;k=k+2) {
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+}
+}
+
+// decloak -->
+</script>
+
+<p align="center">&nbsp;</p>
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="288" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="232" height="135"><div align="center"><img id="spotlight" speed="100"  src="../../Images/Logo3.png" width="288" height="129" /></div></td>
+      </tr>
+    </table>    </td>
+    <td width="330" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="330" height="135">
+      <param name="movie" value="../../Flashes/Bongden.swf" />
+      <param name="quality" value="high" />
+      <embed src="../../Flashes/Bongden.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="330" height="135"></embed>
+    </object></td>
+    <td width="362" height="51">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="87" valign="top"><h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Thanks for visiting The Pictures!"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+    </h2></td>
+  </tr>
+</table>
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="40"></td>
+  </tr>
+</table>
+
+<!-- InstanceBeginRepeat name="MenuNews" --><!-- InstanceBeginRepeatEntry -->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Home" onclick="window.location='../../Home.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td ><img src="../../Images/Button-News2.jpg"/></td>
+    <td id="LineButton" >&nbsp;</td>
+    <td id="Music" onclick="window.location='../../Music.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    .
+    <td id="Movies" onclick="window.location='../../Movies.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Store" onclick="window.location='../../Store.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Hosted" onclick="window.location='../../Hosted.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Sugs" onclick="window.location='../../Suggestion.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Search" onclick="window.location='../../Search.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="SiteMap" onclick="window.location='../../SiteMap.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Links" onclick="window.location='../../Links.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Us" onclick="window.location='../../AboutUs.html'"></td>
+  </tr>
+</table>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="2"></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#DDDDDD">
+  <!--DWLayoutTable-->
+   <tr>
+    <td height="19" colspan="7" valign="top" bgcolor="#FFE019"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="29" colspan="7" valign="top" bgcolor="#FFE019">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../TempPics/sub_hdr_news.gif" width="106" height="25" /></td>
+  </tr>
+  <tr>
+  <tr>
+    <td width="19" height="31"></td>
+    <td width="214"></td>
+    <td width="17"></td>
+    <td width="460"></td>
+    <td width="34"></td>
+    <td width="141"></td>
+    <td width="75"></td>
+  </tr>
+  
+  <tr>
+    <td height="449">&nbsp;</td>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="13" height="20">&nbsp;</td>
+          <td width="189">&nbsp;</td>
+          <td width="12">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="92">&nbsp;</td>
+          <td valign="top"><a href="http://atlan.vtc.vn/news/images/home"><img src="../../Images/QuangCao/189x92.gif" width="189" height="92" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      
+      <tr>
+        <td height="13"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=R2Yp4zIKOQh3FcQXB0/lyw==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/anhhunghoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/Default.aspx?s=AVIEW&amp;AID=0QtoOn3/3mzxsv+lY1woQQ==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/khieuchienhoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=sISNbYMnQfdW5/60cmLYwA==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/thattinh.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="18"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td>&nbsp;</td>
+    <td rowspan="2" valign="top"><!-- InstanceBeginEditable name="TinTuc" -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="14" height="283"></td>
+          <td width="436" valign="top" id="TextHN3"><div>
+            <p class="style3">Ngh&#7879; s&#297; tr&#7867; v&agrave; scandal</p>
+            <p>Trong th&#7901;i &#273;i&#7875;m ca s&#7929;, di&#7877;n vi&ecirc;n tr&#7867; &ldquo;m&#7885;c&rdquo; l&ecirc;n  nh&#432; n&#7845;m th&igrave; tham v&#7885;ng n&#7893;i ti&#7871;ng l&agrave; &#273;i&#7873;u t&#7845;t y&#7871;u &#273;&#7889;i v&#7899;i b&#7843;n th&acirc;n c&#7911;a  b&#7845;t k&#7923; ai mu&#7889;n &ldquo;d&#7845;n th&acirc;n&rdquo; v&agrave;o ng&agrave;nh n&agrave;y.</p>
+          </div>
+            <div> <span id="ctl00_MidderContent_Detail1_lbl_DetailContent">
+              <div>Tuy  nhi&ecirc;n, &#273;&#7875; &#273;&#432;&#7907;c nhi&#7873;u ng&#432;&#7901;i bi&#7871;t &#273;&#7871;n v&agrave; nhanh ch&oacute;ng g&#7863;t h&aacute;i th&agrave;nh c&ocirc;ng  th&igrave; kh&ocirc;ng ph&#7843;i ai c&#361;ng c&oacute; kh&#7843; n&#259;ng&hellip; V&igrave; th&#7871;, khi m&#7897;t ca s&#7929; chu&#7849;n b&#7883; ra  album, di&#7877;n vi&ecirc;n ra m&#7855;t vai di&#7877;n m&#7899;i&hellip; lu&ocirc;n k&egrave;m theo &#273;&oacute; l&agrave; 1 v&#7909; scandal;  nh&#7887; l&agrave; cu&#7897;c t&igrave;nh tay ba, nh&#7919;ng tuy&ecirc;n b&#7889; g&acirc;y s&#7889;c, cu&#7897;c c&atilde;i c&#7885; n&#7843;y l&#7917;a,  ki&#7879;n t&#7909;ng&hellip; l&#7899;n l&agrave; vi ph&#7841;m b&#7843;n quy&#7873;n ca kh&uacute;c, tung &#7843;nh &ldquo;n&oacute;ng&rdquo; ho&#7863;c nh&#7919;ng  clip g&acirc;y s&#7889;c kh&aacute;c.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/16/87f149.jpg" width="400" /></div>
+                <div>Ho&agrave;ng Th&ugrave;y Linh</div>
+              </div>
+              <p>G&acirc;y ch&uacute; &yacute; b&#7857;ng scandal &#7843;nh, phim &ldquo;n&oacute;ng&rdquo;</p>
+              <div>K&#7875; t&#7915; cu&#7897;c thi Sao Mai &#273;i&#7875;m h&#7865;n 2005,  c&aacute;i t&ecirc;n Nguy&#7877;n H&#7891;ng Nhung &#273;&atilde; t&#7841;o &#273;&#432;&#7907;c s&#7921; ch&uacute; &yacute; g&#7847;n xa, tuy nhi&ecirc;n, t&ecirc;n  c&#7911;a c&ocirc; c&ograve;n g&#7855;n v&#7899;i scandal &ldquo;&#7843;nh n&oacute;ng&rdquo; t&#7915;ng g&acirc;y x&ocirc;n xao d&#432; lu&#7853;n. V&agrave; &#273;&#7871;n  nay, tuy &#273;&atilde; &ldquo;bi&#7871;n m&#7845;t&rdquo; kh&#7887;i l&agrave;ng nh&#7841;c Vi&#7879;t nh&#432;ng Nhung v&#7851;n &#273;&#432;&#7907;c m&#7885;i  ng&#432;&#7901;i nh&#7899; &#273;&#7871;n l&agrave; &ldquo;ng&ocirc;i sao&rdquo; &#273;i&#7875;n h&igrave;nh n&#7893;i l&ecirc;n nh&#7901; scandal sex. R&#7891;i &#273;&#7871;n  m&#7897;t Ho&agrave;ng Th&ugrave;y Linh &ldquo;n&oacute;ng b&#7887;ng&rdquo; trong clip sex v&#7899;i b&#7841;n trai c&aacute;ch &#273;&acirc;y  kh&ocirc;ng l&acirc;u c&#361;ng khi&#7871;n nhi&#7873;u b&#7853;c ph&#7909; huynh ph&#7843;i lo l&#7855;ng, b&#7903;i v&agrave;o th&#7901;i  &#273;i&#7875;m &#273;&oacute;, Linh &#273;ang r&#7845;t &#273;&#432;&#7907;c y&ecirc;u m&#7871;n, th&#7853;m ch&iacute; tr&#7903; th&agrave;nh th&#7847;n t&#432;&#7907;ng c&#7911;a  gi&#7899;i tr&#7867; qua vai ch&iacute;nh trong Nh&#7853;t k&yacute; V&agrave;ng Anh.  B&ecirc;n c&#7841;nh &#273;&oacute; c&#361;ng ph&#7843;i k&#7875; &#273;&#7871;n c&ocirc; g&aacute;i c&oacute; t&ecirc;n Th&#7911;y Top v&#7899;i nh&#7919;ng b&#7897; &#7843;nh c&oacute;  ph&#7847;n sexy do ch&iacute;nh c&ocirc; l&agrave;m ng&#432;&#7901;i m&#7851;u v&agrave; stylist, &#273;&#432;&#7907;c &ldquo;show off&rdquo; l&ecirc;n  blog c&aacute; nh&acirc;n, g&acirc;y x&ocirc;n xao c&#432; d&acirc;n m&#7841;ng&hellip; C&#361;ng kh&ocirc;ng th&#7875; b&#7887; qua m&#7897;t Th&#7911;y  Ti&ecirc;n sau scandal t&igrave;nh tr&#432;&#7901;ng v&#7899;i nh&#7841;c s&#7929; Qu&#7889;c B&#7843;o c&aacute;ch &#273;&acirc;y 1 v&agrave;i n&#259;m,  m&#7899;i &#273;&acirc;y l&#7841;i ti&#7871;p t&#7909;c &#273;&#432;&#7907;c &ldquo;h&acirc;m n&oacute;ng&rdquo; v&#7899;i nh&#7919;ng t&#7845;m &#7843;nh m&aacute;t m&#7867; t&#7921; ch&#7909;p  khi&#7871;n c&#432; d&acirc;n m&#7841;ng l&#7851;n fans c&#7911;a c&ocirc; ca s&#7929; Gi&#7845;c m&#417; tuy&#7871;t tr&#7855;ng l&#7901;i ra ti&#7871;ng v&agrave;o&hellip; </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/16/1a.jpg" width="400" /></div>
+                <div>T&ocirc;i kh&ocirc;ng c&#7889; t&igrave;nh t&#7841;o d&#7921;ng l&ecirc;n scandal n&agrave;y</div>
+              </div>
+              <div>&nbsp;</div>
+              <div>G&#7847;n &#273;&acirc;y, s&#7921; vi&#7879;c ng&ocirc;i sao c&#7911;a G&#7885;i gi&#7845;c m&#417; v&#7873; v&agrave; Gi&#7843;i c&#7913;u th&#7847;n ch&#7871;t  - Minh H&#7857;ng l&#7897; &ldquo;&#7843;nh n&oacute;ng&rdquo; l&#7841;i m&#7897;t l&#7847;n n&#7919;a x&ocirc;n xao d&#432; lu&#7853;n. R&#7891;i m&#7897;t Ng&#7885;c  S&#417;n sau h&agrave;ng lo&#7841;t nh&#7919;ng scandal t&igrave;nh &aacute;i, vi&#7879;c l&agrave;m kh&aacute;c ng&#432;&#7901;i&hellip; c&#361;ng l&#7841;i  &#273;&#432;&#7907;c &ldquo;kh&#417;i&rdquo; d&#7853;y v&#7899;i m&#7897;t clip sex; ho&#7863;c tr&#432;&#7899;c &#273;&oacute; c&oacute; ca s&#7929; Quang H&agrave; v&#7899;i  scandal &ldquo;l&#7845;y ti&#7873;n mua danh&rdquo; khi xu&#7845;t hi&#7879;n m&#7897;t c&aacute;ch th&#432;&#7901;ng xuy&ecirc;n v&agrave; b&#7845;t  th&#432;&#7901;ng tr&ecirc;n truy&#7873;n h&igrave;nh, scandal v&#7899;i ca kh&uacute;c H&agrave;o hoa,  v&#7899;i Nguy&#7877;n H&#7891;ng Nhung, v&#7899;i H.T production, &#7849;u &#273;&#7843; v&#7899;i ca s&#7929; L&acirc;m V&#361;&hellip;;  Ph&#432;&#417;ng Thanh v&#7899;i scandal nh&#7855;n tin kh&#7911;ng b&#7889; qua &#273;i&#7879;n tho&#7841;i, nh&#7919;ng tranh  c&atilde;i v&#7899;i bloger Cogaidolong&hellip; &#272;i&#7875;m qua nh&#7919;ng s&#7921; vi&#7879;c tr&ecirc;n, nhi&#7873;u &yacute; ki&#7871;n  cho r&#7857;ng, ph&#7843;i ch&#259;ng l&agrave;ng gi&#7843;i tr&iacute; Vi&#7879;t &#273;ang &#273;i v&agrave;o l&#7889;i m&ograve;n c&#7911;a l&agrave;ng  gi&#7843;i tr&iacute; th&#7871; gi&#7899;i, n&#7893;i l&ecirc;n b&#7857;ng scandal?&hellip; tuy nhi&ecirc;n, hi&#7879;u &#7913;ng c&#7911;a v&#7845;n  &#273;&#7873; l&#7841;i kh&ocirc;ng ho&agrave;n h&#7843;o nh&#432; m&#7897;t s&#7889; ng&ocirc;i sao th&#7871; gi&#7899;i &#273;&atilde; &#273;&#7841;t &#273;&#432;&#7907;c. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/16/229.jpg" width="450" /></div>
+                <div>Th&#7911;y Top</div>
+              </div>
+              <p>May m&#7855;n kh&ocirc;ng &#273;&#7873;u</p>
+              <div>Sau scandal &#273;&#7897;ng tr&#7901;i, th&#7853;m ch&iacute; Ho&agrave;ng Th&ugrave;y Linh c&ograve;n nh&#7853;n &#273;&#432;&#7907;c  nhi&#7873;u h&#417;n nh&#7919;ng l&#7901;i m&#7901;i bi&#7875;u di&#7877;n, tham gia c&aacute;c s&#7921; ki&#7879;n l&#7899;n, l&agrave;m g&#432;&#417;ng  m&#7863;t &#273;&#7841;i di&#7879;n c&#7911;a nhi&#7873;u th&#432;&#417;ng hi&#7879;u n&#7893;i ti&#7871;ng (trong &#273;&oacute; c&oacute; game online  Linh V&#432;&#417;ng), theo scandal &#273;&oacute;, c&aacute;t-x&ecirc; c&#7911;a Linh c&#361;ng t&#259;ng l&ecirc;n r&#7845;t nhi&#7873;u  v&agrave; r&#7845;t cao so v&#7899;i nh&#7919;ng ng&ocirc;i sao t&ecirc;n tu&#7893;i kh&aacute;c, m&#7885;i ho&#7841;t &#273;&#7897;ng c&#7911;a Linh  &#273;&#7873;u &#273;&#432;&#7907;c ch&uacute; &yacute; h&#417;n, t&#7915; ca nh&#7841;c &#273;&#7871;n th&#7901;i trang&hellip; c&#361;ng v&igrave; th&#7871; n&ecirc;n m&#7899;i c&oacute;  nhi&#7873;u &yacute; ki&#7871;n v&iacute; von r&#7857;ng, &ldquo;hi&#7879;n t&#432;&#7907;ng&rdquo; c&#7911;a Linh c&#361;ng gi&#7889;ng v&#7899;i ng&ocirc;i sao  d&ograve;ng h&#7885; Hilton - n&#7919; t&#7927; ph&uacute; tr&#7867; Paris Hilton, c&#361;ng nh&#7901; nh&#7919;ng c&#7843;nh m&aacute;t m&#7867;  v&#7899;i b&#7841;n trai m&agrave; t&ecirc;n tu&#7893;i &#273;&#432;&#7907;c nhi&#7873;u ng&#432;&#7901;i bi&#7871;t &#273;&#7871;n, s&#7921; nghi&#7879;p c&#361;ng nh&#7901;  &#273;&oacute; m&agrave; ph&#7845;t l&ecirc;n nh&#432; &ldquo;di&#7873;u g&#7863;p gi&oacute;&rdquo;. C&ugrave;ng v&#7899;i Linh l&agrave; Th&#7911;y Top, sau l&#7847;n  t&#7921; ch&#7909;p &#7843;nh kh&#7887;e v&ograve;ng 1 ngo&#7841;i c&#7905; v&agrave; &#273;&#432;a l&ecirc;n blog c&aacute; nh&acirc;n, t&ecirc;n tu&#7893;i c&#7911;a  c&ocirc; l&#7853;p t&#7913;c n&#7893;i l&ecirc;n nh&#432; c&#7891;n, kh&ocirc;ng ng&#7915;ng t&#7853;n d&#7909;ng l&#7907;i th&#7871; n&agrave;y, c&ocirc; &#273;&atilde;  ti&#7871;p t&#7909;c th&#7921;c hi&#7879;n nh&#7919;ng b&#7897; &#7843;nh c&#7889; t&igrave;nh khoe &ldquo;n&uacute;i &#273;&ocirc;i&rdquo; thu&#7897;c h&agrave;ng  &ldquo;kh&#7911;ng&rdquo; v&agrave; c&ocirc;ng khai tr&ecirc;n b&aacute;o ch&iacute; v&#7899;i vai tr&ograve; c&#7911;a m&#7897;t stylist&hellip;, c&ugrave;ng  v&#7899;i slogan: be myself-lu&ocirc;n l&agrave; ch&iacute;nh m&igrave;nh  n&#7893;i ti&#7871;ng, c&ocirc; g&aacute;i tu&#7893;i teen n&agrave;y &#273;&atilde; tr&#7903; th&agrave;nh ng&#432;&#7901;i ti&ecirc;n phong c&#7911;a vi&#7879;c  &ldquo;kh&#7859;ng &#273;&#7883;nh m&igrave;nh&rdquo; qua nh&#7919;ng b&#7897; &#7843;nh ri&ecirc;ng, tuy nhi&ecirc;n, ngo&agrave;i &ldquo;th&agrave;nh qu&#7843;&rdquo;  &#273;&oacute;, Th&#7911;y c&ograve;n g&acirc;y s&#7889;c khi &ldquo;d&iacute;nh&rdquo; v&agrave;o scandal tay 3 v&#7899;i &#273;&ocirc;i v&#7907; ch&#7891;ng ngh&#7879;  s&#7929; Quang H&#7843;i-H&#7843;i Y&#7871;n c&aacute;ch &#273;&acirc;y kh&ocirc;ng l&acirc;u, c&#361;ng &ldquo;nh&#7901;&rdquo; s&#7921; ki&#7879;n n&agrave;y m&agrave; Th&#7911;y  Top nh&#7853;n &#273;&#432;&#7907;c nhi&#7873;u h&#417;n s&#7921; quan t&acirc;m trong l&agrave;ng gi&#7843;i tr&iacute; hi&#7879;n nay. V&agrave;  &#273;&#7871;n nay, Th&#7911;y Top &#273;&#432;&#7907;c xem l&agrave; ng&#432;&#7901;i may m&#7855;n nh&#7845;t khi kh&ocirc;ng g&#7863;p b&#7845;t k&#7923;  tr&#7903; ng&#7841;i n&agrave;o tr&ecirc;n con &#273;&#432;&#7901;ng &#273;i &#273;&#7871;n s&#7921; n&#7893;i ti&#7871;ng, d&ugrave; &#273;&oacute; l&agrave; scandal. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/16/0392a.jpg" width="450" /></div>
+                <div>N&#7893;i l&ecirc;n b&#7857;ng scandal v&agrave; &#273;ang c&#7889; g&#7855;ng &#273;&#7875; kh&#7859;ng &#273;&#7883;nh m&igrave;nh </div>
+              </div>
+              <p>&#272;i&#7875;n h&igrave;nh c&#7911;a &ldquo;k&#7871;t c&#7909;c&rdquo; kh&ocirc;ng may l&agrave; ng&ocirc;i sao Y&#7871;n Vy &ndash; m&#7897;t t&ecirc;n tu&#7893;i  l&#7899;n trong l&agrave;ng m&#7851;u Vi&#7879;t th&#7853;p ni&ecirc;n 90, tuy nhi&ecirc;n, s&#7921; vi&#7879;c scandal &ldquo;phim  n&oacute;ng&rdquo; c&ugrave;ng vi&#7879;c b&#7883; ph&aacute;t hi&#7879;n l&agrave; g&aacute;i g&#7885;i cao c&#7845;p &#273;&atilde; d&#7847;n b&oacute;p ch&#7871;t t&ecirc;n  tu&#7893;i c&#7911;a c&ocirc; ng&#432;&#7901;i m&#7851;u, ca s&#7929;, di&#7877;n vi&ecirc;n n&agrave;y. B&ecirc;n c&#7841;nh &#273;&oacute; c&#361;ng ph&#7843;i k&#7875;  &#273;&#7871;n s&#7921; &ldquo;bi&#7871;n m&#7845;t&rdquo; c&#7911;a Sao Mai Nguy&#7877;n  H&#7891;ng Nhung, d&ugrave; v&agrave;o th&#7901;i &#273;i&#7875;m nh&#7919;ng b&#7913;c &#7843;nh ph&#7843;n c&#7843;m c&#7911;a c&ocirc; &#273;&#432;&#7907;c tung  l&ecirc;n m&#7841;ng b&#7883; c&ocirc;ng ch&uacute;ng ch&#7881; tr&iacute;ch k&#7883;ch li&#7879;t th&igrave; c&aacute;t-x&ecirc; c&#7911;a c&ocirc; n&agrave;y c&#361;ng  kh&ocirc;ng ng&#7915;ng t&#259;ng l&ecirc;n, tuy nhi&ecirc;n, v&igrave; kh&ocirc;ng n&#7893;i l&ecirc;n nh&#7901; t&agrave;i n&#259;ng n&ecirc;n c&ocirc;  c&#361;ng d&#7847;n b&#7883; l&atilde;ng qu&ecirc;n theo th&#7901;i gian. B&#7845;t b&igrave;nh nh&#7845;t c&oacute; l&#7869; l&agrave; s&#7921; vi&#7879;c MC  &#272;an L&ecirc; d&iacute;nh clip sex, d&ugrave; &#273;&atilde; &#273;&#432;&#7907;c minh oan, nh&#432;ng t&#7915; khi s&#7921; vi&#7879;c &#273;&aacute;ng  ti&#7871;c x&#7843;y ra &#273;&#7871;n nay, c&aacute;i t&ecirc;n &#272;an L&ecirc;n &#273;&atilde; bi&#7871;n m&#7845;t kh&#7887;i c&aacute;c ch&#432;&#417;ng tr&igrave;nh  truy&#7873;n h&igrave;nh c&#7911;a VTV v&agrave; nhi&#7873;u ng&#432;&#7901;i v&#7851;n kh&ocirc;ng kh&#7887;i ti&#7871;c cho c&ocirc;, c&oacute; l&#7869; v&igrave;  &ldquo;tai bay v&#7841; gi&oacute;&rdquo; n&ecirc;n m&#7899;i ch&#7883;u &#273;en &#273;&#7911;i.</p>
+              <p>N&#7893;i ti&#7871;ng b&#7857;ng scandal &ndash; con dao hai l&#432;&#7905;i</p>
+              <div>&#272;&#7871;n nay, vi&#7879;c t&#7841;o scandal v&#7899;i mong mu&#7889;n &#273;&#432;&#7907;c n&#7893;i ti&#7871;ng kh&ocirc;ng c&ograve;n  l&agrave; &#273;i&#7873;u l&#7841;, th&#7853;m ch&iacute; qu&aacute; nhi&#7873;u, &#273;&#7871;n m&#7913;c sau nh&#7919;ng t&ograve; m&ograve; ban &#273;&#7847;u th&igrave;  c&ocirc;ng ch&uacute;ng &#273;&atilde; d&#7847;n c&#7843;nh gi&aacute;c, d&#7883; &#7913;ng v&agrave; xem &#273;&oacute; l&agrave; &ldquo;chi&ecirc;u b&agrave;i&rdquo; m&#7899;i c&#7911;a  gi&#7899;i ngh&#7879; s&#7929;. N&#7893;i ti&#7871;ng b&#7857;ng scandal c&#361;ng gi&#7889;ng con dao 2 l&#432;&#7905;i v&#7853;y,  nhanh nh&#7853;n &#273;&#432;&#7907;c s&#7921; quan t&acirc;m c&#7911;a c&ocirc;ng ch&uacute;ng, nh&#432;ng b&ugrave; l&#7841;i, ng&#432;&#7901;i ngh&#7879; s&#7929;  s&#7869; kh&oacute; l&#7845;y l&#7841;i &#273;&#432;&#7907;c h&igrave;nh &#7843;nh &#273;&#7865;p (m&agrave; b&#7843;n th&acirc;n h&#7885; &#273;&atilde; &#273;&aacute;nh m&#7845;t) trong con  m&#7855;t c&#7911;a nh&#7919;ng kh&aacute;n gi&#7843; kh&oacute; t&iacute;nh. T&#7841;o scandal &#273;&#7875; n&#7893;i ti&#7871;ng l&agrave; chi&ecirc;u b&agrave;i  nhanh nh&#7845;t &#273;&#7875; &#273;&#432;&#7907;c n&#7893;i ti&#7871;ng m&agrave; m&#7897;t s&#7889; ng&ocirc;i sao c&#7911;a l&agrave;ng gi&#7843;i tr&iacute; th&#7871;  gi&#7899;i v&#7851;n l&agrave;m, nh&#432;ng kh&ocirc;ng ph&#7843;i ai c&#361;ng c&oacute; th&#7875; th&agrave;nh danh theo c&aacute;ch n&agrave;y,  b&#7903;i sau scandal th&igrave; t&agrave;i n&#259;ng m&#7899;i l&agrave; &#273;i&#7873;u quy&#7871;t &#273;&#7883;nh th&agrave;nh b&#7841;i tr&ecirc;n con  &#273;&#432;&#7901;ng s&#7921; nghi&#7879;p c&#7911;a h&#7885;.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/16/328.jpg" width="400" /></div>
+                <div>Minh H&#7857;ng: Ch&#432;a bao gi&#7901; ngh&#297; m&igrave;nh s&#7869; t&#7841;o scandal &#273;&#7875; g&acirc;y s&#7921; ch&uacute; &yacute; cho m&#7885;i ng&#432;&#7901;i</div>
+              </div>
+              <p>&#272;i&#7875;m l&#7841;i nh&#7919;ng s&#7921; vi&#7879;c g&#7847;n &#273;&acirc;y th&igrave; scandal &ldquo;&#7843;nh, phim n&oacute;ng&rdquo; v&#7851;n &#273;ang  chi&#7871;m &#432;u th&#7871;, d&ugrave; v&ocirc; t&igrave;nh hay h&#7919;u &yacute; th&igrave; n&oacute; v&#7851;n g&acirc;y &#7843;nh h&#432;&#7903;ng x&#7845;u &#273;&#7871;n m&#7897;t  b&#7897; ph&#7853;n &#273;&ocirc;ng &#273;&#7843;o gi&#7899;i tr&#7867;, &#273;i l&#7879;ch v&#7899;i thu&#7847;n phong m&#7929; t&#7909;c c&#7911;a d&acirc;n t&#7897;c,  c&#7911;a truy&#7873;n th&#7889;ng &Aacute; &#272;&ocirc;ng. Thi&#7871;t ngh&#297;, m&#7897;t ng&#432;&#7901;i th&#7853;t s&#7921; c&oacute; nh&acirc;n c&aacute;ch,  t&agrave;i n&#259;ng v&agrave; bi&#7871;t t&ocirc;n tr&#7885;ng ch&iacute;nh m&igrave;nh th&igrave; ch&#7855;c ch&#7855;n s&#7869; kh&ocirc;ng g&acirc;y ra  nh&#7919;ng s&#7921; vi&#7879;c &ldquo;&#273;&aacute;ng ti&#7871;c&rdquo; nh&#432; v&#7853;y, v&igrave; mu&#7889;n &#273;&#432;&#7907;c ng&#432;&#7901;i kh&aacute;c t&ocirc;n tr&#7885;ng  m&igrave;nh th&igrave; tr&#432;&#7899;c ti&ecirc;n, b&#7841;n ph&#7843;i l&agrave; ng&#432;&#7901;i t&ocirc;n tr&#7885;ng ch&iacute;nh b&#7843;n th&acirc;n b&#7841;n.  Mong r&#7857;ng nh&#7919;ng ai &#273;ang c&oacute; &yacute; &#273;&#7883;nh &#273;i l&ecirc;n b&#7857;ng con &#273;&#432;&#7901;ng n&agrave;y s&#7869; c&oacute; c&aacute;i  nh&igrave;n s&acirc;u s&#7855;c h&#417;n, &#273;&#7875; l&agrave;ng gi&#7843;i tr&iacute; Vi&#7879;t &#273;&#432;&#7907;c s&#7841;ch h&#417;n nh&#7901; nh&#7919;ng t&agrave;i  n&#259;ng th&#7921;c th&#7909;. Xin tr&iacute;ch d&#7851;n l&#7901;i di&#7877;nvi&ecirc;n, ca s&#7929; Minh H&#7857;ng &#273;&#7875; b&#7841;n &#273;&#7885;c hi&#7875;u th&ecirc;m v&#7873; t&acirc;m t&#432; c&#7911;a ng&#432;&#7901;i trong cu&#7897;c:&ldquo;H&#7857;ng  ch&#432;a bao gi&#7901; ngh&#297; m&igrave;nh s&#7869; t&#7841;o scandal &#273;&#7875; g&acirc;y s&#7921; ch&uacute; &yacute; cho m&#7885;i ng&#432;&#7901;i v&agrave;  H&#7857;ng c&#361;ng s&#7869; kh&ocirc;ng d&ugrave;ng nh&#7919;ng &#7843;nh nh&#432; th&#7871; n&agrave;y &#273;&#7875; t&#7841;o scandal &#273;&#7875; n&#7893;i  ti&#7871;ng. H&atilde;y nh&igrave;n v&agrave;o con &#273;&#432;&#7901;ng H&#7857;ng &#273;i m&#7885;i ng&#432;&#7901;i s&#7869; bi&#7871;t, H&#7857;ng mu&#7889;n m&igrave;nh  &#273;i b&#7857;ng ch&iacute;nh s&#7913;c l&#7921;c v&agrave; b&#7843;n l&#297;nh c&#7911;a m&igrave;nh, kh&ocirc;ng d&ugrave;ng nh&#7919;ng chi&ecirc;u th&#7913;c  r&#7867; ti&#7873;n nh&#432; th&#7871;. M&#7863;t kh&aacute;c n&#7871;u g&#7885;i nh&#7919;ng b&#7913;c &#7843;nh n&agrave;y l&agrave; &#7843;nh n&oacute;ng th&igrave;  ho&agrave;n to&agrave;n kh&ocirc;ng &#273;&uacute;ng, mong r&#7857;ng m&#7885;i ng&#432;&#7901;i s&#7869; &#273;&#7891;ng c&#7843;m c&ugrave;ng H&#7857;ng&rdquo;</p>
+          </span></div></td>
+          <td width="10"></td>
+        </tr>
+        <tr>
+          <td height="13"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+    <td>&nbsp;</td>
+    <td rowspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="10" height="12"></td>
+          <td width="121"></td>
+          <td width="10"></td>
+        </tr>
+      <tr>
+        <td height="406">&nbsp;</td>
+          <td valign="top"><img src="../../Images/QuangCao/moviequangca.gif" width="120" height="406" /></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="22">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="240">&nbsp;</td>
+          <td valign="top"><a href="http://forum.zing.vn/girl-viet-nam/f913/"><img src="../../Images/QuangCao/mp32_timodau.gif" width="120" height="240" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="17"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+    </table></td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="211">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="37"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="137" height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="137" height="26">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="26" valign="top">
+		
+		<form>
+			&nbsp;&nbsp;&nbsp;<select name="osite">
+				<option value="othersites">Other sites</option>
+				<option value="-">-----</option>
+				<option value="vh1">Vh1</option>
+				<option value="mtvasia">MTVasia</option>
+				<option value="disney">Disney asia</option>
+				<option value="tgdienanh">Pictures World</option>
+				<option value="moviezing">Zing movie</option>
+		</form>
+		
+		 </td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="256">&nbsp;</td>
+    <td width="567" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="567" height="55"><div align="right" class="style2">
+          <div align="right" id="TextLink1"><a href="../../Home.html">Home </a>|<a href="../../News.html" target="_self"> News</a> |<a href="../../Music.html"> Music</a> | <a href="../../Movies.html">Movies</a> | <a href="../../Suggestion.html">Contact us </a>|<a href="../../Links.html"> Links&nbsp;&nbsp;</a></div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="567" height="25"><div align="right"><span class="style1">&copy;2009 TPsKHHD Group  .All rights reserved.</span></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript1.2">
+
+/*
+Flying Butterfly script (By BGAudioDr@aol.com)
+Modified slightly/ permission granted to Dynamic Drive to feature script in archive
+For full source, visit http://www.dynamicdrive.com
+*/
+
+var Ymax=8;                                //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
+var Xmax=8;                                //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
+var Tmax=10000;                        //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+
+//FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
+
+var floatimages=new Array();
+floatimages[0]='./Images/butterfly2.gif';
+floatimages[1]='./Images/butterfly2.gif';
+floatimages[2]='./Images/butterfly2.gif';
+floatimages[3]='./Images/butterfly2.gif';
+
+//*********DO NOT EDIT BELOW***********
+var NS4 = (navigator.appName.indexOf("Netscape")>=0 && parseFloat(navigator.appVersion) >= 4 && parseFloat(navigator.appVersion) < 5)? true : false;
+var IE4 = (document.all)? true : false;
+var NS6 = (parseFloat(navigator.appVersion) >= 5 && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var wind_w, wind_h, t='', IDs=new Array();
+for(i=0; i<floatimages.length; i++){
+t+=(NS4)?'<layer name="pic'+i+'" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">' : '<div id="pic'+i+'" style="position:absolute; visibility:hidden;width:10px; height:10px"><a href="javascript:hidebutterfly()">';
+t+='<img src="'+floatimages[i]+'" name="p'+i+'" border="0">';
+t+=(NS4)? '</a></layer>':'</a></div>';
+}
+document.write(t);
+
+function moveimage(num){
+if(getidleft(num)+IDs[num].W+IDs[num].Xstep >= wind_w+getscrollx())IDs[num].Xdir=false;
+if(getidleft(num)-IDs[num].Xstep<=getscrollx())IDs[num].Xdir=true;
+if(getidtop(num)+IDs[num].H+IDs[num].Ystep >= wind_h+getscrolly())IDs[num].Ydir=false;
+if(getidtop(num)-IDs[num].Ystep<=getscrolly())IDs[num].Ydir=true;
+moveidby(num, (IDs[num].Xdir)? IDs[num].Xstep :  -IDs[num].Xstep , (IDs[num].Ydir)?  IDs[num].Ystep:  -IDs[num].Ystep);
+}
+
+function getnewprops(num){
+IDs[num].Ydir=Math.floor(Math.random()*2)>0;
+IDs[num].Xdir=Math.floor(Math.random()*2)>0;
+IDs[num].Ystep=Math.ceil(Math.random()*Ymax);
+IDs[num].Xstep=Math.ceil(Math.random()*Xmax)
+setTimeout('getnewprops('+num+')', Math.floor(Math.random()*Tmax));
+}
+
+function getscrollx(){
+if(NS4 || NS6)return window.pageXOffset;
+if(IE4)return document.body.scrollLeft;
+}
+
+function getscrolly(){
+if(NS4 || NS6)return window.pageYOffset;
+if(IE4)return document.body.scrollTop;
+}
+
+function getid(name){
+if(NS4)return document.layers[name];
+if(IE4)return document.all[name];
+if(NS6)return document.getElementById(name);
+}
+
+function moveidto(num,x,y){
+if(NS4)IDs[num].moveTo(x,y);
+if(IE4 || NS6){
+IDs[num].style.left=x+'px';
+IDs[num].style.top=y+'px';
+}}
+
+function getidleft(num){
+if(NS4)return IDs[num].left;
+if(IE4 || NS6)return parseInt(IDs[num].style.left);
+}
+
+function getidtop(num){
+if(NS4)return IDs[num].top;
+if(IE4 || NS6)return parseInt(IDs[num].style.top);
+}
+
+function moveidby(num,dx,dy){
+if(NS4)IDs[num].moveBy(dx, dy);
+if(IE4 || NS6){
+IDs[num].style.left=(getidleft(num)+dx)+'px';
+IDs[num].style.top=(getidtop(num)+dy)+'px';
+}}
+
+function getwindowwidth(){
+if(NS4 || NS6)return window.innerWidth;
+if(IE4)return document.body.clientWidth;
+}
+
+function getwindowheight(){
+if(NS4 || NS6)return window.innerHeight;
+if(IE4)return document.body.clientHeight;
+}
+
+function init(){
+wind_w=getwindowwidth();
+wind_h=getwindowheight();
+for(i=0; i<floatimages.length; i++){
+IDs[i]=getid('pic'+i);
+if(NS4){
+IDs[i].W=IDs[i].document.images["p"+i].width;
+IDs[i].H=IDs[i].document.images["p"+i].height;
+}
+if(NS6 || IE4){
+IDs[i].W=document.images["p"+i].width;
+IDs[i].H=document.images["p"+i].height;
+}
+getnewprops(i);
+moveidto(i , Math.floor(Math.random()*(wind_w-IDs[i].W)), Math.floor(Math.random()*(wind_h-IDs[i].H)));
+if(NS4)IDs[i].visibility = "show";
+if(IE4 || NS6)IDs[i].style.visibility = "visible";
+startfly=setInterval('moveimage('+i+')',Math.floor(Math.random()*100)+100);
+}}
+
+function hidebutterfly(){
+for(i=0; i<floatimages.length; i++){
+if (IE4)
+eval("document.all.pic"+i+".style.visibility='hidden'")
+else if (NS6)
+document.getElementById("pic"+i).style.visibility='hidden'
+else if (NS4)
+eval("document.pic"+i+".visibility='hide'")
+clearInterval(startfly)
+}
+}
+
+if (NS4||NS6||IE4){
+window.onload=init;
+window.onresize=function(){ wind_w=getwindowwidth(); wind_h=getwindowheight(); }
+}
+
+</script>
+/* Spot light */
+<script language="JavaScript1.2">
+
+/*
+Moving light on image script
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+if (document.all&&window.spotlight){
+var x=new Array()
+var direction=new Array()
+var y=new Array()
+if (spotlight.length==null){
+spotlight[0]=document.all.spotlight
+x[0]=0
+direction[0]="right"
+y[0]=spotlight[0].height
+spotlight[0].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+else
+for (i=0;i<spotlight.length;i++){
+x[i]=0
+direction[i]="right"
+y[i]=spotlight[i].height
+spotlight[i].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+}
+
+function slidelight(cur){
+spotlight[cur].filters.light.MoveLight(0,x[cur],y[cur],200,-1)
+
+if (x[cur]<spotlight[cur].width+200&&direction[cur]=="right")
+x[cur]+=10
+else if (x[cur]>spotlight[cur].width+200){
+direction[cur]="left"
+x[cur]-=10
+}
+else if (x[cur]>-200&&x[cur]<-185){
+direction[cur]="right"
+x[cur]+=10
+}
+else{
+x[cur]-=10
+direction[cur]="left"
+}
+}
+
+if (document.all&&window.spotlight){
+if (spotlight.length==null)
+setInterval("slidelight(0)",spotlight[0].speed)
+else
+for (t=0;t<spotlight.length;t++){
+var temp='setInterval("slidelight('+t+')",'+spotlight[t].speed+')'
+eval(temp)
+}
+}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

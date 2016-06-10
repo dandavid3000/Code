@@ -1,0 +1,1835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Store</title>
+<style type="text/css">
+<!--
+.style6 {color: #000000}
+-->
+</style>
+<style type="text/css">
+<!--
+.style7 {font-size: xx-large}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="Templates/Style1.css" rel="stylesheet" type="text/css" />
+
+<link href="Templates/Pictures.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+#spotlight{
+filter:light
+}
+-->
+</style>
+<style type="text/css">
+<!--
+h1 {
+  color:#cc3333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+h3 {
+  color:#993333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+.kisser {
+  position:absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+.style3 {color: #999999}
+-->
+</style>
+
+<script language="JavaScript1.2" type="text/JavaScript">
+<!-- cloak
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+//Modified by Dynamic Drive for bug fixes
+//Visit http://www.dynamicdrive.com for this script
+
+kisserCount = 15 //maximum number of images on screen at one time
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+kissDelay = 1000 //duration images stay on screen (in milliseconds)
+kissSpacer = 50 //distance to move mouse b4 next heart appears
+theimage = "lips_small.gif" //the 1st image to be displayed
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+//Browser checking and syntax variables
+var docLayers = (document.layers) ? true:false;
+var docId = (document.getElementById) ? true:false;
+var docAll = (document.all) ? true:false;
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+var stylebitK = (docLayers) ? "":".style"
+var showbitK = (docLayers) ? "show":"visible"
+var hidebitK = (docLayers) ? "hide":"hidden"
+var ns6=document.getElementById&&!document.all
+//Variables used in script
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+lastX = 0
+lastY = 0
+//Collection of functions to get mouse position and place the images
+function doKisser(e) {
+
+  posX = getMouseXPos(e)
+  posY = getMouseYPos(e)
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+    showKisser(posX,posY)
+    lastX = posX
+    lastY = posY
+  }
+}
+// Get the horizontal position of the mouse
+function getMouseXPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageX+10)
+  } else {
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+  }
+}
+// Get the vartical position of the mouse
+function getMouseYPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageY)
+  } else {
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+  }
+}
+//Place the image and start timer so that it disappears after a period of time
+function showKisser(x,y) {
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".left = " + processedx)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".top = " + y)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+  }
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+  curKisser += 1
+}
+//Make the image disappear
+function hideKisser(knum) {
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+}
+
+function kissbegin(){
+//Let the browser know when the mouse moves
+if (docLayers) {
+  document.captureEvents(Event.MOUSEMOVE)
+  document.onMouseMove = doKisser
+} else {
+  document.onmousemove = doKisser
+}
+}
+window.onload=kissbegin
+// decloak -->
+</script>
+
+<script language="JavaScript1.2">
+
+//Highlight form element- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var highlightcolor="lightyellow"
+
+var ns6=document.getElementById&&!document.all
+var previous=''
+var eventobj
+
+//Regular expression to highlight only form elements
+var intended=/INPUT|TEXTAREA|SELECT|OPTION/
+
+//Function to check whether element clicked is form element
+function checkel(which){
+if (which.style&&intended.test(which.tagName)){
+if (ns6&&eventobj.nodeType==3)
+eventobj=eventobj.parentNode.parentNode
+return true
+}
+else
+return false
+}
+
+//Function to highlight form element
+function highlight(e){
+eventobj=ns6? e.target : event.srcElement
+if (previous!=''){
+if (checkel(previous))
+previous.style.backgroundColor=''
+previous=eventobj
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+}
+else{
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+previous=eventobj
+}
+}
+
+</script>
+</head>
+<body id="container">
+<script language="JavaScript" type="text/JavaScript">
+<!-- cloak
+// Add all DIV's of hearts
+if (document.all||document.getElementById||document.layers){
+for (k=0;k<kisserCount;k=k+2) {
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+}
+}
+
+// decloak -->
+</script>
+
+<p align="center">&nbsp;</p>
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="288" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="232" height="135"><div align="center"><img id="spotlight" speed="100"  src="Images/Logo3.png" width="288" height="129" /></div></td>
+      </tr>
+    </table>    </td>
+    <td width="330" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="330" height="135">
+      <param name="movie" value="Flashes/Bongden.swf" />
+      <param name="quality" value="high" />
+      <embed src="Flashes/Bongden.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="330" height="135"></embed>
+    </object></td>
+    <td width="362" height="105"><table width="358" height="95" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td height="33" colspan="2"><span class="style2">Name</span></td>
+        <td colspan="2"><input type="text" size="20" maxlength="30" /></td>
+      </tr>
+      <tr>
+        <td height="33" colspan="2"><span class="style2">Password</span></td>
+        <td colspan="2"><input type="password" size="20" maxlength="30" />&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59" height="5"></td>
+        <td width="17"></td>
+        <td width="198"></td>
+        <td width="84"></td>
+      </tr>
+      <tr>
+        <td height="29"></td>
+        <td colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="47" height="29">&nbsp;</td>
+                <td width="73" valign="top"><input type="submit" name="btnDangNhap" value="Sign in" />              &nbsp;</td>
+                <td width="66" valign="top" id="TextLink1"><div align="right"><a href="http://www.paygate.vtczone.vn">Sign up</a></div></td>
+                <td width="29">&nbsp;</td>
+              </tr>
+        </table></td>
+        <td>&nbsp;</td>
+      </tr>
+      
+      
+      
+      
+    </table></td>
+  </tr>
+  
+  
+  
+  
+  <tr>
+    <td height="49" valign="top"><h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Thanks for visiting The Pictures!"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+    </h2></td>
+  </tr>
+</table>
+<table width="961" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="961" height="40"></td>
+  </tr>
+</table>
+
+<!-- InstanceBeginEditable name="Menu" -->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Home" onclick="window.location='Home.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="News" onclick="window.location='News.html'"></td>
+    <td id="LineButton" >&nbsp;</td>
+    <td id="Music" onclick="window.location='Music.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Movies" onclick="window.location='Movies.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td ><img src="Images/Button-Store2.jpg" /></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Hosted" onclick="window.location='Hosted.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Sugs" onclick="window.location='Suggestion.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Search" onclick="window.location='Search.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="SiteMap" onclick="window.location='SiteMap.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Links" onclick="window.location='Links.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Us" onclick="window.location='AboutUs.html'"></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="2"></td>
+  </tr>
+</table>
+<!-- InstanceBeginEditable name="MainContent" --><table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" id="TextHN3">
+  <!--DWLayoutTable-->
+              <tbody>
+              <tr valign="top">
+                <td height="17" colspan="7" valign="top" bgcolor="#18FF01"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                </tr>
+              <tr valign="top">
+                <td height="38" colspan="7" valign="top" bgcolor="#18FF01"><span class="style6 style7">&nbsp;&nbsp;&nbsp;STORE</span></td>
+                </tr>
+              <tr valign="top">
+                <td width="20" height="27">&nbsp;</td>
+                <td width="210">&nbsp;</td>
+                <td width="33">&nbsp;</td>
+                <td width="435">&nbsp;</td>
+                <td width="52">&nbsp;</td>
+                <td width="162">&nbsp;</td>
+                <td width="48">&nbsp;</td>
+              </tr>
+              <tr valign="top">
+                <td height="31">&nbsp;</td>
+                <td rowspan="2" valign="top" style="background-repeat: no-repeat;">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <!--DWLayoutTable-->
+              <tbody>
+              <tr valign="top">
+                <td style="background-repeat: no-repeat;" width="160">
+                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                      <td colspan="2" height="7">
+                       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tbody>
+                            <tr>
+                              <td colspan="2" height="7">&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td>
+<script language="JavaScript1.2" src="index.php_files/thuedvd.js" type="text/javascript"></script>
+<br></td>
+                            </tr>
+                            <tr>
+                              <td><img src="index.php_files/blank.gif" height="7" width="10"></td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td><script language="javascript" type="text/javascript">
+	function submitbutton() {
+		var form = document.search;
+
+		// do field validation
+		if (form.FindFilmName.value == "") {
+			alert( 'Vui long nhap vao ten phim de tim kiem' );
+			return false;
+		}
+		
+		return true;
+	}
+	</script></td>
+                            </tr>
+                            <tr>
+                              <td><img src="index.php_files/blank.gif" height="7" width="10"></td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td><table style="font-family: Arial,Helvetica,sans-serif;" cellpadding="1" cellspacing="0">
+								<tbody><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=21">Xmas Special</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=1">Hành &#272;&#7897;ng</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=2">Hình S&#7921; - Ly K&#7923;</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=3">Kinh D&#7883; - Ma</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=4">Tình C&#7843;m - Bi K&#7883;ch</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=6">Hài</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=5">Lãng M&#7841;n</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=8">Ho&#7841;t Hình</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=7">Gia &#272;ình - Thi&#7871;u Nhi</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=13">Th&#7875; Thao</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=9">Võ - C&#7893; Trang</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=10">Th&#7847;n Tho&#7841;i</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=11">Khoa H&#7885;c Gi&#7843; T&#432;&#7903;ng</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=12">Phiêu L&#432;u - Cowboy</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=14">Chi&#7871;n Tranh</a></td></tr><tr id="primary1"><td id="prod1" align="left"><a href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=15">Kinh &#272;i&#7875;n</a></td></tr><tr id="primary1">							</tbody></table>                    </td>
+                            </tr>
+                            <tr>
+                              <td><img src="index.php_files/blank.gif" height="7" width="10"></td>
+                            </tr>
+                            <tr>
+                              <td width="7"><img src="index.php_files/blank.gif" height="10" width="7"></td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" height="7"><img src="index.php_files/blank.gif" height="7" width="10"></td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td><p></p>
+                              
+<table bgcolor="#cccccc" border="0" cellpadding="0" cellspacing="0" width="149">
+    <tbody><tr id="primary2">
+	   <td id="prod2" align="center"><a href="http://www.shopphim.com/index.php?p=oscar" class="LeftRigthTitle"><strong>&#272;O&#7840;T GI&#7842;I OSCAR</strong></a></td>
+  </tr>
+    <tr>
+      <td colspan="3">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+                                <tr valign="top">
+								 
+                                <td valign="top" width="127"><img src="index.php_files/blank.gif" height="1" width="10">									</td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://shopphim.com/index.php?p=detail&amp;id=T165">The Departed</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://shopphim.com/index.php?p=detail&amp;id=9434">The Last King of Scotland</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://shopphim.com/index.php?p=detail&amp;id=T205">The Queen</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://shopphim.com/index.php?p=detail&amp;id=L032">Little Miss Sunshine</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://shopphim.com/index.php?p=detail&amp;id=9416">Dreamgirls</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=C002">Crash</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=B013">Brokeback Mountain</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=T018">Truman Capote</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr><tr valign="top"><td align="right" width="10%">*&nbsp;</td>
+                                			<td align="left" width="83%"><a class="CacTop" href="http://shopphim.com/index.php?p=detail&amp;id=W010&amp;t=1168707514">Walk The Line</a><br>
+											<img src="index.php_files/blank.gif" height="3" width="10"></td></tr>
+          </tbody>
+      </table></td>
+    </tr>
+</tbody></table>                                 </td>
+                            </tr>
+                          </tbody>
+                      </table>                       </td></tr>
+                    <tr>
+                      <td width="7"><img src="index.php_files/blank.gif" height="10" width="7"></td>
+                      <td></td>
+                    </tr></tbody></table></td>
+                </tr>
+              <tr>
+                <td height="62"></td>
+              </tr>
+              </tbody>
+                              </table></td>
+                <td>&nbsp;</td>
+                <td rowspan="3" valign="top">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="435">
+                    <!--DWLayoutTable-->
+                    <tbody>
+                    <tr>
+                      <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr align="center">
+                      
+                      <td align="center">
+                        
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=1&amp;t=1240673098">Hành &#272;&#7897;ng</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=1&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=D089"><img src="Images/Pics/D-WarC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=D089">Dragon Wars (D-War) (Long Chi&#7871;n)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050"><img src="Images/Pics/REC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050">Resident Evil: Extinction (Hang Qu&#7927; 3: Di&#7879;t Tuy&#7879;t)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=S145"><img src="Images/Pics/SC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=S145">Skinwalkers (Cu&#7897;c Chi&#7871;n Ng&#432;&#7901;i Sói)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=2&amp;t=1240673098">Hình S&#7921; - Ly K&#7923;</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=2&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="2" height="17" width="100%">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td width="140" align="center" valign="top" bgcolor="#CCCCCC">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=H077"><img src="Images/Pics/TimesC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H077">Harsh Times (Ký &#7912;c Chi&#7871;n Tranh)</a>					</td><td width="140" align="center" valign="top" bgcolor="#CCCCCC">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=I047"><img src="Images/Pics/Who1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=I047">I Know Who Killed Me (Tôi Bi&#7871;t K&#7867; Gi&#7871;t Tôi)</a>
+					</td><td width="140" align="center" valign="top" bgcolor="#CCCCCC">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=A093"><img src="pics/AGC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=A093">American Gangster (Gangster M&#7929;)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=3&amp;t=1240673098">Kinh D&#7883; - Ma</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=3&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=I048"><img src="Images/Pics/Mang1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=I048">In the Spider&#8216;s Web (M&#7841;ng Nh&#7879;n)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=B115"><img src="Images/Pics/MatNa1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=B115">Behind The Mask: The Rise Of Leslie Vernon (&#272;&#7857;ng Sau M&#7863;t N&#7841;)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T319"><img src="Images/Pics/TF1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T319">Timber Falls (L&#432;&#7905;i Hái Th&#7847;n Ch&#7871;t 2)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=4&amp;t=1240673098">Tình C&#7843;m - Bi K&#7883;ch</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=4&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=L062"><img src="Images/Pics/LB1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=L062">Los Borgia (Th&#7849;m Cung Alexander &#272;&#7841;i &#272;&#7871;)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=N031"><img src="Images/Pics/NF1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=N031">Never Forever (Cu&#7897;c Tình V&#7909;ng Tr&#7897;m)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=R055"><img src="Images/Pics/RR1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R055">Raise The Red Lantern (L&#7891;ng &#272;èn &#272;&#7887; Treo Cao)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=6&amp;t=1240673098">Hài</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=6&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="2" height="17" width="100%">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td width="140" align="center" valign="top" bgcolor="#CCCCCC">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=B116"><img src="Images/Pics/Ball1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=B116">Balls Of Fury (Tr&#7853;n &#272;&#7845;u Cu&#7889;i Cùng)</a>					</td><td width="140" align="center" valign="top" bgcolor="#CCCCCC">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=S143"><img src="Images/Pics/Super1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=S143">Superbad (Siêu T&#7879;)</a>
+					</td><td width="140" align="center" valign="top" bgcolor="#CCCCCC">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=H081"><img src="Images/Pics/HS1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H081">Homie Spumoni (Con Ông Tr&#7901;i)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+				
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=8&amp;t=1240673098">Ho&#7841;t Hình</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=8&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T312"><img src="Images/Pics/TomAC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T312">Tom And Jerry: A Nutcracker Tale (V&#361; &#272;i&#7879;u &#272;êm Giáng Sinh) - B&#7842;N CHÍNH TH&#7912;C 5.1</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=D090"><img src="Images/Pics/Bay2.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=D090">Dragon Ball GT V (H&#7853;u 7 Viên Ng&#7885;c R&#7891;ng 5)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=R047"><img src="Images/Pics/Rata1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R047">Ratatouille (Chú Chu&#7897;t &#272;&#7847;u B&#7871;p) - B&#7842;N CHÍNH TH&#7912;C 5.1</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=7&amp;t=1240673098">Gia &#272;ình - Thi&#7871;u Nhi</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=7&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=U024"><img src="Images/Pics/Dog2.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=U024">Underdog (Chú Chó Siêu Nhân)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=H079"><img src="Images/Pics/Hair1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H079">Hairspray (Cu&#7897;c Thi Hoa H&#7853;u Tóc)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=H075"><img src="Images/Pics/TH1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H075">Halloweentown High (Tr&#432;&#7901;ng H&#7885;c Ma Qu&#7927;)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=13&amp;t=1240673098">Th&#7875; Thao</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=13&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=B116"><img src="Images/Pics/Ball1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=B116">Balls Of Fury (Tr&#7853;n &#272;&#7845;u Cu&#7889;i Cùng)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=G047"><img src="Images/Pics/Nu1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=G047">Gracie (N&#7919; C&#7847;u Th&#7911;)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=S132"><img src="Images/Pics/Dance1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=S132">Stomp The Yard (Sàn Nh&#7843;y Sôi &#272;&#7897;ng)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=9&amp;t=1240673098">Võ - C&#7893; Trang</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=9&amp;t=1240673098">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=S147"><img src="Images/Pics/Samurai1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=S147">Samourais (Bào Thai Võ S&#297; &#272;&#7841;o)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=W044"><img src="Images/Pics/WingChunC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=W044">Wing Chun (Minh Trung Hùng)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=N030"><img src="Images/Pics/Long1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=N030">New Dragon Gate Inn (Long Quy&#7873;n Binh Pháp)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=10&amp;t=1240673099">Th&#7847;n Tho&#7841;i</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=10&amp;t=1240673099">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="2" height="17" width="100%">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=H069"><img src="Images/Pics/Harry2.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H069">Harry Potter And The Order Of The Phoenix (Harry Potter Và M&#7879;nh L&#7879;nh Ph&#432;&#7907;ng Hoàng) - B&#7842;N CHÍNH TH&#7912;C 5.1</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=C035"><img src="Images/Pics/Conver1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=C035">The Covenant (Lãnh &#272;&#7883;a T&#7889;i Cao)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T020"><img src="Images/Pics/Ring1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T020">The Lord Of The Ring 1: The Fellowship Of The Ring (Nh&#7919;ng Ng&#432;&#7901;i B&#7841;n C&#7911;a Nh&#7851;n)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=11&amp;t=1240673099">Khoa H&#7885;c Gi&#7843; T&#432;&#7903;ng</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=11&amp;t=1240673099">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050"><img src="Images/Pics/REC1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050">Resident Evil: Extinction (Hang Qu&#7927; 3: Di&#7879;t Tuy&#7879;t)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=C081"><img src="Images/Pics/Child1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=C081">Children Of Dune (Th&#7843;m Sát Khóc Li&#7879;t)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=B110"><img src="Images/Pics/Bat2.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=B110">Battlespace (Ngân Hà T&#7917; Chi&#7871;n)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=12&amp;t=1240673099">Phiêu L&#432;u - Cowboy</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=12&amp;t=1240673099">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=P053"><img src="Images/Pics/Pri1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=P053">Pirates Of The Caribbean: At World&#8216;s End (C&#432;&#7899;p Bi&#7875;n Caribbean 3: N&#417;i T&#7853;n Cùng Th&#7871; Gi&#7899;i) - B&#7842;N CHÍNH TH&#7912;C 5.1</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T322"><img src="Images/Pics/The1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T322">The Outsider (Tay Súng Tuy&#7879;t Luân)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=F067"><img src="Images/Pics/For1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=F067">Forbidden Warrior (Pháp L&#7921;c Vô Biên)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=14&amp;t=1240673099">Chi&#7871;n Tranh</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=14&amp;t=1240673099">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T316"><img src="Images/Pics/First1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T316">The First Of August (&#272;&#7897;i Quân Th&#7893; Ph&#7881;)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=A091"><img src="Images/Pics/Heart1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=A091">A mighty Heart (T&#7845;m Lòng D&#361;ng C&#7843;m)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=P046"><img src="Images/Pics/Path1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=P046">Pathfinder: Legend Of The Ghost Warrior (Huy&#7873;n Tho&#7841;i Chi&#7871;n Binh)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+
+					
+
+<br><div align="left"><strong><a class="style8" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=15&amp;t=1240673099">Kinh &#272;i&#7875;n</a></strong>&nbsp;<span class="style1">(</span><a class="LinkMore" href="http://www.shopphim.com/index.php?p=pd&amp;iFilmtype=15&amp;t=1240673099">see more</a><span class="style1">)</span><br>
+                                                           </div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  
+                                  <tbody><tr>
+                                    <td>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                          <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" height="1" width="100%">
+                                              <tbody><tr>
+                                                <td height="1" width="0%"><img src="index.php_files/xamlt.gif" height="9" width="10"></td>
+                                                <td background="index.php_files/xamt.gif" height="1" width="100%"></td>
+                                                <td height="1" width="0%"><img src="index.php_files/xamrt.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td background="index.php_files/xaml.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                                <td bgcolor="#80807c" width="100%">
+                                                  <table width="100%" height="17" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#CCCCCC">
+                                                    
+                                                    <tbody><tr>
+                                                      <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                          <tbody><tr align="center">
+                                                            <td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=R055"><img src="Images/Pics/RR1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R055">Raise The Red Lantern (L&#7891;ng &#272;èn &#272;&#7887; Treo Cao)</a>					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T020"><img src="Images/Pics/Ring1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T020">The Lord Of The Ring 1: The Fellowship Of The Ring (Nh&#7919;ng Ng&#432;&#7901;i B&#7841;n C&#7911;a Nh&#7851;n)</a>
+					</td><td align="center" valign="top" width="140">
+				<a title="" href="http://www.shopphim.com/index.php?p=detail&amp;id=T021"><img src="Images/Pics/TheRing1.jpg" border="0" height="140" width="100"></a><br><br>
+				<a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T021">The Lord Of The Ring 2: The Two Towers (Hai Toà Tháp)</a>
+					</td>                                                          </tr>
+                                                      </tbody></table></td>
+                                                    </tr>
+                                                </tbody></table></td>
+                                                <td background="index.php_files/xamr.gif" valign="top" width="0%"><img src="index.php_files/blank1.gif" height="9" width="10"></td>
+                                              </tr>
+                                          </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                          <td><table background="index.php_files/xamb.gif" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tbody><tr>
+                                                <td width="0%"><img src="index.php_files/xamlb.gif" height="9" width="10"></td>
+                                                <td width="100%"></td>
+                                                <td width="0%"><img src="index.php_files/xamrb.gif" height="9" width="10"></td>
+                                              </tr>
+                                            </tbody></table>                                          </td>
+                                        </tr>
+                                        <tr>
+                            <td background="index.php_files/sep-line-bg.jpg" height="19"><br></td></tr>
+                                    </tbody></table></td></tr></tbody></table>
+                    <tr>
+                      <td colspan="3">&nbsp;</td></tr></tbody>
+                      </table></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              
+              <tr valign="top">
+                <td height="900">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td rowspan="2" valign="top">
+				
+                  <script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+                  </script>
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <!--DWLayoutTable-->
+                    
+                    <tbody>
+                      
+                      <tr valign="top">
+                        
+                        <td width="162" height="4718" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <!--DWLayoutTable-->
+                          
+                          <tbody>
+                            
+                            
+                            <tr>
+                              
+                              <td width="7" height="4710">&nbsp;</td>
+    
+              <td width="152" valign="top">
+                
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <!--DWLayoutTable-->
+                  
+                  <tbody>
+                    
+                    <tr>
+                      <td width="152"><img src="index.php_files/blank.gif" height="7" width="10"></td>
+                            </tr>
+                    <tr>
+                      <td>	
+                        
+                        <table bgcolor="#cccccc" border="0" cellpadding="0" cellspacing="0" width="149">
+                          <tbody><tr id="primary2">
+                            <td class="BoxTitle" id="prod2" align="center">
+                              <a class="LeftRigthTitle" href="http://www.shopphim.com/index.php?p=new_music"><img src="Images/Pics/star3.gif" border="0"> <strong>SOUNDTRACK M&#7898;I <strong><img src="Images/Pics/star3.gif" border="0"></a></td>
+            </tr>
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tbody>
+                                    <tr valign="top">
+                                      <td colspan="2" align="right"><img src="index.php_files/blank.gif" height="6" width="6"></td></tr>
+                                    
+                                    <tr valign="top"><td align="right" width="15%">1.&nbsp;</td>
+                   			                <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=H017">High School Musical (H&#7897;i Di&#7877;n Âm Nh&#7841;c)</a></td></tr><tr valign="top"><td align="right" width="15%">2.&nbsp;</td>
+                       			              <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=T304">Transformers (Rôb&#7889;t &#272;&#7841;i Chi&#7871;n)</a></td></tr><tr valign="top"><td align="right" width="15%">3.&nbsp;</td>
+                           			            <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=B063">Babel (K&#7871; Ho&#7841;ch &#7842;o T&#432;&#7903;ng)</a></td></tr><tr valign="top"><td align="right" width="15%">4.&nbsp;</td>
+                               			          <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=C061">Curse Of The Golden Flower (Hoàng Kim Giáp)</a></td></tr><tr valign="top"><td align="right" width="15%">5.&nbsp;</td>
+                   			                <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=L032">Little Miss Sunshine (Cu&#7897;c Thi Hoa H&#7853;u Nhí)</a></td></tr>          </tbody>
+                                  </table><div align="right"><a href="http://www.shopphim.com/index.php?p=new_music" class="LinkMore">see more</a></div><br></td>
+            </tr>
+                            </tbody></table>                    </td>
+                            </tr>
+                    <tr>
+                      <td><img src="index.php_files/blank.gif" height="7" width="10">                        </td>
+                            </tr>
+                    <tr>
+                      <td>	
+                        
+                        <table bgcolor="#cccccc" border="0" cellpadding="0" cellspacing="0" width="149">
+                          <tbody><tr id="primary2">
+                            <td class="BoxTitle" id="prod2" align="center">
+                              <a class="LeftRigthTitle" href="http://www.shopphim.com/index.php?p=new_trailer"><img src="Images/Pics/star3.gif" border="0"><strong> TRAILER M&#7898;I </strong><img src="Images/Pics/star3.gif" border="0"></a></td>
+            </tr>
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tbody>
+                                    <tr valign="top">
+                                      <td colspan="2" align="right"><img src="index.php_files/blank.gif" height="6" width="6"></td></tr>
+                                    
+                                    <tr valign="top"><td align="right" width="15%">1.&nbsp;</td>
+                   			                <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=9688">Bee Movie</a></td></tr><tr valign="top"><td align="right" width="15%">2.&nbsp;</td>
+                       			              <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=A093">American Gangster (Gangster M&#7929;)</a></td></tr><tr valign="top"><td align="right" width="15%">3.&nbsp;</td>
+                           			            <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=9685">Saw IV</a></td></tr><tr valign="top"><td align="right" width="15%">4.&nbsp;</td>
+                               			          <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=9678">Rendition</a></td></tr><tr valign="top"><td align="right" width="15%">5.&nbsp;</td>
+                   			                <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=9676">Gone Baby Gone</a></td></tr>          </tbody>
+                                  </table><div align="right"><a href="http://www.shopphim.com/index.php?p=new_trailer" class="LinkMore">see more</a></div><br></td>
+            </tr>
+                            </tbody></table>                    </td>
+                            </tr>
+                    <tr>
+                      <td><img src="index.php_files/blank.gif" height="7" width="10">                        </td>
+                            </tr>
+                    <tr>
+                      <td>	
+                        
+                        <table bgcolor="#cccccc" border="0" cellpadding="0" cellspacing="0" width="149">
+                          <tbody><tr id="primary2">
+                            <td class="BoxTitle" id="prod2" align="center">
+                              <a class="LeftRigthTitle" href=""><img src="Images/Pics/star3.gif" border="0"><strong> TOP TRAILER </strong><img src="Images/Pics/star3.gif" border="0"></a></td>
+            </tr>
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tbody>
+                                    <tr valign="top">
+                                      <td colspan="2" align="right"><img src="index.php_files/blank.gif" height="6" width="6"></td></tr>
+                                    
+                                    <tr valign="top"><td align="right" width="15%">1.&nbsp;</td>
+                   			                <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=D089">Dragon Wars (D-War) (Long Chi&#7871;n)</a></td></tr><tr valign="top"><td align="right" width="15%">2.&nbsp;</td>
+                       			              <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=G049">Good Luck Chuck (K&#7867; B&#7883; &#272;á May M&#7855;n)</a></td></tr><tr valign="top"><td align="right" width="15%">3.&nbsp;</td>
+                           			            <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=H069">Harry Potter And The Order Of The Phoenix (Harry Potter Và M&#7879;nh L&#7879;nh Ph&#432;&#7907;ng Hoàng) - B&#7842;N CHÍNH TH&#7912;C 5.1</a></td></tr><tr valign="top"><td align="right" width="15%">4.&nbsp;</td>
+                               			          <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050">Resident Evil: Extinction (Hang Qu&#7927; 3: Di&#7879;t Tuy&#7879;t)</a></td></tr><tr valign="top"><td align="right" width="15%">5.&nbsp;</td>
+                                			        <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=G037">Ghost Rider (Ma T&#7889;c &#272;&#7897;)</a></td></tr><tr valign="top"><td align="right" width="15%">6.&nbsp;</td>
+                                			        <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=S123">Spider-Man 3 (Ng&#432;&#7901;i Nh&#7879;n 3)</a></td></tr><tr valign="top"><td align="right" width="15%">7.&nbsp;</td>
+                                			        <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=S140">Shrek The Third (Gã Ch&#7857;ng Tinh T&#7889;t B&#7909;ng 3)</a></td></tr><tr valign="top"><td align="right" width="15%">8.&nbsp;</td>
+                                			        <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=C061">Curse Of The Golden Flower (Hoàng Kim Giáp)</a></td></tr><tr valign="top"><td align="right" width="15%">9.&nbsp;</td>
+                                			        <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=S145">Skinwalkers (Cu&#7897;c Chi&#7871;n Ng&#432;&#7901;i Sói)</a></td></tr><tr valign="top"><td align="right" width="15%">10.&nbsp;</td>
+                   			                <td width="85%"><a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=1037">300 (&#272;&#7897;i Quân T&#7917; Th&#7847;n)</a></td></tr>          </tbody>
+                                  </table></td>
+            </tr>
+                            </tbody></table>                    </td>
+                            </tr>
+                    <tr>
+                      <td><img src="index.php_files/blank.gif" height="7" width="10">                        </td>
+                            </tr>					<tr><td>
+                              <a target="_blank" href="http://www.thuedvd.com/index.php?p=huongdan#freetrial"><img src="index.php_files/thueDVDonshopphim.gif" border="0" width="149"></a><br></td></tr><tr><td><img src="index.php_files/blank.gif" height="7" width="10"></td></tr>                    <tr>
+                                
+                                <td height="3050" valign="top"><table bgcolor="#cccccc" border="0" cellpadding="0" cellspacing="0" width="149">
+                                  <!--DWLayoutTable-->
+                                  <tbody><tr id="primary2">
+                                      <td width="149" align="center" id="prod2"><a href="#" class="LeftRigthTitle">M&#7898;I VÀ &#272;&#7862;C S&#7854;C</a></td>
+                 <td width="7">&nbsp;</td>
+                 </tr>
+                                    <tr>
+                                      <td height="2991" valign="top">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <!--DWLayoutTable-->
+                                          <tbody>
+                                            <tr valign="top">
+                                                      
+                                              <td valign="top" width="20">								</td>
+                                            <td width="129">&nbsp;</td>
+                                            </tr>
+                                            <tr valign="top"><td align="right">*&nbsp;</td>
+               			                      <td class="CacTop" align="left"> 
+               			                        <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050">Resident Evil: Extinction (Hang Qu&#7927; 3: Di&#7879;t Tuy&#7879;t)</a><br>
+               			                        <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R050">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/REC1.jpg" border="0" height="150" width="100"></a><br>
+       			                            <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+               			                      <td class="CacTop" align="left"> 
+               			                        <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=R047">Ratatouille (Chú Chu&#7897;t &#272;&#7847;u B&#7871;p) - B&#7842;N CHÍNH TH&#7912;C 5.1</a><br>
+               			                        <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=R047">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Rata1.jpg" border="0" height="150" width="100"></a><br>
+           			                          <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                   			                    <td class="CacTop" align="left"> 
+                   			                      <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=T312">Tom And Jerry: A Nutcracker Tale (V&#361; &#272;i&#7879;u &#272;êm Giáng Sinh) - B&#7842;N CHÍNH TH&#7912;C 5.1</a><br>
+                   			                      <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T312">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Tom1.jpg" border="0" height="150" width="100"></a><br>
+               			                        <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                       			                  <td class="CacTop" align="left"> 
+                       			                    <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=H079">Hairspray (Cu&#7897;c Thi Hoa H&#7853;u Tóc)</a><br>
+                       			                    <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H079">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Hair1.jpg" border="0" height="150" width="100"></a><br>
+                   			                      <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                           			                <td class="CacTop" align="left"> 
+                           			                  <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=H074">Hot Rod (Anh Chàng Siêu Qu&#7853;y)</a><br>
+                           			                  <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=H074">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Hot1.jpg" border="0" height="150" width="100"></a><br>
+                       			                    <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                               			              <td class="CacTop" align="left"> 
+                               			                <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=B112">BRATZ (4 Nàng Búp Bê)</a><br>
+                               			                <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=B112">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/BB1.jpg" border="0" height="150" width="100"></a><br>
+                           			                  <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                                			            <td class="CacTop" align="left"> 
+                                			              <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=I047">I Know Who Killed Me (Tôi Bi&#7871;t K&#7867; Gi&#7871;t Tôi)</a><br>
+                                			              <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=I047">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Who1.jpg" border="0" height="150" width="100"></a><br>
+                               			                <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                                			            <td class="CacTop" align="left"> 
+                                			              <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=P053">Pirates Of The Caribbean: At World&#8216;s End (C&#432;&#7899;p Bi&#7875;n Caribbean 3: N&#417;i T&#7853;n Cùng Th&#7871; Gi&#7899;i) - B&#7842;N CHÍNH TH&#7912;C 5.1</a><br>
+                                			              <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=P053">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Hot1.jpg" border="0" height="150" width="100"></a><br>
+                                			              <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                                			            <td class="CacTop" align="left"> 
+                                			              <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=S140">Shrek The Third (Gã Ch&#7857;ng Tinh T&#7889;t B&#7909;ng 3)</a><br>
+                                			              <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=S140">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Shrek1.jpg" border="0" height="150" width="100"></a><br>
+                                			              <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                                			            <td class="CacTop" align="left"> 
+                                			              <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=I045">I Now Pronounce You Chuck And Larry (Cha Tuyên B&#7889; T&#7915; Nay Hai Con S&#7869; Là: Ch&#7891;ng và Ch&#7891;ng)</a><br>
+                                			              <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=I045">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/I1.jpg" border="0" height="150" width="100"></a><br>
+                                			              <br>											</td></tr><tr valign="top"><td align="right">*&nbsp;</td>
+                                			            <td class="CacTop" align="left"> 
+                                			              <a class="CacTop" href="http://www.shopphim.com/index.php?p=detail&amp;id=T313">The Santa Clause 3: The Escape Clause (Ông Già Noel 3)</a><br>
+                                			              <a class="FilmName1" href="http://www.shopphim.com/index.php?p=detail&amp;id=T313">&nbsp;&nbsp;&nbsp;<img src="Images/Pics/Santa1.jpg" border="0" height="150" width="100"></a><br>
+                                			              <br>											</td></tr><tr valign="top"><td height="53">&nbsp;</td>
+                                			            <td>&nbsp;</td></tr>									
+                                          </tbody>
+                                        </table></td>
+              <td>&nbsp;</td>
+                </tr>
+                                    <tr>
+                                      <td height="17"></td>
+                <td></td>
+                </tr>
+                                  </tbody>
+                                </table></td>
+        
+                    </tr>
+                    <tr>
+                      <td height="1"></td>
+		                    </tr>
+                          </tbody>
+                    </table></td>
+                </tr>
+                            <tr>
+                              <td height="8"></td>
+                  <td></td>
+                </tr>
+              </tbody>
+                        </table></td>
+      </tr>
+                      <tr valign="top">
+                        <td height="17"></td>
+                      </tr>
+                    </tbody>
+                                                                                                                                                                                                                                                                                                                  </table></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr valign="top">
+                <td height="3835">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              
+              
+              
+              <tr valign="top">
+                <td height="74"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody></table>
+<!-- InstanceEndEditable -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="137" height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="137" height="26">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="26" valign="top">
+		
+		<form>
+			&nbsp;&nbsp;&nbsp;<select name="osite">
+				<option value="othersites">Other sites</option>
+				<option value="-">-----</option>
+				<option value="vh1">Vh1</option>
+				<option value="mtvasia">MTVasia</option>
+				<option value="disney">Disney asia</option>
+				<option value="tgdienanh">Pictures World</option>
+				<option value="moviezing">Zing movie</option>
+		</form>
+		
+		 </td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="256">&nbsp;</td>
+    <td width="567" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="567" height="55"><div align="right" class="style2">
+          <div align="right" id="TextLink1"><a href="Home.html">Home </a>|<a href="News.html" target="_self"> News</a> |<a href="Music.html"> Music</a> | <a href="Movies.html">Movies</a> | <a href="AboutUs.html">Contact us </a>|<a href="Links.html"> Links&nbsp;&nbsp;</a></div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="567" height="25"><div align="right"><span class="style1">&copy;2009 TPsKHHD Group  .All rights reserved.</span></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript1.2">
+
+/*
+Flying Butterfly script (By BGAudioDr@aol.com)
+Modified slightly/ permission granted to Dynamic Drive to feature script in archive
+For full source, visit http://www.dynamicdrive.com
+*/
+
+var Ymax=8;                                //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
+var Xmax=8;                                //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
+var Tmax=10000;                        //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+
+//FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
+
+var floatimages=new Array();
+floatimages[0]='./Images/butterfly2.gif';
+floatimages[1]='./Images/butterfly2.gif';
+floatimages[2]='./Images/butterfly2.gif';
+floatimages[3]='./Images/butterfly2.gif';
+
+//*********DO NOT EDIT BELOW***********
+var NS4 = (navigator.appName.indexOf("Netscape")>=0 && parseFloat(navigator.appVersion) >= 4 && parseFloat(navigator.appVersion) < 5)? true : false;
+var IE4 = (document.all)? true : false;
+var NS6 = (parseFloat(navigator.appVersion) >= 5 && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var wind_w, wind_h, t='', IDs=new Array();
+for(i=0; i<floatimages.length; i++){
+t+=(NS4)?'<layer name="pic'+i+'" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">' : '<div id="pic'+i+'" style="position:absolute; visibility:hidden;width:10px; height:10px"><a href="javascript:hidebutterfly()">';
+t+='<img src="'+floatimages[i]+'" name="p'+i+'" border="0">';
+t+=(NS4)? '</a></layer>':'</a></div>';
+}
+document.write(t);
+
+function moveimage(num){
+if(getidleft(num)+IDs[num].W+IDs[num].Xstep >= wind_w+getscrollx())IDs[num].Xdir=false;
+if(getidleft(num)-IDs[num].Xstep<=getscrollx())IDs[num].Xdir=true;
+if(getidtop(num)+IDs[num].H+IDs[num].Ystep >= wind_h+getscrolly())IDs[num].Ydir=false;
+if(getidtop(num)-IDs[num].Ystep<=getscrolly())IDs[num].Ydir=true;
+moveidby(num, (IDs[num].Xdir)? IDs[num].Xstep :  -IDs[num].Xstep , (IDs[num].Ydir)?  IDs[num].Ystep:  -IDs[num].Ystep);
+}
+
+function getnewprops(num){
+IDs[num].Ydir=Math.floor(Math.random()*2)>0;
+IDs[num].Xdir=Math.floor(Math.random()*2)>0;
+IDs[num].Ystep=Math.ceil(Math.random()*Ymax);
+IDs[num].Xstep=Math.ceil(Math.random()*Xmax)
+setTimeout('getnewprops('+num+')', Math.floor(Math.random()*Tmax));
+}
+
+function getscrollx(){
+if(NS4 || NS6)return window.pageXOffset;
+if(IE4)return document.body.scrollLeft;
+}
+
+function getscrolly(){
+if(NS4 || NS6)return window.pageYOffset;
+if(IE4)return document.body.scrollTop;
+}
+
+function getid(name){
+if(NS4)return document.layers[name];
+if(IE4)return document.all[name];
+if(NS6)return document.getElementById(name);
+}
+
+function moveidto(num,x,y){
+if(NS4)IDs[num].moveTo(x,y);
+if(IE4 || NS6){
+IDs[num].style.left=x+'px';
+IDs[num].style.top=y+'px';
+}}
+
+function getidleft(num){
+if(NS4)return IDs[num].left;
+if(IE4 || NS6)return parseInt(IDs[num].style.left);
+}
+
+function getidtop(num){
+if(NS4)return IDs[num].top;
+if(IE4 || NS6)return parseInt(IDs[num].style.top);
+}
+
+function moveidby(num,dx,dy){
+if(NS4)IDs[num].moveBy(dx, dy);
+if(IE4 || NS6){
+IDs[num].style.left=(getidleft(num)+dx)+'px';
+IDs[num].style.top=(getidtop(num)+dy)+'px';
+}}
+
+function getwindowwidth(){
+if(NS4 || NS6)return window.innerWidth;
+if(IE4)return document.body.clientWidth;
+}
+
+function getwindowheight(){
+if(NS4 || NS6)return window.innerHeight;
+if(IE4)return document.body.clientHeight;
+}
+
+function init(){
+wind_w=getwindowwidth();
+wind_h=getwindowheight();
+for(i=0; i<floatimages.length; i++){
+IDs[i]=getid('pic'+i);
+if(NS4){
+IDs[i].W=IDs[i].document.images["p"+i].width;
+IDs[i].H=IDs[i].document.images["p"+i].height;
+}
+if(NS6 || IE4){
+IDs[i].W=document.images["p"+i].width;
+IDs[i].H=document.images["p"+i].height;
+}
+getnewprops(i);
+moveidto(i , Math.floor(Math.random()*(wind_w-IDs[i].W)), Math.floor(Math.random()*(wind_h-IDs[i].H)));
+if(NS4)IDs[i].visibility = "show";
+if(IE4 || NS6)IDs[i].style.visibility = "visible";
+startfly=setInterval('moveimage('+i+')',Math.floor(Math.random()*100)+100);
+}}
+
+function hidebutterfly(){
+for(i=0; i<floatimages.length; i++){
+if (IE4)
+eval("document.all.pic"+i+".style.visibility='hidden'")
+else if (NS6)
+document.getElementById("pic"+i).style.visibility='hidden'
+else if (NS4)
+eval("document.pic"+i+".visibility='hide'")
+clearInterval(startfly)
+}
+}
+
+if (NS4||NS6||IE4){
+window.onload=init;
+window.onresize=function(){ wind_w=getwindowwidth(); wind_h=getwindowheight(); }
+}
+
+</script>
+/* Spot light */
+<script language="JavaScript1.2">
+
+/*
+Moving light on image script
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+if (document.all&&window.spotlight){
+var x=new Array()
+var direction=new Array()
+var y=new Array()
+if (spotlight.length==null){
+spotlight[0]=document.all.spotlight
+x[0]=0
+direction[0]="right"
+y[0]=spotlight[0].height
+spotlight[0].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+else
+for (i=0;i<spotlight.length;i++){
+x[i]=0
+direction[i]="right"
+y[i]=spotlight[i].height
+spotlight[i].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+}
+
+function slidelight(cur){
+spotlight[cur].filters.light.MoveLight(0,x[cur],y[cur],200,-1)
+
+if (x[cur]<spotlight[cur].width+200&&direction[cur]=="right")
+x[cur]+=10
+else if (x[cur]>spotlight[cur].width+200){
+direction[cur]="left"
+x[cur]-=10
+}
+else if (x[cur]>-200&&x[cur]<-185){
+direction[cur]="right"
+x[cur]+=10
+}
+else{
+x[cur]-=10
+direction[cur]="left"
+}
+}
+
+if (document.all&&window.spotlight){
+if (spotlight.length==null)
+setInterval("slidelight(0)",spotlight[0].speed)
+else
+for (t=0;t<spotlight.length;t++){
+var temp='setInterval("slidelight('+t+')",'+spotlight[t].speed+')'
+eval(temp)
+}
+}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

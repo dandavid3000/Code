@@ -1,0 +1,231 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/theme.master" AutoEventWireup="false" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" runat="server" 
+    contentplaceholderid="ContentPlaceHolder1">
+        
+     
+    	<div id="left"><!--begin left-->
+        	
+            <div class="left_box"><!--begin left_box-->
+                <div class="left_box_title">Chức Năng</div>
+                <div class="left_box_content">
+                   <div class="arrowlistmenu"><!--begin_arrowlistmenu-->
+   						  <div class="menuheader expandable">Thông tin địa ốc</div>
+                           		<ul class="categoryitems">
+                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                           ConnectionString="<%$ ConnectionStrings:xaydung %>" 
+                                           SelectCommand="SELECT [TenViTri], [MaViTri] FROM [vitri]"></asp:SqlDataSource>
+                                       <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                                       <ItemTemplate>
+                                          <li><a href="diaoctheovitri.aspx?idvitri=<%#Eval("mavitri") %>"> <%#Eval("TenViTri")%></a></li>
+                                       </ItemTemplate>
+                                       </asp:Repeater>
+                                           
+                                          
+                                 </ul>            
+              
+                          <div class="menuheader expandable">Tin tức thời sự</div>
+                          		<ul class="categoryitems">
+                                           <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                           ConnectionString="<%$ ConnectionStrings:xaydung %>" 
+                                           SelectCommand="SELECT [TenLoaiTin], [MaLoaiTin] FROM [loaitintuc]"></asp:SqlDataSource>
+                                       <asp:Repeater ID="Repeater2" runat="server" DataSourceID="SqlDataSource2">
+                                       <ItemTemplate>
+                                          <li><a href="tintheoloai.aspx?idloaitin=<%#Eval("MaLoaiTin") %>"> <%#Eval("TenLoaiTin")%></a></li>
+                                       </ItemTemplate>
+                                       </asp:Repeater>
+                                 </ul>   
+                         
+                                   
+                          </div><!-- end arrowlistmenu-->
+						  <div class="clear"></div>
+                </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+            <div class="left_box"><!--begin left_box-->
+                 <div class="left_box_title">Tìm kiếm</div>
+                 <div class="left_box_content">
+                   <asp:TextBox ID="TextBox1" runat="server" Width="156px" Height="33px"></asp:TextBox>    </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+            
+            
+            
+            <div class="left_box"><!--begin left_box-->
+                <div class="left_box_title">Liên kết WebSite</div>
+                <div class="left_box_content">
+                   <form>
+                   
+                    <select class="selectbox" name="Web" onchange="ClickToURL(this.value)" size="1" style="width:168px; color:#999; font-size:11px; padding:2px;">
+
+                        <option selected="selected" value="0">Chọn WebSite liên kết</option>
+                        <option value="http://tuoitre.vn">Báo tuổi trẻ online</option>
+                        <option value="http://vnexpress.net">Báo vnexpress</option>
+                        <option value="http://kenh14.vn">Kênh 14</option>
+                    </select>
+                   </form>
+                </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+            <div class="left_box"><!--begin left_box-->
+                <div class="left_box_title">Hỗ trợ trực tuyến</div>
+                <div class="left_box_content" align="center">
+                   <p style="margin-bottom:5px;"><a href="ymsgr:sendIM?chocoice_me" title="Chào"><img src="http://opi.yahoo.com/online?u=chocoice_me&amp;m=g&amp;t=11&amp;l=us" border="0"></a></p>
+                  
+              </div>
+            </div><!--end left_box-->
+            <br clear="all" />
+            
+     	</div><!--end left-->
+        
+        <div id="right_content"><!--begin right_content-->
+        	<div class="right_content_box"><!--begin right_content_box-->
+        	
+        	  <div id="center">
+        	    <!--begin center-->
+                <div class="center_box">
+                  <div class="center_box_title">Thông tin</div>
+                  <asp:ContentPlaceHolder  ID="contenedit" runat=server>
+                  <div class="center_box_content">
+                    <p class="normal">
+                        &nbsp;</p>
+                   
+                  </div>
+                  </asp:ContentPlaceHolder>
+                </div>
+                
+      	    </div>
+      	  
+        	  
+        	  <!--end center-->
+                
+          <div id="right"><!--begin right-->
+                	<div class="right_box"><!--begin right_box-->
+                    	<div class="right_box_title">Thông tin tài khoản</div>
+                        <div class="right_box_content">
+                        <%if (Session["login"] == null)
+                          {
+                              btndangxuat.Visible = false;
+                              btnchangepass.Visible = false;
+                              
+                        %>
+                            <table style="width:100%;">
+                                <tr>
+                                    <td class="style1" colspan="2">
+                                        Đăng nhập</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        <asp:TextBox ID="txtuser" runat="server" Width="96px"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        Tài khoản</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        <asp:TextBox ID="txtpass" runat="server" Width="96px" TextMode="Password"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        Mật khẩu</td>
+                                </tr>
+                            </table>
+                        <%}
+                          else
+                          {
+                              Response.Write("<h1>");
+                              Response.Write("Xin chào: ");
+                              Response.Write(Session["user"].ToString());
+                              Response.Write("</h1>");
+                              btndangnhap.Visible = false;
+                              
+                          }    
+                        %>
+                        
+                        </div>
+                                       <center>
+                                        <asp:Button ID="btndangnhap" runat="server" Text="Đăng nhập" 
+                                               onclick="btndangnhap_Click" />
+                                       <asp:Button ID="btndangxuat" runat="server" Text="Đăng xuất" 
+                                               onclick="btndangxuat_Click" />
+                                       <asp:Button ID="btnchangepass" runat="server" Text="Đổi mật khẩu" 
+                                              OnClick="btnchangepass_Click"  />
+                                       </center>
+                    </div><!--end right_box-->
+                    <br clear="all" />
+                   
+                    <div class="right_box"><!--begin right_box-->
+                        <div class="right_box_title">Quảng cáo</div>
+                        <div class="right_box_content">
+                            
+                           <div class="tintuc_home_box"><!--begin tintuc_home_box-->
+                                <div class="tintuc_home_img"><img src="images/ChoThue.gif" /></div>
+                               
+                           </div><!--end tintuc_home_box-->
+                           <br clear="all" />
+                           
+                           <div class="tintuc_home_box"><!--begin tintuc_home_box-->
+                                <div class="tintuc_home_img"><img src="images/VP.gif" /></div>
+                               
+                           </div><!--end tintuc_home_box-->
+                           <br clear="all" />
+                           
+                          
+                        </div>
+                    </div><!--end right_box-->
+                    <br clear="all" />
+                    
+                    <div class="right_box"><!--begin right_box-->
+                        <div class="right_box_title" style="background:none; text-transform:none; color:#a0977b; font-weight:bold;">
+                            Tỉ giá ngoại tệ</div>
+                        <div class="right_box_content" style="border:none;background:#ddd8c4;">
+                            <div class="tigia">
+                               <table width="150" border="1" bordercolor="#c7b58b" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>USD</td>
+                                    <td>19,090</td>
+                                </tr>
+                                <tr>
+                                    <td>GBP</td>
+                                    <td>29,407</td>
+                                </tr>
+                                <tr>
+                                    <td>HKD</td>
+                                    <td>2,476</td>
+                                </tr>
+                                <tr>
+                                    <td>EUR</td>
+                                    <td>24,534</td>
+                                </tr>
+                                <tr>
+                                    <td>CAD</td>
+                                    <td>18,324</td>
+                                </tr>
+                              </table>
+                             </div>
+                        </div>
+                    </div><!--end right_box-->
+                    <br clear="all" />
+                    
+                    <div class="right_box"><!--begin right_box-->
+                        <div class="right_box_title">Thống kê truy cập</div>
+                        <div class="right_box_content">
+                           <div class="tc">Đang truy cập : <span style="color:#FF0000"><strong>10</strong></span></div>
+                           <div class="tc">Lượt truy cập : <span style="color:#FF0000"><strong>29.999</strong></span></div>
+                        </div>
+                    </div><!--end left_box-->
+                    <br clear="all" />
+            
+                </div><!--end right-->
+            </div><!--end right_content_box-->
+            <br clear="all" />
+           
+        </div><!--end right_content--> 
+           
+</asp:Content>
+
+

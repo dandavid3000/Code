@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template-News.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>News</title>
+<style type="text/css">
+<!--
+.style4 {font-size: 18px}
+-->
+</style>
+<style type="text/css">
+<!--
+.style5 {font-size: 36px}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="../Style1.css" rel="stylesheet" type="text/css" />
+
+<link href="../Pictures.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style4 {color: #999999}
+.style5 {color: #CCCCCC}
+#spotlight{
+filter:light
+}
+-->
+</style>
+<style type="text/css">
+<!--
+h1 {
+  color:#cc3333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+h3 {
+  color:#993333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+.kisser {
+  position:absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+-->
+</style>
+
+<script language="JavaScript1.2" type="text/JavaScript">
+<!-- cloak
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+//Modified by Dynamic Drive for bug fixes
+//Visit http://www.dynamicdrive.com for this script
+
+kisserCount = 15 //maximum number of images on screen at one time
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+kissDelay = 1000 //duration images stay on screen (in milliseconds)
+kissSpacer = 50 //distance to move mouse b4 next heart appears
+theimage = "lips_small.gif" //the 1st image to be displayed
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+//Browser checking and syntax variables
+var docLayers = (document.layers) ? true:false;
+var docId = (document.getElementById) ? true:false;
+var docAll = (document.all) ? true:false;
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+var stylebitK = (docLayers) ? "":".style"
+var showbitK = (docLayers) ? "show":"visible"
+var hidebitK = (docLayers) ? "hide":"hidden"
+var ns6=document.getElementById&&!document.all
+//Variables used in script
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+lastX = 0
+lastY = 0
+//Collection of functions to get mouse position and place the images
+function doKisser(e) {
+
+  posX = getMouseXPos(e)
+  posY = getMouseYPos(e)
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+    showKisser(posX,posY)
+    lastX = posX
+    lastY = posY
+  }
+}
+// Get the horizontal position of the mouse
+function getMouseXPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageX+10)
+  } else {
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+  }
+}
+// Get the vartical position of the mouse
+function getMouseYPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageY)
+  } else {
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+  }
+}
+//Place the image and start timer so that it disappears after a period of time
+function showKisser(x,y) {
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".left = " + processedx)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".top = " + y)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+  }
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+  curKisser += 1
+}
+//Make the image disappear
+function hideKisser(knum) {
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+}
+
+function kissbegin(){
+//Let the browser know when the mouse moves
+if (docLayers) {
+  document.captureEvents(Event.MOUSEMOVE)
+  document.onMouseMove = doKisser
+} else {
+  document.onmousemove = doKisser
+}
+}
+window.onload=kissbegin
+// decloak -->
+</script>
+
+<script language="JavaScript1.2">
+
+//Highlight form element- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var highlightcolor="lightyellow"
+
+var ns6=document.getElementById&&!document.all
+var previous=''
+var eventobj
+
+//Regular expression to highlight only form elements
+var intended=/INPUT|TEXTAREA|SELECT|OPTION/
+
+//Function to check whether element clicked is form element
+function checkel(which){
+if (which.style&&intended.test(which.tagName)){
+if (ns6&&eventobj.nodeType==3)
+eventobj=eventobj.parentNode.parentNode
+return true
+}
+else
+return false
+}
+
+//Function to highlight form element
+function highlight(e){
+eventobj=ns6? e.target : event.srcElement
+if (previous!=''){
+if (checkel(previous))
+previous.style.backgroundColor=''
+previous=eventobj
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+}
+else{
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+previous=eventobj
+}
+}
+
+</script>
+</head>
+<body id="container">
+<script language="JavaScript" type="text/JavaScript">
+<!-- cloak
+// Add all DIV's of hearts
+if (document.all||document.getElementById||document.layers){
+for (k=0;k<kisserCount;k=k+2) {
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+}
+}
+
+// decloak -->
+</script>
+
+<p align="center">&nbsp;</p>
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="288" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="232" height="135"><div align="center"><img id="spotlight" speed="100"  src="../../Images/Logo3.png" width="288" height="129" /></div></td>
+      </tr>
+    </table>    </td>
+    <td width="330" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="330" height="135">
+      <param name="movie" value="../../Flashes/Bongden.swf" />
+      <param name="quality" value="high" />
+      <embed src="../../Flashes/Bongden.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="330" height="135"></embed>
+    </object></td>
+    <td width="362" height="51">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="87" valign="top"><h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Thanks for visiting The Pictures!"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+    </h2></td>
+  </tr>
+</table>
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="40"></td>
+  </tr>
+</table>
+
+<!-- InstanceBeginRepeat name="MenuNews" --><!-- InstanceBeginRepeatEntry -->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Home" onclick="window.location='../../Home.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td ><img src="../../Images/Button-News2.jpg"/></td>
+    <td id="LineButton" >&nbsp;</td>
+    <td id="Music" onclick="window.location='../../Music.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    .
+    <td id="Movies" onclick="window.location='../../Movies.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Store" onclick="window.location='../../Store.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Hosted" onclick="window.location='../../Hosted.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Sugs" onclick="window.location='../../Suggestion.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Search" onclick="window.location='../../Search.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="SiteMap" onclick="window.location='../../SiteMap.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Links" onclick="window.location='../../Links.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Us" onclick="window.location='../../AboutUs.html'"></td>
+  </tr>
+</table>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="2"></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#DDDDDD">
+  <!--DWLayoutTable-->
+   <tr>
+    <td height="19" colspan="7" valign="top" bgcolor="#FFE019"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="29" colspan="7" valign="top" bgcolor="#FFE019">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../TempPics/sub_hdr_news.gif" width="106" height="25" /></td>
+  </tr>
+  <tr>
+  <tr>
+    <td width="19" height="31"></td>
+    <td width="214"></td>
+    <td width="17"></td>
+    <td width="460"></td>
+    <td width="34"></td>
+    <td width="141"></td>
+    <td width="75"></td>
+  </tr>
+  
+  <tr>
+    <td height="449">&nbsp;</td>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="13" height="20">&nbsp;</td>
+          <td width="189">&nbsp;</td>
+          <td width="12">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="92">&nbsp;</td>
+          <td valign="top"><a href="http://atlan.vtc.vn/news/images/home"><img src="../../Images/QuangCao/189x92.gif" width="189" height="92" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      
+      <tr>
+        <td height="13"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=R2Yp4zIKOQh3FcQXB0/lyw==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/anhhunghoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/Default.aspx?s=AVIEW&amp;AID=0QtoOn3/3mzxsv+lY1woQQ==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/khieuchienhoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=sISNbYMnQfdW5/60cmLYwA==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/thattinh.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="18"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td>&nbsp;</td>
+    <td rowspan="2" valign="top"><!-- InstanceBeginEditable name="TinTuc" -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" id="TextHN3">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="460" height="231" valign="top"><div>
+            <div></div>
+            <div> </div>
+            (TG&#272;A) - Di&#7877;n vi&ecirc;n Miley Cyrus &#273;&atilde; t&#7915;ng l&agrave; m&#7909;c ti&ecirc;u b&#7855;t n&#7841;t c&#7911;a nh&#7919;ng  b&#7841;n c&ugrave;ng trang l&#7913;a v&agrave; c&ugrave;ng tr&#432;&#7901;ng. &#272;&oacute; l&agrave; m&#7897;t trong nh&#7919;ng g&igrave; ng&ocirc;i sao  nh&#7841;c pop tr&#7867; &#273;ang l&ecirc;n ti&#7871;t l&#7897; trong ch&#432;&#417;ng tr&igrave;nh Good Morning America  khi c&ocirc; n&oacute;i v&#7873; d&#7921; &aacute;n s&aacute;ch m&#7899;i v&agrave; phim m&#7899;i c&#7911;a m&igrave;nh.</div>
+            <div> <span id="ctl00_MidderContent_Detail1_lbl_DetailContent">
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/87d424.jpg" width="400" /></div>
+              </div>
+              <div> &nbsp;</div>
+              <div>Tho&aacute;t ra kh&#7887;i &#7843;o gi&aacute;c</div>
+              <div>Miley Cyrus &#273;&atilde; th&#7853;t s&#7921; t&#7841;o ra m&#7897;t hi&#7879;n t&#432;&#7907;ng trong th&#7871; gi&#7899;i ng&#432;&#7901;i  n&#7893;i ti&#7871;ng. &#7902; &#273;&#7897; tu&#7893;i 16, c&ocirc; &#273;&atilde; l&agrave; m&#7897;t nh&#7841;c s&#297; ki&ecirc;m ca s&#297; c&oacute; h&agrave;ng tri&#7879;u  album b&aacute;n h&#7871;t. Vai di&#7877;n trong lo&#7841;t phim TH tu&#7893;i teen Hannah Montana  chi&#7871;u tr&ecirc;n k&ecirc;nh Disney &#273;&atilde; bi&#7871;n c&ocirc; th&agrave;nh th&#7847;n t&#432;&#7907;ng c&#7911;a m&#7897;t b&#7897; ph&#7853;n  kh&ocirc;ng nh&#7887; gi&#7899;i tr&#7867; t&#7841;i M&#7929; v&agrave; nhi&#7873;u n&#432;&#7899;c tr&ecirc;n th&#7871; gi&#7899;i. Ngo&agrave;i vi&#7879;c xu&#7845;t  hi&#7879;n th&#432;&#7901;ng xuy&ecirc;n tr&ecirc;n c&aacute;c TV show, s&acirc;n kh&#7845;u ca nh&#7841;c v&agrave; phim &#7843;nh, nay  Cyrus s&#7855;p s&#7917;a cho ra m&#7897;t cu&#7889;n h&#7891;i k&yacute; v&#7873; m&igrave;nh. Nh&#432;ng c&oacute; l&#7869; b&#7841;n kh&ocirc;ng th&#7875;  t&#432;&#7903;ng t&#432;&#7907;ng &#273;&#432;&#7907;c c&ocirc; g&aacute;i xinh &#273;&#7865;p n&agrave;y t&#7915;ng l&agrave; n&#7841;n nh&acirc;n c&#7911;a t&#7879; n&#7841;n b&#7855;t  n&#7841;t khi c&ocirc; c&ograve;n nh&#7887;. Trong ch&#432;&#417;ng tr&igrave;nh ph&#7887;ng v&#7845;n Good Morning America ph&aacute;t  tr&ecirc;n k&ecirc;nh ABC m&#7899;i &#273;&acirc;y, Cyrus &#273;&atilde; ti&#7871;t l&#7897; &#273;i&#7873;u n&agrave;y sau khi c&ocirc; h&aacute;t chung  v&#7899;i ng&#432;&#7901;i cha Billy Ray Cyrus m&#7897;t ca kh&uacute;c t&#7863;ng kh&aacute;n g&#7881;a. C&ocirc; cho bi&#7871;t  khi c&ograve;n h&#7885;c l&#7899;p 6 t&#7841;i tr&#432;&#7901;ng c&#7845;p 2 Nashville, Tennessee, c&ocirc; &#273;&atilde; b&#7883; ba c&ocirc;  g&aacute;i chung tr&#432;&#7901;ng b&#7855;t n&#7841;t. Tho&#7841;t &#273;&#7847;u l&agrave; nh&#7919;ng b&#7913;c th&#432; &#273;e d&#7885;a, sau &#273;&oacute; l&agrave;  &#259;n c&#7855;p s&aacute;ch v&agrave; ch&#7871; gi&#7877;u, b&ocirc;i b&#7849;n l&ecirc;n &aacute;o qu&#7847;n v&agrave; &#273;&#7847;u t&oacute;c c&ocirc;. H&#7885; c&ograve;n c&#7845;m  c&#7917;a c&ocirc; &#273;&#7871;n cafeteria c&#7911;a tr&#432;&#7901;ng, &ldquo;n&#7871;u kh&ocirc;ng, h&#7853;u q&#7911;a s&#7869; &#273;&#7871;n v&#7899;i m&agrave;y&rdquo;.  C&oacute; l&uacute;c h&#7885; &#273;&#7849;y c&ocirc; v&agrave;o ph&ograve;ng v&#7879; sinh v&agrave; kho&aacute; c&#7917;a nh&#7889;t c&ocirc; trong &#273;&oacute;. &ldquo;T&ocirc;i  s&#7907; &#273;&#7871;n n&#7895;i kh&ocirc;ng d&aacute;m c&oacute; b&#7841;n b&egrave;. C&#361;ng kh&ocirc;ng c&oacute; ai ch&#417;i v&#7899;i t&ocirc;i. T&ocirc;i s&#7889;ng  trong c&ocirc; &#273;&#417;n v&agrave; kh&#7893; s&#7903; c&ugrave;ng c&#7921;c&rdquo; &ndash; Cyrus vi&#7871;t trong cu&#7889;n h&#7891;i k&yacute;. Theo  Cyrus th&igrave; l&yacute; do c&ocirc; b&#7883; tr&ecirc;u gh&#7865;o th&#432;&#7901;ng xuy&ecirc;n l&agrave; v&igrave; c&oacute; ng&#432;&#7901;i cha n&#7893;i  ti&#7871;ng: ng&ocirc;i sao nh&#7841;c &#273;&#7891;ng qu&ecirc; Billy Ray Cyrus. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/139.jpg" width="450" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>Ngo&agrave;i ra c&oacute; nhi&#7873;u k&#7867; ghen t&#7913;c khi c&ocirc; d&#7921; tuy&#7875;n vai di&#7877;n trong Hannah Montana  v&agrave;o th&#7901;i &#273;i&#7875;m &#273;&oacute;. &ldquo;C&oacute; l&#7869; h&#7885; ngh&#297; t&ocirc;i qu&aacute; ki&ecirc;u h&atilde;nh v&#7873; ng&#432;&#7901;i cha n&#7893;i  ti&#7871;ng c&#7911;a m&igrave;nh n&ecirc;n ph&#7843;i tr&#7915;ng tr&#7883; cho b&otilde; gh&eacute;t. Gi&#7845;c m&#7897;ng tr&#7903; th&agrave;nh ca  s&#297; hay di&#7877;n vi&ecirc;n c&#7911;a t&ocirc;i c&#361;ng khi&#7871;n m&#7897;t s&#7889; ng&#432;&#7901;i kh&oacute; ch&#7883;u. H&#7885; c&#7843;m th&#7845;y  t&#432;&#417;ng lai &#7843;m &#273;&#7841;m h&#417;n khi t&ocirc;i &aacute;n ng&#7919; tr&#432;&#7899;c m&#7863;t. V&igrave; v&#7853;y h&#7885; nh&#7855;m v&agrave;o t&ocirc;i  &#273;&#7875; b&aacute;o th&ugrave;&rdquo; &ndash; Cyrus n&oacute;i. Cu&#7889;n h&#7891;i k&yacute; c&oacute; t&ecirc;n Miles to Go do Hilary Liftin ch&#7845;p b&uacute;t. C&#361;ng trong cu&#7897;c ph&#7887;ng v&#7845;n d&agrave;nh cho ch&#432;&#417;ng tr&igrave;nh Good Morning America,  Cyrus th&uacute; nh&#7853;n l&agrave; n&#7895;i &aacute;m &#7843;nh b&#7883; b&#7855;t n&#7841;t ti&#7871;p t&#7909;c &#273;eo b&aacute;m ngay khi c&ocirc; &#273;&atilde;  n&#7893;i ti&#7871;ng. Nh&#432;ng d&#7847;n d&#7847;n c&ocirc; &#273;&atilde; h&#7885;c &#273;&#432;&#7907;c c&aacute;ch v&#432;&#7907;t qua. &ldquo;C&oacute; nh&#7919;ng l&uacute;c  t&ocirc;i t&#7921; ng&#7855;m m&igrave;nh trong g&#432;&#417;ng v&agrave; s&#7889;ng th&#7853;t v&#7899;i con ng&#432;&#7901;i c&#7911;a m&igrave;nh, v&#7899;i  nh&#7919;ng gi&#7899;i h&#7841;n v&#7867; &#273;&#7865;p c&#417; th&#7875; v&agrave; t&agrave;i n&#259;ng. &Aacute;p l&#7921;c l&uacute;c &#273;&oacute; s&#7869; gi&#7843;m. T&ocirc;i  ngh&#297; c&aacute;c b&#7841;n b&egrave; c&ugrave;ng trang l&#7913;a v&#7899;i t&ocirc;i c&#361;ng s&#7869; l&agrave;m nh&#432; th&#7871; n&#7871;u h&#7885; mu&#7889;n  s&#7889;ng m&#7897;t cu&#7897;c s&#7889;ng b&igrave;nh th&#432;&#7901;ng, h&#7841;nh ph&uacute;c. B&#7841;n ph&#7843;i bi&#7871;t ch&#7845;p nh&#7853;n  nh&#7919;ng gi&#7899;i h&#7841;n kh&ocirc;ng th&#7875; v&#432;&#7907;t qua sau khi &#273;&atilde; l&agrave;m m&#7885;i c&aacute;ch &#273;&#7875; v&#432;&#7907;t qua  ch&uacute;ng m&agrave; kh&ocirc;ng th&agrave;nh c&ocirc;ng&rdquo; &ndash; c&ocirc; n&oacute;i.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/323.jpg" width="300" /></div>
+              </div>
+              <p>C&aacute;i gi&aacute; c&#7911;a s&#7921; n&#7893;i ti&#7871;ng</p>
+              <p>Cyrus cho bi&#7871;t vi&#7879;c c&aacute;c c&ocirc; g&aacute;i c&ugrave;ng trang l&#7913;a t&#7921; so s&aacute;nh m&igrave;nh v&#7899;i  nh&#7919;ng ng&ocirc;i sao tr&ecirc;n b&igrave;a t&#7841;p ch&iacute; r&#7891;i &#273;&acirc;m ra bu&#7891;n ch&aacute;n tuy&#7879;t v&#7885;ng l&agrave; c&aacute;ch  &#7913;ng x&#7917; b&#7845;t c&ocirc;ng v&#7899;i b&#7843;n th&acirc;n. &ldquo;Th&#7853;t l&agrave; kh&ocirc;ng th&#7921;c t&#7871; ch&uacute;t n&agrave;o khi b&#7841;n  nh&igrave;n v&agrave;o h&igrave;nh &#7843;nh m&#7897;t ai &#273;&oacute; r&#7891;i r&ecirc;n l&ecirc;n: &ldquo;l&#7841;y ch&uacute;a, sao con l&#7841;i kh&ocirc;ng  &#273;&#432;&#7907;c nh&#432; h&#7885;! Ai c&#361;ng c&oacute; &#273;i&#7875;m m&#7841;nh v&agrave; &#273;i&#7875;m y&#7871;u, v&#7845;n &#273;&#7873; l&agrave; b&#7841;n ph&#7843;i bi&#7871;t  &#273;&aacute;nh th&#7913;c v&agrave; khai th&aacute;c c&aacute;c &#273;i&#7875;m m&#7841;nh&rdquo; &ndash; c&ocirc; n&oacute;i</p>
+              <div>B&#7897; phim Hannah Montana: The Movie  do Cyrus &#273;&oacute;ng vai ch&iacute;nh &#273;&atilde; c&ocirc;ng chi&#7871;u t&#7915; 10.4 khai th&aacute;c &#273;&#7873; t&agrave;i c&aacute;c c&ocirc;  g&aacute;i tr&#7867; n&#7893;i ti&#7871;ng nh&#432; Hannah Montana h&#7885;c &#273;&#432;&#7907;c c&aacute;i gi&aacute; c&#7911;a s&#7921; n&#7893;i ti&#7871;ng  v&agrave; t&#7847;m quan tr&#7885;ng c&#7911;a vi&#7879;c tr&#7903; l&#7841;i v&#7899;i cu&#7897;c s&#7889;ng gia &#273;&igrave;nh. Khi Cyrus  quay v&#7873; Tennessee &#273;&#7875; l&agrave;m b&#7897; phim n&agrave;y, c&ocirc; r&#7845;t ph&#7845;n k&iacute;ch. Trong cu&#7889;n h&#7891;i  k&yacute;, c&ocirc; vi&#7871;t: &ldquo;Sau khi &#273;&atilde; n&#7893;i ti&#7871;ng v&#7899;i lo&#7841;t phim Hannah Montana,  t&ocirc;i b&#7883; &#273;&aacute;nh l&#7915;a b&#7903;i &#7843;o gi&aacute;c v&agrave; ng&#7897; nh&#7853;n v&#7873; m&igrave;nh. T&ocirc;i kh&ocirc;ng c&ograve;n l&agrave; Cyrus  c&#7911;a ng&agrave;y n&agrave;o n&#7919;a. &#272;&#7883;a v&#7883; ng&ocirc;i sao &#273;&atilde; t&#7841;o ra s&#7921; thay &#273;&#7893;i gh&ecirc; g&#7899;m. T&ocirc;i &#273;&atilde;  l&agrave; con ng&#432;&#7901;i c&#7911;a Hollywood. Bi k&#7883;ch c&#7911;a t&ocirc;i c&#361;ng b&#7855;t &#273;&#7847;u t&#7915; &#273;&acirc;y n&#7871;u t&ocirc;i  c&#7913; l&#7845;n s&acirc;u v&agrave;o &#7843;o gi&aacute;c&rsquo;. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/225.jpg" width="400" /></div>
+                <div></div>
+              </div>
+              <div>&nbsp;Tr&#7903; th&agrave;nh ng&#432;&#7901;i c&#7911;a c&ocirc;ng ch&uacute;ng c&#361;ng &#273;&#7891;ng ngh&#297;a l&agrave; ph&#7843;i s&#7889;ng chung  v&#7899;i c&aacute;c tin &#273;&#7891;n. Nhi&#7873;u t&#7901; b&aacute;o b&igrave;nh d&acirc;n b&#7855;t &#273;&#7847;u d&#7921; &#273;o&aacute;n Cyrus c&oacute; quan h&#7879;  v&#7899;i Justin Gaston, 20 tu&#7893;i, m&#7897;t ca s&#297; nh&#7841;c &#273;&#7891;ng qu&ecirc; ki&ecirc;m ng&#432;&#7901;i m&#7851;u.  Nh&#432;ng c&ocirc; ph&#7911; nh&#7853;n. Sau &#273;&oacute;, tr&#7843; l&#7901;i m&#7897;t t&#7901; b&aacute;o, Cyrus cho bi&#7871;t c&ocirc; &#273;&atilde;  tho&aacute;t ra &#273;&#432;&#7907;c n&#7895;i bu&#7891;n sau khi k&#7871;t th&uacute;c quan h&#7879; v&#7899;i Nick Jonas, th&agrave;nh  vi&ecirc;n nh&oacute;m nh&#7841;c tu&#7893;i teen &#273;ang l&ecirc;n Jonas Brothers. &ldquo;T&ocirc;i kh&ocirc;ng th&#7845;y c&oacute; g&igrave;  sai tr&aacute;i khi quan h&#7879; v&#7899;i m&#7897;t ng&#432;&#7901;i h&#417;n m&igrave;nh v&agrave;i tu&#7893;i. Khi ng&#432;&#7901;i ta &#273;&atilde;  y&ecirc;u qu&aacute; nhi&#7873;u th&igrave; tu&#7893;i t&aacute;c kh&ocirc;ng c&ograve;n &yacute; ngh&#297;a n&#7919;a&rdquo; &ndash; c&ocirc; tuy&ecirc;n b&#7889; v&#7899;i t&#7841;p  ch&iacute; Glamour. N&#259;m 15 tu&#7893;i, Cyrus l&#7841;i t&#7841;o ra v&#7909; tranh c&atilde;i n&#7919;a khi c&ocirc; xu&#7845;t  hi&#7879;n trong s&#7889; th&aacute;ng 6 t&#7841;p ch&iacute; Vanity Fair trong b&#7913;c &#7843;nh b&igrave;a h&#7903; m&#7897;t ph&#7847;n  vai v&agrave; l&#432;ng. Nhi&#7873;u b&#7853;c cha m&#7865; xem &#273;&acirc;y l&agrave; c&uacute; &#273;&#7845;m c&#7911;a th&#7847;n t&#432;&#7907;ng gi&aacute;ng  v&agrave;o con c&aacute;i h&#7885;. D&ugrave; th&#7845;y b&#7913;c &#7843;nh kh&ocirc;ng c&oacute; g&igrave; qu&aacute; &#273;&aacute;ng, Cyrus v&#7851;n xin l&#7895;i  ng&#432;&#7901;i h&acirc;m m&#7897;. &ldquo;Khi ch&#7909;p b&#7913;c &#7843;nh n&agrave;y, t&ocirc;i ngh&#297; n&oacute; l&agrave; ngh&#7879; thu&#7853;t, nh&#432;ng  khi xem b&#7913;c &#7843;nh tr&ecirc;n b&aacute;o v&agrave; ph&#7843;n &#7913;ng c&#7911;a d&#432; lu&#7853;n, t&ocirc;i r&#7845;t b&#7889;i r&#7889;i. T&ocirc;i  cam &#273;oan l&agrave; kh&ocirc;ng t&igrave;m c&aacute;ch khi&ecirc;u kh&iacute;ch ai c&#7843;. Xin l&#7895;i nh&#7919;ng ng&#432;&#7901;i &#273;&atilde;  quan t&acirc;m &#273;&#7871;n t&ocirc;i v&agrave; h&#7913;a s&#7869; kh&ocirc;ng &#273;&#7875; x&#7843;y ra v&#7909; vi&#7879;c n&agrave;o nh&#432; v&#7853;y n&#7919;a&rdquo; &ndash;  Cyrus vi&#7871;t trong b&#7843;n gi&#7843;i tr&igrave;nh v&#7873; v&#7909; vi&#7879;c.</div>
+          </span></div></td>
+        </tr>
+        <tr>
+          <td height="1"></td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+    <td>&nbsp;</td>
+    <td rowspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="10" height="12"></td>
+          <td width="121"></td>
+          <td width="10"></td>
+        </tr>
+      <tr>
+        <td height="406">&nbsp;</td>
+          <td valign="top"><img src="../../Images/QuangCao/moviequangca.gif" width="120" height="406" /></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="22">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="240">&nbsp;</td>
+          <td valign="top"><a href="http://forum.zing.vn/girl-viet-nam/f913/"><img src="../../Images/QuangCao/mp32_timodau.gif" width="120" height="240" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="17"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+    </table></td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="211">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="37"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="137" height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="137" height="26">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="26" valign="top">
+		
+		<form>
+			&nbsp;&nbsp;&nbsp;<select name="osite">
+				<option value="othersites">Other sites</option>
+				<option value="-">-----</option>
+				<option value="vh1">Vh1</option>
+				<option value="mtvasia">MTVasia</option>
+				<option value="disney">Disney asia</option>
+				<option value="tgdienanh">Pictures World</option>
+				<option value="moviezing">Zing movie</option>
+		</form>
+		
+		 </td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="256">&nbsp;</td>
+    <td width="567" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="567" height="55"><div align="right" class="style2">
+          <div align="right" id="TextLink1"><a href="../../Home.html">Home </a>|<a href="../../News.html" target="_self"> News</a> |<a href="../../Music.html"> Music</a> | <a href="../../Movies.html">Movies</a> | <a href="../../Suggestion.html">Contact us </a>|<a href="../../Links.html"> Links&nbsp;&nbsp;</a></div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="567" height="25"><div align="right"><span class="style1">&copy;2009 TPsKHHD Group  .All rights reserved.</span></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript1.2">
+
+/*
+Flying Butterfly script (By BGAudioDr@aol.com)
+Modified slightly/ permission granted to Dynamic Drive to feature script in archive
+For full source, visit http://www.dynamicdrive.com
+*/
+
+var Ymax=8;                                //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
+var Xmax=8;                                //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
+var Tmax=10000;                        //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+
+//FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
+
+var floatimages=new Array();
+floatimages[0]='./Images/butterfly2.gif';
+floatimages[1]='./Images/butterfly2.gif';
+floatimages[2]='./Images/butterfly2.gif';
+floatimages[3]='./Images/butterfly2.gif';
+
+//*********DO NOT EDIT BELOW***********
+var NS4 = (navigator.appName.indexOf("Netscape")>=0 && parseFloat(navigator.appVersion) >= 4 && parseFloat(navigator.appVersion) < 5)? true : false;
+var IE4 = (document.all)? true : false;
+var NS6 = (parseFloat(navigator.appVersion) >= 5 && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var wind_w, wind_h, t='', IDs=new Array();
+for(i=0; i<floatimages.length; i++){
+t+=(NS4)?'<layer name="pic'+i+'" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">' : '<div id="pic'+i+'" style="position:absolute; visibility:hidden;width:10px; height:10px"><a href="javascript:hidebutterfly()">';
+t+='<img src="'+floatimages[i]+'" name="p'+i+'" border="0">';
+t+=(NS4)? '</a></layer>':'</a></div>';
+}
+document.write(t);
+
+function moveimage(num){
+if(getidleft(num)+IDs[num].W+IDs[num].Xstep >= wind_w+getscrollx())IDs[num].Xdir=false;
+if(getidleft(num)-IDs[num].Xstep<=getscrollx())IDs[num].Xdir=true;
+if(getidtop(num)+IDs[num].H+IDs[num].Ystep >= wind_h+getscrolly())IDs[num].Ydir=false;
+if(getidtop(num)-IDs[num].Ystep<=getscrolly())IDs[num].Ydir=true;
+moveidby(num, (IDs[num].Xdir)? IDs[num].Xstep :  -IDs[num].Xstep , (IDs[num].Ydir)?  IDs[num].Ystep:  -IDs[num].Ystep);
+}
+
+function getnewprops(num){
+IDs[num].Ydir=Math.floor(Math.random()*2)>0;
+IDs[num].Xdir=Math.floor(Math.random()*2)>0;
+IDs[num].Ystep=Math.ceil(Math.random()*Ymax);
+IDs[num].Xstep=Math.ceil(Math.random()*Xmax)
+setTimeout('getnewprops('+num+')', Math.floor(Math.random()*Tmax));
+}
+
+function getscrollx(){
+if(NS4 || NS6)return window.pageXOffset;
+if(IE4)return document.body.scrollLeft;
+}
+
+function getscrolly(){
+if(NS4 || NS6)return window.pageYOffset;
+if(IE4)return document.body.scrollTop;
+}
+
+function getid(name){
+if(NS4)return document.layers[name];
+if(IE4)return document.all[name];
+if(NS6)return document.getElementById(name);
+}
+
+function moveidto(num,x,y){
+if(NS4)IDs[num].moveTo(x,y);
+if(IE4 || NS6){
+IDs[num].style.left=x+'px';
+IDs[num].style.top=y+'px';
+}}
+
+function getidleft(num){
+if(NS4)return IDs[num].left;
+if(IE4 || NS6)return parseInt(IDs[num].style.left);
+}
+
+function getidtop(num){
+if(NS4)return IDs[num].top;
+if(IE4 || NS6)return parseInt(IDs[num].style.top);
+}
+
+function moveidby(num,dx,dy){
+if(NS4)IDs[num].moveBy(dx, dy);
+if(IE4 || NS6){
+IDs[num].style.left=(getidleft(num)+dx)+'px';
+IDs[num].style.top=(getidtop(num)+dy)+'px';
+}}
+
+function getwindowwidth(){
+if(NS4 || NS6)return window.innerWidth;
+if(IE4)return document.body.clientWidth;
+}
+
+function getwindowheight(){
+if(NS4 || NS6)return window.innerHeight;
+if(IE4)return document.body.clientHeight;
+}
+
+function init(){
+wind_w=getwindowwidth();
+wind_h=getwindowheight();
+for(i=0; i<floatimages.length; i++){
+IDs[i]=getid('pic'+i);
+if(NS4){
+IDs[i].W=IDs[i].document.images["p"+i].width;
+IDs[i].H=IDs[i].document.images["p"+i].height;
+}
+if(NS6 || IE4){
+IDs[i].W=document.images["p"+i].width;
+IDs[i].H=document.images["p"+i].height;
+}
+getnewprops(i);
+moveidto(i , Math.floor(Math.random()*(wind_w-IDs[i].W)), Math.floor(Math.random()*(wind_h-IDs[i].H)));
+if(NS4)IDs[i].visibility = "show";
+if(IE4 || NS6)IDs[i].style.visibility = "visible";
+startfly=setInterval('moveimage('+i+')',Math.floor(Math.random()*100)+100);
+}}
+
+function hidebutterfly(){
+for(i=0; i<floatimages.length; i++){
+if (IE4)
+eval("document.all.pic"+i+".style.visibility='hidden'")
+else if (NS6)
+document.getElementById("pic"+i).style.visibility='hidden'
+else if (NS4)
+eval("document.pic"+i+".visibility='hide'")
+clearInterval(startfly)
+}
+}
+
+if (NS4||NS6||IE4){
+window.onload=init;
+window.onresize=function(){ wind_w=getwindowwidth(); wind_h=getwindowheight(); }
+}
+
+</script>
+/* Spot light */
+<script language="JavaScript1.2">
+
+/*
+Moving light on image script
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+if (document.all&&window.spotlight){
+var x=new Array()
+var direction=new Array()
+var y=new Array()
+if (spotlight.length==null){
+spotlight[0]=document.all.spotlight
+x[0]=0
+direction[0]="right"
+y[0]=spotlight[0].height
+spotlight[0].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+else
+for (i=0;i<spotlight.length;i++){
+x[i]=0
+direction[i]="right"
+y[i]=spotlight[i].height
+spotlight[i].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+}
+
+function slidelight(cur){
+spotlight[cur].filters.light.MoveLight(0,x[cur],y[cur],200,-1)
+
+if (x[cur]<spotlight[cur].width+200&&direction[cur]=="right")
+x[cur]+=10
+else if (x[cur]>spotlight[cur].width+200){
+direction[cur]="left"
+x[cur]-=10
+}
+else if (x[cur]>-200&&x[cur]<-185){
+direction[cur]="right"
+x[cur]+=10
+}
+else{
+x[cur]-=10
+direction[cur]="left"
+}
+}
+
+if (document.all&&window.spotlight){
+if (spotlight.length==null)
+setInterval("slidelight(0)",spotlight[0].speed)
+else
+for (t=0;t<spotlight.length;t++){
+var temp='setInterval("slidelight('+t+')",'+spotlight[t].speed+')'
+eval(temp)
+}
+}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

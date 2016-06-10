@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template-News.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>News</title>
+<style type="text/css">
+<!--
+.style3 {font-size: x-large}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="../Style1.css" rel="stylesheet" type="text/css" />
+
+<link href="../Pictures.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style4 {color: #999999}
+.style5 {color: #CCCCCC}
+#spotlight{
+filter:light
+}
+-->
+</style>
+<style type="text/css">
+<!--
+h1 {
+  color:#cc3333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+h3 {
+  color:#993333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+.kisser {
+  position:absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+-->
+</style>
+
+<script language="JavaScript1.2" type="text/JavaScript">
+<!-- cloak
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+//Modified by Dynamic Drive for bug fixes
+//Visit http://www.dynamicdrive.com for this script
+
+kisserCount = 15 //maximum number of images on screen at one time
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+kissDelay = 1000 //duration images stay on screen (in milliseconds)
+kissSpacer = 50 //distance to move mouse b4 next heart appears
+theimage = "lips_small.gif" //the 1st image to be displayed
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+//Browser checking and syntax variables
+var docLayers = (document.layers) ? true:false;
+var docId = (document.getElementById) ? true:false;
+var docAll = (document.all) ? true:false;
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+var stylebitK = (docLayers) ? "":".style"
+var showbitK = (docLayers) ? "show":"visible"
+var hidebitK = (docLayers) ? "hide":"hidden"
+var ns6=document.getElementById&&!document.all
+//Variables used in script
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+lastX = 0
+lastY = 0
+//Collection of functions to get mouse position and place the images
+function doKisser(e) {
+
+  posX = getMouseXPos(e)
+  posY = getMouseYPos(e)
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+    showKisser(posX,posY)
+    lastX = posX
+    lastY = posY
+  }
+}
+// Get the horizontal position of the mouse
+function getMouseXPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageX+10)
+  } else {
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+  }
+}
+// Get the vartical position of the mouse
+function getMouseYPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageY)
+  } else {
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+  }
+}
+//Place the image and start timer so that it disappears after a period of time
+function showKisser(x,y) {
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".left = " + processedx)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".top = " + y)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+  }
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+  curKisser += 1
+}
+//Make the image disappear
+function hideKisser(knum) {
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+}
+
+function kissbegin(){
+//Let the browser know when the mouse moves
+if (docLayers) {
+  document.captureEvents(Event.MOUSEMOVE)
+  document.onMouseMove = doKisser
+} else {
+  document.onmousemove = doKisser
+}
+}
+window.onload=kissbegin
+// decloak -->
+</script>
+
+<script language="JavaScript1.2">
+
+//Highlight form element- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var highlightcolor="lightyellow"
+
+var ns6=document.getElementById&&!document.all
+var previous=''
+var eventobj
+
+//Regular expression to highlight only form elements
+var intended=/INPUT|TEXTAREA|SELECT|OPTION/
+
+//Function to check whether element clicked is form element
+function checkel(which){
+if (which.style&&intended.test(which.tagName)){
+if (ns6&&eventobj.nodeType==3)
+eventobj=eventobj.parentNode.parentNode
+return true
+}
+else
+return false
+}
+
+//Function to highlight form element
+function highlight(e){
+eventobj=ns6? e.target : event.srcElement
+if (previous!=''){
+if (checkel(previous))
+previous.style.backgroundColor=''
+previous=eventobj
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+}
+else{
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+previous=eventobj
+}
+}
+
+</script>
+</head>
+<body id="container">
+<script language="JavaScript" type="text/JavaScript">
+<!-- cloak
+// Add all DIV's of hearts
+if (document.all||document.getElementById||document.layers){
+for (k=0;k<kisserCount;k=k+2) {
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+}
+}
+
+// decloak -->
+</script>
+
+<p align="center">&nbsp;</p>
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="288" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="232" height="135"><div align="center"><img id="spotlight" speed="100"  src="../../Images/Logo3.png" width="288" height="129" /></div></td>
+      </tr>
+    </table>    </td>
+    <td width="330" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="330" height="135">
+      <param name="movie" value="../../Flashes/Bongden.swf" />
+      <param name="quality" value="high" />
+      <embed src="../../Flashes/Bongden.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="330" height="135"></embed>
+    </object></td>
+    <td width="362" height="51">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="87" valign="top"><h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Thanks for visiting The Pictures!"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+    </h2></td>
+  </tr>
+</table>
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="40"></td>
+  </tr>
+</table>
+
+<!-- InstanceBeginRepeat name="MenuNews" --><!-- InstanceBeginRepeatEntry -->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Home" onclick="window.location='../../Home.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td ><img src="../../Images/Button-News2.jpg"/></td>
+    <td id="LineButton" >&nbsp;</td>
+    <td id="Music" onclick="window.location='../../Music.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    .
+    <td id="Movies" onclick="window.location='../../Movies.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Store" onclick="window.location='../../Store.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Hosted" onclick="window.location='../../Hosted.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Sugs" onclick="window.location='../../Suggestion.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Search" onclick="window.location='../../Search.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="SiteMap" onclick="window.location='../../SiteMap.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Links" onclick="window.location='../../Links.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Us" onclick="window.location='../../AboutUs.html'"></td>
+  </tr>
+</table>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="2"></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#DDDDDD">
+  <!--DWLayoutTable-->
+   <tr>
+    <td height="19" colspan="7" valign="top" bgcolor="#FFE019"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="29" colspan="7" valign="top" bgcolor="#FFE019">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../TempPics/sub_hdr_news.gif" width="106" height="25" /></td>
+  </tr>
+  <tr>
+  <tr>
+    <td width="19" height="31"></td>
+    <td width="214"></td>
+    <td width="17"></td>
+    <td width="460"></td>
+    <td width="34"></td>
+    <td width="141"></td>
+    <td width="75"></td>
+  </tr>
+  
+  <tr>
+    <td height="449">&nbsp;</td>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="13" height="20">&nbsp;</td>
+          <td width="189">&nbsp;</td>
+          <td width="12">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="92">&nbsp;</td>
+          <td valign="top"><a href="http://atlan.vtc.vn/news/images/home"><img src="../../Images/QuangCao/189x92.gif" width="189" height="92" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      
+      <tr>
+        <td height="13"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=R2Yp4zIKOQh3FcQXB0/lyw==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/anhhunghoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/Default.aspx?s=AVIEW&amp;AID=0QtoOn3/3mzxsv+lY1woQQ==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/khieuchienhoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=sISNbYMnQfdW5/60cmLYwA==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/thattinh.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="18"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td>&nbsp;</td>
+    <td rowspan="2" valign="top"><!-- InstanceBeginEditable name="TinTuc" -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="16" height="296">&nbsp;</td>
+          <td width="431" valign="top" id="TextHN3"><div class="style3"> 
+            <p><strong>Sao v&agrave; m&#7889;t g&#7847;y tr&#417; x&#432;&#417;ng s&#7889;ng </strong></p>
+            </div>
+            <div> </div>
+            <div> (TG&#272;A) - Gi&#7919; v&oacute;c d&aacute;ng g&#7847;y g&ograve; kh&ocirc;ng ph&#7843;i l&agrave; chuy&#7879;n m&#7899;i &#7903; Hollywood nh&#432;ng qu&aacute; g&#7847;y l&#7841;i l&agrave; chuy&#7879;n kh&aacute;c?</div>
+            <div> <span id="ctl00_MidderContent_Detail1_lbl_DetailContent">
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/817140.jpg" width="200" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>&nbsp;1. H&igrave;nh &#7843;nh g&#7847;y gi&#417; x&#432;&#417;ng c&#7911;a di&#7877;n vi&ecirc;n Tori Spelling &#273;&atilde; tr&#7903;  th&agrave;nh v&#7845;n &#273;&#7873; khi di&#7877;n vi&ecirc;n n&agrave;y bi&#7875;u di&#7877;n tr&ecirc;n b&#7909;c th&#7901;i trang v&agrave;o ng&agrave;y  31.3.2009 t&#7841;i Los Angeles. M&#7863;c qu&#7847;n so&#7885;c jean nh&#7887; nh&#7855;n, di&#7877;n vi&ecirc;n &#273;&oacute;ng  vai ch&iacute;nh trong lo&#7841;t phim TH 90210 ph&ocirc; b&agrave;y &#273;&ocirc;i ch&acirc;n c&#7921;c k&#7923; g&#7847;y v&agrave; th&acirc;n tr&ecirc;n &#7889;m nhom &#273;&#432;&#7907;c che b&#7903;i chi&#7871;c &aacute;o &#273;&#7887;. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/226.jpg" width="241" /></div>
+                <div></div>
+              </div>
+              <div>2. Keira Knightley, n&#7919; di&#7877;n vi&ecirc;n ch&iacute;nh trong b&#7897; phim Atonement  lu&ocirc;n t&#7841;o ra nh&#7919;ng c&uacute; s&#7889;c b&#7857;ng th&acirc;n h&igrave;nh g&#7847;y g&ograve; c&#7911;a c&ocirc;, gi&#7889;ng nh&#432; c&#7843;nh  c&ocirc; m&#7863;c chi&#7871;c v&aacute;y khoe ph&#7847;n tr&ecirc;n c&#7911;a c&#417; th&#7875; trong bu&#7893;i chi&#7871;u ra m&#7855;t b&#7897;  phim m&#7899;i The Duchess  t&#7841;i Toronto, Canada. Trong khi c&aacute;c b&aacute;o l&aacute; c&#7843;i n&oacute;i nhi&#7873;u v&#7873; th&acirc;n th&#7875;  si&ecirc;u g&#7847;y c&#7911;a Knightley, t&#7901; Daily Telegraph gi&#7853;t t&iacute;t &ldquo;c&ocirc; b&eacute; g&#7847;y &#273;&#7871;n &#273;&aacute;ng  th&#432;&#417;ng&rdquo; khi &#273;&#7873; c&#7853;p &#273;&#7871;n ch&#7913;ng bi&#7871;ng &#259;n v&igrave; s&#7907; m&#7853;p c&#7911;a c&ocirc;.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/324.jpg" width="287" /></div>
+                <div></div>
+              </div>
+              <div>3. Di&#7877;n vi&ecirc;n Angelina Jolie th&uacute; nh&#7853;n l&agrave; c&ocirc; &#273;&atilde; xu&#7889;ng c&acirc;n nghi&ecirc;m  tr&#7885;ng sau c&aacute;i ch&#7871;t c&#7911;a ng&#432;&#7901;i m&#7865; v&agrave;o &#273;&#7847;u n&#259;m 2007, nh&#432;ng 9 th&aacute;ng sau &#273;&oacute;,  nh&#7919;ng g&igrave; c&ocirc; ph&ocirc; b&agrave;y trong b&#7897; phim The Changeling m&#7899;i kh&#7859;ng &#273;&#7883;nh l&agrave; c&ocirc; n&oacute;i &#273;&uacute;ng.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/425.jpg" width="230" /></div>
+              </div>
+              <p>4. Ellen Pompeo, ng&ocirc;i sao c&#7911;a b&#7897; phim TH nhi&#7873;u t&#7853;p Grey's Anatomy &#273;&atilde; gi&#7899;i thi&#7879;u m&#7897;t h&igrave;nh &#7843;nh g&#7847;y g&ograve; khi c&ocirc; xu&#7845;t hi&#7879;n trong ch&#432;&#417;ng tr&igrave;nh ph&#7887;ng v&#7845;n Late Show with David Letterman &#7903;  New York City v&agrave;o ng&agrave;y 31.3.2008. Nh&#432;ng Pompeo, c&oacute; bi&#7879;t danh  Stracciatella (c&ocirc; b&eacute; r&aacute;ch r&#432;&#7899;i trong ti&#7871;ng &Yacute;) kh&#7859;ng &#273;&#7883;nh l&agrave; c&ocirc; &#273;&atilde; &#273;&#432;a  v&agrave;o c&#417; th&#7875; kho&#7843;ng 3.000 calories m&#7895;i ng&agrave;y ch&#7913; kh&ocirc;ng ph&#7843;i kh&ocirc;ng &#259;n g&igrave; c&#7843;  nh&#432; b&aacute;o ch&iacute; &#273;&#7891;n &#273;&#7841;i. </p>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/523.jpg" width="158" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>5. Thay &#273;&#7893;i trang ph&#7909;c li&ecirc;n t&#7909;c gi&#7919;a nh&#7919;ng chi&#7871;c v&aacute;y b&#7909;i r&aacute;ch te  tua v&agrave; v&aacute;y d&#7841; h&#7897;i Versace, ca s&#297; rock Courtney Love nh&#432; mu&#7889;n t&#7853;n d&#7909;ng  m&#7885;i c&#417; h&#7897;i &#273;&#7875; khoe th&acirc;n th&#7875; g&#7847;y g&ograve; c&#7911;a m&igrave;nh. Tuy nhi&ecirc;n, khi tr&#7885;ng l&#432;&#7907;ng  c&#7911;a c&ocirc; gi&#7843;m m&#7841;nh trong n&#259;m 2008, &#273;&atilde; c&oacute; nh&#7919;ng &#273;&#7891;n &#273;o&aacute;n v&#7873; t&#432;&#417;ng lai r&#7845;t  x&#7845;u c&#7911;a ca s&#297; si&ecirc;u qu&#7853;y n&agrave;y. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/619.jpg" width="273" /></div>
+                <div></div>
+              </div>
+              <div>6. Ng&ocirc;i sao qu&#7847;n v&#7907;t Anna Kournikova c&oacute; v&#7867; &#273;&atilde; &#273;&#7875; l&#7841;i th&acirc;n th&#7875; s&#259;n  ch&#7855;c c&#7911;a c&ocirc; tr&ecirc;n s&acirc;n qu&#7847;n v&#7907;t khi xu&#7845;t hi&#7879;n t&#7841;i Los Angeles trong di&#7879;n  m&#7841;o g&#7847;y m&#7897;t c&aacute;ch b&#7845;t ng&#7901;.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/717.jpg" width="258" /></div>
+                <div></div>
+              </div>
+              <div>7. Di&#7877;n vi&ecirc;n Courteney Cox c&#7911;a lo&#7841;t phim TH Friend l&agrave;  ng&#432;&#7901;i m&#7865; lu&ocirc;n tr&acirc;n tr&#7885;ng nh&#7919;ng &#273;&#432;&#7901;ng cong c&#7911;a c&#417; th&#7875;, nh&#7845;t l&agrave; sau khi  c&ocirc; sinh con g&aacute;i Coco n&#259;m 2004. C&ocirc; tr&ocirc;ng r&#7845;t n&#7919; t&iacute;nh trong lo&#7841;t phim TH Dirt.  Nh&#432;ng kh&ocirc;ng hi&#7875;u sao, th&aacute;ng 1.2009, t&#7841;p ch&iacute; Anh Grazia cho bi&#7871;t ng&ocirc;i  sao n&agrave;y &#273;&atilde; gi&#7843;m k&iacute;ch c&#7905; trang ph&#7909;c &#273;&#7871;n 2 size trong v&ograve;ng ch&#7881; v&agrave;i th&aacute;ng. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/814.jpg" width="208" /></div>
+                <div></div>
+              </div>
+              <div>8. Nicky, em c&#7911;a ca s&#297; Paris Hilton lu&ocirc;n chia s&#7867; s&#7903; th&iacute;ch g&#7847;y v&#7899;i  ch&#7883;. &#7842;nh ch&#7909;p c&ocirc; &#273;ang &#273;i mua s&#7855;m t&#7841;i Beverly Hills v&#7899;i &#273;&ocirc;i ch&acirc;n nh&#432; hai  &#7889;ng &#273;i&#7871;u. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/911.jpg" width="170" /></div>
+              </div>
+              <p>9. Ca s&#297; Anh Amy Winehouse &#273;o&#7841;t nhi&#7873;u gi&#7843;i Grammy, nh&#432;ng nhi&#7873;u ng&#432;&#7901;i  kh&ocirc;ng hi&#7875;u t&#7841;i sao c&ocirc; l&#7841;i c&oacute; &#273;&#7911; s&#7913;c kho&#7867; &#273;&#7875; h&aacute;t trong m&#7897;t c&#417; th&#7875; si&ecirc;u  g&#7847;y nh&#432; th&#7871;. </p>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/108.jpg" width="262" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>10. Nhi&#7873;u ng&#432;&#7901;i h&acirc;m m&#7897; di&#7877;n vi&ecirc;n Jenna Jameson kh&ocirc;ng c&ograve;n xa l&#7841; g&igrave;  v&#7899;i th&acirc;n th&#7875; g&#7847;y g&ograve; c&#7911;a c&ocirc;. Nh&#432;ng m&#7899;i &#273;&acirc;y, c&ocirc; l&agrave;m cho h&#7885; kinh ho&agrave;ng khi  ph&ocirc; b&#7847;y b&#7897; x&#432;&#417;ng c&aacute;ch tr&iacute; t&#7841;i m&#7897;t b&atilde;i bi&#7875;n &#7903; Malibu, California. Tin  &#273;&#7891;n c&ocirc; b&#7883; stress sau khi ly h&ocirc;n v&#7899;i ng&ocirc;i sao &#273;&oacute;ng phim h&#7841;ng 3 Jay  Gradina.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/1114.jpg" width="239" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>11. Taylor Momsen, ng&ocirc;i sao tu&#7893;i teen c&#7911;a ch&#432;&#417;ng tr&igrave;nh TH nhi&#7873;u k&#7923; Gossip Girl  l&#7845;y b&#7889;i c&#7843;nh khu v&#7921;c Upper East Side c&#7911;a th&agrave;nh ph&#7889; New York c&oacute; v&#7867; &#273;&atilde;  theo k&#7883;p &#273;&agrave;n ch&#7883; Paris Hilton v&#7873; kho&#7843;n si&ecirc;u g&#7847;y khi c&ocirc; &#273;i b&aacute;t ph&#7889; t&#7841;i  Brooklyn nh&#7919;ng ng&agrave;y &#273;&#7847;u n&#259;m 2009.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/1210.jpg" width="450" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>12. Di&#7877;n vi&ecirc;n Claire Danes khoe b&#7897; x&#432;&#417;ng c&aacute;ch tr&iacute; c&#7911;a c&ocirc; khi &#273;i  b&ecirc;n c&#7841;nh ng&#432;&#7901;i y&ecirc;u Hugh Dancy t&#7841;i m&#7897;t khu ngh&#7881; m&aacute;t &#7903; &Yacute; v&agrave;o th&aacute;ng 3.2009.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/1310.jpg" width="260" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>13. Di&#7877;n vi&ecirc;n Cate Blanchett tr&ocirc;ng qu&aacute; kh&#7859;ng khiu t&#7841;i &#273;&ecirc;m Costume  Institute Gala. Nh&#432;ng khi sinh &#273;&#7913;a con th&#7913; 2, c&ocirc; &#273;&atilde; m&#7853;p tr&#7903; l&#7841;i ch&uacute;t &iacute;t.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/145.jpg" width="236" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>14. Di&#7877;n vi&ecirc;n Calista Flockhart c&#7911;a lo&#7841;t phim TH Ally McBeal &#273;&#7871;n d&#7921; bu&#7893;i chi&#7871;u ra m&#7855;t b&#7897; phim Indiana Jones and the Kingdom of the Crystal Skull t&#7841;i Hollywood trong b&#7897; gi&ograve; nh&#7887; x&iacute;u.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/154.jpg" width="263" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>15. Di&#7877;n vi&ecirc;n Nicole Richie, con c&#7911;a danh ca Lionel Ritchie v&#7851;n l&agrave;  &#273;&#7879; t&#7917; trung th&agrave;nh c&#7911;a tr&#432;&#7901;ng ph&aacute;i m&igrave;nh h&#7841;c x&#432;&#417;ng mai t&#7841;i m&#7897;t bu&#7893;i g&acirc;y  qu&#297; t&#7915; thi&#7879;n </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/164.jpg" width="277" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>16. Kate Bosworth, di&#7877;n vi&ecirc;n ch&iacute;nh c&#7911;a b&#7897; phim Superman Returns xu&#7845;t hi&#7879;n t&#7841;i Tu&#7847;n th&#7901;i trang New York v&#7899;i c&#417; th&#7875; v&#7851;n g&#7847;y g&ograve; nh&#432; ng&agrave;y n&agrave;o. </div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/173.jpg" width="258" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>17. Khi Kate Hudson &#273;&#7871;n d&#7921; bu&#7893;i chi&#7871;u ra m&#7855;t b&#7897; phim m&#7899;i nh&#7845;t c&#7911;a  c&ocirc; t&#7841;i Los Angeles, c&ocirc; c&#361;ng khoe lu&ocirc;n b&#7897; v&oacute; thi&#7871;u &#259;n l&acirc;u ng&agrave;y c&#7911;a m&igrave;nh.  &nbsp;</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/182.jpg" width="240" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>18. Th&#7881;nh tho&#7843;ng di&#7877;n vi&ecirc;n &#273;o&#7841;t Oscar Nicole Kidman l&#7841;i &ldquo;g&#7847;y h&oacute;a&rdquo; nh&#432; trong b&#7913;c &#7843;nh ch&#7909;p t&#7841;i New York City.</div>
+              <div>&nbsp;</div>
+              <div align="center">
+                <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/15/193.jpg" width="197" /></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>19. Ca s&#297; Victoria Beckham c&#361;ng l&agrave; m&ocirc;n &#273;&#7879; c&#7911;a tr&#432;&#7901;ng ph&aacute;i g&#7847;y khi c&ocirc; khoe c&#417; th&#7875; m&igrave;nh nh&acirc;n tu&#7847;n bi&#7875;u di&#7877;n th&#7901;i trang &#7903; New York.</div>
+          </span></div></td>
+          <td width="13">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="13"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+    <td>&nbsp;</td>
+    <td rowspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="10" height="12"></td>
+          <td width="121"></td>
+          <td width="10"></td>
+        </tr>
+      <tr>
+        <td height="406">&nbsp;</td>
+          <td valign="top"><img src="../../Images/QuangCao/moviequangca.gif" width="120" height="406" /></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="22">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="240">&nbsp;</td>
+          <td valign="top"><a href="http://forum.zing.vn/girl-viet-nam/f913/"><img src="../../Images/QuangCao/mp32_timodau.gif" width="120" height="240" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="17"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+    </table></td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="211">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="37"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="137" height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="137" height="26">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="26" valign="top">
+		
+		<form>
+			&nbsp;&nbsp;&nbsp;<select name="osite">
+				<option value="othersites">Other sites</option>
+				<option value="-">-----</option>
+				<option value="vh1">Vh1</option>
+				<option value="mtvasia">MTVasia</option>
+				<option value="disney">Disney asia</option>
+				<option value="tgdienanh">Pictures World</option>
+				<option value="moviezing">Zing movie</option>
+		</form>
+		
+		 </td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="256">&nbsp;</td>
+    <td width="567" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="567" height="55"><div align="right" class="style2">
+          <div align="right" id="TextLink1"><a href="../../Home.html">Home </a>|<a href="../../News.html" target="_self"> News</a> |<a href="../../Music.html"> Music</a> | <a href="../../Movies.html">Movies</a> | <a href="../../Suggestion.html">Contact us </a>|<a href="../../Links.html"> Links&nbsp;&nbsp;</a></div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="567" height="25"><div align="right"><span class="style1">&copy;2009 TPsKHHD Group  .All rights reserved.</span></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript1.2">
+
+/*
+Flying Butterfly script (By BGAudioDr@aol.com)
+Modified slightly/ permission granted to Dynamic Drive to feature script in archive
+For full source, visit http://www.dynamicdrive.com
+*/
+
+var Ymax=8;                                //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
+var Xmax=8;                                //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
+var Tmax=10000;                        //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+
+//FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
+
+var floatimages=new Array();
+floatimages[0]='./Images/butterfly2.gif';
+floatimages[1]='./Images/butterfly2.gif';
+floatimages[2]='./Images/butterfly2.gif';
+floatimages[3]='./Images/butterfly2.gif';
+
+//*********DO NOT EDIT BELOW***********
+var NS4 = (navigator.appName.indexOf("Netscape")>=0 && parseFloat(navigator.appVersion) >= 4 && parseFloat(navigator.appVersion) < 5)? true : false;
+var IE4 = (document.all)? true : false;
+var NS6 = (parseFloat(navigator.appVersion) >= 5 && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var wind_w, wind_h, t='', IDs=new Array();
+for(i=0; i<floatimages.length; i++){
+t+=(NS4)?'<layer name="pic'+i+'" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">' : '<div id="pic'+i+'" style="position:absolute; visibility:hidden;width:10px; height:10px"><a href="javascript:hidebutterfly()">';
+t+='<img src="'+floatimages[i]+'" name="p'+i+'" border="0">';
+t+=(NS4)? '</a></layer>':'</a></div>';
+}
+document.write(t);
+
+function moveimage(num){
+if(getidleft(num)+IDs[num].W+IDs[num].Xstep >= wind_w+getscrollx())IDs[num].Xdir=false;
+if(getidleft(num)-IDs[num].Xstep<=getscrollx())IDs[num].Xdir=true;
+if(getidtop(num)+IDs[num].H+IDs[num].Ystep >= wind_h+getscrolly())IDs[num].Ydir=false;
+if(getidtop(num)-IDs[num].Ystep<=getscrolly())IDs[num].Ydir=true;
+moveidby(num, (IDs[num].Xdir)? IDs[num].Xstep :  -IDs[num].Xstep , (IDs[num].Ydir)?  IDs[num].Ystep:  -IDs[num].Ystep);
+}
+
+function getnewprops(num){
+IDs[num].Ydir=Math.floor(Math.random()*2)>0;
+IDs[num].Xdir=Math.floor(Math.random()*2)>0;
+IDs[num].Ystep=Math.ceil(Math.random()*Ymax);
+IDs[num].Xstep=Math.ceil(Math.random()*Xmax)
+setTimeout('getnewprops('+num+')', Math.floor(Math.random()*Tmax));
+}
+
+function getscrollx(){
+if(NS4 || NS6)return window.pageXOffset;
+if(IE4)return document.body.scrollLeft;
+}
+
+function getscrolly(){
+if(NS4 || NS6)return window.pageYOffset;
+if(IE4)return document.body.scrollTop;
+}
+
+function getid(name){
+if(NS4)return document.layers[name];
+if(IE4)return document.all[name];
+if(NS6)return document.getElementById(name);
+}
+
+function moveidto(num,x,y){
+if(NS4)IDs[num].moveTo(x,y);
+if(IE4 || NS6){
+IDs[num].style.left=x+'px';
+IDs[num].style.top=y+'px';
+}}
+
+function getidleft(num){
+if(NS4)return IDs[num].left;
+if(IE4 || NS6)return parseInt(IDs[num].style.left);
+}
+
+function getidtop(num){
+if(NS4)return IDs[num].top;
+if(IE4 || NS6)return parseInt(IDs[num].style.top);
+}
+
+function moveidby(num,dx,dy){
+if(NS4)IDs[num].moveBy(dx, dy);
+if(IE4 || NS6){
+IDs[num].style.left=(getidleft(num)+dx)+'px';
+IDs[num].style.top=(getidtop(num)+dy)+'px';
+}}
+
+function getwindowwidth(){
+if(NS4 || NS6)return window.innerWidth;
+if(IE4)return document.body.clientWidth;
+}
+
+function getwindowheight(){
+if(NS4 || NS6)return window.innerHeight;
+if(IE4)return document.body.clientHeight;
+}
+
+function init(){
+wind_w=getwindowwidth();
+wind_h=getwindowheight();
+for(i=0; i<floatimages.length; i++){
+IDs[i]=getid('pic'+i);
+if(NS4){
+IDs[i].W=IDs[i].document.images["p"+i].width;
+IDs[i].H=IDs[i].document.images["p"+i].height;
+}
+if(NS6 || IE4){
+IDs[i].W=document.images["p"+i].width;
+IDs[i].H=document.images["p"+i].height;
+}
+getnewprops(i);
+moveidto(i , Math.floor(Math.random()*(wind_w-IDs[i].W)), Math.floor(Math.random()*(wind_h-IDs[i].H)));
+if(NS4)IDs[i].visibility = "show";
+if(IE4 || NS6)IDs[i].style.visibility = "visible";
+startfly=setInterval('moveimage('+i+')',Math.floor(Math.random()*100)+100);
+}}
+
+function hidebutterfly(){
+for(i=0; i<floatimages.length; i++){
+if (IE4)
+eval("document.all.pic"+i+".style.visibility='hidden'")
+else if (NS6)
+document.getElementById("pic"+i).style.visibility='hidden'
+else if (NS4)
+eval("document.pic"+i+".visibility='hide'")
+clearInterval(startfly)
+}
+}
+
+if (NS4||NS6||IE4){
+window.onload=init;
+window.onresize=function(){ wind_w=getwindowwidth(); wind_h=getwindowheight(); }
+}
+
+</script>
+/* Spot light */
+<script language="JavaScript1.2">
+
+/*
+Moving light on image script
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+if (document.all&&window.spotlight){
+var x=new Array()
+var direction=new Array()
+var y=new Array()
+if (spotlight.length==null){
+spotlight[0]=document.all.spotlight
+x[0]=0
+direction[0]="right"
+y[0]=spotlight[0].height
+spotlight[0].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+else
+for (i=0;i<spotlight.length;i++){
+x[i]=0
+direction[i]="right"
+y[i]=spotlight[i].height
+spotlight[i].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+}
+
+function slidelight(cur){
+spotlight[cur].filters.light.MoveLight(0,x[cur],y[cur],200,-1)
+
+if (x[cur]<spotlight[cur].width+200&&direction[cur]=="right")
+x[cur]+=10
+else if (x[cur]>spotlight[cur].width+200){
+direction[cur]="left"
+x[cur]-=10
+}
+else if (x[cur]>-200&&x[cur]<-185){
+direction[cur]="right"
+x[cur]+=10
+}
+else{
+x[cur]-=10
+direction[cur]="left"
+}
+}
+
+if (document.all&&window.spotlight){
+if (spotlight.length==null)
+setInterval("slidelight(0)",spotlight[0].speed)
+else
+for (t=0;t<spotlight.length;t++){
+var temp='setInterval("slidelight('+t+')",'+spotlight[t].speed+')'
+eval(temp)
+}
+}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

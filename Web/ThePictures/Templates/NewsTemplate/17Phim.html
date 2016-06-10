@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template-News.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>News</title>
+<style type="text/css">
+<!--
+.style3 {
+	font-size: x-large;
+	font-weight: bold;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="../Style1.css" rel="stylesheet" type="text/css" />
+
+<link href="../Pictures.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style4 {color: #999999}
+.style5 {color: #CCCCCC}
+#spotlight{
+filter:light
+}
+-->
+</style>
+<style type="text/css">
+<!--
+h1 {
+  color:#cc3333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+h3 {
+  color:#993333;
+  font-family:"Comic Sans MS",Helvetica;
+}
+.kisser {
+  position:absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+-->
+</style>
+
+<script language="JavaScript1.2" type="text/JavaScript">
+<!-- cloak
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+//Modified by Dynamic Drive for bug fixes
+//Visit http://www.dynamicdrive.com for this script
+
+kisserCount = 15 //maximum number of images on screen at one time
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+kissDelay = 1000 //duration images stay on screen (in milliseconds)
+kissSpacer = 50 //distance to move mouse b4 next heart appears
+theimage = "lips_small.gif" //the 1st image to be displayed
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+//Browser checking and syntax variables
+var docLayers = (document.layers) ? true:false;
+var docId = (document.getElementById) ? true:false;
+var docAll = (document.all) ? true:false;
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+var stylebitK = (docLayers) ? "":".style"
+var showbitK = (docLayers) ? "show":"visible"
+var hidebitK = (docLayers) ? "hide":"hidden"
+var ns6=document.getElementById&&!document.all
+//Variables used in script
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+lastX = 0
+lastY = 0
+//Collection of functions to get mouse position and place the images
+function doKisser(e) {
+
+  posX = getMouseXPos(e)
+  posY = getMouseYPos(e)
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+    showKisser(posX,posY)
+    lastX = posX
+    lastY = posY
+  }
+}
+// Get the horizontal position of the mouse
+function getMouseXPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageX+10)
+  } else {
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+  }
+}
+// Get the vartical position of the mouse
+function getMouseYPos(e) {
+  if (document.layers||ns6) {
+    return parseInt(e.pageY)
+  } else {
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+  }
+}
+//Place the image and start timer so that it disappears after a period of time
+function showKisser(x,y) {
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".left = " + processedx)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".top = " + y)
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+  }
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+  curKisser += 1
+}
+//Make the image disappear
+function hideKisser(knum) {
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+}
+
+function kissbegin(){
+//Let the browser know when the mouse moves
+if (docLayers) {
+  document.captureEvents(Event.MOUSEMOVE)
+  document.onMouseMove = doKisser
+} else {
+  document.onmousemove = doKisser
+}
+}
+window.onload=kissbegin
+// decloak -->
+</script>
+
+<script language="JavaScript1.2">
+
+//Highlight form element- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var highlightcolor="lightyellow"
+
+var ns6=document.getElementById&&!document.all
+var previous=''
+var eventobj
+
+//Regular expression to highlight only form elements
+var intended=/INPUT|TEXTAREA|SELECT|OPTION/
+
+//Function to check whether element clicked is form element
+function checkel(which){
+if (which.style&&intended.test(which.tagName)){
+if (ns6&&eventobj.nodeType==3)
+eventobj=eventobj.parentNode.parentNode
+return true
+}
+else
+return false
+}
+
+//Function to highlight form element
+function highlight(e){
+eventobj=ns6? e.target : event.srcElement
+if (previous!=''){
+if (checkel(previous))
+previous.style.backgroundColor=''
+previous=eventobj
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+}
+else{
+if (checkel(eventobj))
+eventobj.style.backgroundColor=highlightcolor
+previous=eventobj
+}
+}
+
+</script>
+</head>
+<body id="container">
+<script language="JavaScript" type="text/JavaScript">
+<!-- cloak
+// Add all DIV's of hearts
+if (document.all||document.getElementById||document.layers){
+for (k=0;k<kisserCount;k=k+2) {
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+}
+}
+
+// decloak -->
+</script>
+
+<p align="center">&nbsp;</p>
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="288" rowspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="232" height="135"><div align="center"><img id="spotlight" speed="100"  src="../../Images/Logo3.png" width="288" height="129" /></div></td>
+      </tr>
+    </table>    </td>
+    <td width="330" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="330" height="135">
+      <param name="movie" value="../../Flashes/Bongden.swf" />
+      <param name="quality" value="high" />
+      <embed src="../../Flashes/Bongden.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="330" height="135"></embed>
+    </object></td>
+    <td width="362" height="51">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="87" valign="top"><h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Thanks for visiting The Pictures!"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+    </h2></td>
+  </tr>
+</table>
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="40"></td>
+  </tr>
+</table>
+
+<!-- InstanceBeginRepeat name="MenuNews" --><!-- InstanceBeginRepeatEntry -->
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Home" onclick="window.location='../../Home.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td ><img src="../../Images/Button-News2.jpg"/></td>
+    <td id="LineButton" >&nbsp;</td>
+    <td id="Music" onclick="window.location='../../Music.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    .
+    <td id="Movies" onclick="window.location='../../Movies.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Store" onclick="window.location='../../Store.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Hosted" onclick="window.location='../../Hosted.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Sugs" onclick="window.location='../../Suggestion.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Search" onclick="window.location='../../Search.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="SiteMap" onclick="window.location='../../SiteMap.html'" ></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Links" onclick="window.location='../../Links.html'"></td>
+    <td id="LineButton">&nbsp;</td>
+    <td id="Us" onclick="window.location='../../AboutUs.html'"></td>
+  </tr>
+</table>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="960" height="2"></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#DDDDDD">
+  <!--DWLayoutTable-->
+   <tr>
+    <td height="19" colspan="7" valign="top" bgcolor="#FFE019"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="29" colspan="7" valign="top" bgcolor="#FFE019">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../TempPics/sub_hdr_news.gif" width="106" height="25" /></td>
+  </tr>
+  <tr>
+  <tr>
+    <td width="19" height="31"></td>
+    <td width="214"></td>
+    <td width="17"></td>
+    <td width="460"></td>
+    <td width="34"></td>
+    <td width="141"></td>
+    <td width="75"></td>
+  </tr>
+  
+  <tr>
+    <td height="449">&nbsp;</td>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="13" height="20">&nbsp;</td>
+          <td width="189">&nbsp;</td>
+          <td width="12">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="92">&nbsp;</td>
+          <td valign="top"><a href="http://atlan.vtc.vn/news/images/home"><img src="../../Images/QuangCao/189x92.gif" width="189" height="92" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      
+      <tr>
+        <td height="13"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=R2Yp4zIKOQh3FcQXB0/lyw==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/anhhunghoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/Default.aspx?s=AVIEW&amp;AID=0QtoOn3/3mzxsv+lY1woQQ==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/khieuchienhoi.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="92"></td>
+          <td valign="top"><a href="http://trutien.vtczone.vn/?s=AVIEW&amp;AID=sISNbYMnQfdW5/60cmLYwA==&amp;CATID=6nZ14e61OHmlFFbONmtezg=="><img src="../../Images/QuangCao/thattinh.jpg" width="189" height="92" border="0" /></a></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td height="18"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table></td>
+    <td>&nbsp;</td>
+    <td rowspan="2" valign="top"><!-- InstanceBeginEditable name="TinTuc" -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        <!--DWLayoutTable-->
+        <tr>
+          <td width="5" height="7525">&nbsp;</td>
+          <td width="451" valign="top" id="TextHN3"><div>
+            <p class="style3">17 phim &#273;&aacute;ng xem t&#7841;i LHPQT Cannes 2009</p>
+            </div>            <div> <span id="ctl00_MidderContent_Detail1_lbl_DetailContent"><strong>1.Up</strong><br />
+                  <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/d99c1.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Pete Docter, Bob Peterson<br />
+              Di&#7877;n vi&ecirc;n: Edward Asner, Christopher Plummer, Jordan Nagai, John Ratzenberger<br />
+              N&#7897;i  dung: M&#7897;t &ocirc;ng gi&agrave; &#273;&atilde; khi&#7871;n ng&ocirc;i nh&agrave; m&igrave;nh bay t&#7899;i t&#7853;n Nam M&#7929; b&#7857;ng h&agrave;ng  ng&agrave;n qu&#7843; b&oacute;ng bay. Nh&#432;ng cu&#7897;c phi&ecirc;u l&#432;u &#273;&atilde; b&#7883; &quot;l&agrave;m phi&#7873;n&quot; b&#7903;i m&#7897;t c&#7853;u  b&eacute; t&#7853;p t&agrave;nh l&agrave;m ph&oacute;ng vi&ecirc;n &#432;a m&#7841;o hi&#7875;m.<br />
+              <br />
+              <strong>2.Broken Embraces</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/c2.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Pedro Almodovar<br />
+              Di&#7877;n vi&ecirc;n: Penelope Cruz, Blanca Portillo, Angela Molina, Lluis Omar<br />
+              N&#7897;i  dung: C&acirc;u chuy&#7879;n t&igrave;nh &#273;&#7847;y bi th&#432;&#417;ng gi&#7919;a nh&agrave; &#273;&#7841;o di&#7877;n phim v&agrave; c&ocirc; g&aacute;i  Lena. Pedro Almodovar l&agrave; &#273;&#7841;o di&#7877;n l&#7915;ng danh nh&#7845;t T&acirc;y Ban Nha.<br />
+              <br />
+              <strong>3.Fish Tank</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t32.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Andrea Arnold<br />
+              Di&#7877;n vi&ecirc;n: Michael Fassbender, Harry Treadway, Jason Maza<br />
+              N&#7897;i dung: Cu&#7897;c s&#7889;ng c&#7911;a c&ocirc; b&eacute; 15 tu&#7893;i Mia thay &#273;&#7893;i khi m&#7865; c&ocirc; mang v&#7873; nh&agrave; m&#7897;t t&igrave;nh nh&acirc;n m&#7899;i.<br />
+              <br />
+              <strong>4.Bright Star</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t42.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Jane Campion<br />
+              Di&#7877;n vi&ecirc;n: Ben Whishaw, Abbie Cornish, Kerry Fox, Thomas Sangster<br />
+              N&#7897;i  dung: C&acirc;u chuy&#7879;n t&igrave;nh y&ecirc;u l&atilde;ng m&#7841;n k&eacute;o d&agrave;i 3 n&#259;m c&#7911;a anh ch&agrave;ng nh&agrave; th&#417;  tr&#7867; tu&#7893;i Keats v&agrave; c&ocirc; b&eacute; h&agrave;ng x&oacute;m &#273;&atilde; ph&#7843;i ch&#7845;m d&#7913;t b&#7903;i c&aacute;i ch&#7871;t c&#7911;a  ch&agrave;ng trai tr&#7867;.<br />
+              <br />
+              <strong>5.The White Ribbon</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t52.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Michael Haneke<br />
+              Di&#7877;n vi&ecirc;n: Leonard Proxauf, Leonie Benesch, Theo Trebs<br />
+              N&#7897;i  dung: K&#7875; v&#7873; m&#7897;t ng&ocirc;i tr&#432;&#7901;ng &#7903; &#272;&#7913;c v&agrave;o n&#259;m 1913 v&agrave; nh&#7919;ng nghi l&#7877; h&igrave;nh  ph&#7841;t c&#7911;a n&oacute; &#273;&atilde; tr&#7903; th&agrave;nh nh&acirc;n t&#7889; &#273;&#7875; h&igrave;nh th&agrave;nh n&ecirc;n ch&#7911; ngh&#297;a Ph&aacute;t x&iacute;t.<br />
+              <br />
+              <strong>6.Taking Woodstock</strong><br />
+              <br />
+                  <div>
+                    <div>
+                      <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/takingwoodstock1.jpg" width="450" /></div>
+                    </div>
+                    <br />
+                  </div>
+              &#272;&#7841;o di&#7877;n: L&yacute; An<br />
+              Di&#7877;n vi&ecirc;n: Liev Schreiber, Emile Hirsch, Paul Dano, Demetri Martin<br />
+              N&#7897;i  dung: M&#7897;t chang trai tr&#7867; &#273;&atilde; bi&#7871;n ng&ocirc;i nh&agrave; ngh&#7881; hoang t&agrave;n c&#7911;a cha m&#7865;  m&igrave;nh th&agrave;nh n&#417;i di&#7877;n ra li&ecirc;n hoan &acirc;m nh&#7841;c Woodstock. B&#7897; phim d&#7921;a theo  m&#7897;t s&#7921; ki&#7879;n c&oacute; th&#7853;t.<br />
+              <br />
+              <strong>7.Looking For Eric</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/b8et72.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Ken Loach<br />
+              Di&#7877;n vi&ecirc;n: Steve Evets, Eric Cantona, Stephanie Bishop<br />
+              N&#7897;i  dung: Eric l&agrave;m c&ocirc;ng vi&#7879;c &#273;&#432;a th&#432; v&agrave; l&agrave; m&#7897;t fan h&acirc;m m&#7897; b&oacute;ng &#273;&aacute;. cu&#7897;c  s&#7889;ng c&#7911;a anh &#273;ang tr&#7903; n&ecirc;n v&ocirc; c&ugrave;ng r&#7855;c r&#7889;i v&agrave; c&oacute; l&#7869; m&#7897;t v&agrave;i l&#7901;i khuy&ecirc;n  t&#7915; ng&ocirc;i sao b&oacute;ng &#273;&atilde; Eric Cantona c&oacute; th&#7875; gi&uacute;p &iacute;ch...<br />
+              <br />
+              <strong>8.Enter The Void</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t8.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Gaspar Noe<br />
+              Di&#7877;n vi&ecirc;n: Nathaniel Brown, Paz de la Huerta, Cyril Roy<br />
+              N&#7897;i  dung: Oscar v&agrave; Linda chuy&#7875;n t&#7899;i Tokyo &#273;&#7875; sinh s&#7889;ng. &#7902; &#273;&oacute; Oscar bu&ocirc;n b&aacute;n  ch&#7845;t g&acirc;y nghi&#7879;n v&agrave; Linda l&agrave;m ngh&#7873; tho&aacute;t y. Trong m&#7897;t tai n&#7841;n, linh h&#7891;n  c&#7911;a Oscar tr&#7903; v&#7873; nh&#7919;ng n&#417;i quen thu&#7897;c v&agrave; d&#7847;n d&#7847;n tr&#7843;i nghi&#7879;m n&agrave;y tr&#7903;  th&agrave;nh &aacute;c m&#7897;ng.<br />
+              <br />
+              <strong>9.Thirst</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t9.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Park Chan-Wook<br />
+              Di&#7877;n vi&ecirc;n: Song Kang-Ho, Shin Ha-Kyun, Kim Ok-Bin<br />
+              N&#7897;i dung: M&#7897;t linh m&#7909;c tr&#7903; th&agrave;nh ma-c&agrave;-r&#7891;ng do m&#7897;t tai n&#7841;n hi h&#7919;u v&agrave; r&#417;i v&agrave;o l&#432;&#7899;i t&igrave;nh v&#7899;i ng&#432;&#7901;i v&#7907; c&#7911;a b&#7841;n m&igrave;nh.<br />
+              <br />
+              <strong>10.Inglourious Basterds</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t102.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Quentin Tarantino<br />
+              Di&#7877;n vi&ecirc;n: Brad Pitt, Diane Kruger, Michael Fassbender, Eli Roth<br />
+              N&#7897;i  dung: M&#7897;t nh&oacute;m chi&#7871;n binh M&#7929;-Do Th&aacute;i do Lt. Aldo Raine ch&#7881; huy &#273;&#432;&#7907;c  ch&#7885;n l&#7921;a cho m&#7897;t nhi&#7879;m v&#7909; reo r&#7855;c n&#7895;i kinh ho&agrave;ng tr&ecirc;n to&agrave;n n&#432;&#7899;c Ph&aacute;p  b&#7857;ng c&aacute;ch thu th&#7853;p x&#432;&#417;ng s&#7885; c&#7911;a nh&#7919;ng th&agrave;nh vi&ecirc;n &#272;&#7843;ng qu&#7889;c x&atilde;.<br />
+              <br />
+              <strong>11.Vengeance</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t112.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Johnnie To<br />
+              Di&#7877;n vi&ecirc;n: Johnny Hallyday, Sylvie Testud, Anthony Wong, Simon Yam<br />
+              N&#7897;i dung: &#7848;n sau l&#7899;p m&#7863;t n&#7841; m&#7897;t &#273;&#7847;u b&#7871;p ng&#432;&#7901;i Ph&aacute;p l&agrave; m&#7897;t s&aacute;t th&#7911; v&#7899;i nhi&#7879;m v&#7909; t&#7899;i H&#7891;ng K&ocirc;ng &#273;&#7875; b&aacute;o th&ugrave; k&#7867; &#273;&atilde; gi&#7871;t con g&aacute;i m&igrave;nh.<br />
+              <br />
+              <strong>12.Antichrist</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t122.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Lars Von Trier<br />
+              Di&#7877;n vi&ecirc;n: Willem Dafoe, Charlotte Gainsbourg<br />
+              N&#7897;i  dung: Sau c&aacute;i ch&#7871;t c&#7911;a con trai, &#273;&ocirc;i v&#7907; ch&#7891;ng tr&#7867; t&#7899;i m&#7897;t v&ugrave;ng hoang  v&#7855;ng &#273;&#7875; qu&ecirc;n &#273;i v&#7871;t th&#432;&#417;ng l&ograve;ng. Nh&#432;ng c&oacute; m&#7897;t th&#7871; l&#7921;c th&#7847;n b&iacute; kh&ocirc;ng &#273;&#7875;  y&ecirc;n cho cu&#7897;c s&#7889;ng c&#7911;a h&#7885;.<br />
+              <br />
+              13.Mother<br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t132.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Bong Joon Ho<br />
+              Di&#7877;n vi&ecirc;n: Won Bin, Jin Ku, Kim Hye-ja<br />
+              N&#7897;i  dung: M&#7897;t ch&agrave;ng trai tr&#7867; b&#7883; k&#7871;t t&#7897;i s&aacute;t nh&acirc;n, v&agrave; ng&#432;&#7901;i m&#7865; &#273;&atilde; ph&#7843;i &#273;i  t&igrave;m ra k&#7867; s&aacute;t nh&acirc;n th&#7921;c s&#7921; nh&#7857;m c&#7913;u con trai m&igrave;nh kh&#7887;i ch&#7889;n lao t&ugrave;<br />
+              <strong><br />
+              14.Coco Chanel &amp; Igor Stravinsky</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t14.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Jan Kounen<br />
+              Di&#7877;n vi&ecirc;n: Anna Mouglalis, Mads Mikkelsen, Anatole Taubman<br />
+              N&#7897;i dung: K&#7875; v&#7873; m&#7889;i quan h&#7879; gi&#7919;a nh&agrave; t&#7841;o m&#7851;u l&#7915;ng danh Coco Chanel v&agrave; nh&agrave; so&#7841;n nh&#7841;c Stravinsky.<br />
+              <br />
+              <strong>15.Agora</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t15.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Alejandro Amenabar<br />
+              Di&#7877;n vi&ecirc;n: Rachel Weisz, Max Minghella, Oscar Isaac<br />
+              N&#7897;i dung: M&#7897;t k&#7867; n&ocirc; l&#7879; tr&#7903; th&agrave;nh t&iacute;n &#273;&#7891; C&#417; &#273;&#7889;c trong khi theo &#273;u&#7893;i t&#7921; do v&agrave; &#273;em l&ograve;ng y&ecirc;u c&ocirc; g&aacute;i tri&#7871;t h&#7885;c v&ocirc; th&#7847;n Hypatia.<br />
+              <br />
+              <strong>16.The Imaginarium Of Dr Parnassus</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/t16.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Terry Gilliam<br />
+              Di&#7877;n vi&ecirc;n: Heath Ledger, Christopher Plummer, Johnny Depp, Colin Farrell, Jude Law<br />
+              Ti&#7871;n  s&#297; Parnassus v&#7899;i th&#7887;a thu&#7853;n v&#7899;i ma qu&#7881; &#273;em trao &#273;&#7893;i t&acirc;m h&#7891;n c&#7911;a c&ocirc; con  g&aacute;i l&#7845;y s&#7921; b&#7845;t t&#7917;. &#272;&#7875; c&#7913;u con g&aacute;i m&igrave;nh, &ocirc;ng ph&#7843;i nh&#7901; t&#7899;i s&#7921; gi&uacute;p &#273;&#7905; c&#7911;a  Tony, k&#7867; mang nh&#7919;ng g&#432;&#417;ng m&#7863;t kh&aacute;c nhau qua c&aacute;c th&#7871; gi&#7899;i kh&aacute;c nhau.<br />
+              <br />
+              <strong>17.Drag Me To Hell</strong><br />
+              <br />
+                  <div>
+                    <div><img src="http://img.thegioidienanh.vn/Images/Uploaded/Share/2009/04/25/d81t172.jpg" width="450" /></div>
+                  </div>
+              <br />
+              &#272;&#7841;o di&#7877;n: Sam Raimi<br />
+              Di&#7877;n vi&ecirc;n: Alison Lohman, Justin Long, Bojana Novakovic, Fernanda Romero<br />
+          N&#7897;i  dung: M&#7897;t nh&acirc;n vi&ecirc;n t&#7841;i v&#259;n ph&ograve;ng cho vay &#273;&atilde; t&#7915; ch&#7889;i l&#7901;i van xin c&#7911;a  m&#7897;t n&#7919; qu&#7927; gi&agrave; v&agrave; b&#7883; nguy&#7873;n r&#7911;a b&#7903;i m&#7897;t l&#7901;i nguy&#7873;n ch&#7871;t ch&oacute;c.</span></div></td>
+        <td width="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="15"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+    <td>&nbsp;</td>
+    <td rowspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="10" height="12"></td>
+          <td width="121"></td>
+          <td width="10"></td>
+        </tr>
+      <tr>
+        <td height="406">&nbsp;</td>
+          <td valign="top"><img src="../../Images/QuangCao/moviequangca.gif" width="120" height="406" /></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="22">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="240">&nbsp;</td>
+          <td valign="top"><a href="http://forum.zing.vn/girl-viet-nam/f913/"><img src="../../Images/QuangCao/mp32_timodau.gif" width="120" height="240" border="0" /></a></td>
+          <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="17"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+      
+      
+      
+    </table></td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="211">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="37"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="137" height="168" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="137" height="26">&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="26" valign="top">
+		
+		<form>
+			&nbsp;&nbsp;&nbsp;<select name="osite">
+				<option value="othersites">Other sites</option>
+				<option value="-">-----</option>
+				<option value="vh1">Vh1</option>
+				<option value="mtvasia">MTVasia</option>
+				<option value="disney">Disney asia</option>
+				<option value="tgdienanh">Pictures World</option>
+				<option value="moviezing">Zing movie</option>
+		</form>
+		
+		 </td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="256">&nbsp;</td>
+    <td width="567" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <!--DWLayoutTable-->
+      <tr>
+        <td width="567" height="55"><div align="right" class="style2">
+          <div align="right" id="TextLink1"><a href="../../Home.html">Home </a>|<a href="../../News.html" target="_self"> News</a> |<a href="../../Music.html"> Music</a> | <a href="../../Movies.html">Movies</a> | <a href="../../Suggestion.html">Contact us </a>|<a href="../../Links.html"> Links&nbsp;&nbsp;</a></div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td height="25" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="567" height="25"><div align="right"><span class="style1">&copy;2009 TPsKHHD Group  .All rights reserved.</span></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript1.2">
+
+/*
+Flying Butterfly script (By BGAudioDr@aol.com)
+Modified slightly/ permission granted to Dynamic Drive to feature script in archive
+For full source, visit http://www.dynamicdrive.com
+*/
+
+var Ymax=8;                                //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
+var Xmax=8;                                //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
+var Tmax=10000;                        //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+
+//FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
+
+var floatimages=new Array();
+floatimages[0]='./Images/butterfly2.gif';
+floatimages[1]='./Images/butterfly2.gif';
+floatimages[2]='./Images/butterfly2.gif';
+floatimages[3]='./Images/butterfly2.gif';
+
+//*********DO NOT EDIT BELOW***********
+var NS4 = (navigator.appName.indexOf("Netscape")>=0 && parseFloat(navigator.appVersion) >= 4 && parseFloat(navigator.appVersion) < 5)? true : false;
+var IE4 = (document.all)? true : false;
+var NS6 = (parseFloat(navigator.appVersion) >= 5 && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var wind_w, wind_h, t='', IDs=new Array();
+for(i=0; i<floatimages.length; i++){
+t+=(NS4)?'<layer name="pic'+i+'" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">' : '<div id="pic'+i+'" style="position:absolute; visibility:hidden;width:10px; height:10px"><a href="javascript:hidebutterfly()">';
+t+='<img src="'+floatimages[i]+'" name="p'+i+'" border="0">';
+t+=(NS4)? '</a></layer>':'</a></div>';
+}
+document.write(t);
+
+function moveimage(num){
+if(getidleft(num)+IDs[num].W+IDs[num].Xstep >= wind_w+getscrollx())IDs[num].Xdir=false;
+if(getidleft(num)-IDs[num].Xstep<=getscrollx())IDs[num].Xdir=true;
+if(getidtop(num)+IDs[num].H+IDs[num].Ystep >= wind_h+getscrolly())IDs[num].Ydir=false;
+if(getidtop(num)-IDs[num].Ystep<=getscrolly())IDs[num].Ydir=true;
+moveidby(num, (IDs[num].Xdir)? IDs[num].Xstep :  -IDs[num].Xstep , (IDs[num].Ydir)?  IDs[num].Ystep:  -IDs[num].Ystep);
+}
+
+function getnewprops(num){
+IDs[num].Ydir=Math.floor(Math.random()*2)>0;
+IDs[num].Xdir=Math.floor(Math.random()*2)>0;
+IDs[num].Ystep=Math.ceil(Math.random()*Ymax);
+IDs[num].Xstep=Math.ceil(Math.random()*Xmax)
+setTimeout('getnewprops('+num+')', Math.floor(Math.random()*Tmax));
+}
+
+function getscrollx(){
+if(NS4 || NS6)return window.pageXOffset;
+if(IE4)return document.body.scrollLeft;
+}
+
+function getscrolly(){
+if(NS4 || NS6)return window.pageYOffset;
+if(IE4)return document.body.scrollTop;
+}
+
+function getid(name){
+if(NS4)return document.layers[name];
+if(IE4)return document.all[name];
+if(NS6)return document.getElementById(name);
+}
+
+function moveidto(num,x,y){
+if(NS4)IDs[num].moveTo(x,y);
+if(IE4 || NS6){
+IDs[num].style.left=x+'px';
+IDs[num].style.top=y+'px';
+}}
+
+function getidleft(num){
+if(NS4)return IDs[num].left;
+if(IE4 || NS6)return parseInt(IDs[num].style.left);
+}
+
+function getidtop(num){
+if(NS4)return IDs[num].top;
+if(IE4 || NS6)return parseInt(IDs[num].style.top);
+}
+
+function moveidby(num,dx,dy){
+if(NS4)IDs[num].moveBy(dx, dy);
+if(IE4 || NS6){
+IDs[num].style.left=(getidleft(num)+dx)+'px';
+IDs[num].style.top=(getidtop(num)+dy)+'px';
+}}
+
+function getwindowwidth(){
+if(NS4 || NS6)return window.innerWidth;
+if(IE4)return document.body.clientWidth;
+}
+
+function getwindowheight(){
+if(NS4 || NS6)return window.innerHeight;
+if(IE4)return document.body.clientHeight;
+}
+
+function init(){
+wind_w=getwindowwidth();
+wind_h=getwindowheight();
+for(i=0; i<floatimages.length; i++){
+IDs[i]=getid('pic'+i);
+if(NS4){
+IDs[i].W=IDs[i].document.images["p"+i].width;
+IDs[i].H=IDs[i].document.images["p"+i].height;
+}
+if(NS6 || IE4){
+IDs[i].W=document.images["p"+i].width;
+IDs[i].H=document.images["p"+i].height;
+}
+getnewprops(i);
+moveidto(i , Math.floor(Math.random()*(wind_w-IDs[i].W)), Math.floor(Math.random()*(wind_h-IDs[i].H)));
+if(NS4)IDs[i].visibility = "show";
+if(IE4 || NS6)IDs[i].style.visibility = "visible";
+startfly=setInterval('moveimage('+i+')',Math.floor(Math.random()*100)+100);
+}}
+
+function hidebutterfly(){
+for(i=0; i<floatimages.length; i++){
+if (IE4)
+eval("document.all.pic"+i+".style.visibility='hidden'")
+else if (NS6)
+document.getElementById("pic"+i).style.visibility='hidden'
+else if (NS4)
+eval("document.pic"+i+".visibility='hide'")
+clearInterval(startfly)
+}
+}
+
+if (NS4||NS6||IE4){
+window.onload=init;
+window.onresize=function(){ wind_w=getwindowwidth(); wind_h=getwindowheight(); }
+}
+
+</script>
+/* Spot light */
+<script language="JavaScript1.2">
+
+/*
+Moving light on image script
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+if (document.all&&window.spotlight){
+var x=new Array()
+var direction=new Array()
+var y=new Array()
+if (spotlight.length==null){
+spotlight[0]=document.all.spotlight
+x[0]=0
+direction[0]="right"
+y[0]=spotlight[0].height
+spotlight[0].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+else
+for (i=0;i<spotlight.length;i++){
+x[i]=0
+direction[i]="right"
+y[i]=spotlight[i].height
+spotlight[i].filters.light.addPoint(100,50,100,255,255,255,90)
+}
+}
+
+function slidelight(cur){
+spotlight[cur].filters.light.MoveLight(0,x[cur],y[cur],200,-1)
+
+if (x[cur]<spotlight[cur].width+200&&direction[cur]=="right")
+x[cur]+=10
+else if (x[cur]>spotlight[cur].width+200){
+direction[cur]="left"
+x[cur]-=10
+}
+else if (x[cur]>-200&&x[cur]<-185){
+direction[cur]="right"
+x[cur]+=10
+}
+else{
+x[cur]-=10
+direction[cur]="left"
+}
+}
+
+if (document.all&&window.spotlight){
+if (spotlight.length==null)
+setInterval("slidelight(0)",spotlight[0].speed)
+else
+for (t=0;t<spotlight.length;t++){
+var temp='setInterval("slidelight('+t+')",'+spotlight[t].speed+')'
+eval(temp)
+}
+}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

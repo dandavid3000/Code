@@ -1,0 +1,73 @@
+.arrowlistmenu{
+width: 168px; /*width of accordion menu*/
+float:left;
+}
+
+.arrowlistmenu a{
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#023d62;
+}
+
+.arrowlistmenu a:hover{
+	color:#b50000;
+}
+
+.arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+	color:#023d62;
+	padding-left:15px;
+	cursor: pointer;
+	font-size:11px;
+	font-weight:bold;
+	line-height:18px;
+	float:left;
+	width:153px;
+	background:url(../images/icon_list_dv.jpg) left 5px no-repeat;
+	/*border-bottom:1px solid #b3b7b9;*/
+
+}
+
+
+.arrowlistmenu .nosub{
+	color:#b50000;
+	padding-left:25px;
+	cursor: pointer;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+	color:#990000;
+}
+
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-left:15px;
+	float:left;
+	width:148px;
+	margin:5px 0 5px 0 ;
+}
+
+.arrowlistmenu ul li{
+	padding-left:15px;
+	line-height:15px;
+	background:url(../images/list_more_menu.jpg) left 1px no-repeat;
+	display:block;
+	width:133px;
+	float:left;
+}
+
+.arrowlistmenu ul li a{
+	color: #330000;
+	display: block;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+	color:#023d62;
+}
