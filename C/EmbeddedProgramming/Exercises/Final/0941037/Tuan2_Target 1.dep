@@ -1,0 +1,3 @@
+Dependencies for Project 'Tuan2', Target 'Target 1': (DO NOT MODIFY !)
+F (.\LPC2300.s)(0x47FED444)(--device DARMP -g --apcs=interwork -I "C:\Keil\ARM\INC\Philips" --list "LPC2300.lst" --xref -o "LPC2300.o")
+F (.\Tuan2.c)(0x4D745FC5)(-c --device DARMP -g -O0 --apcs=interwork -I "C:\Keil\ARM\INC\Philips" -o "tuan2.o" --omf_browse "tuan2.crf" --depend "tuan2.d")

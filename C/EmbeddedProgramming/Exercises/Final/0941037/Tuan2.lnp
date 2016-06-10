@@ -1,0 +1,4 @@
+"lpc2300.o" "tuan2.o" --device DARMP --strict --scatter "Tuan2.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Tuan2.map" -o "Tuan2.axf"

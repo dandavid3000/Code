@@ -1,0 +1,20 @@
+*** Creating Trace Output File 'Tuan2.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"lpc2300.o"'
+### List of Objects: adding '"tuan2.o"'
+### ADS-LD Command completed:
+"lpc2300.o" "tuan2.o" --device DARMP --strict --scatter "Tuan2.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Tuan2.map" -o "Tuan2.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Tuan2.axf'
+### ADS-LD Command File: 'Tuan2.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Tuan2.lnp', Handle=0x00000248
+### Writing '.lnp' file
+### ADS-LD Command file 'Tuan2.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,8 @@
+D:\RS232\Com\bin\Debug\ComPort.exe
+D:\RS232\Com\bin\Debug\ComPort.pdb
+D:\RS232\Com\obj\Debug\ResolveAssemblyReference.cache
+D:\RS232\Com\obj\Debug\ComPort.frmMain.resources
+D:\RS232\Com\obj\Debug\ComPort.Properties.Resources.resources
+D:\RS232\Com\obj\Debug\Com.csproj.GenerateResource.Cache
+D:\RS232\Com\obj\Debug\ComPort.exe
+D:\RS232\Com\obj\Debug\ComPort.pdb

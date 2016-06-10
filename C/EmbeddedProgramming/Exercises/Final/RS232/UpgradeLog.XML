@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RS232Port">
+</Property><Property Name="Solution File" Value="D:\RS232\RS232Port.sln">
+</Property><Property Name="Date" Value="Sunday, March 06, 2011">
+</Property><Property Name="Time" Value="7:38 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RS232Port.sln" Description="File successfully backed up as D:\RS232\Backup\RS232Port.sln">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Com.csproj" Description="Project file successfully backed up as D:\RS232\Backup\Com\Com.csproj">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\ComManager.cs" Description="File successfully backed up as D:\RS232\Backup\Com\ComManager.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\frmMain.cs" Description="File successfully backed up as D:\RS232\Backup\Com\frmMain.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\frmMain.Designer.cs" Description="File successfully backed up as D:\RS232\Backup\Com\frmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Program.cs" Description="File successfully backed up as D:\RS232\Backup\Com\Program.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RS232\Backup\Com\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Properties\Resources.Designer.cs" Description="File successfully backed up as D:\RS232\Backup\Com\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Properties\Settings.Designer.cs" Description="File successfully backed up as D:\RS232\Backup\Com\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Properties\Settings.settings" Description="File successfully backed up as D:\RS232\Backup\Com\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\frmMain.resx" Description="File successfully backed up as D:\RS232\Backup\Com\frmMain.resx">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Properties\Resources.resx" Description="File successfully backed up as D:\RS232\Backup\Com\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Com.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Com" Source="Com\Com.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RS232Port.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RS232Port.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Com" Source="Com\Com.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,4 @@
+"lpc2300.o" "09hc.o" "lcd_4bit.o" --device DARMP --strict --scatter "led.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\led.map" -o "led.axf"
