@@ -73,9 +73,14 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 
 ![Application interface](images/CSharp.png "Application interface")
 
-
-
 ## Projects in Visual Basic
+1. [School management app](VisualBasic/FinalProject/AppliedManagementApplication) An application to manage students, teachers with 3 layers written in VB.
+2. [Exercises](VisualBasic/Exercises) This folder contains some basic programs such as *Hospital management*, *Scheduling*, *Student management*.
+
 ## Web projects
+1. [E-commerce](Web/E_Commerce) a web system that connects many websites together to perform e-commerce. For example, a selling website can connect to a bank to do the payment, and supply APIs for other websites about it's products.
+2. [The pictures](Web/ThePictures) A basic web project for building an entertaining website
+3. [Web interaction](Web/WebInt) This folder contains assignments, project of the course that I studied about HTML5, CSS, and javascript.
+
 ## What comes next
 I hope you will see more interesting projects in the near future. Currently, I am looking for a new challenge to start my career since I'm passionate about **software development**, **Internet of Things**, and **Security**.
