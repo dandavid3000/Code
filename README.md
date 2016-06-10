@@ -62,12 +62,12 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 ![Streaming application](images/Streamingapplication.png "Streaming application")
 
 ## Projects in Python
-1. [Challenges](Python/Challenges) This folder contains challenges such as [forensics1](Python/Challenges/Forensics1.py)
-* Write a simple python script that, by invoking tshark, prints the IPs that are likely natted using the TCP timestamp option.
+1. [Challenges](Python/Challenges) This folder contains challenges as follows:
+[forensics1](Python/Challenges/Forensics1.py)
+- Write a simple python script that, by invoking tshark, prints the IPs that are likely natted using the TCP timestamp option.
 Requirements:
-
-** self-contained python script that uses tshark for the packet analysis
-** The tool should receive a pcap file as parameter and print the IP addresses that are likely natted.
+-- self-contained python script that uses tshark for the packet analysis
+-- The tool should receive a pcap file as parameter and print the IP addresses that are likely natted.
 
 
 
