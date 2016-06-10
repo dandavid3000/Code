@@ -23,12 +23,11 @@ In particular, we developed a security feature for [TTool](http://ttool.telecom-
 The project was divided into two main parts. Web crawler, and The assistant; a friendly interface which allows users to retrieve relevant information from the Datebase (Web crawler).
 
 Regarding to our work in this projects:
-> Studied, analysed, and illustrated a well-known attack [Stunex](https://en.wikipedia.org/wiki/Stuxnet) as a SysML-Sec attack model.
+> Studied, analysed, and illustrated a well-known attack [Stuxnet](https://en.wikipedia.org/wiki/Stuxnet) as a SysML-Sec attack model.
 > Implemented a friendly user interface for users to retrieve information, perform the search
 > Designed, and implemented a secure protocol as a bridge to let TTool, and The Crawler interact together.
 
 The final report for this work is available [here](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/SemesterProjectReport_VO.pdf) along with the [source code](Java/Eurecom/SemesterFinalResult/FullSubmitted_Source/TTool.zip). The protocol is developed step by step being stored [here](Java/Eurecom/SmallClient_Server/). From the simple one to multithreaded, and SSL socket usage.
-
 
 ## Projects in C/C++
 ## Projects in Java
