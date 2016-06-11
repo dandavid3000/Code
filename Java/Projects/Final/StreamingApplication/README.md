@@ -33,7 +33,7 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 
 ####Server
 
-* Need a picture [here for server interface]()
+* ![Server interface](../../../../images/s1.png "Server interface")
 * **File** includes `Open` to open streamed videos, add into `Video List` to share to clients. `Exit` to quit the program.
 * **Video List** is used to list all added videos for sharing.
 * **Client List** is used to list all connected clients for sharing.
