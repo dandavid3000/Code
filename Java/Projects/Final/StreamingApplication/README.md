@@ -8,8 +8,8 @@
 
 ##Content
 * [Source code](Source%20code) of the project.
-* Executable [jar files](File%20Jar%20Thuc%20Thi).
-* [Built](File%20Build) files.
+* [Executable jar files](File%20Jar%20Thuc%20Thi).
+* [Built files](File%20Build).
 * Report (How to participate, use the program).
 
 ##Features
