@@ -61,34 +61,42 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 ![Adding videos](../../../../images/s3.png "Adding videos")
 
 2. Choose a video and click `Play`, the server plays this video.
-  ![Playing videos](../../../../images/s4.png "Playing videos")
+
+![Playing videos](../../../../images/s4.png "Playing videos")
 
 3. Click `Share` to setup the connections for clients.
-  ![Sharing videos](../../../../images/s5.png "Sharing videos")
+
+![Sharing videos](../../../../images/s5.png "Sharing videos")
 
 4. Open `Client application`, and fill information. Click `Connect` to watch the streaming video. Server will see which clients are connecting and watching.
-  ![Client opening](../../../../images/s6.png "Client opening")
+
+![Client opening](../../../../images/s6.png "Client opening")
 
 5. It is possible to open many clients
-  ![Client opening](../../../../images/s7.png "Client opening")
+
+![Client opening](../../../../images/s7.png "Client opening")
 
 6. Diconnect any client from the list by choosing `client name` and click `disconnect` from server side or client can disconnect itself.
-  ![Server Disconnection](../../../../images/s8.png "Server Disconnection")
 
-  ![Client Disconnection](../../../../images/s9.png "Client Disconnection")
+![Server Disconnection](../../../../images/s8.png "Server Disconnection")
+
+![Client Disconnection](../../../../images/s9.png "Client Disconnection")
 
 7. Quit the program by click the button `Exit`
-  ![Quit](../../../../images/s10.png "Quit")
+
+![Quit](../../../../images/s10.png "Quit")
 
 ####Notice
 * To `build` and `run` the program. Installation of JMF is a must.
 * To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or it is available 
 * Pay attention to the `Sound` icon.
-  ![JMF](../../../../images/s11.png "JMF")
+
+![JMF](../../../../images/s11.png "JMF")
 
 * Modify `Stereo Mix` 
-  ![Recording control](../../../../images/s12.png "Recording control")
 
-  ![Sound setting](../../../../images/s13.png "Sound setting")
+![Recording control](../../../../images/s12.png "Recording control")
+
+![Sound setting](../../../../images/s13.png "Sound setting")
 
 
