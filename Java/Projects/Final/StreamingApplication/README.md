@@ -18,20 +18,20 @@
 * Streaming with sound.
 
 ##Process
-###Server
+####Server
 * Server uses JMF library to play videos with `.avi`, and other extensions such as `.mpg`. When users start the program, this will trigger `main Thread` running continuously to listen to connections from clients.
 * If there is a request from a client, the server gives this client an ID to distinguish other clients. The server sends back to this client audio, and video ports that help the client to receive audio, and video from the server.
 * After the connection, server also runs another `Thread` which is reponsible to listen the disconnection request from the clients.
 * When the connections is set up. Server starts 2 threads. The first one will capture the screen 24f/s, and send continuously to the client while the second thread records the sound, and sends directly to the client.
 
-###Client
+####Client
 * After filling all information to the form including Server IP, and its name (Clients are allows to name theirselves), clients send request to connect to server.
 * After connections are granted. Clients start 2 threads. One is for receiving video, and another one is used for receiving audio that comes from the server.
 
 ##Guide
 Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=player_embedded`
 
-###Server
+####Server
 
 * Need a picture [here for server interface]()
 * **File** includes `Open` to open streamed videos, add into `Video List` to share to clients. `Exit` to quit the program.
@@ -44,7 +44,7 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 * Button **Remove** to delete selected video from `Video List`.
 * Button **Disconnect** to stop sharing the selected video.
 
-###Client
+####Client
 
 * Need a picture [here for client interface]()
 * `nickname`, `localhost` need to be filled up to connect to server.
@@ -52,7 +52,7 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 * Button **Disconnect** is used to stop the connection.
 * Button **Exit** is used to quit the program.
 
-###Usage
+####Usage
 
 1. Open `server application`, add videos to the list.
  [Pic here]()
@@ -70,7 +70,7 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 7. Quit the program by click the button `Exit`
 [Pic here]()
 
-###Notice
+####Notice
 * To `build` and `run` the program. Installation of JMF is a must.
 * To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or it is available [here]().
 * Pay attention to the `Sound` icon.
