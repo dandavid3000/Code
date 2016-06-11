@@ -7,9 +7,9 @@
 4. Server can observe how many clients are connecting, and has ability to disconnect clients at anytime.
 
 ##Content
-* Source code of the project.
-* Executable jar files.
-* Built files.
+* [Source code](Source%20code) of the project.
+* Executable [jar files](File%20Jar%20Thuc%20Thi).
+* [Built](File%20Build) files.
 * Report (How to participate, use the program).
 
 ##Features
@@ -88,7 +88,7 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 
 ####Notice
 * To `build` and `run` the program. Installation of JMF is a must.
-* To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or it is available 
+* To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or use those video are available [here](../Demo).
 * Pay attention to the `Sound` icon.
 
     ![JMF](../../../../images/s11.png "JMF")
