@@ -76,6 +76,7 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 * Pay attention to the `Sound` icon.
 [Hinh]()
 * Modify `Stereo Mix` 
-
+[Hinh]()
+[Hinh]()
 
 
