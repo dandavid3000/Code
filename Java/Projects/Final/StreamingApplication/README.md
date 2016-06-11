@@ -32,14 +32,50 @@
 Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=player_embedded`
 
 ###Server
-* Server application interface
-  * Need a picture [here]()
-  * **File** includes `Open` to open streamed videos, add into `Video List` to share to clients. `Exit` to quit the program.
-  * **Video List** is used to list all added videos for sharing.
-  * **Client List** is used to list all connected clients for sharing.
-  * Button **Play** is used to choose which video on `Video List` to share.
-  * Button **Share** is used to share a streaming video.
-  * Button **Exit** to quit the program.
-  * Button **Add video** to add videos from computer to `Video List`.
-  * Button **Remove** to delete selected video from `Video List`.
-  * BUtton **Disconnect** to stop sharing the selected video.
+
+* Need a picture [here for server interface]()
+* **File** includes `Open` to open streamed videos, add into `Video List` to share to clients. `Exit` to quit the program.
+* **Video List** is used to list all added videos for sharing.
+* **Client List** is used to list all connected clients for sharing.
+* Button **Play** is used to choose which video on `Video List` to share.
+* Button **Share** is used to share a streaming video.
+* Button **Exit** to quit the program.
+* Button **Add video** to add videos from computer to `Video List`.
+* Button **Remove** to delete selected video from `Video List`.
+* Button **Disconnect** to stop sharing the selected video.
+
+###Client
+
+* Need a picture [here for client interface]()
+* `nickname`, `localhost` need to be filled up to connect to server.
+* Button **Connect** is used to connect to the server, and watch a streaming video.
+* Button **Disconnect** is used to stop the connection.
+* Button **Exit** is used to quit the program.
+
+###Usage
+
+1. Open `server application`, add videos to the list.
+ [Pic here]()
+2. Choose a video and click `Play`, the server plays this video.
+[Pic here]()
+3. Click `Share` to setup the connections for clients.
+[Pic here]()
+4. Open `Client application`, and fill information. Click `Connect` to watch the streaming video. Server will see which clients are connecting and watching.
+[Pic here]()
+5. It is possible to open many clients
+[Pic here]()
+6. Diconnect any client from the list by choosing `client name` and click `disconnect` from server side or client can disconnect itself.
+[Pic here]()
+[Pic here]()
+7. Quit the program by click the button `Exit`
+[Pic here]()
+
+###Notice
+* To `build` and `run` the program. Installation of JMF is a must.
+* To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or it is available [here]().
+* Pay attention to the `Sound` icon.
+[Hinh]()
+* Modify `Stereo Mix` 
+
+
+
