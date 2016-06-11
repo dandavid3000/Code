@@ -33,7 +33,8 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 
 ####Server
 
-* ![Server interface](../../../../images/s1.png "Server interface")
+  ![Server interface](../../../../images/s1.png "Server interface")
+
 * **File** includes `Open` to open streamed videos, add into `Video List` to share to clients. `Exit` to quit the program.
 * **Video List** is used to list all added videos for sharing.
 * **Client List** is used to list all connected clients for sharing.
@@ -46,7 +47,8 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 
 ####Client
 
-* Need a picture [here for client interface]()
+  ![Client interface](../../../../images/s2.png "Client interface")
+
 * `nickname`, `localhost` need to be filled up to connect to server.
 * Button **Connect** is used to connect to the server, and watch a streaming video.
 * Button **Disconnect** is used to stop the connection.
@@ -55,28 +57,37 @@ Video link for the demo `http://www.youtube.com/watch?v=Jo0SyWUYs9E&feature=play
 ####Usage
 
 1. Open `server application`, add videos to the list.
- [Pic here]()
+  ![Adding videos](../../../../images/s3.png "Adding videos")
+
 2. Choose a video and click `Play`, the server plays this video.
-[Pic here]()
+  ![Playing videos](../../../../images/s4.png "Playing videos")
+
 3. Click `Share` to setup the connections for clients.
-[Pic here]()
+  ![Sharing videos](../../../../images/s5.png "Sharing videos")
+
 4. Open `Client application`, and fill information. Click `Connect` to watch the streaming video. Server will see which clients are connecting and watching.
-[Pic here]()
+  ![Client opening](../../../../images/s6.png "Client opening")
+
 5. It is possible to open many clients
-[Pic here]()
+  ![Client opening](../../../../images/s7.png "Client opening")
+
 6. Diconnect any client from the list by choosing `client name` and click `disconnect` from server side or client can disconnect itself.
-[Pic here]()
-[Pic here]()
+  ![Server Disconnection](../../../../images/s8.png "Server Disconnection")
+
+  ![Client Disconnection](../../../../images/s9.png "Client Disconnection")
+
 7. Quit the program by click the button `Exit`
-[Pic here]()
+  ![Quit](../../../../images/s10.png "Quit")
 
 ####Notice
 * To `build` and `run` the program. Installation of JMF is a must.
-* To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or it is available [here]().
+* To have a sound of streaming videos. [This video](http://www.mediafire.com/?ybr1363de4sj9iw) is suitable, or it is available 
 * Pay attention to the `Sound` icon.
-[Hinh]()
+  ![JMF](../../../../images/s11.png "JMF")
+
 * Modify `Stereo Mix` 
-[Hinh]()
-[Hinh]()
+  ![Recording control](../../../../images/s12.png "Recording control")
+
+  ![Sound setting](../../../../images/s13.png "Sound setting")
 
 
