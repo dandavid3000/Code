@@ -1,4 +1,4 @@
-> This application based on client-server model, it is used to share stream videos to clients in a local network.
+> This application based on client-server model, it is used to share streaming videos to clients in a local network.
 
 ##Requirements
 1. There is a computer as a server. It can share videos for other people at their clients. The server can play one or many videos to share for others. Controller of the server is able to choose which video will be played on the list (.avi file) and turn on the sharing feature. Clients connect to the server at different moments but they have to watch the same content from the video.
