@@ -11,6 +11,7 @@ A tourist guide offers a verhile renting service. There are 3 types you can rent
 * Price 60k/day
 * Example: Rent a bicyle in 2 days with a distance 25km. The total price is
  * ```60k*2days```
+
 ###E-Bicycle
 * Price 80k/day
 * A full charged E-Bicyle can go 10km. Charging price is 10k once (Fully charge is mandatory).
