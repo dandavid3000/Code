@@ -14,9 +14,9 @@ A tourist guide offers a verhile renting service. There are 3 types you can rent
 
 ###E-Bicycle
 * Price 80k/day
-* A full charged E-Bicyle can go 10km. Charging price is 10k once (Fully charge is mandatory).
+* A full charged E-Bicyle can go 10km. Charging price is 10k once (Full charge is mandatory).
 * Example: Rent an E-Bicyle to go 25km in 2 days with the total price
- * ```80k*2days + 10k*3fullycharge (25km/10km = 3)``` 
+ * ```80k*2days + 10k*3fullcharge (25km/10km = 3)``` 
 
 ####Requirements
 Use your OOP skill to built a program which satisfies:
