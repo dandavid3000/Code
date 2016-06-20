@@ -14,7 +14,7 @@ p/s Some projects you'll find strange because they're not in English. I am still
 * [Projects in CSharp](#projects-in-sharp)
 * [Projects in Visual Basic](#projects-in-visual-basic)
 * [Web projects](#web-projects)
-* [What comes next](#what-comes-next)
+
 
 ## Secure integration of Internet of Things
 I participated in a co-innovation project named [Secure Integration of Internet of Things](http://scn.sap.com/community/labs/blog/2015/06/25/co-innovation-project-on-predictive-analytics-for-pipeline-integrity). The requirements come from French Public Sector - City of Antibes. They'd like to have an end-to-end solution for data collected by more than 2000 sensors, and deployed for their water network. They use the data for `predictive maintenance` to predict the pipeline failures of the water network. In order to improve management, and financial optimization, they also would like to visualize their water network. The data will be encrypted at the beginning, and only decrypted at the end. In particular, I designed and implemented a sysmetrical cryptography to assure the confidentiality and integrity of the data accross many different platforms including `Arduino` (C/C++), `Raspberry Pi` and `Intel Edision` (Python), `DataGraph application` and `FreeDataMap` (Java, and Javascript). Setup a secure connection between `PLCs`, `SIGFOX`, and `HANA Cloud Platform`. The final step of this project is to evaluate the security perspective. I built an attack tree containing attack models, and considered all possible attacks that could happend to the system, and provided suggestions on how to defend, and mitigrate those risks.
@@ -60,6 +60,7 @@ This folder contains important projects such as [Finding paths Algs](C/Projects/
 3. [Java mail app](Java/Projects/Final/JavaMailApp/0941037) This is my mail application in java.
 4. [Java video streaming app](Java/Projects/Final/StreamingApplication) This is one of the most interesting projects. The application contains a client-server model. When a server plays a video, clients can connect to the server and watch the stream video.
 ![Streaming application](images/Streamingapplication.png "Streaming application")
+5. [Java Bill Management](Java/Projects/BillManagement/) The application shows some basic interactions with SQL Server.
 
 ## Projects in Python
 
@@ -107,6 +108,3 @@ these data into a small database
 1. [E-commerce](Web/E_Commerce) a web system that connects many websites together to perform e-commerce. For example, a website can connect to a bank to do the payment, and supply APIs for other websites about it's products.
 2. [The pictures](Web/ThePictures) A basic web project for building an entertaining website
 3. [Web interaction](Web/WebInt) This folder contains assignments, project of the course that I studied about HTML5, CSS, and javascript.
-
-## What comes next
-I hope you will see more interesting projects in the near future. Currently, I am looking for a new challenge to start my career since I'm passionate about **software development**, **Internet of Things**, and **Security**.
