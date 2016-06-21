@@ -8,12 +8,16 @@
  * [Bill interface](#bill-interface)
  * [Search interface](#search-interface)
 
+---
+
 #### Introduction
 Given a Bill Database (SQL Server 2005) with `PhieuThu` table structure
 
 ![Bill table](../../../images/PhieuThu.png "Bill table")
 
 MaPT is a primary key, and it's automatically increased (IDENTITY)
+
+---
 
 #### Requirements
 
@@ -23,7 +27,10 @@ Write a program which allows to do these tasks:
 2. Can update/detele/update bills.
 3. The program allows inputs as user information
 
+---
+
 #### Guide
+
 ##### Main interface
 * The program will start with a login window. Fill correct information, and click `Log in` to connect to the `SQL Database` or `Exit` to quit the program.
 
