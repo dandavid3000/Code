@@ -21,7 +21,7 @@ I participated in a co-innovation project named [Secure Integration of Internet 
 
 ![Architecture](images/architecturediagram.png "Architecture Overview")
 
-I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a **presentation file** [here](https://github.com/dandavid3000/Documents/blob/master/SecureIoT/SAP_Defense.pptx), and some demo videos are available [here](https://www.youtube.com/playlist?list=PLdaye8eh9RXBh5d2a3kdM_no-PMQ2ORsD) which I used for my defense, and for some demo videos you can contact me directly via my email address. I also completed an Enterprise Github about this work to help others can replicate my concept, as well as a detailed report with more than 150 pages.
+I am so sorry to say that this project is confidential. Therefore, I cannot reveal the information. However, if you are interested in this project, I have a **presentation file** [here](https://github.com/dandavid3000/Documents/blob/master/SecureIoT/SAP_Defense.pptx), and **some demo videos** are available [here](https://www.youtube.com/playlist?list=PLdaye8eh9RXBh5d2a3kdM_no-PMQ2ORsD) which I used for my defense. I also completed an Enterprise Github about this work to help others can replicate my concept, as well as a detailed report with more than 150 pages.
 
 At the end, the concept worked perfectly, it's considered to develop and deloy as a real bussiness.
 
