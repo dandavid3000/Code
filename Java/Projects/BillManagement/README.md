@@ -3,10 +3,11 @@
 ###Table of contents
 * [Introduction](#introduction)
 * [Requirements](#requirements)
-* [Guide](#guide)
+* [Interfaces](#interfaces)
  * [Main interface](#main-interface)
  * [Bill interface](#bill-interface)
  * [Search interface](#search-interface)
+* [Guide](#guide)
 
 ---
 
@@ -29,7 +30,7 @@ Write a program which allows to do these tasks:
 
 ---
 
-#### Guide
+#### Interfaces
 
 ##### Main interface
 * The program will start with a login window. Fill correct information, and click `Log in` to connect to the `SQL Database` or `Exit` to quit the program.
@@ -66,5 +67,50 @@ Write a program which allows to do these tasks:
 * `Xoá bảng` = `Empty Grid` button is used to clear the grid.
 * `Phiếu Thu` = `Bill` button is used to switch to `Bill` form
 
-   ![Search interface](../../../images/bill4.PNG "Searc interface")
+   ![Search interface](../../../images/bill4.PNG "Search interface")
 
+---
+
+#### Guide
+
+* Create a Database with `MaPT`=`Bill ID` is `IDENTITY`
+
+   ![DB creation](../../../images/bm0.png "DB creation")
+
+* Open the application. Fill in the information, and click `Log in` to use the program
+
+   ![Log in](../../../images/bm2.PNG "Log in")
+   
+* There are 3 options which are `Phieu Thu` = `Bills`, `Tim Kiem` = `Search`, and `Thong Tin` = `Information`
+
+   ![Features](../../../images/bm3.PNG "Features")
+   
+   * Click `Phieu Thu` = `Bills` to open a new window. There is a list of all records in the DB.
+   
+      ![Bill interface](../../../images/bm4.PNG "Bill interface")
+   
+      * Insert: Type information and click `Them` to add a new record to the DB
+         
+         ![Add a new record](../../../images/bm5.PNG "Add a new record")
+      
+      * Delete: Choose any record from the grid, and click `Xoa` to delete it from the DB
+      
+         ![Delete a new record](../../../images/bm6.PNG "Delete a new record")
+
+         ![After being deleted](../../../images/bm7.PNG "After being deleted")
+         
+      * Update: Choose any record from the grid. Modify the inforamtion, and click `Sua` to update it.
+      
+         ![Modify a new record](../../../images/bm9.PNG "Modify a new record")
+
+         ![After being updated](../../../images/bm10.PNG "After being updated")
+
+   * Click `Tim Kiem` = `Seach` to open Search feature.
+      * Choose inputs by ticking boxses.
+      * Fill the information, and click `Tim Kiem` to get the result
+         
+         ![Search feature](../../../images/bm10.PNG "Search feature")
+
+      * `Xoa Bang` is used to clear the grid (Not in the DB).
+      
+   * Click `Thoat` to exit the program, or close windows.
