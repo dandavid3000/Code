@@ -109,7 +109,7 @@ Write a program which allows to do these tasks:
       * Choose inputs by ticking boxses.
       * Fill the information, and click `Tim Kiem` to get the result
          
-         ![Search feature](../../../images/bm10.PNG "Search feature")
+         ![Search feature](../../../images/bm11.PNG "Search feature")
 
       * `Xoa Bang` is used to clear the grid (Not in the DB).
       
