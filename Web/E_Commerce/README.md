@@ -41,3 +41,7 @@ There are 3 parts:
 
   * Change their passwords, and update account information
     * Password change: Type new password, check, and update new password
+
+        ![password change](../../images/ec7.png "password change")
+        
+        ![password change 2](../../images/ec8.png "password change 2")
