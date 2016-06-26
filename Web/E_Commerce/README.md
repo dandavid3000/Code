@@ -60,8 +60,29 @@ There are 3 parts:
 * The unique page for administrators
   * Login to the system with administration permission. Choose `Quan Ly` tab to use those features
  
-   ![User management](../../images/ec13.png "User management")
+   ![Administration features](../../images/ec12.png "Administration features")
 
   * User management
 
-   ![Administration features](../../images/ec12.png "Administration features")
+   ![User management](../../images/ec13.png "User management")
+  
+    * The interface includes `Add`, `Delete`, and `Modify` users.
+
+   ![User management 2](../../images/ec14.png "User management 2")
+  
+  * `Classified advertising` management
+    * Is is possible to modify, add, and delete the list of those.
+    
+      ![User management 3](../../images/ec15.png "User management 3") 
+
+    * Registration
+    
+  * Goods check, and offer: `Add`, `Delete`, or update goods, and order goods.
+  
+    ![User management 4](../../images/ec16.png "User management 4") 
+
+  * News management
+
+    ![User management 5](../../images/ec17.png "User management 5") 
+    
+#### Other features
