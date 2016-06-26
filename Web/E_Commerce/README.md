@@ -27,3 +27,17 @@ There are 3 parts:
 * Clients can register to become users of the website
 
  ![Registration](../../images/ec4.png "Registration")
+
+#### Registered clients
+* Includes unregistered client features
+* Login and Logout
+  * Fill correct information, and click `login` 
+  
+    ![Log in](../../images/ec5.png "Log in")
+
+  * After loggin in, clients can log out.
+  
+     ![Log out](../../images/ec6.png "Log out")
+
+  * Change their passwords, and update account information
+    * Password change: Type new password, check, and update new password
