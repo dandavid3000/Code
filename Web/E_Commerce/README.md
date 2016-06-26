@@ -55,3 +55,13 @@ There are 3 parts:
   * Purchase buildings: Clients select desire buildings. The system will show packages of the buildings. Client can choose `Package purchase` to link to other services
  
     ![Purchase](../../images/ec11.png "Purchase")
+
+#### Administration
+* The unique page for administrators
+  * Login to the system with administration permission. Choose `Quan Ly` tab to use those features
+ 
+   ![User management](../../images/ec13.png "User management")
+
+  * User management
+
+   ![Administration features](../../images/ec12.png "Administration features")
