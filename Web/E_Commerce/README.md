@@ -100,4 +100,4 @@ There are 3 parts:
 
 ### Database
 
-Here are [files](/DB/) for the database
+Here are [files](DB/) for the database
