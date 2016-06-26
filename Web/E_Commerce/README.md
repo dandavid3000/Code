@@ -45,3 +45,13 @@ There are 3 parts:
         ![password change](../../images/ec7.png "password change")
         
         ![password change 2](../../images/ec8.png "password change 2")
+
+  * Register `Classified advertising` by choosing the type of building, and fill in extra relevant information. Click `Dang Ky` = `Register` to finish.
+  
+        ![Advertise](../../images/ec9.png "Adverstise")
+
+        ![Advertise 2](../../images/ec10.png "Adverstise 2")
+        
+  * Purchase buildings: Clients select desire buildings. The system will show packages of the buildings. Client can choose `Package purchase` to link to other services
+ 
+    ![Purchase](../../images/ec11.png "Purchase")
