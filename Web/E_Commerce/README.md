@@ -86,3 +86,13 @@ There are 3 parts:
     ![User management 5](../../images/ec17.png "User management 5") 
     
 #### Other features
+
+* Load building locations by using Google Map
+
+  ![Location 1](../../images/ec18.png "Location 1") 
+
+  ![Location 2](../../images/ec19.png "Location 2") 
+
+* Load `foreign currency` from other services
+
+  ![currency](../../images/ec20.png "Currency") 
